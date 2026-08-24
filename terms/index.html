@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Terms of Use (EULA) for Pausely: what the app is and is not, how Premium is billed, and what strict mode asks of you.">
+<meta name="robots" content="index,follow">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F4F6F9">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0E1116">
+<meta property="og:title" content="Terms of Use — Pausely">
+<meta property="og:description" content="Terms of Use (EULA) for Pausely: what the app is and is not, how Premium is billed, and what strict mode asks of you.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sohaibiii.github.io/pausely-links/terms/">
+<link rel="canonical" href="https://sohaibiii.github.io/pausely-links/terms/">
+<link rel="icon" href="/pausely-links/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/pausely-links/apple-touch-icon.png">
+<title>Terms of Use — Pausely</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg:#F4F6F9;--surface:#FFFFFF;--fill:#EAEEF3;--ink:#0E1116;--ink-2:#5B6573;--ink-3:#5F6875;
+  --line:rgba(0,0,0,.06);--accent:#0B7065;--accent-strong:#127A6F;--accent-soft:rgba(11,112,101,.12);--on-accent:#FFFFFF;
+  --glow:transparent;--card-shadow:0 10px 30px rgba(24,33,52,.08);--card-edge:transparent;
+  --streak:#A3640F;--streak-soft:rgba(163,100,15,.14);--success:#23744A;--success-soft:rgba(35,116,74,.14);
+  --hero-top:#18313A;--hero-bottom:#0E1820;--hero-glow:rgba(94,212,198,.40);--hero-ink:#F2F4F7;--hero-ink-2:rgba(242,244,247,.72);--hero-stroke:rgba(255,255,255,.10);--hero-fill:rgba(255,255,255,.08);
+  --orb-core:#D1FAF2;--orb-edge:#5ED4C6;--orb-glow:rgba(94,212,198,.75);
+  --r-card:20px;--r-hero:28px;--r-control:14px;--r-chip:12px;--r-tile:10px;
+  --max:760px;--wide:1080px;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#0E1116;--surface:#171B22;--fill:#1E242D;--ink:#F2F4F7;--ink-2:#9AA3AF;--ink-3:#7C8594;
+  --line:rgba(255,255,255,.08);--accent:#5ED4C6;--accent-strong:#6EDED0;--accent-soft:rgba(94,212,198,.16);--on-accent:#0E1116;
+  --glow:rgba(94,212,198,.35);--card-shadow:none;--card-edge:rgba(255,255,255,.06);
+  --streak:#F3B562;--streak-soft:rgba(243,181,98,.18);--success:#7FC98F;--success-soft:rgba(127,201,143,.18);
+}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Text","Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:var(--accent);text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--accent) 40%,transparent);text-underline-offset:3px;overflow-wrap:anywhere}
+a:hover{text-decoration-color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;top:8px;left:8px;background:var(--surface);color:var(--ink);padding:8px 12px;z-index:20;border-radius:var(--r-chip);box-shadow:var(--card-shadow)}
+.skip:not(:focus){clip:rect(0 0 0 0);clip-path:inset(50%);width:1px;height:1px;overflow:hidden;white-space:nowrap;padding:0;margin:-1px}
+h1,h2,h3{margin:0;letter-spacing:-.02em;text-wrap:balance;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter","Segoe UI",Roboto,sans-serif}
+h1{font-weight:700;font-size:clamp(32px,4.6vw,48px);line-height:1.08}
+h2{font-weight:700;font-size:24px;line-height:1.25}
+h3{font-weight:600;font-size:18px;line-height:1.3}
+p{margin:0 0 1em}
+p:last-child{margin-bottom:0}
+ul,ol{margin:0;padding-left:1.3em}
+li{margin:.45em 0}
+li::marker{color:var(--accent)}
+strong{font-weight:600}
+.muted{color:var(--ink-2)}
+small,.small{font-size:14px;color:var(--ink-2)}
+code{font:.92em ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--fill);padding:.1em .4em;border-radius:6px}
+kbd{font:inherit;background:var(--fill);border-radius:8px;padding:.05em .5em;white-space:nowrap}
+
+/* top bar — the one glass surface, like the app's navigation layer */
+.topbar{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 82%,transparent);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line)}
+.topbar .in{max-width:var(--wide);margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.brand{display:inline-flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-weight:700;font-size:19px;letter-spacing:-.01em}
+.orb{width:22px;height:22px;border-radius:50%;flex:none;background:radial-gradient(circle at 38% 32%,var(--orb-core) 0,var(--orb-edge) 62%,color-mix(in srgb,var(--orb-edge) 70%,#0E1116) 100%);box-shadow:0 0 0 1px var(--hero-stroke),0 0 14px var(--orb-glow)}
+nav.pages{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+nav.pages a{text-decoration:none;color:var(--ink-2);font-size:15px;font-weight:500;padding:7px 12px;border-radius:999px}
+nav.pages a[aria-current="page"]{color:var(--accent);background:var(--accent-soft)}
+nav.pages a:hover{color:var(--ink)}
+@media (max-width:640px){nav.pages{margin-left:0;width:100%;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none;padding-bottom:2px}nav.pages::-webkit-scrollbar{display:none}nav.pages a{flex:none}}
+
+/* hero — the home screen's dark island, dark in both appearances */
+.hero-wrap{max-width:var(--wide);margin:24px auto 0;padding:0 20px}
+.hero{position:relative;overflow:hidden;border-radius:var(--r-hero);background:linear-gradient(180deg,var(--hero-top),var(--hero-bottom));color:var(--hero-ink);box-shadow:inset 0 0 0 1px var(--hero-stroke),0 24px 60px rgba(14,17,22,.18);padding:clamp(36px,6vw,64px) clamp(24px,5vw,56px)}
+.hero::before{content:"";position:absolute;inset:-40% auto auto -20%;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,var(--hero-glow) 0,transparent 62%);pointer-events:none}
+.hero>*{position:relative}
+.hero .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--hero-ink-2);margin-bottom:18px}
+.hero .eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--orb-edge);box-shadow:0 0 10px var(--orb-glow)}
+.hero h1{max-width:18ch}
+.hero .sub{margin:16px 0 0;max-width:56ch;font-size:clamp(17px,2vw,20px);color:var(--hero-ink-2)}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;align-items:center}
+.hero .ctas a,.hero .ctas span{color:var(--hero-ink)}
+.hero .ctas .btn.primary{background:#5ED4C6;color:#0E1116;box-shadow:0 8px 24px rgba(94,212,198,.30)}
+.hero .ctas .btn.quiet{background:var(--hero-fill);color:var(--hero-ink);box-shadow:inset 0 0 0 1px var(--hero-stroke)}
+.hero .meta{margin-top:22px;font-size:14px;color:var(--hero-ink-2)}
+.hero .meta a{color:var(--hero-ink);text-decoration-color:rgba(255,255,255,.4)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:16px;line-height:1;padding:14px 20px;border-radius:var(--r-control);text-decoration:none;white-space:nowrap}
+.btn.primary{background:var(--accent);color:var(--on-accent);box-shadow:0 8px 24px var(--glow)}
+.btn.quiet{background:var(--fill);color:var(--ink)}
+.btn svg{width:18px;height:18px;flex:none}
+.soon{display:inline-flex;align-items:center;gap:8px;font-size:15px;color:var(--hero-ink-2);padding:12px 4px}
+.soon svg{width:18px;height:18px;flex:none}
+
+/* content */
+main{max-width:var(--wide);margin:0 auto;padding:32px 20px 64px}
+.grid{display:grid;grid-template-columns:minmax(0,1fr);gap:20px}
+@media (min-width:900px){.grid.with-toc{grid-template-columns:240px minmax(0,1fr);align-items:start}}
+.toc{position:sticky;top:76px;padding:20px 22px;border-radius:var(--r-card);background:var(--surface);box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge)}
+.toc .lbl{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin-bottom:10px}
+.toc ol{list-style:none;padding:0;margin:0}
+.toc li{margin:0}
+.toc a{display:block;padding:6px 0;font-size:15px;color:var(--ink-2);text-decoration:none;border-bottom:1px solid var(--line)}
+.toc li:last-child a{border-bottom:0}
+.toc a:hover{color:var(--accent)}
+.stack{display:grid;gap:20px;max-width:var(--max)}
+.grid.with-toc .stack{max-width:none}
+.card{background:var(--surface);border-radius:var(--r-card);padding:clamp(22px,3.4vw,32px);box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge)}
+.card h2{margin-bottom:12px;scroll-margin-top:84px}
+.card h3{margin:20px 0 6px}
+.card h3:first-of-type{margin-top:0}
+.card p+h3{margin-top:18px}
+.lead{font-size:clamp(18px,2vw,21px);line-height:1.5;color:var(--ink)}
+.stamp{font-size:14px;color:var(--ink-2);margin:0 0 4px}
+.callout{display:flex;gap:14px;align-items:flex-start;padding:16px 18px;border-radius:var(--r-control);background:var(--accent-soft)}
+.callout .tile{flex:none;width:32px;height:32px;border-radius:var(--r-tile);display:grid;place-items:center;background:var(--accent);color:var(--on-accent)}
+.callout .tile svg{width:18px;height:18px}
+.callout.warm{background:var(--streak-soft)}.callout.warm .tile{background:var(--streak);color:#fff}
+.rows{list-style:none;padding:0;margin:0;display:grid;gap:2px}
+.rows li{display:grid;grid-template-columns:40px minmax(0,1fr);gap:14px;padding:12px 0;margin:0;border-bottom:1px solid var(--line);align-items:start}
+.rows li:last-child{border-bottom:0}
+.rows .tile{width:40px;height:40px;border-radius:var(--r-tile);display:grid;place-items:center;background:var(--accent-soft);color:var(--accent)}
+.rows .tile svg{width:20px;height:20px}
+.rows b{display:block;font-weight:600}
+.rows span{color:var(--ink-2);font-size:15.5px}
+.features{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.features .card{display:flex;flex-direction:column;gap:10px}
+.features .tile{width:44px;height:44px;border-radius:var(--r-chip);display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);margin-bottom:6px}
+.features .tile svg{width:22px;height:22px}
+.features .card h3{margin:0}
+.features .card p{color:var(--ink-2);font-size:16px}
+.tiers{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.tier{background:var(--surface);border-radius:var(--r-card);padding:24px;box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge);display:flex;flex-direction:column;gap:10px}
+.tier .lbl{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.tier .price{font-size:28px;font-weight:700;letter-spacing:-.02em}
+.tier .price small{font-size:15px;font-weight:500;color:var(--ink-2)}
+.tier ul{margin-top:4px;color:var(--ink-2);font-size:15.5px}
+.tier.premium{background:linear-gradient(180deg,var(--hero-top),var(--hero-bottom));color:var(--hero-ink);box-shadow:inset 0 0 0 1px var(--hero-stroke)}
+.tier.premium .lbl,.tier.premium ul{color:var(--hero-ink-2)}
+.tier.premium li::marker{color:#5ED4C6}
+.chip{display:inline-flex;align-items:center;gap:6px;background:var(--fill);color:var(--ink-2);border-radius:999px;padding:4px 10px;font-size:13.5px;font-weight:500}
+dl.faq{margin:0}
+dl.faq dt{font-weight:600;margin-top:18px}
+dl.faq dt:first-child{margin-top:0}
+dl.faq dd{margin:6px 0 0;color:var(--ink-2)}
+table{width:100%;border-collapse:collapse;font-size:15.5px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px 10px 0;border-bottom:1px solid var(--line)}
+th{font-weight:600;color:var(--ink-2);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+tr:last-child td{border-bottom:0}
+.table-wrap{overflow-x:auto}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.steps li{display:grid;grid-template-columns:32px minmax(0,1fr);gap:14px;margin:0;align-items:start}
+.steps li::before{counter-increment:s;content:counter(s);width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--on-accent);font-weight:700;font-size:14px}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:28px 20px 44px;color:var(--ink-2);font-size:14.5px}
+footer .in{max-width:var(--wide);margin:0 auto;display:flex;gap:10px 22px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+footer nav{display:flex;gap:6px 16px;flex-wrap:wrap}
+footer a{color:var(--ink-2)}
+footer a:hover{color:var(--accent)}
+</style>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="topbar"><div class="in">
+  <a class="brand" href="/pausely-links/"><span class="orb" aria-hidden="true"></span>Pausely</a>
+  <nav class="pages" aria-label="Pages"><a href="/pausely-links/">Support</a><a href="/pausely-links/about/">About</a><a href="/pausely-links/privacy/">Privacy</a><a href="/pausely-links/terms/" aria-current="page">Terms</a><a href="/pausely-links/delete-data/">Your data</a></nav>
+</div></header>
+<div class="hero-wrap"><section class="hero"><div class="eyebrow"><span class="dot" aria-hidden="true"></span>Terms of Use</div><h1>The agreement, in plain words.</h1><p class="sub">What Pausely does, what it does not promise, how Premium is billed, and what strict mode asks of you.</p><p class="meta">Effective 24 August 2026 · Pausely by TOPSOL</p></section></div>
+<main id="content"><div class="grid with-toc"><aside class="toc" aria-label="On this page"><div class="lbl">On this page</div><ol><li><a href="#acceptance">1. Acceptance</a></li><li><a href="#who">2. Who may use Pausely</a></li><li><a href="#what">3. What Pausely is — and is not</a></li><li><a href="#screentime">4. Screen Time, strict mode and your commitments</a></li><li><a href="#data">5. Your data and your device</a></li><li><a href="#subscriptions">6. Premium, subscriptions and billing</a></li><li><a href="#licence">7. Licence and intellectual property</a></li><li><a href="#use">8. Acceptable use</a></li><li><a href="#termination">9. Termination</a></li><li><a href="#warranty">10. Warranties and liability</a></li><li><a href="#apple">11. Apple</a></li><li><a href="#changes">12. Changes to these Terms</a></li><li><a href="#law">13. Governing law</a></li><li><a href="#contact">14. Contact</a></li></ol></aside><div class="stack"><p class="stamp">Last updated: 24 August 2026</p><section class="card" id="acceptance"><h2 id="acceptance-h">1. Acceptance of Terms</h2>
+<p>These Terms of Use ("Terms") are an agreement between you and TOPSOL ("we", "us"), the publisher of the Pausely app for iPhone ("Pausely" or "the app"). By installing or using Pausely you accept these Terms and our <a href="/pausely-links/privacy/">Privacy Policy</a>. If you do not agree, do not use the app.</p>
+</section><section class="card" id="who"><h2 id="who-h">2. Who may use Pausely</h2>
+<p>You must be at least 13 years old, or the age of digital consent where you live, to use Pausely. Pausely is a tool you install for yourself, on your own iPhone. It is not a parental-control product and must not be used to manage or monitor another person's device.</p>
+</section><section class="card" id="what"><h2 id="what-h">3. What Pausely is — and is not</h2>
+<p>Pausely is a self-directed tool that adds a pause before apps you choose, records the outcomes on your phone, and shows you your own progress. It is designed to make an automatic habit into a conscious choice.</p>
+<p>Pausely is <strong>not</strong> a medical, psychological or therapeutic service, and nothing in it — including mood check-ins, journal prompts and insights — is advice, diagnosis or treatment. If you are struggling with compulsive use, anxiety, depression or anything else that affects your wellbeing, please speak to a qualified professional. In an emergency, call your local emergency number.</p>
+<p>Pausely is also <strong>not a security or parental-control product</strong>. It is designed to be exactly as strong as you ask it to be: the app can be deleted, Screen Time access can be revoked in iOS Settings, and the shield exists only while the app is installed and authorised.</p>
+</section><section class="card" id="screentime"><h2 id="screentime-h">4. Screen Time, strict mode and your commitments</h2>
+<p>Pausely relies on Apple's Screen Time framework. Apple enforces the shield; Pausely asks for it. Whether a shield appears, how quickly, and whether it persists across restarts and iOS updates is ultimately determined by iOS, and we cannot guarantee it in every circumstance.</p>
+<p><strong>Strict mode</strong> is a commitment you make to yourself. While it runs, for the duration you chose, protection cannot be switched off, rules cannot be deleted and data cannot be reset — <em>including by you, and including by us</em>. We cannot end a strict-mode session early on request. Do not start one you are not prepared to keep, and do not start one on a phone you may need unrestricted access to. Deleting the app ends every shield, as described in section 3.</p>
+<p>A <strong>hard-block rule</strong> offers no way through during its hours. The same warning applies.</p>
+</section><section class="card" id="data"><h2 id="data-h">5. Your data and your device</h2>
+<p>Everything Pausely records is stored on your iPhone and nowhere else — see the <a href="/pausely-links/privacy/">Privacy Policy</a>. You are responsible for your device, its passcode and its backups. If you delete the app, reset all data, or lose the device without a backup, your rules, journal and history are gone, and we have no copy to restore. Your Premium purchase is separate: it belongs to your Apple ID and can be restored on any iPhone signed into it.</p>
+<p>What you write into Pausely is yours. We claim no rights over it and never receive it.</p>
+</section><section class="card" id="subscriptions"><h2 id="subscriptions-h">6. Premium, subscriptions and billing</h2>
+<p>Pausely is free to download and use. <strong>Pausely Premium</strong> unlocks additional features and is sold in three forms, at the price shown in the app and on the App Store for your country:</p>
+<ul>
+  <li><strong>Premium Monthly</strong> — an auto-renewing subscription, billed monthly.</li>
+  <li><strong>Premium Yearly</strong> — an auto-renewing subscription, billed yearly, beginning with a <strong>free trial</strong> where one is offered.</li>
+  <li><strong>Premium Lifetime</strong> — a one-time purchase that does not renew.</li>
+</ul>
+<p>Payment is charged to your Apple ID at confirmation of purchase. A free trial converts to a paid subscription unless you cancel at least 24 hours before the trial ends. Subscriptions renew automatically at the same price and period unless auto-renew is turned off at least 24 hours before the end of the current period; renewal is charged within the 24 hours before that period ends. You can manage or cancel a subscription in your <a href="https://apps.apple.com/account/subscriptions">App Store subscription settings</a>; cancellation takes effect at the end of the current period, and no partial refund is given for the unused part of a period. Refunds are handled by Apple under Apple's policies. Use <kbd>Restore Purchases</kbd> in the app to recover Premium on a new device.</p>
+<p><strong>If a subscription lapses</strong>, nothing you have already set up is removed: every rule keeps running and stays editable, and your chosen pause keeps working. Only the ability to add more Premium content closes. The set of Premium features may change over time; we will not remove a feature from an active subscription without notice.</p>
+</section><section class="card" id="licence"><h2 id="licence-h">7. Licence and intellectual property</h2>
+<p>We grant you a personal, non-exclusive, non-transferable, revocable licence to install and use Pausely on an iPhone you own or control, in accordance with these Terms and the App Store's usage rules. Pausely, its name, design, artwork, text and code are owned by TOPSOL and protected by copyright and other laws. You may not copy, modify, distribute, sell, lease, reverse-engineer or create derivative works from the app except where the law expressly allows it.</p>
+</section><section class="card" id="use"><h2 id="use-h">8. Acceptable use</h2>
+<p>You agree not to use Pausely in any way that is unlawful, that interferes with the app or Apple's services, that attempts to bypass the App Store's purchase mechanisms, or that installs it on a device you are not entitled to manage. You agree not to use it to restrict or monitor another person without their informed consent.</p>
+</section><section class="card" id="termination"><h2 id="termination-h">9. Termination</h2>
+<p>You may stop using Pausely at any time by deleting it. We may suspend or end your licence if you breach these Terms. Sections 5, 7, 10, 11 and 13 survive termination. Deleting the app does not cancel an active subscription — cancel it in your App Store settings.</p>
+</section><section class="card" id="warranty"><h2 id="warranty-h">10. Warranties and liability</h2>
+<p>Pausely is provided "as is" and "as available", without warranties of any kind, express or implied, including that it will block any app in every circumstance, that it will be uninterrupted or error-free, or that it will change your habits. To the fullest extent permitted by law, TOPSOL shall not be liable for any indirect, incidental, special, consequential or punitive damages, or for any loss of data, arising from your use of or inability to use the app — including any consequence of a shield that did or did not appear, or of a strict-mode session you chose to start. Where liability cannot be excluded, it is limited to the amount you paid us for Premium in the twelve months before the claim. Nothing in these Terms limits rights you have as a consumer that cannot be waived.</p>
+</section><section class="card" id="apple"><h2 id="apple-h">11. Apple</h2>
+<p>Pausely is distributed through the Apple App Store. These Terms are between you and TOPSOL, not Apple. Apple has no obligation to provide maintenance or support for the app, and is not responsible for addressing any claim relating to it, including product-liability, legal-compliance or intellectual-property claims. Apple and its subsidiaries are third-party beneficiaries of these Terms and may enforce them against you. Where these Terms are silent, Apple's <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Licensed Application End User License Agreement</a> applies. You represent that you are not in a country subject to a U.S. government embargo or listed as a prohibited party, and you must comply with any applicable third-party terms when using the app.</p>
+</section><section class="card" id="changes"><h2 id="changes-h">12. Changes to these Terms</h2>
+<p>We may update these Terms from time to time. The date at the top will change when we do, and material changes will be noted in the app's release notes. Continued use after an update means you accept the revised Terms.</p>
+</section><section class="card" id="law"><h2 id="law-h">13. Governing law</h2>
+<p>These Terms are governed by the laws of Pakistan, where TOPSOL operates, without regard to conflict-of-law provisions. Where the law of your country of residence gives you protections that cannot be contracted out of, those protections apply.</p>
+</section><section class="card" id="contact"><h2 id="contact-h">14. Contact</h2>
+<p>Questions about these Terms: <a href="mailto:topsol.org@gmail.com">topsol.org@gmail.com</a>.</p>
+</section></div></div></main>
+<footer><div class="in">
+  <div>© 2026 Pausely · TOPSOL · All rights reserved.</div>
+  <nav aria-label="Footer"><a href="/pausely-links/">Support</a> · <a href="/pausely-links/about/">About</a> · <a href="/pausely-links/privacy/">Privacy</a> · <a href="/pausely-links/terms/">Terms</a> · <a href="/pausely-links/delete-data/">Your data</a> · <a href="mailto:topsol.org@gmail.com">topsol.org@gmail.com</a></nav>
+</div></footer>
+</body>
+</html>
