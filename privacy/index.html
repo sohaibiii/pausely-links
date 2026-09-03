@@ -3,16 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Pausely collects nothing. No account, no analytics, no server. This policy explains what stays on your phone and why.">
+<meta name="description" content="What Pausely keeps on your device, the one optional feature that sends anything at all, and what it sends.">
 <meta name="robots" content="index,follow">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F4F6F9">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0E1116">
 <meta property="og:title" content="Privacy Policy — Pausely">
-<meta property="og:description" content="Pausely collects nothing. No account, no analytics, no server. This policy explains what stays on your phone and why.">
+<meta property="og:description" content="What Pausely keeps on your device, the one optional feature that sends anything at all, and what it sends.">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="en">
 <meta property="og:url" content="https://sohaibiii.github.io/pausely-links/privacy/">
 <link rel="canonical" href="https://sohaibiii.github.io/pausely-links/privacy/">
+<link rel="alternate" hreflang="en" href="https://sohaibiii.github.io/pausely-links/privacy/"><link rel="alternate" hreflang="de" href="https://sohaibiii.github.io/pausely-links/de/privacy/"><link rel="alternate" hreflang="es" href="https://sohaibiii.github.io/pausely-links/es/privacy/"><link rel="alternate" hreflang="fr" href="https://sohaibiii.github.io/pausely-links/fr/privacy/"><link rel="alternate" hreflang="ja" href="https://sohaibiii.github.io/pausely-links/ja/privacy/"><link rel="alternate" hreflang="ko" href="https://sohaibiii.github.io/pausely-links/ko/privacy/"><link rel="alternate" hreflang="pt-BR" href="https://sohaibiii.github.io/pausely-links/pt-BR/privacy/"><link rel="alternate" hreflang="zh-Hans" href="https://sohaibiii.github.io/pausely-links/zh-Hans/privacy/"><link rel="alternate" hreflang="x-default" href="https://sohaibiii.github.io/pausely-links/privacy/">
 <link rel="icon" href="/pausely-links/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/pausely-links/apple-touch-icon.png">
 <title>Privacy Policy — Pausely</title>
@@ -28,7 +30,7 @@
   --hero-top:#18313A;--hero-bottom:#0E1820;--hero-glow:rgba(94,212,198,.40);--hero-ink:#F2F4F7;--hero-ink-2:rgba(242,244,247,.72);--hero-stroke:rgba(255,255,255,.10);--hero-fill:rgba(255,255,255,.08);
   --orb-core:#D1FAF2;--orb-edge:#5ED4C6;--orb-glow:rgba(94,212,198,.75);
   --r-card:20px;--r-hero:28px;--r-control:14px;--r-chip:12px;--r-tile:10px;
-  --max:760px;--wide:1080px;
+  --max:760px;--wide:1080px;--anchor:96px;
 }
 @media (prefers-color-scheme:dark){:root{
   --bg:#0E1116;--surface:#171B22;--fill:#1E242D;--ink:#F2F4F7;--ink-2:#9AA3AF;--ink-3:#7C8594;
@@ -72,6 +74,17 @@ nav.pages a[aria-current="page"]{color:var(--accent);background:var(--accent-sof
 nav.pages a:hover{color:var(--ink)}
 @media (max-width:640px){nav.pages{margin-left:0;width:100%;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none;padding-bottom:2px}nav.pages::-webkit-scrollbar{display:none}nav.pages a{flex:none}}
 
+/* language tabs — the same page, in the reader's own language */
+.langrow{border-top:1px solid var(--line)}
+.langrow .in{max-width:var(--wide);margin:0 auto;padding:7px 20px;display:flex;align-items:center;gap:12px}
+.langrow .lbl{flex:none;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+nav.langs{display:flex;gap:2px;min-width:0;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+nav.langs::-webkit-scrollbar{display:none}
+nav.langs a{flex:none;text-decoration:none;color:var(--ink-2);font-size:14.5px;font-weight:500;padding:6px 11px;border-radius:999px;white-space:nowrap}
+nav.langs a:hover{color:var(--ink);background:var(--fill)}
+nav.langs a[aria-current="page"]{color:var(--accent);background:var(--accent-soft)}
+@media (max-width:640px){.langrow .lbl{display:none}.langrow .in{padding:6px 20px}}
+
 /* hero — the home screen's dark island, dark in both appearances */
 .hero-wrap{max-width:var(--wide);margin:24px auto 0;padding:0 20px}
 .hero{position:relative;overflow:hidden;border-radius:var(--r-hero);background:linear-gradient(180deg,var(--hero-top),var(--hero-bottom));color:var(--hero-ink);box-shadow:inset 0 0 0 1px var(--hero-stroke),0 24px 60px rgba(14,17,22,.18);padding:clamp(36px,6vw,64px) clamp(24px,5vw,56px)}
@@ -100,7 +113,7 @@ nav.pages a:hover{color:var(--ink)}
 main{max-width:var(--wide);margin:0 auto;padding:32px 20px 64px}
 .grid{display:grid;grid-template-columns:minmax(0,1fr);gap:20px}
 @media (min-width:900px){.grid.with-toc{grid-template-columns:240px minmax(0,1fr);align-items:start}}
-.toc{position:sticky;top:76px;padding:20px 22px;border-radius:var(--r-card);background:var(--surface);box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge)}
+.toc{position:sticky;top:var(--anchor);padding:20px 22px;border-radius:var(--r-card);background:var(--surface);box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge)}
 .toc .lbl{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin-bottom:10px}
 .toc ol{list-style:none;padding:0;margin:0}
 .toc li{margin:0}
@@ -110,10 +123,11 @@ main{max-width:var(--wide);margin:0 auto;padding:32px 20px 64px}
 .stack{display:grid;gap:20px;max-width:var(--max)}
 .grid.with-toc .stack{max-width:none}
 .card{background:var(--surface);border-radius:var(--r-card);padding:clamp(22px,3.4vw,32px);box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge)}
-.card h2{margin-bottom:12px;scroll-margin-top:84px}
+.card h2{margin-bottom:12px;scroll-margin-top:calc(var(--anchor) + 8px)}
 .card h3{margin:20px 0 6px}
 .card h3:first-of-type{margin-top:0}
 .card p+h3{margin-top:18px}
+@media (max-width:640px){:root{--anchor:132px}}
 .lead{font-size:clamp(18px,2vw,21px);line-height:1.5;color:var(--ink)}
 .stamp{font-size:14px;color:var(--ink-2);margin:0 0 4px}
 .callout{display:flex;gap:14px;align-items:flex-start;padding:16px 18px;border-radius:var(--r-control);background:var(--accent-soft)}
@@ -166,68 +180,94 @@ footer a:hover{color:var(--accent)}
 </head>
 <body>
 <a class="skip" href="#content">Skip to content</a>
-<header class="topbar"><div class="in">
-  <a class="brand" href="/pausely-links/"><span class="orb" aria-hidden="true"></span>Pausely</a>
-  <nav class="pages" aria-label="Pages"><a href="/pausely-links/">Support</a><a href="/pausely-links/about/">About</a><a href="/pausely-links/privacy/" aria-current="page">Privacy</a><a href="/pausely-links/terms/">Terms</a><a href="/pausely-links/delete-data/">Your data</a></nav>
-</div></header>
-<div class="hero-wrap"><section class="hero"><div class="eyebrow"><span class="dot" aria-hidden="true"></span>Privacy Policy</div><h1>Nothing leaves your phone.</h1><p class="sub">Pausely has no account, no analytics and no server. Which apps you use, how often, what you write — all of it stays on your iPhone, and this page explains why that is not a slogan.</p><p class="meta">Effective 24 August 2026 · applies to the Pausely app for iPhone and to this site</p></section></div>
-<main id="content"><div class="grid with-toc"><aside class="toc" aria-label="On this page"><div class="lbl">On this page</div><ol><li><a href="#summary">The short version</a></li><li><a href="#collect">What we collect</a></li><li><a href="#device">What stays on your phone</a></li><li><a href="#screentime">Screen Time and your app selection</a></li><li><a href="#purchases">Purchases</a></li><li><a href="#notifications">Notifications, widgets and the Lock Screen</a></li><li><a href="#third">Third parties</a></li><li><a href="#delete">Deleting your data</a></li><li><a href="#rights">Your rights</a></li><li><a href="#children">Children</a></li><li><a href="#future">Changes we already know about</a></li><li><a href="#changes">Changes to this policy</a></li><li><a href="#contact">Contact</a></li></ol></aside><div class="stack"><p class="stamp">Last updated: 24 August 2026</p><section class="card" id="summary"><h2 id="summary-h">The short version</h2>
-<p class="lead"><strong>Pausely collects nothing.</strong> It has no account, no analytics, no advertising, no third-party SDKs and no server. It makes no network calls of its own. Everything it knows is written to your iPhone and stays there.</p>
-<div class="callout"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3l18 18M10.6 10.6a2 2 0 0 0 2.8 2.8M9.9 5.1A10 10 0 0 1 12 5c5 0 8.5 4 9.5 7-.4 1.1-1.1 2.3-2 3.3M6.6 6.6C4.6 8 3.3 10 2.5 12c1 3 4.5 7 9.5 7 1.6 0 3-.4 4.3-1"/></svg></span><div>Pausely does not even know which apps you chose to pause. Apple's Screen Time gives it opaque tokens that only your phone can interpret. There is no app name, no identifier, and nothing to send.</div></div>
-<p style="margin-top:16px">This policy applies to the Pausely app for iPhone, published by TOPSOL, and to this website. It is written to be read, and it says the same thing as the privacy label on Pausely's App Store page: <strong>Data Not Collected.</strong></p>
-</section><section class="card" id="collect"><h2 id="collect-h">What we collect</h2>
-<p>Nothing. In Apple's terms, "collecting" means transmitting data off the device and storing it somewhere that is not transient. Pausely has no channel through which that could happen.</p>
+<header class="topbar">
+  <div class="in">
+    <a class="brand" href="/pausely-links/"><span class="orb" aria-hidden="true"></span>Pausely</a>
+    <nav class="pages" aria-label="Pages"><a href="/pausely-links/">Support</a><a href="/pausely-links/about/">About</a><a href="/pausely-links/privacy/" aria-current="page">Privacy</a><a href="/pausely-links/terms/">Terms</a><a href="/pausely-links/delete-data/">Your data</a></nav>
+  </div>
+  <div class="langrow"><div class="in">
+    <span class="lbl">Language</span>
+    <nav class="langs" aria-label="Language"><a href="/pausely-links/privacy/" lang="en" hreflang="en" aria-current="page">English</a><a href="/pausely-links/de/privacy/" lang="de" hreflang="de">Deutsch</a><a href="/pausely-links/es/privacy/" lang="es" hreflang="es">Español</a><a href="/pausely-links/fr/privacy/" lang="fr" hreflang="fr">Français</a><a href="/pausely-links/ja/privacy/" lang="ja" hreflang="ja">日本語</a><a href="/pausely-links/ko/privacy/" lang="ko" hreflang="ko">한국어</a><a href="/pausely-links/pt-BR/privacy/" lang="pt-BR" hreflang="pt-BR">Português (Brasil)</a><a href="/pausely-links/zh-Hans/privacy/" lang="zh-Hans" hreflang="zh-Hans">简体中文</a></nav>
+  </div></div>
+</header>
+<div class="hero-wrap"><section class="hero"><div class="eyebrow"><span class="dot" aria-hidden="true"></span>Privacy Policy</div><h1>Your phone keeps what it knows.</h1><p class="sub">Pausely has no account and no analytics. Everything it records stays on your device — with one optional feature, switched off until you ask for it, that sends the words you type into a single screen. This page is about exactly where that line is.</p><p class="meta">Effective 3 September 2026 · applies to the Pausely app for iPhone and iPad, and to this site</p></section></div>
+<main id="content"><div class="grid with-toc"><aside class="toc" aria-label="On this page"><div class="lbl">On this page</div><ol><li><a href="#summary">The short version</a></li><li><a href="#collect">What we collect</a></li><li><a href="#device">What stays on your device</a></li><li><a href="#screentime">Screen Time and your app selection</a></li><li><a href="#ai">The AI reflection — the one thing that leaves</a></li><li><a href="#purchases">Purchases</a></li><li><a href="#notifications">Notifications, widgets and the Lock Screen</a></li><li><a href="#third">Third parties</a></li><li><a href="#delete">Deleting your data</a></li><li><a href="#rights">Your rights</a></li><li><a href="#children">Children</a></li><li><a href="#changes">Changes to this policy</a></li><li><a href="#contact">Contact</a></li></ol></aside><div class="stack"><p class="stamp">Last updated: 3 September 2026</p><section class="card" id="summary"><h2>The short version</h2>
+<p class="lead">Pausely has no account, no analytics, no advertising and no third-party code of any kind. <strong>With the AI reflection switched off — which is how every install starts — it makes no network calls at all</strong>, and everything it knows is written to your device and stays there.</p>
+<p><strong>Switching the AI reflection on is the one thing that changes that</strong>, and it changes only one thing: the words you type into that one pause leave your device, together with four small facts about the moment. Your journal never leaves. Your check-ins never leave. Which apps you chose never leaves — Pausely cannot read that even on your own device.</p>
+<div class="callout"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3l18 18M10.6 10.6a2 2 0 0 0 2.8 2.8M9.9 5.1A10 10 0 0 1 12 5c5 0 8.5 4 9.5 7-.4 1.1-1.1 2.3-2 3.3M6.6 6.6C4.6 8 3.3 10 2.5 12c1 3 4.5 7 9.5 7 1.6 0 3-.4 4.3-1"/></svg></span><div>Pausely does not know which apps you chose to pause. Apple's Screen Time gives it opaque tokens that only your device can interpret. There is no app name, no identifier, and nothing to send.</div></div>
+<p style="margin-top:16px">This policy applies to the Pausely app for iPhone and iPad, published by TOPSOL, and to this website. It says the same thing as the privacy label on Pausely's App Store page: <strong>User content, not linked to your identity, used only to make the app work — and no tracking.</strong> That single label exists because of the AI reflection; every other category is <em>Data Not Collected</em>.</p>
+</section><section class="card" id="collect"><h2>What we collect</h2>
+<p>"Collect", in Apple's sense and in ours, means transmitting data off the device and keeping it somewhere that is not transient. By that measure Pausely collects one thing, in one case, and only if you asked for it.</p>
 <div class="table-wrap"><table>
-<tr><th>Category</th><th>Collected?</th><th>Why not</th></tr>
+<tr><th>Category</th><th>Collected?</th><th>What that means</th></tr>
 <tr><td>Contact info</td><td>No</td><td>There is no account, no sign-in and no email field anywhere in the app.</td></tr>
 <tr><td>Identifiers</td><td>No</td><td>No user ID, no device ID, no advertising identifier. Pausely never asks for App Tracking Transparency because it has nothing to ask about.</td></tr>
-<tr><td>Usage data</td><td>No</td><td>No analytics SDK and no product-interaction events. Nothing is counted anywhere except on your phone, for your own progress screen.</td></tr>
-<tr><td>User content</td><td>No</td><td>Your journal, your check-ins, the sentence you type on the pause screen and your custom alternatives are stored on the device and nowhere else.</td></tr>
+<tr><td>Usage data</td><td>No</td><td>No analytics SDK and no product-interaction events. Nothing is counted anywhere except on your device, for your own progress screen.</td></tr>
+<tr><td>User content</td><td><strong>Only the AI reflection</strong></td><td>Your journal, your check-ins and your custom alternatives are stored on the device and nowhere else. If — and only if — you switch the AI reflection on, the words you type into <em>that one screen</em> are sent, so that a question can come back. Nothing else you write is ever sent.</td></tr>
 <tr><td>Purchases</td><td>No</td><td>Payment is Apple's, in the App Store sheet. Pausely never sees a card and sends nothing about the purchase anywhere.</td></tr>
 <tr><td>Location, health, contacts, browsing, search, diagnostics</td><td>No</td><td>Pausely does not link the frameworks that would read them and has no crash or performance reporter of its own.</td></tr>
 </table></div>
-<p style="margin-top:14px"><strong>Tracking:</strong> none. Pausely does not link anything about you with data from other companies' apps or websites, and shares nothing with data brokers or advertisers.</p>
-</section><section class="card" id="device"><h2 id="device-h">What stays on your phone</h2>
-<p>Pausely stores the following in its own private storage on your iPhone, protected by your device's passcode and encryption. None of it is uploaded, backed up by us, or visible to us.</p>
+<p style="margin-top:14px"><strong>Tracking:</strong> none. Pausely does not link anything about you with data from other companies' apps or websites, and shares nothing with data brokers or advertisers. There is no advertising in the app and no SDK that could carry any.</p>
+</section><section class="card" id="device"><h2>What stays on your device</h2>
+<p>Pausely stores the following in its own private storage on your iPhone or iPad, protected by your device's passcode and encryption. None of it is uploaded, backed up by us, or visible to us.</p>
 <ul>
   <li><strong>Your app selection</strong> — as opaque Screen Time tokens Pausely cannot read (see below).</li>
   <li><strong>Your rules and schedules</strong> — the names you give them, their hours and their pause.</li>
   <li><strong>Pause outcomes</strong> — that a pause was shown, when, and whether you walked away, went in, or chose an alternative. This is what the progress screen, the streak and the chart are made of.</li>
   <li><strong>What you write</strong> — journal entries, the words you type on the pause screen, mood check-ins after a session, and the names of custom alternatives.</li>
-  <li><strong>Settings</strong> — your chosen pause, strict-mode state, alternatives, and preferences.</li>
+  <li><strong>Settings</strong> — your chosen pause, strict-mode state, alternatives, your language, and preferences.</li>
   <li><strong>Your Premium entitlement</strong> — a tier and an expiry date, so the app knows what to unlock.</li>
 </ul>
 <p>If you use iCloud Backup or an encrypted local backup, Apple may include Pausely's data in that backup under your own Apple ID and Apple's privacy terms. We have no access to it.</p>
-</section><section class="card" id="screentime"><h2 id="screentime-h">Screen Time and your app selection</h2>
+</section><section class="card" id="screentime"><h2>Screen Time and your app selection</h2>
 <p>Pausely is built on Apple's Screen Time framework (Family Controls, Managed Settings and Device Activity). You grant it access once, through Apple's own prompt, and can revoke it at any time in <kbd>Settings</kbd> → <kbd>Screen Time</kbd>.</p>
-<p>When you pick apps, Apple's picker returns <strong>tokens</strong>: values that identify the app to iOS but mean nothing to Pausely and nothing outside your phone. Pausely stores those tokens so it can ask iOS to shield the apps you chose. It never receives a bundle identifier or an app name, and it could not report one if it wanted to. Where it needs to compare tokens between its own components it compares one-way hashes of them, never the tokens themselves.</p>
+<p>When you pick apps, Apple's picker returns <strong>tokens</strong>: values that identify the app to iOS but mean nothing to Pausely and nothing outside your device. Pausely stores those tokens so it can ask iOS to shield the apps you chose. It never receives a bundle identifier or an app name, and it could not report one if it wanted to. Where it needs to compare tokens between its own components it compares one-way hashes of them, never the tokens themselves.</p>
 <p>Pausely does not observe your browsing, your messages, or what you do inside any app. iOS itself draws the block screen and enforces the shield. Pausely learns only that its own pause was shown and what you chose on it.</p>
-</section><section class="card" id="purchases"><h2 id="purchases-h">Purchases</h2>
+</section><section class="card" id="ai"><h2>The AI reflection — the one thing that leaves</h2>
+<p class="lead">This is an optional Premium feature. <strong>It is off when you install Pausely and stays off until you switch it on</strong>, and switching it off again returns the app to making no network calls at all.</p>
+<p>With it on, one pause becomes a short exchange: you type why you are opening the app, and a question comes back rather than a lecture. Once a week it also writes a short note about how your week went.</p>
+<h3>What is sent</h3>
+<ul>
+  <li>The <strong>display name of the app you are opening</strong> — the name already on your screen at that moment.</li>
+  <li><strong>Three numbers</strong>: how many times you have opened it today, the time on the clock, and how long your streak is.</li>
+  <li><strong>The words you type into that screen</strong>, in that moment.</li>
+</ul>
+<p>The weekly note sends less: counts for the week and nothing else. No app names appear in it at all.</p>
+<h3>What is never sent</h3>
+<ul>
+  <li><strong>Your journal.</strong> It is the one place you write for nobody, and it never leaves the device.</li>
+  <li><strong>Your check-ins</strong>, moods, or any note attached to them.</li>
+  <li><strong>Your app selection</strong> — which apps you protect, or how many — and never a Screen Time token, a token hash or a bundle identifier.</li>
+  <li><strong>Your rules, schedules or strict-mode state.</strong></li>
+  <li><strong>Anything that identifies you.</strong> There is no account, no user ID and no advertising identifier to send. The request carries an Apple App Attest assertion, which tells our server that it is talking to a genuine copy of Pausely — it is scoped to the app, not to you, and does not follow you between requests.</li>
+</ul>
+<h3>Where it goes, and how long it is kept</h3>
+<p>Your words go to <strong>Pausely's own server</strong>, and on to <strong>Google</strong>, which runs the model. Pausely never calls a model vendor's API from your device, and there is no API key inside the app to be extracted.</p>
+<p><strong>Pausely's server stores nothing per request</strong> — no prompt, no reply, no context. Its logs record the shape of a request (a timestamp, how long it took, whether it succeeded) and never its contents. <strong>Google keeps inputs and outputs for up to 24 hours</strong> to reduce latency, and may examine prompts to check for abuse, under its standard Cloud terms. <strong>Google does not use any of it to train its models.</strong></p>
+<p><kbd>Settings</kbd> → <kbd>AI reflection</kbd> → <kbd>What is sent</kbd> lists every field in the app itself, in the same words as this page.</p>
+</section><section class="card" id="purchases"><h2>Purchases</h2>
 <p>Premium is sold through Apple's App Store using StoreKit. The transaction is between you and Apple, under <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>. Apple tells Pausely whether a purchase is active — nothing else — and Pausely tells Apple nothing about how you use the app. No usage data, no journal, no app selection and no identifier of ours travels with a purchase.</p>
-</section><section class="card" id="notifications"><h2 id="notifications-h">Notifications, widgets and the Lock Screen</h2>
-<p><strong>Notifications</strong> are optional and are generated on your phone. Pausely uses them to hand you from the block screen into the pause, and to ask afterwards how a session left you feeling. No notification is sent from a server, because there is no server.</p>
-<p><strong>Widgets and the Live Activity</strong> show counts and dates — today's wins, your streak, time reclaimed, and how long an access window has left. They deliberately do not have Screen Time access and never see which apps you blocked. A Lock Screen countdown names the <em>rule</em> you wrote ("Bedtime"), never the app, because a Lock Screen is readable by anyone holding the phone.</p>
-</section><section class="card" id="third"><h2 id="third-h">Third parties</h2>
-<p>None. Pausely contains no third-party code, no analytics, no advertising and no crash reporter. The only other party involved is <strong>Apple</strong>: it operates the App Store, processes purchases, enforces the Screen Time shield, and — if you have opted in to sharing with developers — may share crash logs with us under its own policy. We do not sell, rent or share personal data with anyone, because we hold none.</p>
-</section><section class="card" id="delete"><h2 id="delete-h">Deleting your data</h2>
+</section><section class="card" id="notifications"><h2>Notifications, widgets and the Lock Screen</h2>
+<p><strong>Notifications</strong> are optional and are generated on your device. Pausely uses them to hand you from the block screen into the pause, and to ask afterwards how a session left you feeling. No notification is sent from a server — there is no push server, no tips, no streak nudges and no marketing.</p>
+<p><strong>Widgets and the Live Activity</strong> show counts and dates — today's wins, your streak, time reclaimed, and how long an access window has left. They deliberately do not have Screen Time access and never see which apps you blocked. A Lock Screen countdown names the <em>rule</em> you wrote ("Bedtime"), never the app, because a Lock Screen is readable by anyone holding the device.</p>
+</section><section class="card" id="third"><h2>Third parties</h2>
+<p>Pausely contains <strong>no third-party code</strong>: no analytics, no advertising, no crash reporter, no SDKs. Two other parties are involved, and only these two:</p>
+<ul>
+  <li><strong>Apple</strong> operates the App Store, processes purchases, enforces the Screen Time shield, and — if you have opted in to sharing with developers — may share crash logs with us under its own policy.</li>
+  <li><strong>Google</strong> runs the model behind the AI reflection, and only for as long as you have that feature switched on. It receives what is listed above and nothing else, and it does not use it to train its models.</li>
+</ul>
+<p>We do not sell or rent personal data to anyone, and we share nothing with data brokers or advertisers.</p>
+</section><section class="card" id="delete"><h2>Deleting your data</h2>
 <p>Everything Pausely holds is erasable from inside the app, without asking us:</p>
 <div class="callout"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg></span><div><kbd>Settings</kbd> → <kbd>Your data</kbd> → <kbd>Reset all data</kbd><br><span class="small">Empties every pause, win, rule, journal entry and check-in, takes the shields down, withdraws the schedules and starts you at the beginning. It refuses while strict mode is running — the one commitment you asked the app to hold you to — and it does not touch your subscription, which belongs to your Apple ID.</span></div></div>
-<p style="margin-top:16px">Deleting the app removes all of its data from the phone as well. There is nothing on our side to delete, and so nothing to request — but you are welcome to write to us anyway. See the <a href="/pausely-links/delete-data/">Your data</a> page.</p>
-</section><section class="card" id="rights"><h2 id="rights-h">Your rights</h2>
-<p>Wherever you live — including under the GDPR, the UK GDPR and the CCPA/CPRA — you have rights to access, correct, export, restrict and erase personal data a company holds about you, and to complain to a supervisory authority. Because Pausely holds no personal data about you, there is nothing for us to produce or delete; the data on your phone is already in your hands, and the app's own controls exercise every one of those rights for you. If you believe otherwise, write to <a href="mailto:topsol.org@gmail.com">topsol.org@gmail.com</a> and we will respond.</p>
-</section><section class="card" id="children"><h2 id="children-h">Children</h2>
-<p>Pausely is a self-directed tool for the person using the phone. It is not a parental-control product and does not manage another person's device. It is not directed at children under 13 (or the age of digital consent where you live), and we do not knowingly collect personal information from anyone — of any age.</p>
-</section><section class="card" id="future"><h2 id="future-h">Changes we already know about</h2>
-<p>We are designing one optional feature that would change the sentence at the top of this page: an <strong>AI reflection</strong> that turns the "why are you opening it?" question into a short conversation. It is <strong>not in the app today</strong>. When it ships:</p>
-<ul>
-  <li>It will be <strong>off until you switch it on</strong>, and switching it off returns the app to making no network calls at all.</li>
-  <li>It will send only the display name of the app you are opening, three numbers (how many times today, the time on the clock, your streak) and the words you type into that one screen — to Pausely's own service, never a model vendor's API from the app.</li>
-  <li>It will never send your journal, your check-ins, your app selection or any identifier, and nothing sent will be linked to you.</li>
-</ul>
-<p>This policy will be updated on the day that feature ships, before it is switched on for anyone.</p>
-</section><section class="card" id="changes"><h2 id="changes-h">Changes to this policy</h2>
-<p>We may update this policy as the app changes. The date at the top moves when we do, and material changes will be noted in the app's release notes. Continued use of Pausely after a change means you accept the revised policy.</p>
-</section><section class="card" id="contact"><h2 id="contact-h">Contact</h2>
+<p style="margin-top:16px">Deleting the app removes all of its data from the device as well. On our side there is nothing to delete: the server keeps no record of a request once it has answered it. You are welcome to write to us anyway — see the <a href="/pausely-links/delete-data/">Your data</a> page.</p>
+</section><section class="card" id="rights"><h2>Your rights</h2>
+<p>Wherever you live — including under the GDPR, the UK GDPR and the CCPA/CPRA — you have rights to access, correct, export, restrict and erase personal data a company holds about you, and to complain to a supervisory authority. Pausely holds no profile of you and keeps nothing after a reflection is answered, so there is nothing on our side to produce or delete; the data on your device is already in your hands, and the app's own controls exercise every one of those rights for you. If you believe otherwise, write to <a href="mailto:topsol.org@gmail.com">topsol.org@gmail.com</a> and we will respond.</p>
+</section><section class="card" id="children"><h2>Children</h2>
+<p>Pausely is a self-directed tool for the person using the device. It is not a parental-control product and does not manage another person's device. It is not directed at children under 13 (or the age of digital consent where you live), and we do not knowingly collect personal information from anyone — of any age.</p>
+</section><section class="card" id="changes"><h2>Changes to this policy</h2>
+<p>We may update this policy as the app changes. The date at the top moves when we do, and material changes will be noted in the app's release notes. The last substantive change was the arrival of the AI reflection, which added the one case in which anything leaves your device. Continued use of Pausely after a change means you accept the revised policy.</p>
+</section><section class="card" id="contact"><h2>Contact</h2>
 <p>TOPSOL, the publisher of Pausely, is the controller for anything covered here. Questions about privacy: <a href="mailto:topsol.org@gmail.com">topsol.org@gmail.com</a>.</p>
 </section></div></div></main>
 <footer><div class="in">

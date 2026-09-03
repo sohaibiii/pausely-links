@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="L’aide officielle de Pausely, l’app qui place une pause devant les apps que vous avez choisies. Comment ça marche, prérequis, FAQ et contact.">
+<meta name="robots" content="index,follow">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F4F6F9">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0E1116">
+<meta property="og:title" content="Pausely — Aide">
+<meta property="og:description" content="L’aide officielle de Pausely, l’app qui place une pause devant les apps que vous avez choisies. Comment ça marche, prérequis, FAQ et contact.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr">
+<meta property="og:url" content="https://sohaibiii.github.io/pausely-links/fr/">
+<link rel="canonical" href="https://sohaibiii.github.io/pausely-links/fr/">
+<link rel="alternate" hreflang="en" href="https://sohaibiii.github.io/pausely-links/"><link rel="alternate" hreflang="de" href="https://sohaibiii.github.io/pausely-links/de/"><link rel="alternate" hreflang="es" href="https://sohaibiii.github.io/pausely-links/es/"><link rel="alternate" hreflang="fr" href="https://sohaibiii.github.io/pausely-links/fr/"><link rel="alternate" hreflang="ja" href="https://sohaibiii.github.io/pausely-links/ja/"><link rel="alternate" hreflang="ko" href="https://sohaibiii.github.io/pausely-links/ko/"><link rel="alternate" hreflang="pt-BR" href="https://sohaibiii.github.io/pausely-links/pt-BR/"><link rel="alternate" hreflang="zh-Hans" href="https://sohaibiii.github.io/pausely-links/zh-Hans/"><link rel="alternate" hreflang="x-default" href="https://sohaibiii.github.io/pausely-links/">
+<link rel="icon" href="/pausely-links/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/pausely-links/apple-touch-icon.png">
+<title>Pausely — Aide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg:#F4F6F9;--surface:#FFFFFF;--fill:#EAEEF3;--ink:#0E1116;--ink-2:#5B6573;--ink-3:#5F6875;
+  --line:rgba(0,0,0,.06);--accent:#0B7065;--accent-strong:#127A6F;--accent-soft:rgba(11,112,101,.12);--on-accent:#FFFFFF;
+  --glow:transparent;--card-shadow:0 10px 30px rgba(24,33,52,.08);--card-edge:transparent;
+  --streak:#A3640F;--streak-soft:rgba(163,100,15,.14);--success:#23744A;--success-soft:rgba(35,116,74,.14);
+  --hero-top:#18313A;--hero-bottom:#0E1820;--hero-glow:rgba(94,212,198,.40);--hero-ink:#F2F4F7;--hero-ink-2:rgba(242,244,247,.72);--hero-stroke:rgba(255,255,255,.10);--hero-fill:rgba(255,255,255,.08);
+  --orb-core:#D1FAF2;--orb-edge:#5ED4C6;--orb-glow:rgba(94,212,198,.75);
+  --r-card:20px;--r-hero:28px;--r-control:14px;--r-chip:12px;--r-tile:10px;
+  --max:760px;--wide:1080px;--anchor:96px;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#0E1116;--surface:#171B22;--fill:#1E242D;--ink:#F2F4F7;--ink-2:#9AA3AF;--ink-3:#7C8594;
+  --line:rgba(255,255,255,.08);--accent:#5ED4C6;--accent-strong:#6EDED0;--accent-soft:rgba(94,212,198,.16);--on-accent:#0E1116;
+  --glow:rgba(94,212,198,.35);--card-shadow:none;--card-edge:rgba(255,255,255,.06);
+  --streak:#F3B562;--streak-soft:rgba(243,181,98,.18);--success:#7FC98F;--success-soft:rgba(127,201,143,.18);
+}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Text","Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:var(--accent);text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--accent) 40%,transparent);text-underline-offset:3px;overflow-wrap:anywhere}
+a:hover{text-decoration-color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;top:8px;left:8px;background:var(--surface);color:var(--ink);padding:8px 12px;z-index:20;border-radius:var(--r-chip);box-shadow:var(--card-shadow)}
+.skip:not(:focus){clip:rect(0 0 0 0);clip-path:inset(50%);width:1px;height:1px;overflow:hidden;white-space:nowrap;padding:0;margin:-1px}
+h1,h2,h3{margin:0;letter-spacing:-.02em;text-wrap:balance;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter","Segoe UI",Roboto,sans-serif}
+h1{font-weight:700;font-size:clamp(32px,4.6vw,48px);line-height:1.08}
+h2{font-weight:700;font-size:24px;line-height:1.25}
+h3{font-weight:600;font-size:18px;line-height:1.3}
+p{margin:0 0 1em}
+p:last-child{margin-bottom:0}
+ul,ol{margin:0;padding-left:1.3em}
+li{margin:.45em 0}
+li::marker{color:var(--accent)}
+strong{font-weight:600}
+.muted{color:var(--ink-2)}
+small,.small{font-size:14px;color:var(--ink-2)}
+code{font:.92em ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--fill);padding:.1em .4em;border-radius:6px}
+kbd{font:inherit;background:var(--fill);border-radius:8px;padding:.05em .5em;white-space:nowrap}
+
+/* top bar — the one glass surface, like the app's navigation layer */
+.topbar{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 82%,transparent);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line)}
+.topbar .in{max-width:var(--wide);margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.brand{display:inline-flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-weight:700;font-size:19px;letter-spacing:-.01em}
+.orb{width:22px;height:22px;border-radius:50%;flex:none;background:radial-gradient(circle at 38% 32%,var(--orb-core) 0,var(--orb-edge) 62%,color-mix(in srgb,var(--orb-edge) 70%,#0E1116) 100%);box-shadow:0 0 0 1px var(--hero-stroke),0 0 14px var(--orb-glow)}
+nav.pages{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+nav.pages a{text-decoration:none;color:var(--ink-2);font-size:15px;font-weight:500;padding:7px 12px;border-radius:999px}
+nav.pages a[aria-current="page"]{color:var(--accent);background:var(--accent-soft)}
+nav.pages a:hover{color:var(--ink)}
+@media (max-width:640px){nav.pages{margin-left:0;width:100%;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none;padding-bottom:2px}nav.pages::-webkit-scrollbar{display:none}nav.pages a{flex:none}}
+
+/* language tabs — the same page, in the reader's own language */
+.langrow{border-top:1px solid var(--line)}
+.langrow .in{max-width:var(--wide);margin:0 auto;padding:7px 20px;display:flex;align-items:center;gap:12px}
+.langrow .lbl{flex:none;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+nav.langs{display:flex;gap:2px;min-width:0;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+nav.langs::-webkit-scrollbar{display:none}
+nav.langs a{flex:none;text-decoration:none;color:var(--ink-2);font-size:14.5px;font-weight:500;padding:6px 11px;border-radius:999px;white-space:nowrap}
+nav.langs a:hover{color:var(--ink);background:var(--fill)}
+nav.langs a[aria-current="page"]{color:var(--accent);background:var(--accent-soft)}
+@media (max-width:640px){.langrow .lbl{display:none}.langrow .in{padding:6px 20px}}
+
+/* hero — the home screen's dark island, dark in both appearances */
+.hero-wrap{max-width:var(--wide);margin:24px auto 0;padding:0 20px}
+.hero{position:relative;overflow:hidden;border-radius:var(--r-hero);background:linear-gradient(180deg,var(--hero-top),var(--hero-bottom));color:var(--hero-ink);box-shadow:inset 0 0 0 1px var(--hero-stroke),0 24px 60px rgba(14,17,22,.18);padding:clamp(36px,6vw,64px) clamp(24px,5vw,56px)}
+.hero::before{content:"";position:absolute;inset:-40% auto auto -20%;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,var(--hero-glow) 0,transparent 62%);pointer-events:none}
+.hero>*{position:relative}
+.hero .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--hero-ink-2);margin-bottom:18px}
+.hero .eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--orb-edge);box-shadow:0 0 10px var(--orb-glow)}
+.hero h1{max-width:18ch}
+.hero .sub{margin:16px 0 0;max-width:56ch;font-size:clamp(17px,2vw,20px);color:var(--hero-ink-2)}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;align-items:center}
+.hero .ctas a,.hero .ctas span{color:var(--hero-ink)}
+.hero .ctas .btn.primary{background:#5ED4C6;color:#0E1116;box-shadow:0 8px 24px rgba(94,212,198,.30)}
+.hero .ctas .btn.quiet{background:var(--hero-fill);color:var(--hero-ink);box-shadow:inset 0 0 0 1px var(--hero-stroke)}
+.hero .meta{margin-top:22px;font-size:14px;color:var(--hero-ink-2)}
+.hero .meta a{color:var(--hero-ink);text-decoration-color:rgba(255,255,255,.4)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:16px;line-height:1;padding:14px 20px;border-radius:var(--r-control);text-decoration:none;white-space:nowrap}
+.btn.primary{background:var(--accent);color:var(--on-accent);box-shadow:0 8px 24px var(--glow)}
+.btn.quiet{background:var(--fill);color:var(--ink)}
+.btn svg{width:18px;height:18px;flex:none}
+.soon{display:inline-flex;align-items:center;gap:8px;font-size:15px;color:var(--hero-ink-2);padding:12px 4px}
+.soon svg{width:18px;height:18px;flex:none}
+
+/* content */
+main{max-width:var(--wide);margin:0 auto;padding:32px 20px 64px}
+.grid{display:grid;grid-template-columns:minmax(0,1fr);gap:20px}
+@media (min-width:900px){.grid.with-toc{grid-template-columns:240px minmax(0,1fr);align-items:start}}
+.toc{position:sticky;top:var(--anchor);padding:20px 22px;border-radius:var(--r-card);background:var(--surface);box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge)}
+.toc .lbl{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin-bottom:10px}
+.toc ol{list-style:none;padding:0;margin:0}
+.toc li{margin:0}
+.toc a{display:block;padding:6px 0;font-size:15px;color:var(--ink-2);text-decoration:none;border-bottom:1px solid var(--line)}
+.toc li:last-child a{border-bottom:0}
+.toc a:hover{color:var(--accent)}
+.stack{display:grid;gap:20px;max-width:var(--max)}
+.grid.with-toc .stack{max-width:none}
+.card{background:var(--surface);border-radius:var(--r-card);padding:clamp(22px,3.4vw,32px);box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge)}
+.card h2{margin-bottom:12px;scroll-margin-top:calc(var(--anchor) + 8px)}
+.card h3{margin:20px 0 6px}
+.card h3:first-of-type{margin-top:0}
+.card p+h3{margin-top:18px}
+@media (max-width:640px){:root{--anchor:132px}}
+.lead{font-size:clamp(18px,2vw,21px);line-height:1.5;color:var(--ink)}
+.stamp{font-size:14px;color:var(--ink-2);margin:0 0 4px}
+.callout{display:flex;gap:14px;align-items:flex-start;padding:16px 18px;border-radius:var(--r-control);background:var(--accent-soft)}
+.callout .tile{flex:none;width:32px;height:32px;border-radius:var(--r-tile);display:grid;place-items:center;background:var(--accent);color:var(--on-accent)}
+.callout .tile svg{width:18px;height:18px}
+.callout.warm{background:var(--streak-soft)}.callout.warm .tile{background:var(--streak);color:#fff}
+.rows{list-style:none;padding:0;margin:0;display:grid;gap:2px}
+.rows li{display:grid;grid-template-columns:40px minmax(0,1fr);gap:14px;padding:12px 0;margin:0;border-bottom:1px solid var(--line);align-items:start}
+.rows li:last-child{border-bottom:0}
+.rows .tile{width:40px;height:40px;border-radius:var(--r-tile);display:grid;place-items:center;background:var(--accent-soft);color:var(--accent)}
+.rows .tile svg{width:20px;height:20px}
+.rows b{display:block;font-weight:600}
+.rows span{color:var(--ink-2);font-size:15.5px}
+.features{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.features .card{display:flex;flex-direction:column;gap:10px}
+.features .tile{width:44px;height:44px;border-radius:var(--r-chip);display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);margin-bottom:6px}
+.features .tile svg{width:22px;height:22px}
+.features .card h3{margin:0}
+.features .card p{color:var(--ink-2);font-size:16px}
+.tiers{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.tier{background:var(--surface);border-radius:var(--r-card);padding:24px;box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge);display:flex;flex-direction:column;gap:10px}
+.tier .lbl{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.tier .price{font-size:28px;font-weight:700;letter-spacing:-.02em}
+.tier .price small{font-size:15px;font-weight:500;color:var(--ink-2)}
+.tier ul{margin-top:4px;color:var(--ink-2);font-size:15.5px}
+.tier.premium{background:linear-gradient(180deg,var(--hero-top),var(--hero-bottom));color:var(--hero-ink);box-shadow:inset 0 0 0 1px var(--hero-stroke)}
+.tier.premium .lbl,.tier.premium ul{color:var(--hero-ink-2)}
+.tier.premium li::marker{color:#5ED4C6}
+.chip{display:inline-flex;align-items:center;gap:6px;background:var(--fill);color:var(--ink-2);border-radius:999px;padding:4px 10px;font-size:13.5px;font-weight:500}
+dl.faq{margin:0}
+dl.faq dt{font-weight:600;margin-top:18px}
+dl.faq dt:first-child{margin-top:0}
+dl.faq dd{margin:6px 0 0;color:var(--ink-2)}
+table{width:100%;border-collapse:collapse;font-size:15.5px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px 10px 0;border-bottom:1px solid var(--line)}
+th{font-weight:600;color:var(--ink-2);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+tr:last-child td{border-bottom:0}
+.table-wrap{overflow-x:auto}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.steps li{display:grid;grid-template-columns:32px minmax(0,1fr);gap:14px;margin:0;align-items:start}
+.steps li::before{counter-increment:s;content:counter(s);width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--on-accent);font-weight:700;font-size:14px}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:28px 20px 44px;color:var(--ink-2);font-size:14.5px}
+footer .in{max-width:var(--wide);margin:0 auto;display:flex;gap:10px 22px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+footer nav{display:flex;gap:6px 16px;flex-wrap:wrap}
+footer a{color:var(--ink-2)}
+footer a:hover{color:var(--accent)}
+</style>
+</head>
+<body>
+<a class="skip" href="#content">Aller au contenu</a>
+<header class="topbar">
+  <div class="in">
+    <a class="brand" href="/pausely-links/fr/"><span class="orb" aria-hidden="true"></span>Pausely</a>
+    <nav class="pages" aria-label="Pages"><a href="/pausely-links/fr/" aria-current="page">Aide</a><a href="/pausely-links/fr/about/">À propos</a><a href="/pausely-links/fr/privacy/">Confidentialité</a><a href="/pausely-links/fr/terms/">Conditions</a><a href="/pausely-links/fr/delete-data/">Vos données</a></nav>
+  </div>
+  <div class="langrow"><div class="in">
+    <span class="lbl">Langue</span>
+    <nav class="langs" aria-label="Langue"><a href="/pausely-links/" lang="en" hreflang="en">English</a><a href="/pausely-links/de/" lang="de" hreflang="de">Deutsch</a><a href="/pausely-links/es/" lang="es" hreflang="es">Español</a><a href="/pausely-links/fr/" lang="fr" hreflang="fr" aria-current="page">Français</a><a href="/pausely-links/ja/" lang="ja" hreflang="ja">日本語</a><a href="/pausely-links/ko/" lang="ko" hreflang="ko">한국어</a><a href="/pausely-links/pt-BR/" lang="pt-BR" hreflang="pt-BR">Português (Brasil)</a><a href="/pausely-links/zh-Hans/" lang="zh-Hans" hreflang="zh-Hans">简体中文</a></nav>
+  </div></div>
+</header>
+<div class="hero-wrap"><section class="hero"><div class="eyebrow"><span class="dot" aria-hidden="true"></span>Aide</div><h1>De l’aide pour Pausely</h1><p class="sub">Une respiration avant de faire défiler. Pausely se place devant les apps que vous avez choisies et demande d’abord dix secondes. Cette page explique comment ça marche, ce qu’il faut, et comment nous joindre.</p><div class="ctas"><span class="soon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.3 1.2 9.7.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.2-.8s1.9.8 3.2.8 2.1-1.2 2.9-2.4c.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.5-1-2.5-3.8zM14 5.5c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.2-.6 2.8-1.4z"/></svg> Bientôt sur l’App Store</span><a class="btn quiet" href="#faq">Lire la FAQ</a></div><p class="meta">Aucun compte · rien ne quitte votre appareil sauf si vous le demandez · <a href="/pausely-links/fr/privacy/">Politique de confidentialité</a></p></section></div>
+<main id="content"><div class="grid with-toc"><aside class="toc" aria-label="Sur cette page"><div class="lbl">Sur cette page</div><ol><li><a href="#how">Comment fonctionne Pausely</a></li><li><a href="#requirements">Prérequis</a></li><li><a href="#start">Premiers pas</a></li><li><a href="#faq">Questions fréquentes</a></li><li><a href="#trouble">Dépannage</a></li><li><a href="#contact">Contact</a></li></ol></aside><div class="stack"><section class="card" id="how"><h2>Comment fonctionne Pausely</h2>
+<p class="lead">Pausely place un petit ralentisseur entre vous et les apps qui dévorent votre journée.</p>
+<p>Vous choisissez les apps que vous préféreriez utiliser moins. Ensuite, en toucher une ne l’ouvre plus tout de suite : Pausely se place devant, avec une courte pause — une respiration, une phrase à taper, ou une question sur la raison qui vous pousse à l’ouvrir. Si vous voulez quand même y aller, vous le pouvez, pour une durée limitée. Quand elle s’achève, la pause revient.</p>
+<p>Le but n’est pas de vous enfermer dehors. Il est de transformer une habitude automatique, guidée par le pouce, en une décision que vous prenez vraiment. Avec dix secondes pour y penser, la plupart des gens referment l’app — et Pausely compte cela comme une victoire.</p>
+<ul class="rows">
+  <li><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/></svg></span><div><b>Protection</b><span>Un interrupteur. Tant qu’il est actif, les apps que vous avez choisies affichent l’écran de blocage paisible de Pausely au lieu de s’ouvrir.</span></div></li>
+  <li><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 8h11a3 3 0 1 0-3-3M3 12h15a3 3 0 1 1-3 3M3 16h8a2.5 2.5 0 1 1-2.5 2.5"/></svg></span><div><b>Trois pauses</b><span>Un exercice de respiration, un défi de saisie, ou nommer votre intention. La configuration choisit celle qui vous convient ; vous pouvez en changer à tout moment.</span></div></li>
+  <li><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b>Règles</b><span>Protégez certaines apps à certaines heures — le coucher, une journée de travail — avec leur propre pause et leur propre fenêtre. Une règle peut aussi bloquer complètement jusqu’à la fin de ses heures.</span></div></li>
+  <li><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span><div><b>Mode strict</b><span>Tenez-vous-y pendant une heure, une journée, ou jusqu’à l’heure de votre choix. Tant qu’il tourne, la protection ne peut pas être désactivée et les règles ne peuvent pas être supprimées — même pas par vous.</span></div></li>
+  <li><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h14v16H6a2 2 0 0 0-2 2V5z"/><path d="M4 19a2 2 0 0 0 2 2h14"/></svg></span><div><b>Alternatives et journal</b><span>Jusqu’à trois alternatives saines apparaissent sur l’écran de pause comme une troisième issue, et il y a un journal pour les fois où vous préférez écrire plutôt que faire défiler.</span></div></li>
+  <li><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg></span><div><b>Progression</b><span>Pauses tenues, temps récupéré, votre série et un graphique hebdomadaire — plus des widgets sur l’écran d’accueil et un compte à rebours sur l’écran verrouillé pendant qu’une fenêtre est ouverte.</span></div></li>
+  <li><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.9L18.7 9.7l-4.9 1.8L12 16.4l-1.8-4.9L5.3 9.7l4.9-1.8L12 3z"/><path d="M18.5 16.5l.7 1.9 1.9.7-1.9.7-.7 1.9-.7-1.9-1.9-.7 1.9-.7.7-1.9z"/></svg></span><div><b>La réflexion IA, si vous la voulez</b><span>Désactivée jusqu’à ce que vous l’activiez. Elle transforme « pourquoi ouvrez-vous ceci ? » en un court échange, et rédige une note hebdomadaire sur votre semaine. C’est la seule partie de Pausely qui utilise le réseau — voir <a href="/pausely-links/fr/privacy/#ai">Confidentialité</a>.</span></div></li>
+</ul>
+</section><section class="card" id="requirements"><h2>Prérequis</h2>
+<div class="table-wrap"><table>
+<tr><th>Appareil</th><td><strong>iPhone ou iPad</strong> sous <strong>iOS 17 ou iPadOS 17</strong> ou plus récent. Une app, une mise en page, les deux appareils.</td></tr>
+<tr><th>Autorisation</th><td>L’accès au <strong>Temps d’écran</strong>, accordé une fois pendant la configuration via la demande d’Apple elle-même. Pausely utilise le framework Temps d’écran d’Apple — le système qui sert aussi aux limites d’apps intégrées à iOS — et c’est Apple, pas Pausely, qui bloque réellement une app.</td></tr>
+<tr><th>Compte</th><td>Aucun. Il n’y a nulle part dans l’app d’inscription, de champ e-mail ni de mot de passe.</td></tr>
+<tr><th>Internet</th><td>Pas nécessaire. Chaque pause, règle, graphique et entrée de journal fonctionne hors ligne. Deux choses utilisent le réseau : le trafic propre d’Apple quand vous achetez ou restaurez Premium, et la réflexion IA — qui est désactivée jusqu’à ce que vous l’activiez.</td></tr>
+<tr><th>Notifications</th><td>Facultatives, et locales à l’appareil. Pausely les utilise pour vous faire passer de l’écran de blocage à la pause, et pour demander ensuite comment une session vous a laissé. Il n’y a aucun serveur de notifications.</td></tr>
+<tr><th>Langues</th><td>Anglais, allemand, espagnol, français, japonais, coréen, portugais du Brésil et chinois simplifié. Pausely suit la langue de votre appareil, et vous pouvez en choisir une autre dans <kbd>Réglages</kbd> → <kbd>Langue</kbd>.</td></tr>
+</table></div>
+</section><section class="card" id="start"><h2>Premiers pas</h2>
+<p>La configuration tient en sept écrans et prend moins de trois minutes. Elle se termine avec la protection déjà active et votre première règle déjà écrite.</p>
+<ol class="steps">
+  <li><div><b>Dites quelle part de la journée revient à votre téléphone</b> — votre propre estimation, rien de mesuré.</div></li>
+  <li><div><b>Autorisez l’accès au Temps d’écran</b> quand Apple le demande. Pausely ne peut pas fonctionner sans lui, et vous pouvez le retirer à tout moment dans <kbd>Réglages</kbd> → <kbd>Temps d’écran</kbd>.</div></li>
+  <li><div><b>Choisissez vos apps</b> dans le sélecteur d’Apple. Pausely n’apprend jamais leurs noms — voir <a href="/pausely-links/fr/privacy/">Confidentialité</a>.</div></li>
+  <li><div><b>Répondez à trois questions</b> qui choisissent la pause qui vous convient.</div></li>
+  <li><div><b>Ajoutez jusqu’à trois alternatives</b> — une promenade, un livre, un verre d’eau, ou quelque chose à vous avec un lien vers une autre app.</div></li>
+  <li><div><b>Terminé.</b> Ouvrez une de vos apps et rencontrez la pause.</div></li>
+</ol>
+</section><section class="card" id="faq"><h2>Questions fréquentes</h2>
+<dl class="faq">
+<dt>Pausely est-il gratuit ?</dt>
+<dd>Oui. La version gratuite est un produit qui fonctionne, pas une démo : <strong>une règle</strong>, la <strong>pause respiration</strong> et l’<strong>intégralité de votre écran de progression</strong> — pauses, victoires, temps récupéré, la série et le graphique.</dd>
+<dt>Qu’ajoute Premium ?</dt>
+<dd>Autant de règles que vous voulez, les deux autres pauses (taper pour continuer, poser une intention), le mode strict, l’analyse d’humeur qui compare comment vous vous sentez après une session et après y avoir renoncé, et la réflexion IA optionnelle avec son bilan hebdomadaire. Premium est un abonnement mensuel ou annuel — la formule annuelle commence par un <strong>essai gratuit</strong> — ou un achat unique à vie. Les prix sont affichés dans l’app et sur l’App Store de votre pays, et la facturation est gérée par Apple.</dd>
+<dt>Que se passe-t-il si mon abonnement expire ?</dt>
+<dd>Rien de ce que vous avez construit ne vous est retiré. Chaque règle continue de tourner et reste modifiable, et la pause que vous avez choisie reste devant vos apps. Seule la possibilité d’en ajouter se ferme. Une app qui cesserait de protéger votre téléphone parce qu’une carte a expiré vous laisserait tomber au moment précis où vous lui avez demandé de ne pas le faire.</dd>
+<dt>Puis-je restaurer un achat sur un nouvel appareil ?</dt>
+<dd>Oui. Ouvrez l’écran Premium et touchez <kbd>Restaurer les achats</kbd>. Premium appartient à votre identifiant Apple, pas à l’appareil.</dd>
+<dt>Pourquoi Pausely ne peut-il pas me dire quelles apps j’ai bloquées ?</dt>
+<dd>Parce qu’il ne le sait vraiment pas. Le Temps d’écran d’Apple remet à Pausely des jetons opaques qui n’ont aucun sens en dehors de votre appareil : aucun nom d’app, aucun identifiant. Pausely peut demander à iOS de les bloquer ; il ne peut pas les lire.</dd>
+<dt>Je n’arrive pas à désactiver la protection. Est-ce un bug ?</dt>
+<dd>Vérifiez si le <strong>mode strict</strong> tourne — l’écran d’accueil le dit. Tant qu’il tourne, la protection ne peut pas être désactivée et les règles ne peuvent pas être supprimées, et c’est voulu. Il se termine tout seul à l’heure que vous avez choisie.</dd>
+<dt>Pausely voit-il ce que je fais dans les autres apps ?</dt>
+<dd>Non. Il n’observe jamais votre navigation, vos messages ni votre activité à l’intérieur d’une app. Il n’enregistre que ses propres événements — qu’une pause a été affichée, et ce que vous avez choisi — et les garde sur votre appareil.</dd>
+<dt>Qu’est-ce que la réflexion IA, et est-elle active ?</dt>
+<dd>Elle est désactivée, jusqu’à ce que vous l’activiez. Quand vous le faites, une pause devient un court échange : vous tapez pourquoi vous ouvrez l’app, et une question vous revient. Elle rédige aussi une courte note sur votre semaine. Ces mots vont au serveur de Pausely puis à Google, qui fait tourner le modèle — jamais votre journal, jamais vos bilans d’humeur, jamais les apps que vous avez choisies. <kbd>Réglages</kbd> → <kbd>Réflexion IA</kbd> → <kbd>Ce qui est envoyé</kbd> énumère chaque champ, et la désactiver ramène l’app à ne faire aucun appel réseau.</dd>
+<dt>Est-ce que ça marche sur iPad ? Sur Mac ?</dt>
+<dd>Sur iPad, oui : Pausely est une seule app pour iPhone et iPad, avec la même mise en page sur les deux, et elle fonctionne en Split View, Slide Over et Stage Manager. Sur Mac, non : les frameworks Temps d’écran sur lesquels Pausely repose n’y existent pas.</dd>
+<dt>Puis-je lire l’app dans ma langue ?</dt>
+<dd>Pausely parle huit langues et suit le réglage de votre appareil. Pour le lire dans une autre — sans rien changer d’autre sur votre appareil — ouvrez <kbd>Réglages</kbd> → <kbd>Langue</kbd>. Les écrans de blocage, les widgets et le compte à rebours suivent le même choix.</dd>
+<dt>Comment tout effacer ?</dt>
+<dd><kbd>Réglages</kbd> → <kbd>Vos données</kbd> → <kbd>Réinitialiser toutes les données</kbd>. Cela vide chaque pause, victoire, règle, entrée de journal et bilan d’humeur, retire les blocages et vous ramène au début. C’est refusé tant que le mode strict tourne. Les détails sont sur la page <a href="/pausely-links/fr/delete-data/">Vos données</a>.</dd>
+</dl>
+</section><section class="card" id="trouble"><h2>Dépannage</h2>
+<h3>Une app s’ouvre sans pause</h3>
+<ul>
+  <li>Vérifiez l’interrupteur <strong>Protection</strong> sur l’écran d’accueil.</li>
+  <li>Vérifiez que l’accès au Temps d’écran est toujours accordé : <kbd>Réglages</kbd> → <kbd>Temps d’écran</kbd> → <kbd>Apps avec accès au Temps d’écran</kbd>. S’il a été retiré, Pausely affiche un écran de récupération avec un bouton pour redemander.</li>
+  <li>Si l’app n’est que dans une <strong>règle</strong>, la pause n’apparaît que pendant les heures de cette règle.</li>
+  <li>Une <strong>fenêtre d’accès</strong> ouverte plus tôt tourne peut-être encore — le compte à rebours de l’écran verrouillé indique le temps restant.</li>
+</ul>
+<h3>L’écran de blocage apparaît mais la pause ne s’ouvre jamais</h3>
+<ul>
+  <li>Toucher le bouton de l’écran de blocage vous remet à l’app via une notification. Si les notifications sont désactivées pour Pausely, iOS ne peut pas livrer ce relais — activez-les dans <kbd>Réglages</kbd> → <kbd>Notifications</kbd> → <kbd>Pausely</kbd>.</li>
+  <li>Ouvrir Pausely directement ouvre également la pause en attente.</li>
+</ul>
+<h3>Les widgets sont en retard</h3>
+<p>iOS rafraîchit les widgets selon son propre calendrier. Ouvrir Pausely les met à jour immédiatement.</p>
+<h3>L’app n’est pas dans la bonne langue</h3>
+<p>Ouvrez <kbd>Réglages</kbd> → <kbd>Langue</kbd> et choisissez celle que vous voulez. Tout ce que Pausely dessine suit immédiatement. Le sélecteur d’apps est dessiné par iOS, pas par Pausely : il change au lancement suivant.</p>
+<h3>Premium n’est pas reconnu</h3>
+<p>Touchez <kbd>Restaurer les achats</kbd> sur l’écran Premium, et vérifiez que l’appareil est connecté au même identifiant Apple que celui qui a fait l’achat. Les remboursements et les questions de facturation sont gérés par Apple via l’<a href="https://support.apple.com/billing">assistance Apple</a>.</p>
+</section><section class="card" id="contact"><h2>Contact</h2>
+<p>Une question, un bug, ou quelque chose qui devrait marcher et ne marche pas — écrivez-nous, et une personne vous répondra.</p>
+<div class="callout"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><div><strong><a href="mailto:topsol.org@gmail.com">topsol.org@gmail.com</a></strong><br><span class="small">Indiquez le modèle de votre appareil, la version d’iOS et ce que vous attendiez. Ne nous envoyez jamais votre journal ni vos bilans d’humeur — nous n’en avons pas besoin et préférerions ne pas les détenir.</span></div></div>
+<p style="margin-top:16px" class="small">La facturation, les remboursements et les changements d’abonnement sont gérés par Apple : <a href="https://apps.apple.com/account/subscriptions">gérer les abonnements</a> · <a href="https://support.apple.com/billing">demander un remboursement</a>.</p>
+</section></div></div></main>
+<footer><div class="in">
+  <div>© 2026 Pausely · TOPSOL · Tous droits réservés.</div>
+  <nav aria-label="Pied de page"><a href="/pausely-links/fr/">Aide</a> · <a href="/pausely-links/fr/about/">À propos</a> · <a href="/pausely-links/fr/privacy/">Confidentialité</a> · <a href="/pausely-links/fr/terms/">Conditions</a> · <a href="/pausely-links/fr/delete-data/">Vos données</a> · <a href="mailto:topsol.org@gmail.com">topsol.org@gmail.com</a></nav>
+</div></footer>
+</body>
+</html>

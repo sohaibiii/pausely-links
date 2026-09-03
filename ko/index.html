@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="당신이 고른 앱 앞에 멈춤을 놓는 앱, Pausely의 공식 도움말. 작동 방식, 필요 조건, 자주 묻는 질문, 문의처.">
+<meta name="robots" content="index,follow">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F4F6F9">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0E1116">
+<meta property="og:title" content="Pausely — 도움말">
+<meta property="og:description" content="당신이 고른 앱 앞에 멈춤을 놓는 앱, Pausely의 공식 도움말. 작동 방식, 필요 조건, 자주 묻는 질문, 문의처.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko">
+<meta property="og:url" content="https://sohaibiii.github.io/pausely-links/ko/">
+<link rel="canonical" href="https://sohaibiii.github.io/pausely-links/ko/">
+<link rel="alternate" hreflang="en" href="https://sohaibiii.github.io/pausely-links/"><link rel="alternate" hreflang="de" href="https://sohaibiii.github.io/pausely-links/de/"><link rel="alternate" hreflang="es" href="https://sohaibiii.github.io/pausely-links/es/"><link rel="alternate" hreflang="fr" href="https://sohaibiii.github.io/pausely-links/fr/"><link rel="alternate" hreflang="ja" href="https://sohaibiii.github.io/pausely-links/ja/"><link rel="alternate" hreflang="ko" href="https://sohaibiii.github.io/pausely-links/ko/"><link rel="alternate" hreflang="pt-BR" href="https://sohaibiii.github.io/pausely-links/pt-BR/"><link rel="alternate" hreflang="zh-Hans" href="https://sohaibiii.github.io/pausely-links/zh-Hans/"><link rel="alternate" hreflang="x-default" href="https://sohaibiii.github.io/pausely-links/">
+<link rel="icon" href="/pausely-links/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/pausely-links/apple-touch-icon.png">
+<title>Pausely — 도움말</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg:#F4F6F9;--surface:#FFFFFF;--fill:#EAEEF3;--ink:#0E1116;--ink-2:#5B6573;--ink-3:#5F6875;
+  --line:rgba(0,0,0,.06);--accent:#0B7065;--accent-strong:#127A6F;--accent-soft:rgba(11,112,101,.12);--on-accent:#FFFFFF;
+  --glow:transparent;--card-shadow:0 10px 30px rgba(24,33,52,.08);--card-edge:transparent;
+  --streak:#A3640F;--streak-soft:rgba(163,100,15,.14);--success:#23744A;--success-soft:rgba(35,116,74,.14);
+  --hero-top:#18313A;--hero-bottom:#0E1820;--hero-glow:rgba(94,212,198,.40);--hero-ink:#F2F4F7;--hero-ink-2:rgba(242,244,247,.72);--hero-stroke:rgba(255,255,255,.10);--hero-fill:rgba(255,255,255,.08);
+  --orb-core:#D1FAF2;--orb-edge:#5ED4C6;--orb-glow:rgba(94,212,198,.75);
+  --r-card:20px;--r-hero:28px;--r-control:14px;--r-chip:12px;--r-tile:10px;
+  --max:760px;--wide:1080px;--anchor:96px;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#0E1116;--surface:#171B22;--fill:#1E242D;--ink:#F2F4F7;--ink-2:#9AA3AF;--ink-3:#7C8594;
+  --line:rgba(255,255,255,.08);--accent:#5ED4C6;--accent-strong:#6EDED0;--accent-soft:rgba(94,212,198,.16);--on-accent:#0E1116;
+  --glow:rgba(94,212,198,.35);--card-shadow:none;--card-edge:rgba(255,255,255,.06);
+  --streak:#F3B562;--streak-soft:rgba(243,181,98,.18);--success:#7FC98F;--success-soft:rgba(127,201,143,.18);
+}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Text","Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:var(--accent);text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--accent) 40%,transparent);text-underline-offset:3px;overflow-wrap:anywhere}
+a:hover{text-decoration-color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;top:8px;left:8px;background:var(--surface);color:var(--ink);padding:8px 12px;z-index:20;border-radius:var(--r-chip);box-shadow:var(--card-shadow)}
+.skip:not(:focus){clip:rect(0 0 0 0);clip-path:inset(50%);width:1px;height:1px;overflow:hidden;white-space:nowrap;padding:0;margin:-1px}
+h1,h2,h3{margin:0;letter-spacing:-.02em;text-wrap:balance;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter","Segoe UI",Roboto,sans-serif}
+h1{font-weight:700;font-size:clamp(32px,4.6vw,48px);line-height:1.08}
+h2{font-weight:700;font-size:24px;line-height:1.25}
+h3{font-weight:600;font-size:18px;line-height:1.3}
+p{margin:0 0 1em}
+p:last-child{margin-bottom:0}
+ul,ol{margin:0;padding-left:1.3em}
+li{margin:.45em 0}
+li::marker{color:var(--accent)}
+strong{font-weight:600}
+.muted{color:var(--ink-2)}
+small,.small{font-size:14px;color:var(--ink-2)}
+code{font:.92em ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--fill);padding:.1em .4em;border-radius:6px}
+kbd{font:inherit;background:var(--fill);border-radius:8px;padding:.05em .5em;white-space:nowrap}
+
+/* top bar — the one glass surface, like the app's navigation layer */
+.topbar{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 82%,transparent);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line)}
+.topbar .in{max-width:var(--wide);margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.brand{display:inline-flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-weight:700;font-size:19px;letter-spacing:-.01em}
+.orb{width:22px;height:22px;border-radius:50%;flex:none;background:radial-gradient(circle at 38% 32%,var(--orb-core) 0,var(--orb-edge) 62%,color-mix(in srgb,var(--orb-edge) 70%,#0E1116) 100%);box-shadow:0 0 0 1px var(--hero-stroke),0 0 14px var(--orb-glow)}
+nav.pages{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+nav.pages a{text-decoration:none;color:var(--ink-2);font-size:15px;font-weight:500;padding:7px 12px;border-radius:999px}
+nav.pages a[aria-current="page"]{color:var(--accent);background:var(--accent-soft)}
+nav.pages a:hover{color:var(--ink)}
+@media (max-width:640px){nav.pages{margin-left:0;width:100%;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none;padding-bottom:2px}nav.pages::-webkit-scrollbar{display:none}nav.pages a{flex:none}}
+
+/* language tabs — the same page, in the reader's own language */
+.langrow{border-top:1px solid var(--line)}
+.langrow .in{max-width:var(--wide);margin:0 auto;padding:7px 20px;display:flex;align-items:center;gap:12px}
+.langrow .lbl{flex:none;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+nav.langs{display:flex;gap:2px;min-width:0;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+nav.langs::-webkit-scrollbar{display:none}
+nav.langs a{flex:none;text-decoration:none;color:var(--ink-2);font-size:14.5px;font-weight:500;padding:6px 11px;border-radius:999px;white-space:nowrap}
+nav.langs a:hover{color:var(--ink);background:var(--fill)}
+nav.langs a[aria-current="page"]{color:var(--accent);background:var(--accent-soft)}
+@media (max-width:640px){.langrow .lbl{display:none}.langrow .in{padding:6px 20px}}
+
+/* hero — the home screen's dark island, dark in both appearances */
+.hero-wrap{max-width:var(--wide);margin:24px auto 0;padding:0 20px}
+.hero{position:relative;overflow:hidden;border-radius:var(--r-hero);background:linear-gradient(180deg,var(--hero-top),var(--hero-bottom));color:var(--hero-ink);box-shadow:inset 0 0 0 1px var(--hero-stroke),0 24px 60px rgba(14,17,22,.18);padding:clamp(36px,6vw,64px) clamp(24px,5vw,56px)}
+.hero::before{content:"";position:absolute;inset:-40% auto auto -20%;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,var(--hero-glow) 0,transparent 62%);pointer-events:none}
+.hero>*{position:relative}
+.hero .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--hero-ink-2);margin-bottom:18px}
+.hero .eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--orb-edge);box-shadow:0 0 10px var(--orb-glow)}
+.hero h1{max-width:18ch}
+.hero .sub{margin:16px 0 0;max-width:56ch;font-size:clamp(17px,2vw,20px);color:var(--hero-ink-2)}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;align-items:center}
+.hero .ctas a,.hero .ctas span{color:var(--hero-ink)}
+.hero .ctas .btn.primary{background:#5ED4C6;color:#0E1116;box-shadow:0 8px 24px rgba(94,212,198,.30)}
+.hero .ctas .btn.quiet{background:var(--hero-fill);color:var(--hero-ink);box-shadow:inset 0 0 0 1px var(--hero-stroke)}
+.hero .meta{margin-top:22px;font-size:14px;color:var(--hero-ink-2)}
+.hero .meta a{color:var(--hero-ink);text-decoration-color:rgba(255,255,255,.4)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:16px;line-height:1;padding:14px 20px;border-radius:var(--r-control);text-decoration:none;white-space:nowrap}
+.btn.primary{background:var(--accent);color:var(--on-accent);box-shadow:0 8px 24px var(--glow)}
+.btn.quiet{background:var(--fill);color:var(--ink)}
+.btn svg{width:18px;height:18px;flex:none}
+.soon{display:inline-flex;align-items:center;gap:8px;font-size:15px;color:var(--hero-ink-2);padding:12px 4px}
+.soon svg{width:18px;height:18px;flex:none}
+
+/* content */
+main{max-width:var(--wide);margin:0 auto;padding:32px 20px 64px}
+.grid{display:grid;grid-template-columns:minmax(0,1fr);gap:20px}
+@media (min-width:900px){.grid.with-toc{grid-template-columns:240px minmax(0,1fr);align-items:start}}
+.toc{position:sticky;top:var(--anchor);padding:20px 22px;border-radius:var(--r-card);background:var(--surface);box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge)}
+.toc .lbl{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin-bottom:10px}
+.toc ol{list-style:none;padding:0;margin:0}
+.toc li{margin:0}
+.toc a{display:block;padding:6px 0;font-size:15px;color:var(--ink-2);text-decoration:none;border-bottom:1px solid var(--line)}
+.toc li:last-child a{border-bottom:0}
+.toc a:hover{color:var(--accent)}
+.stack{display:grid;gap:20px;max-width:var(--max)}
+.grid.with-toc .stack{max-width:none}
+.card{background:var(--surface);border-radius:var(--r-card);padding:clamp(22px,3.4vw,32px);box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge)}
+.card h2{margin-bottom:12px;scroll-margin-top:calc(var(--anchor) + 8px)}
+.card h3{margin:20px 0 6px}
+.card h3:first-of-type{margin-top:0}
+.card p+h3{margin-top:18px}
+@media (max-width:640px){:root{--anchor:132px}}
+.lead{font-size:clamp(18px,2vw,21px);line-height:1.5;color:var(--ink)}
+.stamp{font-size:14px;color:var(--ink-2);margin:0 0 4px}
+.callout{display:flex;gap:14px;align-items:flex-start;padding:16px 18px;border-radius:var(--r-control);background:var(--accent-soft)}
+.callout .tile{flex:none;width:32px;height:32px;border-radius:var(--r-tile);display:grid;place-items:center;background:var(--accent);color:var(--on-accent)}
+.callout .tile svg{width:18px;height:18px}
+.callout.warm{background:var(--streak-soft)}.callout.warm .tile{background:var(--streak);color:#fff}
+.rows{list-style:none;padding:0;margin:0;display:grid;gap:2px}
+.rows li{display:grid;grid-template-columns:40px minmax(0,1fr);gap:14px;padding:12px 0;margin:0;border-bottom:1px solid var(--line);align-items:start}
+.rows li:last-child{border-bottom:0}
+.rows .tile{width:40px;height:40px;border-radius:var(--r-tile);display:grid;place-items:center;background:var(--accent-soft);color:var(--accent)}
+.rows .tile svg{width:20px;height:20px}
+.rows b{display:block;font-weight:600}
+.rows span{color:var(--ink-2);font-size:15.5px}
+.features{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.features .card{display:flex;flex-direction:column;gap:10px}
+.features .tile{width:44px;height:44px;border-radius:var(--r-chip);display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);margin-bottom:6px}
+.features .tile svg{width:22px;height:22px}
+.features .card h3{margin:0}
+.features .card p{color:var(--ink-2);font-size:16px}
+.tiers{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.tier{background:var(--surface);border-radius:var(--r-card);padding:24px;box-shadow:var(--card-shadow),inset 0 0 0 1px var(--card-edge);display:flex;flex-direction:column;gap:10px}
+.tier .lbl{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.tier .price{font-size:28px;font-weight:700;letter-spacing:-.02em}
+.tier .price small{font-size:15px;font-weight:500;color:var(--ink-2)}
+.tier ul{margin-top:4px;color:var(--ink-2);font-size:15.5px}
+.tier.premium{background:linear-gradient(180deg,var(--hero-top),var(--hero-bottom));color:var(--hero-ink);box-shadow:inset 0 0 0 1px var(--hero-stroke)}
+.tier.premium .lbl,.tier.premium ul{color:var(--hero-ink-2)}
+.tier.premium li::marker{color:#5ED4C6}
+.chip{display:inline-flex;align-items:center;gap:6px;background:var(--fill);color:var(--ink-2);border-radius:999px;padding:4px 10px;font-size:13.5px;font-weight:500}
+dl.faq{margin:0}
+dl.faq dt{font-weight:600;margin-top:18px}
+dl.faq dt:first-child{margin-top:0}
+dl.faq dd{margin:6px 0 0;color:var(--ink-2)}
+table{width:100%;border-collapse:collapse;font-size:15.5px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px 10px 0;border-bottom:1px solid var(--line)}
+th{font-weight:600;color:var(--ink-2);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+tr:last-child td{border-bottom:0}
+.table-wrap{overflow-x:auto}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.steps li{display:grid;grid-template-columns:32px minmax(0,1fr);gap:14px;margin:0;align-items:start}
+.steps li::before{counter-increment:s;content:counter(s);width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--on-accent);font-weight:700;font-size:14px}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:28px 20px 44px;color:var(--ink-2);font-size:14.5px}
+footer .in{max-width:var(--wide);margin:0 auto;display:flex;gap:10px 22px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+footer nav{display:flex;gap:6px 16px;flex-wrap:wrap}
+footer a{color:var(--ink-2)}
+footer a:hover{color:var(--accent)}
+</style>
+</head>
+<body>
+<a class="skip" href="#content">본문으로 건너뛰기</a>
+<header class="topbar">
+  <div class="in">
+    <a class="brand" href="/pausely-links/ko/"><span class="orb" aria-hidden="true"></span>Pausely</a>
+    <nav class="pages" aria-label="페이지"><a href="/pausely-links/ko/" aria-current="page">도움말</a><a href="/pausely-links/ko/about/">소개</a><a href="/pausely-links/ko/privacy/">개인정보</a><a href="/pausely-links/ko/terms/">약관</a><a href="/pausely-links/ko/delete-data/">내 데이터</a></nav>
+  </div>
+  <div class="langrow"><div class="in">
+    <span class="lbl">언어</span>
+    <nav class="langs" aria-label="언어"><a href="/pausely-links/" lang="en" hreflang="en">English</a><a href="/pausely-links/de/" lang="de" hreflang="de">Deutsch</a><a href="/pausely-links/es/" lang="es" hreflang="es">Español</a><a href="/pausely-links/fr/" lang="fr" hreflang="fr">Français</a><a href="/pausely-links/ja/" lang="ja" hreflang="ja">日本語</a><a href="/pausely-links/ko/" lang="ko" hreflang="ko" aria-current="page">한국어</a><a href="/pausely-links/pt-BR/" lang="pt-BR" hreflang="pt-BR">Português (Brasil)</a><a href="/pausely-links/zh-Hans/" lang="zh-Hans" hreflang="zh-Hans">简体中文</a></nav>
+  </div></div>
+</header>
+<div class="hero-wrap"><section class="hero"><div class="eyebrow"><span class="dot" aria-hidden="true"></span>도움말</div><h1>Pausely 도움말</h1><p class="sub">스크롤하기 전에, 한 번의 호흡. Pausely는 당신이 고른 앱 앞에 서서 먼저 10초를 청합니다. 이 페이지는 그 작동 방식과 필요한 것, 그리고 저희에게 연락하는 방법을 설명합니다.</p><div class="ctas"><span class="soon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.3 1.2 9.7.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.2-.8s1.9.8 3.2.8 2.1-1.2 2.9-2.4c.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.5-1-2.5-3.8zM14 5.5c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.2-.6 2.8-1.4z"/></svg> App Store에 곧 출시</span><a class="btn quiet" href="#faq">자주 묻는 질문 보기</a></div><p class="meta">계정 없음 · 당신이 원하지 않는 한 아무것도 기기를 떠나지 않습니다 · <a href="/pausely-links/ko/privacy/">개인정보 처리방침</a></p></section></div>
+<main id="content"><div class="grid with-toc"><aside class="toc" aria-label="이 페이지의 내용"><div class="lbl">이 페이지의 내용</div><ol><li><a href="#how">Pausely가 작동하는 방식</a></li><li><a href="#requirements">필요 조건</a></li><li><a href="#start">시작하기</a></li><li><a href="#faq">자주 묻는 질문</a></li><li><a href="#trouble">문제 해결</a></li><li><a href="#contact">문의</a></li></ol></aside><div class="stack"><section class="card" id="how"><h2>Pausely가 작동하는 방식</h2>
+<p class="lead">Pausely는 하루를 삼키는 앱과 당신 사이에 작은 과속방지턱을 놓습니다.</p>
+<p>덜 쓰고 싶은 앱을 당신이 고릅니다. 그 뒤로는 앱을 눌러도 바로 열리지 않습니다. Pausely가 먼저 앞에 서서 짧은 멈춤을 건넵니다. 호흡이거나, 입력할 한 문장이거나, 지금 왜 여는지를 묻는 질문입니다. 그래도 들어가고 싶다면 들어갈 수 있습니다. 정해진 시간 동안만요. 그 시간이 끝나면 멈춤이 다시 돌아옵니다.</p>
+<p>목적은 당신을 가두는 것이 아닙니다. 엄지손가락이 이끄는 자동적인 습관을, 당신이 실제로 내리는 결정으로 바꾸는 것입니다. 생각할 10초가 주어지면 대부분은 앱을 닫습니다 — 그리고 Pausely는 그것을 성과로 셉니다.</p>
+<ul class="rows">
+  <li><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/></svg></span><div><b>보호</b><span>스위치 하나. 켜져 있는 동안 당신이 고른 앱은 열리는 대신 Pausely의 차분한 차단 화면을 보여줍니다.</span></div></li>
+  <li><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 8h11a3 3 0 1 0-3-3M3 12h15a3 3 0 1 1-3 3M3 16h8a2.5 2.5 0 1 1-2.5 2.5"/></svg></span><div><b>세 가지 멈춤</b><span>호흡 연습, 입력 과제, 또는 의도 적기. 설정 과정에서 당신에게 맞는 것을 골라 주고, 언제든 바꿀 수 있습니다.</span></div></li>
+  <li><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b>규칙</b><span>특정 앱을 특정 시간에 지킵니다 — 잠들기 전, 일하는 시간 — 각각 고유한 멈춤과 고유한 시간을 두고요. 규칙은 그 시간이 끝날 때까지 완전히 막을 수도 있습니다.</span></div></li>
+  <li><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span><div><b>엄격 모드</b><span>한 시간, 하루, 또는 당신이 고른 시각까지 스스로와의 약속을 지킵니다. 켜져 있는 동안에는 보호를 끌 수 없고 규칙도 지울 수 없습니다 — 당신조차도요.</span></div></li>
+  <li><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h14v16H6a2 2 0 0 0-2 2V5z"/><path d="M4 19a2 2 0 0 0 2 2h14"/></svg></span><div><b>대안과 일지</b><span>건강한 대안을 최대 세 개까지 멈춤 화면에 세 번째 출구로 띄웁니다. 스크롤하기보다 쓰고 싶은 날을 위한 일지도 있습니다.</span></div></li>
+  <li><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg></span><div><b>기록</b><span>지켜낸 멈춤, 되찾은 시간, 연속 기록, 주간 그래프 — 여기에 홈 화면 위젯과, 접근 시간이 열려 있는 동안의 잠금 화면 카운트다운까지.</span></div></li>
+  <li><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.9L18.7 9.7l-4.9 1.8L12 16.4l-1.8-4.9L5.3 9.7l4.9-1.8L12 3z"/><path d="M18.5 16.5l.7 1.9 1.9.7-1.9.7-.7 1.9-.7-1.9-1.9-.7 1.9-.7.7-1.9z"/></svg></span><div><b>원한다면, AI 되돌아보기</b><span>당신이 켜기 전까지는 꺼져 있습니다. “왜 이걸 열고 있나요?”를 짧은 대화로 바꾸고, 한 주에 대한 짧은 글도 씁니다. Pausely에서 네트워크를 쓰는 유일한 부분입니다 — <a href="/pausely-links/ko/privacy/#ai">개인정보</a>를 보세요.</span></div></li>
+</ul>
+</section><section class="card" id="requirements"><h2>필요 조건</h2>
+<div class="table-wrap"><table>
+<tr><th>기기</th><td><strong>iOS 17 또는 iPadOS 17</strong> 이상을 실행하는 <strong>iPhone 또는 iPad</strong>. 하나의 앱, 하나의 레이아웃, 두 기기 모두.</td></tr>
+<tr><th>권한</th><td><strong>스크린 타임</strong> 접근 권한. 설정 과정에서 Apple 자신의 요청 화면을 통해 한 번만 허용합니다. Pausely는 Apple의 스크린 타임 프레임워크 — iOS에 내장된 앱 시간 제한과 같은 시스템 — 를 사용하며, 앱을 실제로 막는 것은 Pausely가 아니라 Apple입니다.</td></tr>
+<tr><th>계정</th><td>없습니다. 앱 어디에도 가입, 이메일 입력란, 비밀번호가 없습니다.</td></tr>
+<tr><th>인터넷</th><td>필요하지 않습니다. 멈춤도, 규칙도, 그래프도, 일지도 오프라인에서 작동합니다. 네트워크를 쓰는 것은 두 가지뿐입니다. Premium을 구매하거나 복원할 때의 Apple 자체 통신과, AI 되돌아보기 — 이것은 당신이 켜기 전까지 꺼져 있습니다.</td></tr>
+<tr><th>알림</th><td>선택 사항이며 기기 안에서만 만들어집니다. 차단 화면에서 멈춤으로 넘겨주기 위해, 그리고 끝난 뒤 어떤 기분이었는지 묻기 위해 씁니다. 푸시 서버는 없습니다.</td></tr>
+<tr><th>언어</th><td>영어, 독일어, 스페인어, 프랑스어, 일본어, 한국어, 브라질 포르투갈어, 중국어 간체. Pausely는 기기의 언어를 따르지만, <kbd>설정</kbd> → <kbd>언어</kbd>에서 다른 언어를 고를 수도 있습니다.</td></tr>
+</table></div>
+</section><section class="card" id="start"><h2>시작하기</h2>
+<p>설정은 일곱 화면, 3분이 채 걸리지 않습니다. 끝날 때쯤이면 보호는 이미 켜져 있고, 첫 규칙도 이미 쓰여 있습니다.</p>
+<ol class="steps">
+  <li><div><b>하루 중 얼마만큼을 휴대폰에 주고 있는지 답합니다</b> — 측정값이 아니라, 당신의 짐작입니다.</div></li>
+  <li><div>Apple이 물으면 <b>스크린 타임 접근 권한을 허용합니다</b>. 이것 없이는 Pausely가 작동할 수 없고, <kbd>설정</kbd> → <kbd>스크린 타임</kbd>에서 언제든 거둘 수 있습니다.</div></li>
+  <li><div>Apple의 선택 화면에서 <b>앱을 고릅니다</b>. Pausely는 그 이름을 결코 알지 못합니다 — <a href="/pausely-links/ko/privacy/">개인정보</a>를 보세요.</div></li>
+  <li><div><b>세 가지 질문에 답합니다</b>. 당신에게 맞는 멈춤이 정해집니다.</div></li>
+  <li><div><b>대안을 세 개까지 더합니다</b> — 산책, 책, 물 한 잔, 또는 다른 앱으로 연결되는 나만의 것.</div></li>
+  <li><div><b>끝났습니다.</b> 고른 앱을 열어 멈춤을 만나 보세요.</div></li>
+</ol>
+</section><section class="card" id="faq"><h2>자주 묻는 질문</h2>
+<dl class="faq">
+<dt>Pausely는 무료인가요?</dt>
+<dd>네. 무료는 체험판이 아니라 제대로 작동하는 제품입니다. <strong>규칙 하나</strong>, <strong>호흡 멈춤</strong>, 그리고 <strong>기록 화면 전체</strong> — 멈춤, 성과, 되찾은 시간, 연속 기록, 그래프.</dd>
+<dt>Premium은 무엇을 더해 주나요?</dt>
+<dd>원하는 만큼의 규칙, 나머지 두 가지 멈춤(입력해서 통과하기, 의도 적기), 엄격 모드, 앱을 쓰고 난 뒤의 기분과 그냥 돌아섰을 때의 기분을 견주어 보여 주는 기분 분석, 그리고 주간 요약이 딸린 선택 기능인 AI 되돌아보기입니다. Premium은 월간 또는 연간 구독 — 연간은 <strong>무료 체험</strong>으로 시작합니다 — 이거나 한 번만 결제하는 평생 구매입니다. 가격은 앱과 거주 국가의 App Store에 표시되며, 결제는 Apple이 처리합니다.</dd>
+<dt>구독이 만료되면 어떻게 되나요?</dt>
+<dd>당신이 쌓아 온 것은 무엇도 사라지지 않습니다. 모든 규칙은 계속 돌아가고 수정도 할 수 있으며, 당신이 고른 멈춤도 계속 앱 앞에 섭니다. 닫히는 것은 “더 추가하는 일”뿐입니다. 카드가 만료됐다고 휴대폰을 지키는 일을 그만두는 앱은, 그러지 말아 달라고 부탁받은 바로 그 순간에 당신을 저버리는 셈이니까요.</dd>
+<dt>새 기기에서 구매를 복원할 수 있나요?</dt>
+<dd>네. Premium 화면을 열고 <kbd>구매 복원</kbd>를 누르세요. Premium은 기기가 아니라 당신의 Apple 계정에 속합니다.</dd>
+<dt>어떤 앱을 막았는지 Pausely는 왜 알려 주지 못하나요?</dt>
+<dd>정말로 모르기 때문입니다. Apple의 스크린 타임은 당신의 기기 밖에서는 아무 의미가 없는 불투명한 토큰을 Pausely에 건넵니다. 앱 이름도, 식별자도 없습니다. Pausely는 iOS에 그것들을 막아 달라고 부탁할 수 있을 뿐, 읽을 수는 없습니다.</dd>
+<dt>보호를 끌 수가 없습니다. 고장인가요?</dt>
+<dd><strong>엄격 모드</strong>가 켜져 있는지 확인해 보세요 — 홈 화면에 표시됩니다. 켜져 있는 동안에는 보호를 끌 수 없고 규칙도 지울 수 없습니다. 그렇게 설계되어 있습니다. 당신이 고른 시각에 스스로 끝납니다.</dd>
+<dt>Pausely가 다른 앱에서 하는 일을 보나요?</dt>
+<dd>아니요. 당신의 웹 사용도, 메시지도, 어떤 앱 안에서의 활동도 결코 지켜보지 않습니다. 기록하는 것은 자기 자신의 사건 — 멈춤이 표시되었다는 것과, 당신이 무엇을 골랐는지 — 뿐이며, 그마저 당신의 기기에 남습니다.</dd>
+<dt>AI 되돌아보기는 무엇이고, 켜져 있나요?</dt>
+<dd>꺼져 있습니다. 당신이 켜기 전까지는요. 켜면 하나의 멈춤이 짧은 대화가 됩니다. 왜 앱을 여는지 적으면 질문이 되돌아옵니다. 한 주에 대한 짧은 글도 씁니다. 그 말들은 Pausely 자체 서버로, 그리고 모델을 돌리는 Google로 갑니다 — 일지도, 기분 기록도, 어떤 앱을 골랐는지도 결코 가지 않습니다. <kbd>설정</kbd> → <kbd>AI 되돌아보기</kbd> → <kbd>보내는 것</kbd>에 모든 항목이 나열되어 있고, 다시 끄면 앱은 네트워크 통신을 전혀 하지 않는 상태로 돌아갑니다.</dd>
+<dt>iPad에서 되나요? Mac에서는요?</dt>
+<dd>iPad는 됩니다. Pausely는 iPhone과 iPad를 위한 하나의 앱이고, 두 기기의 레이아웃도 같으며, Split View와 Slide Over, Stage Manager에서도 작동합니다. Mac은 되지 않습니다. Pausely가 딛고 선 스크린 타임 프레임워크가 그곳에는 없기 때문입니다.</dd>
+<dt>제 언어로 읽을 수 있나요?</dt>
+<dd>Pausely는 여덟 개 언어를 하고, 기기의 설정을 따릅니다. 다른 언어로 읽고 싶다면 — 기기의 다른 설정은 그대로 둔 채 — <kbd>설정</kbd> → <kbd>언어</kbd>를 여세요. 차단 화면도, 위젯도, 잠금 화면도 같은 선택을 따릅니다.</dd>
+<dt>전부 지우려면 어떻게 하나요?</dt>
+<dd><kbd>설정</kbd> → <kbd>내 데이터</kbd> → <kbd>모든 데이터 초기화</kbd>. 모든 멈춤, 성과, 규칙, 일지, 기분 기록을 비우고, 차단을 내리고, 처음으로 되돌립니다. 엄격 모드가 켜져 있는 동안에는 거부합니다. 자세한 내용은 <a href="/pausely-links/ko/delete-data/">내 데이터</a> 페이지에 있습니다.</dd>
+</dl>
+</section><section class="card" id="trouble"><h2>문제 해결</h2>
+<h3>멈춤 없이 앱이 열립니다</h3>
+<ul>
+  <li>홈 화면의 <strong>보호</strong> 스위치를 확인하세요.</li>
+  <li>스크린 타임 접근 권한이 여전히 살아 있는지 확인하세요: <kbd>설정</kbd> → <kbd>스크린 타임</kbd> → <kbd>스크린 타임 접근 권한이 있는 앱</kbd>. 권한이 거둬졌다면 Pausely가 다시 요청하는 버튼이 있는 복구 화면을 보여 줍니다.</li>
+  <li>그 앱이 <strong>규칙</strong>에만 들어 있다면, 멈춤은 그 규칙의 시간대에만 나타납니다.</li>
+  <li>앞서 연 <strong>접근 시간</strong>이 아직 남아 있을 수 있습니다 — 잠금 화면의 카운트다운이 남은 시간을 보여 줍니다.</li>
+</ul>
+<h3>차단 화면은 뜨는데 멈춤이 열리지 않습니다</h3>
+<ul>
+  <li>차단 화면의 버튼을 누르면 알림을 통해 앱으로 넘어갑니다. Pausely의 알림이 꺼져 있으면 iOS가 그 연결을 전달하지 못합니다 — <kbd>설정</kbd> → <kbd>알림</kbd> → <kbd>Pausely</kbd>에서 켜 주세요.</li>
+  <li>Pausely를 직접 열어도 기다리고 있던 멈춤이 열립니다.</li>
+</ul>
+<h3>위젯이 뒤처져 있습니다</h3>
+<p>iOS는 자기 일정대로 위젯을 새로 고칩니다. Pausely를 열면 바로 최신 상태가 됩니다.</p>
+<h3>앱이 다른 언어로 보입니다</h3>
+<p><kbd>설정</kbd> → <kbd>언어</kbd>를 열고 원하는 언어를 고르세요. Pausely가 그리는 것은 즉시 따라옵니다. Apple의 앱 선택 화면은 Pausely가 아니라 iOS가 그리므로, 다음 실행부터 바뀝니다.</p>
+<h3>Premium이 인식되지 않습니다</h3>
+<p>Premium 화면에서 <kbd>구매 복원</kbd>를 누르고, 구매할 때 쓴 것과 같은 Apple 계정으로 기기에 로그인되어 있는지 확인하세요. 환불과 결제 문의는 <a href="https://support.apple.com/billing">Apple 지원</a>을 통해 Apple이 처리합니다.</p>
+</section><section class="card" id="contact"><h2>문의</h2>
+<p>궁금한 점, 버그, 되어야 하는데 되지 않는 것 — 편지를 보내 주시면 사람이 답합니다.</p>
+<div class="callout"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><div><strong><a href="mailto:topsol.org@gmail.com">topsol.org@gmail.com</a></strong><br><span class="small">기기 모델, iOS 버전, 그리고 어떤 일이 일어날 거라 기대했는지 함께 적어 주세요. 일지나 기분 기록은 절대 보내지 마세요 — 저희에게 필요하지 않고, 갖고 있고 싶지도 않습니다.</span></div></div>
+<p style="margin-top:16px" class="small">결제, 환불, 구독 변경은 Apple이 처리합니다: <a href="https://apps.apple.com/account/subscriptions">구독 관리</a> · <a href="https://support.apple.com/billing">환불 요청</a>.</p>
+</section></div></div></main>
+<footer><div class="in">
+  <div>© 2026 Pausely · TOPSOL · 모든 권리 보유.</div>
+  <nav aria-label="푸터"><a href="/pausely-links/ko/">도움말</a> · <a href="/pausely-links/ko/about/">소개</a> · <a href="/pausely-links/ko/privacy/">개인정보</a> · <a href="/pausely-links/ko/terms/">약관</a> · <a href="/pausely-links/ko/delete-data/">내 데이터</a> · <a href="mailto:topsol.org@gmail.com">topsol.org@gmail.com</a></nav>
+</div></footer>
+</body>
+</html>
