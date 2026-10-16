@@ -27,7 +27,7 @@ COPY = {
 "ui.rights": "All rights reserved.",
 "ui.store_soon": "Coming soon to the App Store",
 "ui.store_get": "Download on the App Store",
-"ui.date": "3 September 2026",
+"ui.date": "16 October 2026",
 "ui.last_updated": "Last updated: {DATE}",
 
 # The app's own words, so this site names a screen the way the screen does.
@@ -123,7 +123,7 @@ COPY = {
 <dt>Does Pausely see what I do in other apps?</dt>
 <dd>No. It never observes your browsing, messages or activity inside any app. It records only its own events — that a pause was shown, and what you chose — and keeps those on your device.</dd>
 <dt>What is the AI reflection, and is it on?</dt>
-<dd>It is off, until you switch it on. When you do, one pause becomes a short exchange: you type why you are opening the app, and a question comes back. It also writes a short note about your week. Those words go to Pausely's own server and on to Google, which runs the model — never your journal, never your check-ins, never which apps you chose. {K_settings} → {K_ai_reflection} → {K_what_is_sent} lists every field, and switching it off returns the app to making no network calls at all.</dd>
+<dd>It is off, until you switch it on. When you do, one pause becomes a short exchange: you type why you are opening the app, and a question comes back. It also writes a short note about your week. Those words go to Pausely's own server and on to OpenAI, which runs the model — never your journal, never your check-ins, never which apps you chose. {K_settings} → {K_ai_reflection} → {K_what_is_sent} lists every field, and switching it off returns the app to making no network calls at all.</dd>
 <dt>Does it work on iPad? On Mac?</dt>
 <dd>iPad, yes — Pausely is one app for iPhone and iPad, with the same layout on both, and it works in Split View, Slide Over and Stage Manager. Mac, no: the Screen Time frameworks Pausely is built on are not available there.</dd>
 <dt>Can I read the app in my own language?</dt>
@@ -278,8 +278,9 @@ COPY = {
   <li><strong>Anything that identifies you.</strong> There is no account, no user ID and no advertising identifier to send. The request carries an Apple App Attest assertion, which tells our server that it is talking to a genuine copy of Pausely — it is scoped to the app, not to you, and does not follow you between requests.</li>
 </ul>
 <h3>Where it goes, and how long it is kept</h3>
-<p>Your words go to <strong>Pausely's own server</strong>, and on to <strong>Google</strong>, which runs the model. Pausely never calls a model vendor's API from your device, and there is no API key inside the app to be extracted.</p>
-<p><strong>Pausely's server stores nothing per request</strong> — no prompt, no reply, no context. Its logs record the shape of a request (a timestamp, how long it took, whether it succeeded) and never its contents. <strong>Google keeps inputs and outputs for up to 24 hours</strong> to reduce latency, and may examine prompts to check for abuse, under its standard Cloud terms. <strong>Google does not use any of it to train its models.</strong></p>
+<p>Your words go to <strong>Pausely's own server</strong>, and on to <strong>OpenAI</strong>, which runs the model. Pausely never calls a model vendor's API from your device, and there is no API key inside the app to be extracted.</p>
+<p><strong>Pausely's server stores nothing per request</strong> — no prompt, no reply, no context. To stop runaway use it keeps one number per device per day — how many reflections that device asked for, under a random device key — and deletes it after two days. Its logs record the shape of a request (a timestamp, how long it took, whether it succeeded) and never its contents. <strong>OpenAI keeps inputs and outputs for up to 30 days</strong> in its abuse-monitoring logs, and may examine them to check for abuse. <strong>OpenAI does not use any of it to train its models.</strong></p>
+<p>Earlier versions of Pausely send the same words to <strong>Google</strong> instead, which keeps inputs and outputs for up to 24 hours, may examine prompts to check for abuse, and does not use them to train its models.</p>
 <p>{K_settings} → {K_ai_reflection} → {K_what_is_sent} lists every field in the app itself, in the same words as this page.</p>
 """,
 
@@ -296,10 +297,11 @@ COPY = {
 
 "p.third.h": "Third parties",
 "p.third.b": """
-<p>Pausely contains <strong>no third-party code</strong>: no analytics, no advertising, no crash reporter, no SDKs. Two other parties are involved, and only these two:</p>
+<p>Pausely contains <strong>no third-party code</strong>: no analytics, no advertising, no crash reporter, no SDKs. Three other parties are involved, and only these three:</p>
 <ul>
   <li><strong>Apple</strong> operates the App Store, processes purchases, enforces the Screen Time shield, and — if you have opted in to sharing with developers — may share crash logs with us under its own policy.</li>
-  <li><strong>Google</strong> runs the model behind the AI reflection, and only for as long as you have that feature switched on. It receives what is listed above and nothing else, and it does not use it to train its models.</li>
+  <li><strong>Cloudflare</strong> hosts Pausely's server. When the AI reflection is on, your words pass through it on their way to the model, and it stores none of them.</li>
+  <li><strong>OpenAI</strong> runs the model behind the AI reflection, and only for as long as you have that feature switched on. It receives what is listed above and nothing else, and it does not use it to train its models. Earlier versions of the app use <strong>Google</strong> for this instead.</li>
 </ul>
 <p>We do not sell or rent personal data to anyone, and we share nothing with data brokers or advertisers.</p>
 """,
@@ -364,7 +366,7 @@ COPY = {
 """,
 "t.ai.h": "6. The AI reflection",
 "t.ai.b": """
-<p>The AI reflection is an <strong>optional</strong> Premium feature that is <strong>off until you switch it on</strong>. With it on, the words you type into that one pause are sent to our server and on to Google, which generates a response. What is sent, what is never sent and how long anything is kept are set out in the <a href="{BASE}{L}/privacy/#ai">Privacy Policy</a>, and listed inside the app at {K_settings} → {K_ai_reflection} → {K_what_is_sent}.</p>
+<p>The AI reflection is an <strong>optional</strong> Premium feature that is <strong>off until you switch it on</strong>. With it on, the words you type into that one pause are sent to our server and on to OpenAI, which generates a response. What is sent, what is never sent and how long anything is kept are set out in the <a href="{BASE}{L}/privacy/#ai">Privacy Policy</a>, and listed inside the app at {K_settings} → {K_ai_reflection} → {K_what_is_sent}.</p>
 <p>The response is <strong>generated text</strong>. It may be wrong, unhelpful, or not what you expected, and it is <strong>not advice of any kind</strong> — see section 3. Do not type anything into it you would not want processed by a third party, and do not rely on it for any decision that matters. We do not guarantee the availability, latency or continuity of the feature, and we may change the model behind it, limit its use, or withdraw it, without that affecting the rest of the app.</p>
 <p>You agree not to use the feature to generate unlawful, abusive or infringing content, or to attempt to extract the underlying model or its instructions. Switching the feature off stops all of it and returns the app to making no network calls at all.</p>
 """,
@@ -427,7 +429,7 @@ COPY = {
 <tr><td>Your app selection</td><td>Opaque Screen Time tokens in the app's private storage</td><td>Same as above; revoking Screen Time access in iOS Settings also ends every shield</td></tr>
 <tr><td>Widget snapshot</td><td>A small file of counts and dates on your device</td><td>Removed with the reset and with the app</td></tr>
 <tr><td>Premium entitlement</td><td>Your Apple ID (Apple) and a copy of its status on your device</td><td>Managed in your App Store settings — see below</td></tr>
-<tr><td>What you typed into an AI reflection</td><td>Nowhere, once it has been answered. Our server stores no prompt and no reply; Google keeps inputs and outputs for up to 24 hours</td><td>Nothing to delete. Switch the feature off in {K_settings} → {K_ai_reflection} and nothing more is ever sent</td></tr>
+<tr><td>What you typed into an AI reflection</td><td>Nowhere, once it has been answered. Our server stores no prompt and no reply; OpenAI keeps inputs and outputs for up to 30 days (Google, for earlier versions: up to 24 hours)</td><td>Nothing to delete. Switch the feature off in {K_settings} → {K_ai_reflection} and nothing more is ever sent</td></tr>
 <tr><td>An account, a profile, anything with your name on it</td><td>—</td><td>There is none. We never had one to delete.</td></tr>
 </table></div>
 """,

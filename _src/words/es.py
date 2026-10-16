@@ -17,7 +17,7 @@ COPY = {
 "ui.rights": "Todos los derechos reservados.",
 "ui.store_soon": "Muy pronto en el App Store",
 "ui.store_get": "Consíguelo en el App Store",
-"ui.date": "3 de septiembre de 2026",
+"ui.date": "16 de octubre de 2026",
 "ui.last_updated": "Última actualización: {DATE}",
 
 "k.settings": "Ajustes",
@@ -111,7 +111,7 @@ COPY = {
 <dt>¿Pausely ve lo que hago en otras apps?</dt>
 <dd>No. Nunca observa tu navegación, tus mensajes ni tu actividad dentro de ninguna app. Solo registra sus propios eventos — que se mostró una pausa y qué elegiste — y los guarda en tu dispositivo.</dd>
 <dt>¿Qué es la reflexión con IA, y está activada?</dt>
-<dd>Está desactivada, hasta que tú la actives. Cuando lo haces, una pausa se convierte en un intercambio breve: escribes por qué estás abriendo la app y te vuelve una pregunta. También escribe una nota corta sobre tu semana. Esas palabras van al servidor propio de Pausely y de ahí a Google, que ejecuta el modelo — nunca tu diario, nunca tus registros de ánimo, nunca qué apps elegiste. {K_settings} → {K_ai_reflection} → {K_what_is_sent} enumera cada campo, y desactivarla devuelve la app a no hacer ninguna llamada de red.</dd>
+<dd>Está desactivada, hasta que tú la actives. Cuando lo haces, una pausa se convierte en un intercambio breve: escribes por qué estás abriendo la app y te vuelve una pregunta. También escribe una nota corta sobre tu semana. Esas palabras van al servidor propio de Pausely y de ahí a OpenAI, que ejecuta el modelo — nunca tu diario, nunca tus registros de ánimo, nunca qué apps elegiste. {K_settings} → {K_ai_reflection} → {K_what_is_sent} enumera cada campo, y desactivarla devuelve la app a no hacer ninguna llamada de red.</dd>
 <dt>¿Funciona en iPad? ¿Y en Mac?</dt>
 <dd>En iPad, sí: Pausely es una sola app para iPhone y iPad, con el mismo diseño en ambos, y funciona en Split View, Slide Over y Stage Manager. En Mac, no: los frameworks de Tiempo de uso sobre los que Pausely está construido no existen ahí.</dd>
 <dt>¿Puedo leer la app en mi idioma?</dt>
@@ -258,8 +258,9 @@ COPY = {
   <li><strong>Nada que te identifique.</strong> No hay cuenta, ni ID de usuario, ni identificador de publicidad que enviar. La petición lleva una certificación App Attest de Apple, que le dice a nuestro servidor que está hablando con una copia auténtica de Pausely — está ligada a la app, no a ti, y no te sigue de una petición a otra.</li>
 </ul>
 <h3>Adónde va y cuánto se guarda</h3>
-<p>Tus palabras van al <strong>servidor propio de Pausely</strong>, y de ahí a <strong>Google</strong>, que ejecuta el modelo. Pausely nunca llama desde tu dispositivo a la API de un proveedor de modelos, y dentro de la app no hay ninguna clave de API que se pueda extraer.</p>
-<p><strong>El servidor de Pausely no guarda nada de cada petición</strong> — ni la entrada, ni la respuesta, ni el contexto. Sus registros anotan la forma de una petición (una marca de tiempo, cuánto tardó, si tuvo éxito) y nunca su contenido. <strong>Google conserva entradas y salidas hasta 24 horas</strong> para reducir la latencia, y puede examinar las entradas para comprobar si hay abuso, bajo sus condiciones estándar de Cloud. <strong>Google no usa nada de ello para entrenar sus modelos.</strong></p>
+<p>Tus palabras van al <strong>servidor propio de Pausely</strong>, y de ahí a <strong>OpenAI</strong>, que ejecuta el modelo. Pausely nunca llama desde tu dispositivo a la API de un proveedor de modelos, y dentro de la app no hay ninguna clave de API que se pueda extraer.</p>
+<p><strong>El servidor de Pausely no guarda nada de cada petición</strong> — ni la entrada, ni la respuesta, ni el contexto. Para frenar un uso desbocado, guarda un único número por dispositivo y día —cuántas reflexiones pidió ese dispositivo, bajo una clave de dispositivo aleatoria— y lo borra a los dos días. Sus registros anotan la forma de una petición (una marca de tiempo, cuánto tardó, si tuvo éxito) y nunca su contenido. <strong>OpenAI conserva entradas y salidas hasta 30 días</strong> en sus registros de supervisión de abusos, y puede examinarlas para comprobar si hay abuso. <strong>OpenAI no usa nada de ello para entrenar sus modelos.</strong></p>
+<p>Las versiones anteriores de Pausely envían esas mismas palabras a <strong>Google</strong>, que conserva entradas y salidas hasta 24 horas, puede examinar las entradas para comprobar si hay abuso y no usa nada de ello para entrenar sus modelos.</p>
 <p>{K_settings} → {K_ai_reflection} → {K_what_is_sent} enumera cada campo dentro de la propia app, con las mismas palabras que esta página.</p>
 """,
 
@@ -276,10 +277,11 @@ COPY = {
 
 "p.third.h": "Terceros",
 "p.third.b": """
-<p>Pausely no contiene <strong>código de terceros</strong>: ni analítica, ni publicidad, ni informes de fallos, ni SDK. Hay otras dos partes implicadas, y solo estas dos:</p>
+<p>Pausely no contiene <strong>código de terceros</strong>: ni analítica, ni publicidad, ni informes de fallos, ni SDK. Hay otras tres partes implicadas, y solo estas tres:</p>
 <ul>
   <li><strong>Apple</strong> gestiona el App Store, procesa las compras, aplica la protección de Tiempo de uso y — si has aceptado compartir con los desarrolladores — puede compartir con nosotros informes de fallos bajo su propia política.</li>
-  <li><strong>Google</strong> ejecuta el modelo que hay detrás de la reflexión con IA, y solo mientras tengas esa función activada. Recibe lo que se enumera arriba y nada más, y no lo usa para entrenar sus modelos.</li>
+  <li><strong>Cloudflare</strong> aloja el servidor de Pausely. Con la reflexión con IA activada, tus palabras pasan por él camino del modelo, y no guarda ninguna.</li>
+  <li><strong>OpenAI</strong> ejecuta el modelo que hay detrás de la reflexión con IA, y solo mientras tengas esa función activada. Recibe lo que se enumera arriba y nada más, y no lo usa para entrenar sus modelos. Las versiones anteriores de la app usan <strong>Google</strong> para esto.</li>
 </ul>
 <p>No vendemos ni alquilamos datos personales a nadie, y no compartimos nada con intermediarios de datos ni anunciantes.</p>
 """,
@@ -343,7 +345,7 @@ COPY = {
 """,
 "t.ai.h": "6. La reflexión con IA",
 "t.ai.b": """
-<p>La reflexión con IA es una función Premium <strong>opcional</strong> que está <strong>desactivada hasta que tú la actives</strong>. Con ella activada, las palabras que escribes en esa única pausa se envían a nuestro servidor y de ahí a Google, que genera una respuesta. Qué se envía, qué no se envía nunca y cuánto se guarda algo están detallados en la <a href="{BASE}{L}/privacy/#ai">Política de Privacidad</a>, y enumerados dentro de la app en {K_settings} → {K_ai_reflection} → {K_what_is_sent}.</p>
+<p>La reflexión con IA es una función Premium <strong>opcional</strong> que está <strong>desactivada hasta que tú la actives</strong>. Con ella activada, las palabras que escribes en esa única pausa se envían a nuestro servidor y de ahí a OpenAI, que genera una respuesta. Qué se envía, qué no se envía nunca y cuánto se guarda algo están detallados en la <a href="{BASE}{L}/privacy/#ai">Política de Privacidad</a>, y enumerados dentro de la app en {K_settings} → {K_ai_reflection} → {K_what_is_sent}.</p>
 <p>La respuesta es <strong>texto generado</strong>. Puede ser incorrecta, poco útil o no lo que esperabas, y <strong>no es consejo de ningún tipo</strong> — ver la sección 3. No escribas ahí nada que no quisieras que procesara un tercero, y no te apoyes en ella para ninguna decisión que importe. No garantizamos la disponibilidad, la latencia ni la continuidad de la función, y podemos cambiar el modelo que hay detrás, limitar su uso o retirarla, sin que eso afecte al resto de la app.</p>
 <p>Te comprometes a no usar la función para generar contenido ilícito, abusivo o infractor, ni a intentar extraer el modelo subyacente o sus instrucciones. Desactivar la función detiene todo eso y devuelve la app a no hacer ninguna llamada de red.</p>
 """,
@@ -405,7 +407,7 @@ COPY = {
 <tr><td>Tu selección de apps</td><td>Tokens opacos de Tiempo de uso en el almacenamiento privado de la app</td><td>Igual que arriba; revocar el acceso a Tiempo de uso en los Ajustes de iOS también termina toda protección</td></tr>
 <tr><td>Instantánea del widget</td><td>Un archivo pequeño de recuentos y fechas en tu dispositivo</td><td>Se quita con el restablecimiento y con la app</td></tr>
 <tr><td>Derecho a Premium</td><td>Tu ID de Apple (Apple) y una copia de su estado en tu dispositivo</td><td>Se gestiona en los ajustes de tu App Store — ver más abajo</td></tr>
-<tr><td>Lo que escribiste en una reflexión con IA</td><td>En ningún sitio, una vez respondida. Nuestro servidor no guarda ni la entrada ni la respuesta; Google conserva entradas y salidas hasta 24 horas</td><td>Nada que borrar. Desactiva la función en {K_settings} → {K_ai_reflection} y no se enviará nada más nunca</td></tr>
+<tr><td>Lo que escribiste en una reflexión con IA</td><td>En ningún sitio, una vez respondida. Nuestro servidor no guarda ni la entrada ni la respuesta; OpenAI conserva entradas y salidas hasta 30 días (Google, en versiones anteriores: hasta 24 horas)</td><td>Nada que borrar. Desactiva la función en {K_settings} → {K_ai_reflection} y no se enviará nada más nunca</td></tr>
 <tr><td>Una cuenta, un perfil, algo con tu nombre</td><td>—</td><td>No existe. Nunca tuvimos ninguna que borrar.</td></tr>
 </table></div>
 """,

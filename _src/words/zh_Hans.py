@@ -17,7 +17,7 @@ COPY = {
 "ui.rights": "保留所有权利。",
 "ui.store_soon": "即将上架 App Store",
 "ui.store_get": "在 App Store 下载",
-"ui.date": "2026年9月3日",
+"ui.date": "2026年10月16日",
 "ui.last_updated": "最后更新：{DATE}",
 
 "k.settings": "设置",
@@ -111,7 +111,7 @@ COPY = {
 <dt>Pausely 会看到我在别的 App 里做什么吗？</dt>
 <dd>不会。它从不观察你的浏览、你的消息，或你在任何 App 内的活动。它只记录自己的事件——一次暂停被显示过，以及你选择了什么——而这些也留在你的设备上。</dd>
 <dt>AI 反思是什么？它开着吗？</dt>
-<dd>关着，直到你打开它。打开之后，其中一次暂停会变成一小段对话：你写下为什么要打开这个 App，回来的是一个问题。它还会写一段关于你这一周的短文。这些文字会送到 Pausely 自己的服务器，再到运行模型的 Google——你的日志、你的心情记录、你选了哪些 App，都不会。{K_settings} → {K_ai_reflection} → {K_what_is_sent}里列出了每一个字段；把它关掉，App 就回到完全不发起任何网络请求的状态。</dd>
+<dd>关着，直到你打开它。打开之后，其中一次暂停会变成一小段对话：你写下为什么要打开这个 App，回来的是一个问题。它还会写一段关于你这一周的短文。这些文字会送到 Pausely 自己的服务器，再到运行模型的 OpenAI——你的日志、你的心情记录、你选了哪些 App，都不会。{K_settings} → {K_ai_reflection} → {K_what_is_sent}里列出了每一个字段；把它关掉，App 就回到完全不发起任何网络请求的状态。</dd>
 <dt>iPad 上能用吗？Mac 呢？</dt>
 <dd>iPad 可以：Pausely 是一个同时面向 iPhone 和 iPad 的 App，两边布局一致，也支持分屏浏览、侧拉和台前调度。Mac 不行：Pausely 所依赖的“屏幕使用时间”框架在那里并不存在。</dd>
 <dt>可以用我自己的语言阅读吗？</dt>
@@ -258,8 +258,9 @@ COPY = {
   <li><strong>任何能指认出你的东西。</strong>没有账号、没有用户 ID、没有广告标识符可供发送。请求会带上 Apple 的 App Attest 证明，它只是告诉我们的服务器：对面是一份货真价实的 Pausely。它绑定的是这个 App，不是你，也不会跨请求跟着你。</li>
 </ul>
 <h3>去到哪里，留多久</h3>
-<p>你的文字会送到 <strong>Pausely 自己的服务器</strong>，再到运行模型的 <strong>Google</strong>。Pausely 从不从你的设备直接调用任何模型厂商的 API，App 里也没有可以被掏出来的 API 密钥。</p>
-<p><strong>Pausely 的服务器对每次请求什么都不保存</strong>——不保存提问、不保存回答、不保存上下文。它的日志只记下一次请求的形状（时间戳、耗时、是否成功），从不记录内容。<strong>Google 会把输入和输出保留最多 24 小时</strong>，用于降低延迟，并可能依据其标准的 Cloud 条款检查输入是否存在滥用。<strong>这些内容 Google 都不会用来训练模型。</strong></p>
+<p>你的文字会送到 <strong>Pausely 自己的服务器</strong>，再到运行模型的 <strong>OpenAI</strong>。Pausely 从不从你的设备直接调用任何模型厂商的 API，App 里也没有可以被掏出来的 API 密钥。</p>
+<p><strong>Pausely 的服务器对每次请求什么都不保存</strong>——不保存提问、不保存回答、不保存上下文。为了制止失控的使用，它每台设备每天只保留一个数字——这台设备当天请求了多少次反思，记在一个随机的设备密钥下——两天后删除。它的日志只记下一次请求的形状（时间戳、耗时、是否成功），从不记录内容。<strong>OpenAI 会把输入和输出在其滥用监控日志中保留最多 30 天</strong>，并可能检查其中是否存在滥用。<strong>这些内容 OpenAI 都不会用来训练模型。</strong></p>
+<p>早期版本的 Pausely 会把同样的文字改送到 <strong>Google</strong>：Google 会把输入和输出保留最多 24 小时，可能检查输入是否存在滥用，也不会用来训练模型。</p>
 <p>{K_settings} → {K_ai_reflection} → {K_what_is_sent}在 App 内列出了每一个字段，用词与本页相同。</p>
 """,
 
@@ -276,10 +277,11 @@ COPY = {
 
 "p.third.h": "第三方",
 "p.third.b": """
-<p>Pausely 里<strong>没有第三方代码</strong>：没有分析统计、没有广告、没有崩溃上报、没有 SDK。参与其中的只有另外两方，也仅有这两方：</p>
+<p>Pausely 里<strong>没有第三方代码</strong>：没有分析统计、没有广告、没有崩溃上报、没有 SDK。参与其中的只有另外三方，也仅有这三方：</p>
 <ul>
   <li><strong>Apple</strong> 运营 App Store、处理购买、执行“屏幕使用时间”的遮挡；如果你已同意与开发者共享，它还可能依据自身政策向我们提供崩溃日志。</li>
-  <li><strong>Google</strong> 运行 AI 反思背后的模型，且仅在你打开该功能期间。它收到的只有上面列出的内容，别无其他，也不会用来训练自己的模型。</li>
+  <li><strong>Cloudflare</strong> 托管 Pausely 的服务器。打开 AI 反思时，你的文字会在送往模型的途中经过它，它不保存其中任何内容。</li>
+  <li><strong>OpenAI</strong> 运行 AI 反思背后的模型，且仅在你打开该功能期间。它收到的只有上面列出的内容，别无其他，也不会用来训练自己的模型。早期版本的 App 由 <strong>Google</strong> 承担这一角色。</li>
 </ul>
 <p>我们不向任何人出售或出租个人数据，也不与数据经纪商或广告商共享任何东西。</p>
 """,
@@ -343,7 +345,7 @@ COPY = {
 """,
 "t.ai.h": "6. AI 反思",
 "t.ai.b": """
-<p>AI 反思是一个<strong>可选的</strong> Premium 功能，<strong>在你打开它之前一直关着</strong>。打开之后，你在那一次暂停里打下的文字会被发送到我们的服务器，再送到生成回应的 Google。发送什么、永远不发送什么，以及任何内容会被保留多久，都写在<a href="{BASE}{L}/privacy/#ai">隐私政策</a>里，并在 App 内的{K_settings} → {K_ai_reflection} → {K_what_is_sent}中逐条列出。</p>
+<p>AI 反思是一个<strong>可选的</strong> Premium 功能，<strong>在你打开它之前一直关着</strong>。打开之后，你在那一次暂停里打下的文字会被发送到我们的服务器，再送到生成回应的 OpenAI。发送什么、永远不发送什么，以及任何内容会被保留多久，都写在<a href="{BASE}{L}/privacy/#ai">隐私政策</a>里，并在 App 内的{K_settings} → {K_ai_reflection} → {K_what_is_sent}中逐条列出。</p>
 <p>返回的是<strong>生成的文字</strong>。它可能是错的、没有帮助的，或者不是你所期待的，并且<strong>不构成任何形式的建议</strong>——见第 3 条。不要在其中输入你不希望被第三方处理的内容，也不要在任何要紧的决定上依赖它。我们不保证该功能的可用性、响应速度或持续提供，并可能更换其背后的模型、限制其使用，或将其撤下，而这不影响 App 的其余部分。</p>
 <p>你同意不使用该功能生成违法、辱骂或侵权的内容，也不试图套取底层模型或其指令。关闭该功能会让这一切停止，并使 App 回到完全不发起任何网络请求的状态。</p>
 """,
@@ -405,7 +407,7 @@ COPY = {
 <tr><td>你选中的 App</td><td>App 私有存储中不透明的“屏幕使用时间”令牌</td><td>同上；在 iOS 设置中收回“屏幕使用时间”权限，也会结束全部遮挡</td></tr>
 <tr><td>小组件快照</td><td>你设备上一个只含计数与日期的小文件</td><td>随重置一起移除，也随 App 一起移除</td></tr>
 <tr><td>Premium 权益</td><td>你的 Apple 账户（Apple 侧），以及其状态在你设备上的一份副本</td><td>在你的 App Store 设置中管理——见下文</td></tr>
-<tr><td>你在一次 AI 反思中打下的内容</td><td>被回答之后哪里都没有。我们的服务器既不保存提问也不保存回答；Google 会把输入和输出保留最多 24 小时</td><td>没有可删的东西。在{K_settings} → {K_ai_reflection}中关闭该功能，此后就不会再发送任何内容</td></tr>
+<tr><td>你在一次 AI 反思中打下的内容</td><td>被回答之后哪里都没有。我们的服务器既不保存提问也不保存回答；OpenAI 会把输入和输出保留最多 30 天（早期版本由 Google 保留最多 24 小时）</td><td>没有可删的东西。在{K_settings} → {K_ai_reflection}中关闭该功能，此后就不会再发送任何内容</td></tr>
 <tr><td>账号、个人资料，或任何带着你名字的东西</td><td>—</td><td>并不存在。我们从来就没有可删的。</td></tr>
 </table></div>
 """,
