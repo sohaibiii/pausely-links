@@ -17,7 +17,7 @@ COPY = {
 "ui.rights": "Alle Rechte vorbehalten.",
 "ui.store_soon": "Bald im App Store",
 "ui.store_get": "Im App Store laden",
-"ui.date": "16. Oktober 2026",
+"ui.date": "17. Oktober 2026",
 "ui.last_updated": "Zuletzt aktualisiert: {DATE}",
 
 "k.settings": "Einstellungen",
@@ -351,12 +351,15 @@ COPY = {
 """,
 "t.subscriptions.h": "7. Premium, Abos und Abrechnung",
 "t.subscriptions.b": """
-<p>Pausely ist kostenlos zum Laden und Benutzen. <strong>Pausely Premium</strong> schaltet weitere Funktionen frei und wird in drei Formen verkauft, zu dem Preis, der in der App und im App Store deines Landes steht:</p>
+<p>Pausely ist kostenlos zum Laden und Benutzen. <strong>Pausely Premium</strong> schaltet weitere Funktionen frei und wird in fünf Formen verkauft, zu dem Preis, der in der App und im App Store deines Landes steht:</p>
 <ul>
   <li><strong>Premium monatlich</strong> – ein sich automatisch verlängerndes Abo, monatlich abgerechnet.</li>
   <li><strong>Premium jährlich</strong> – ein sich automatisch verlängerndes Abo, jährlich abgerechnet, beginnend mit einer <strong>kostenlosen Testphase</strong>, wo eine angeboten wird.</li>
   <li><strong>Premium Einmalkauf</strong> – eine einmalige Zahlung, die sich nicht verlängert.</li>
+  <li><strong>Premium Familie jährlich</strong> – ein sich automatisch verlängerndes Abo, jährlich abgerechnet, beginnend mit einer <strong>kostenlosen Testphase</strong>, wo eine angeboten wird, für bis zu sechs Personen über die Familienfreigabe.</li>
+  <li><strong>Premium Familie Einmalkauf</strong> – eine einmalige Zahlung, die sich nicht verlängert, für bis zu sechs Personen über die Familienfreigabe.</li>
 </ul>
+<p>Die beiden Familienangebote werden über Apples <strong>Familienfreigabe</strong> mit bis zu fünf weiteren Mitgliedern deiner Familiengruppe geteilt. Jede Person bekommt Premium in ihrer eigenen Pausely-App auf ihrem eigenen Gerät; Regeln, Apps, Verlauf und alle anderen Daten werden nicht geteilt. Die anderen drei gelten nur für dich und werden nicht geteilt.</p>
 <p>Die Zahlung wird deiner Apple-ID mit der Kaufbestätigung belastet. Eine kostenlose Testphase geht in ein kostenpflichtiges Abo über, sofern du nicht mindestens 24 Stunden vor Ende der Testphase kündigst. Abos verlängern sich automatisch zum selben Preis und Zeitraum, sofern die automatische Verlängerung nicht mindestens 24 Stunden vor Ende des laufenden Zeitraums abgeschaltet wird; die Verlängerung wird innerhalb der 24 Stunden vor dessen Ende berechnet. Du kannst ein Abo in deinen <a href="https://apps.apple.com/account/subscriptions">App-Store-Aboeinstellungen</a> verwalten oder kündigen; die Kündigung wirkt zum Ende des laufenden Zeitraums, und für den ungenutzten Teil eines Zeitraums gibt es keine anteilige Erstattung. Rückerstattungen übernimmt Apple nach Apples Richtlinien. Nutze {K_restore} in der App, um Premium auf einem neuen Gerät zurückzuholen.</p>
 <p><strong>Läuft ein Abo aus</strong>, wird nichts entfernt, was du bereits eingerichtet hast: Jede Regel läuft weiter und bleibt bearbeitbar, und die von dir gewählte Pause funktioniert weiter. Nur die Möglichkeit, weitere Premium-Inhalte hinzuzufügen, schließt sich. Der Umfang der Premium-Funktionen kann sich mit der Zeit ändern; wir entfernen keine Funktion aus einem laufenden Abo, ohne das anzukündigen.</p>
 """,

@@ -17,7 +17,7 @@ COPY = {
 "ui.rights": "Tous droits réservés.",
 "ui.store_soon": "Bientôt sur l’App Store",
 "ui.store_get": "Télécharger dans l’App Store",
-"ui.date": "16 octobre 2026",
+"ui.date": "17 octobre 2026",
 "ui.last_updated": "Dernière mise à jour : {DATE}",
 
 "k.settings": "Réglages",
@@ -351,12 +351,15 @@ COPY = {
 """,
 "t.subscriptions.h": "7. Premium, abonnements et facturation",
 "t.subscriptions.b": """
-<p>Pausely est gratuit à télécharger et à utiliser. <strong>Pausely Premium</strong> débloque des fonctions supplémentaires et est vendu sous trois formes, au prix affiché dans l’app et sur l’App Store de votre pays :</p>
+<p>Pausely est gratuit à télécharger et à utiliser. <strong>Pausely Premium</strong> débloque des fonctions supplémentaires et est vendu sous cinq formes, au prix affiché dans l’app et sur l’App Store de votre pays :</p>
 <ul>
   <li><strong>Premium mensuel</strong> — un abonnement à renouvellement automatique, facturé chaque mois.</li>
   <li><strong>Premium annuel</strong> — un abonnement à renouvellement automatique, facturé chaque année, commençant par un <strong>essai gratuit</strong> là où il est proposé.</li>
   <li><strong>Premium à vie</strong> — un achat unique qui ne se renouvelle pas.</li>
+  <li><strong>Premium Famille annuel</strong> — un abonnement à renouvellement automatique, facturé chaque année, commençant par un <strong>essai gratuit</strong> là où il est proposé, pour 6 personnes maximum grâce au Partage familial.</li>
+  <li><strong>Premium Famille à vie</strong> — un achat unique qui ne se renouvelle pas, pour 6 personnes maximum grâce au Partage familial.</li>
 </ul>
+<p>Les deux formules Famille sont partagées grâce au <strong>Partage familial</strong> d’Apple avec jusqu’à cinq autres membres de votre groupe familial. Chacun reçoit Premium dans sa propre copie de Pausely, sur son propre appareil ; aucune règle, aucune app, aucun historique ni aucune autre donnée n’est partagé entre eux. Les trois autres formules sont personnelles et ne sont pas partagées.</p>
 <p>Le paiement est prélevé sur votre identifiant Apple à la confirmation de l’achat. Un essai gratuit se transforme en abonnement payant sauf résiliation au moins 24 heures avant la fin de l’essai. Les abonnements se renouvellent automatiquement au même prix et pour la même période, sauf si le renouvellement automatique est désactivé au moins 24 heures avant la fin de la période en cours ; le renouvellement est facturé dans les 24 heures qui précèdent cette fin. Vous pouvez gérer ou résilier un abonnement dans vos <a href="https://apps.apple.com/account/subscriptions">réglages d’abonnements App Store</a> ; la résiliation prend effet à la fin de la période en cours, et aucun remboursement partiel n’est accordé pour la part inutilisée d’une période. Les remboursements sont gérés par Apple selon ses politiques. Utilisez {K_restore} dans l’app pour retrouver Premium sur un nouvel appareil.</p>
 <p><strong>Si un abonnement expire</strong>, rien de ce que vous avez déjà mis en place n’est supprimé : chaque règle continue de tourner et reste modifiable, et la pause que vous avez choisie continue de fonctionner. Seule la possibilité d’ajouter davantage de contenu Premium se ferme. L’ensemble des fonctions Premium peut évoluer ; nous ne retirerons pas une fonction d’un abonnement actif sans préavis.</p>
 """,

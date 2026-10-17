@@ -17,7 +17,7 @@ COPY = {
 "ui.rights": "Todos os direitos reservados.",
 "ui.store_soon": "Em breve na App Store",
 "ui.store_get": "Baixar na App Store",
-"ui.date": "16 de outubro de 2026",
+"ui.date": "17 de outubro de 2026",
 "ui.last_updated": "Última atualização: {DATE}",
 
 "k.settings": "Ajustes",
@@ -351,12 +351,15 @@ COPY = {
 """,
 "t.subscriptions.h": "7. Premium, assinaturas e cobrança",
 "t.subscriptions.b": """
-<p>O Pausely é grátis para baixar e usar. O <strong>Pausely Premium</strong> libera recursos adicionais e é vendido em três formas, pelo preço mostrado no app e na App Store do seu país:</p>
+<p>O Pausely é grátis para baixar e usar. O <strong>Pausely Premium</strong> libera recursos adicionais e é vendido em cinco formas, pelo preço mostrado no app e na App Store do seu país:</p>
 <ul>
   <li><strong>Premium mensal</strong> — uma assinatura de renovação automática, cobrada por mês.</li>
   <li><strong>Premium anual</strong> — uma assinatura de renovação automática, cobrada por ano, começando com um <strong>período de teste grátis</strong> onde for oferecido.</li>
   <li><strong>Premium vitalício</strong> — uma compra única que não se renova.</li>
+  <li><strong>Premium família anual</strong> — uma assinatura de renovação automática, cobrada por ano, começando com um <strong>período de teste grátis</strong> onde for oferecido, para até seis pessoas pelo Compartilhamento Familiar.</li>
+  <li><strong>Premium família vitalício</strong> — uma compra única que não se renova, para até seis pessoas pelo Compartilhamento Familiar.</li>
 </ul>
+<p>Os dois planos família são compartilhados pelo <strong>Compartilhamento Familiar</strong> da Apple com até outros cinco membros do seu grupo familiar. Cada pessoa recebe o Premium na própria cópia do Pausely, no próprio dispositivo; nenhuma regra, app, histórico ou outro dado é compartilhado entre elas. Os outros três são só para você e não são compartilhados.</p>
 <p>O pagamento é cobrado do seu ID Apple na confirmação da compra. Um teste grátis vira uma assinatura paga a menos que você cancele pelo menos 24 horas antes de o teste acabar. As assinaturas se renovam automaticamente pelo mesmo preço e período, a menos que a renovação automática seja desligada pelo menos 24 horas antes do fim do período atual; a renovação é cobrada dentro das 24 horas anteriores a esse fim. Você pode gerenciar ou cancelar uma assinatura nos <a href="https://apps.apple.com/account/subscriptions">ajustes de assinatura da App Store</a>; o cancelamento vale a partir do fim do período atual, e não há reembolso proporcional pela parte não usada de um período. Os reembolsos são tratados pela Apple sob as políticas dela. Use {K_restore} no app para recuperar o Premium num aparelho novo.</p>
 <p><strong>Se uma assinatura vencer</strong>, nada do que você já configurou é removido: todas as regras continuam rodando e podem ser editadas, e a pausa que você escolheu continua funcionando. Só a possibilidade de acrescentar mais conteúdo Premium se fecha. O conjunto de recursos Premium pode mudar com o tempo; não vamos remover um recurso de uma assinatura ativa sem aviso.</p>
 """,

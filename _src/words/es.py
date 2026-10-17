@@ -17,7 +17,7 @@ COPY = {
 "ui.rights": "Todos los derechos reservados.",
 "ui.store_soon": "Muy pronto en el App Store",
 "ui.store_get": "Consíguelo en el App Store",
-"ui.date": "16 de octubre de 2026",
+"ui.date": "17 de octubre de 2026",
 "ui.last_updated": "Última actualización: {DATE}",
 
 "k.settings": "Ajustes",
@@ -351,12 +351,15 @@ COPY = {
 """,
 "t.subscriptions.h": "7. Premium, suscripciones y facturación",
 "t.subscriptions.b": """
-<p>Pausely es gratis de descargar y de usar. <strong>Pausely Premium</strong> desbloquea funciones adicionales y se vende en tres formas, al precio que se muestra en la app y en el App Store de tu país:</p>
+<p>Pausely es gratis de descargar y de usar. <strong>Pausely Premium</strong> desbloquea funciones adicionales y se vende en cinco formas, al precio que se muestra en la app y en el App Store de tu país:</p>
 <ul>
   <li><strong>Premium mensual</strong> — una suscripción de renovación automática, facturada cada mes.</li>
   <li><strong>Premium anual</strong> — una suscripción de renovación automática, facturada cada año, que empieza con una <strong>prueba gratuita</strong> donde se ofrezca.</li>
   <li><strong>Premium de por vida</strong> — una compra única que no se renueva.</li>
+  <li><strong>Premium familiar anual</strong> — una suscripción de renovación automática, facturada cada año, que empieza con una <strong>prueba gratuita</strong> donde se ofrezca, para hasta seis personas mediante En familia.</li>
+  <li><strong>Premium familiar de por vida</strong> — una compra única que no se renueva, para hasta seis personas mediante En familia.</li>
 </ul>
+<p>Los dos planes familiares se comparten mediante <strong>En familia</strong> de Apple con hasta otros cinco miembros de tu grupo familiar. Cada persona recibe Premium en su propia copia de Pausely, en su propio dispositivo; no se comparten reglas, apps, historial ni ningún otro dato entre ellas. Los otros tres son solo para ti y no se comparten.</p>
 <p>El pago se carga a tu ID de Apple al confirmar la compra. Una prueba gratuita se convierte en suscripción de pago salvo que canceles al menos 24 horas antes de que termine. Las suscripciones se renuevan automáticamente al mismo precio y periodo salvo que la renovación automática se desactive al menos 24 horas antes del final del periodo en curso; la renovación se cobra dentro de las 24 horas previas a ese final. Puedes gestionar o cancelar una suscripción en los <a href="https://apps.apple.com/account/subscriptions">ajustes de suscripciones del App Store</a>; la cancelación surte efecto al final del periodo en curso, y no se devuelve la parte no usada de un periodo. Los reembolsos los gestiona Apple según sus políticas. Usa {K_restore} en la app para recuperar Premium en un dispositivo nuevo.</p>
 <p><strong>Si una suscripción caduca</strong>, no se elimina nada de lo que ya hayas configurado: cada regla sigue funcionando y se puede editar, y la pausa que elegiste sigue funcionando. Solo se cierra la posibilidad de añadir más contenido Premium. El conjunto de funciones Premium puede cambiar con el tiempo; no quitaremos una función de una suscripción activa sin avisar.</p>
 """,

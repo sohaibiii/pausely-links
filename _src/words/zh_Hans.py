@@ -17,7 +17,7 @@ COPY = {
 "ui.rights": "保留所有权利。",
 "ui.store_soon": "即将上架 App Store",
 "ui.store_get": "在 App Store 下载",
-"ui.date": "2026年10月16日",
+"ui.date": "2026年10月17日",
 "ui.last_updated": "最后更新：{DATE}",
 
 "k.settings": "设置",
@@ -351,12 +351,15 @@ COPY = {
 """,
 "t.subscriptions.h": "7. Premium、订阅与计费",
 "t.subscriptions.b": """
-<p>Pausely 免费下载、免费使用。<strong>Pausely Premium</strong> 解锁额外功能，以三种形式出售，价格以 App 内和你所在国家/地区 App Store 的显示为准：</p>
+<p>Pausely 免费下载、免费使用。<strong>Pausely Premium</strong> 解锁额外功能，以五种形式出售，价格以 App 内和你所在国家/地区 App Store 的显示为准：</p>
 <ul>
   <li><strong>Premium 按月</strong>——自动续期订阅，按月计费。</li>
   <li><strong>Premium 按年</strong>——自动续期订阅，按年计费；在提供试用的地区，以<strong>免费试用</strong>开始。</li>
   <li><strong>Premium 永久</strong>——一次性购买，不会续期。</li>
+  <li><strong>Premium 家庭版按年</strong>——自动续期订阅，按年计费；在提供试用的地区，以<strong>免费试用</strong>开始；通过家人共享，最多六人可用。</li>
+  <li><strong>Premium 家庭版永久</strong>——一次性购买，不会续期；通过家人共享，最多六人可用。</li>
 </ul>
+<p>两种家庭版通过 Apple 的<strong>家人共享</strong>，与你家庭群组中最多另外五名成员共享。每个人都在自己设备上的 Pausely 里使用 Premium；规则、App、历史记录及其他任何数据都不会在彼此之间共享。另外三种仅供你本人使用，不会共享。</p>
 <p>确认购买时，费用将记入你的 Apple 账户。除非在试用结束前至少 24 小时取消，免费试用会转为付费订阅。除非在当前周期结束前至少 24 小时关闭自动续期，订阅将按相同价格和相同周期自动续期；续期费用会在该周期结束前 24 小时内扣取。你可以在<a href="https://apps.apple.com/account/subscriptions">App Store 订阅设置</a>中管理或取消订阅；取消于当前周期结束时生效，已过周期中未使用的部分不作按比例退款。退款由 Apple 依其政策处理。在新设备上找回 Premium，请使用 App 内的{K_restore}。</p>
 <p><strong>如果订阅到期</strong>，你已经设好的东西一样都不会被移除：每条规则照常运行，也仍然可以编辑，你选的那种暂停也照常工作。关上的只是继续添加更多 Premium 内容这件事。Premium 所包含的功能可能随时间变化；我们不会在没有事先告知的情况下，从一份有效订阅中移除某项功能。</p>
 """,

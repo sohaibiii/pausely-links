@@ -17,7 +17,7 @@ COPY = {
 "ui.rights": "모든 권리 보유.",
 "ui.store_soon": "App Store에 곧 출시",
 "ui.store_get": "App Store에서 다운로드",
-"ui.date": "2026년 10월 16일",
+"ui.date": "2026년 10월 17일",
 "ui.last_updated": "마지막 업데이트: {DATE}",
 
 "k.settings": "설정",
@@ -351,12 +351,15 @@ COPY = {
 """,
 "t.subscriptions.h": "7. Premium, 구독, 결제",
 "t.subscriptions.b": """
-<p>Pausely는 무료로 내려받아 쓸 수 있습니다. <strong>Pausely Premium</strong>은 추가 기능을 열어 주며, 앱과 거주 국가의 App Store에 표시된 가격으로 세 가지 형태로 판매됩니다.</p>
+<p>Pausely는 무료로 내려받아 쓸 수 있습니다. <strong>Pausely Premium</strong>은 추가 기능을 열어 주며, 앱과 거주 국가의 App Store에 표시된 가격으로 다섯 가지 형태로 판매됩니다.</p>
 <ul>
   <li><strong>Premium 월간</strong> — 매달 청구되는 자동 갱신 구독.</li>
   <li><strong>Premium 연간</strong> — 매년 청구되는 자동 갱신 구독. 제공되는 경우 <strong>무료 체험</strong>으로 시작합니다.</li>
   <li><strong>Premium 평생</strong> — 갱신되지 않는 일회성 구매.</li>
+  <li><strong>Premium 가족 연간</strong> — 매년 청구되는 자동 갱신 구독. 제공되는 경우 <strong>무료 체험</strong>으로 시작하며, 가족 공유로 최대 6명이 사용할 수 있습니다.</li>
+  <li><strong>Premium 가족 평생</strong> — 갱신되지 않는 일회성 구매. 가족 공유로 최대 6명이 사용할 수 있습니다.</li>
 </ul>
+<p>두 가족 요금제는 Apple의 <strong>가족 공유</strong>를 통해 가족 그룹의 다른 구성원 최대 5명과 공유됩니다. 각자 자신의 기기에 있는 자신의 Pausely에서 Premium을 사용하며, 규칙, 앱, 기록 등 어떤 데이터도 서로 공유되지 않습니다. 나머지 세 가지는 본인만 사용할 수 있으며 공유되지 않습니다.</p>
 <p>결제는 구매 확인 시 당신의 Apple 계정으로 청구됩니다. 무료 체험은 종료 24시간 전까지 해지하지 않으면 유료 구독으로 전환됩니다. 구독은 현재 기간 종료 24시간 전까지 자동 갱신을 끄지 않는 한 같은 가격과 같은 기간으로 자동 갱신되며, 갱신 요금은 그 기간이 끝나기 전 24시간 이내에 청구됩니다. 구독은 <a href="https://apps.apple.com/account/subscriptions">App Store 구독 설정</a>에서 관리하거나 해지할 수 있습니다. 해지는 현재 기간이 끝날 때 효력이 생기며, 쓰지 않은 기간에 대한 부분 환불은 없습니다. 환불은 Apple이 자체 정책에 따라 처리합니다. 새 기기에서 Premium을 되찾으려면 앱 안의 {K_restore}를 쓰십시오.</p>
 <p><strong>구독이 만료되더라도</strong> 이미 설정해 둔 것은 무엇도 제거되지 않습니다. 모든 규칙은 계속 돌아가고 수정할 수 있으며, 고른 멈춤도 계속 작동합니다. 닫히는 것은 Premium 내용을 더 늘리는 일뿐입니다. Premium 기능의 구성은 시간이 지나며 바뀔 수 있지만, 유효한 구독에서 예고 없이 기능을 빼지는 않습니다.</p>
 """,

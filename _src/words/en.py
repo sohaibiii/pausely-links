@@ -27,7 +27,7 @@ COPY = {
 "ui.rights": "All rights reserved.",
 "ui.store_soon": "Coming soon to the App Store",
 "ui.store_get": "Download on the App Store",
-"ui.date": "16 October 2026",
+"ui.date": "17 October 2026",
 "ui.last_updated": "Last updated: {DATE}",
 
 # The app's own words, so this site names a screen the way the screen does.
@@ -372,12 +372,15 @@ COPY = {
 """,
 "t.subscriptions.h": "7. Premium, subscriptions and billing",
 "t.subscriptions.b": """
-<p>Pausely is free to download and use. <strong>Pausely Premium</strong> unlocks additional features and is sold in three forms, at the price shown in the app and on the App Store for your country:</p>
+<p>Pausely is free to download and use. <strong>Pausely Premium</strong> unlocks additional features and is sold in five forms, at the price shown in the app and on the App Store for your country:</p>
 <ul>
   <li><strong>Premium Monthly</strong> — an auto-renewing subscription, billed monthly.</li>
   <li><strong>Premium Yearly</strong> — an auto-renewing subscription, billed yearly, beginning with a <strong>free trial</strong> where one is offered.</li>
   <li><strong>Premium Lifetime</strong> — a one-time purchase that does not renew.</li>
+  <li><strong>Premium Family Yearly</strong> — an auto-renewing subscription, billed yearly, beginning with a <strong>free trial</strong> where one is offered, for up to six people through Family Sharing.</li>
+  <li><strong>Premium Family Lifetime</strong> — a one-time purchase that does not renew, for up to six people through Family Sharing.</li>
 </ul>
+<p>The two family plans are shared through Apple's <strong>Family Sharing</strong> with up to five other members of your family group. Each person gets Premium in their own copy of Pausely, on their own device; no rules, apps, history or other data are shared between them. The other three are for you alone and are not shared.</p>
 <p>Payment is charged to your Apple ID at confirmation of purchase. A free trial converts to a paid subscription unless you cancel at least 24 hours before the trial ends. Subscriptions renew automatically at the same price and period unless auto-renew is turned off at least 24 hours before the end of the current period; renewal is charged within the 24 hours before that period ends. You can manage or cancel a subscription in your <a href="https://apps.apple.com/account/subscriptions">App Store subscription settings</a>; cancellation takes effect at the end of the current period, and no partial refund is given for the unused part of a period. Refunds are handled by Apple under Apple's policies. Use {K_restore} in the app to recover Premium on a new device.</p>
 <p><strong>If a subscription lapses</strong>, nothing you have already set up is removed: every rule keeps running and stays editable, and your chosen pause keeps working. Only the ability to add more Premium content closes. The set of Premium features may change over time; we will not remove a feature from an active subscription without notice.</p>
 """,
