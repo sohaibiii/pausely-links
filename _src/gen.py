@@ -89,7 +89,7 @@ NAV_ORDER = ["support", "about", "privacy", "terms", "data"]
 # the table of contents, and the two copy keys (`<prefix>.<id>.h` and `.b`).
 SUPPORT_CARDS = ["how", "requirements", "start", "faq", "trouble", "contact"]
 PRIVACY_CARDS = [
-    "summary", "collect", "device", "screentime", "ai", "purchases",
+    "summary", "collect", "device", "screentime", "ads", "ai", "purchases",
     "notifications", "third", "delete", "rights", "children", "changes", "contact",
 ]
 TERMS_CARDS = [
@@ -318,7 +318,8 @@ def context(code, prefix, C):
     )
     for key in ("settings", "your_data", "reset_all", "restore", "screen_time",
                 "apps_with_st", "notifications", "ai_reflection", "what_is_sent",
-                "language", "premium", "protection"):
+                "language", "premium", "protection", "written_by", "time_per_app",
+                "time_banners"):
         ctx["K_" + key] = f'<kbd>{C["k." + key]}</kbd>'
     return ctx
 
