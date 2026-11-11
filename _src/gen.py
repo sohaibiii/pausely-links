@@ -90,7 +90,7 @@ NAV_ORDER = ["support", "about", "privacy", "terms", "data"]
 SUPPORT_CARDS = ["how", "requirements", "start", "faq", "trouble", "contact"]
 PRIVACY_CARDS = [
     "summary", "collect", "device", "screentime", "ads", "ai", "purchases",
-    "notifications", "third", "delete", "rights", "children", "changes", "contact",
+    "notifications", "third", "android", "delete", "rights", "children", "changes", "contact",
 ]
 TERMS_CARDS = [
     "acceptance", "who", "what", "screentime", "data", "ai", "subscriptions",

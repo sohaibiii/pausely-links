@@ -17,7 +17,7 @@ COPY = {
 "ui.rights": "保留所有权利。",
 "ui.store_soon": "即将上架 App Store",
 "ui.store_get": "在 App Store 下载",
-"ui.date": "2026年11月7日",
+"ui.date": "2026年11月11日",
 "ui.last_updated": "最后更新：{DATE}",
 
 "k.settings": "设置",
@@ -195,7 +195,7 @@ COPY = {
 "p.eyebrow": "隐私政策",
 "p.h1": "它知道的，留在你的设备里。",
 "p.sub": "Pausely 没有账号，它记录的关于你的一切都留在你的设备上。有两样东西会离开：Meta 的 SDK 为了让我们衡量广告效果而上报的内容；以及你在 AI 反思里打下的文字——但只有在你打开了它、并且由 OpenAI 来写时才会。这一页讲的就是这些界线到底划在哪里。",
-"p.meta": "自 {DATE} 起生效 · 适用于 iPhone 和 iPad 版 Pausely App，以及本网站",
+"p.meta": "自 {DATE} 起生效 · 适用于 iPhone、iPad 和 Android 版 Pausely App，以及本网站",
 
 "p.summary.h": "简短版本",
 "p.summary.b": """
@@ -206,7 +206,8 @@ COPY = {
   <li><strong>AI 反思</strong>，它在你打开之前一直关着。在配备 Apple Intelligence 的 iPhone 上，它可以直接在手机上写成，这时什么都不会离开。由 OpenAI 来写时，你在那一次暂停里打下的文字会连同关于那一刻的四个小事实一起，送到 Pausely 的服务器，再到 OpenAI。<a href="{BASE}{L}/privacy/#ai">详情。</a></li>
 </ul>
 <div class="callout"><span class="tile">{eye-off}</span><div>你的日志永远不会离开你的设备。你的心情记录永远不会离开。你在其他 App 里花的分钟数永远不会离开。你选了哪些 App 也不会离开——因为哪怕在你自己的设备上，Pausely 都读不出它。</div></div>
-<p style="margin-top:16px">用 Apple 隐私标签的说法：<strong>没有追踪</strong>；<strong>标识符、使用数据、购买、诊断和其他数据</strong>，由 Meta 的 SDK 收集，用于衡量我们的广告效果；以及<strong>用户内容</strong>，不与你关联，仅用于让 AI 反思正常运作。本政策适用于由 {COMPANY} 发行的 iPhone 和 iPad 版 Pausely App，以及本网站。</p>
+<p style="margin-top:16px">用 Apple 隐私标签的说法：<strong>没有追踪</strong>；<strong>标识符、使用数据、购买、诊断和其他数据</strong>，由 Meta 的 SDK 收集，用于衡量我们的广告效果；以及<strong>用户内容</strong>，不与你关联，仅用于让 AI 反思正常运作。本政策适用于由 {COMPANY} 发行的 iPhone、iPad 和 Android 版 Pausely App，以及本网站。</p>
+<p style="margin-top:16px"><strong>在 Android 上</strong>，Pausely 的运作方式相同，只是用的是 Google 的工具而不是 Apple 的，离开手机的内容也不同：没有 Meta 的 SDK，AI 反思从不离开手机，而 Google 的 ML Kit 会向 Google 发送关于它自身的诊断信息。<a href="{BASE}{L}/privacy/#android">Android 版 Pausely</a> 一节有完整说明。</p>
 """,
 
 "p.collect.h": "我们收集什么",
@@ -327,6 +328,30 @@ COPY = {
 <p>我们不向任何人出售或出租个人数据，也不与数据经纪商共享任何东西。</p>
 """,
 
+"p.android.h": "Android 版 Pausely",
+"p.android.b": """
+<p class="lead">来自 Google Play 的 Android 版 Pausely 遵守同样的承诺：<strong>没有账户，它记录的一切都留在你的手机上。</strong>它用的是 Android 自己的工具，而不是 Apple 的，所以有些地方运作方式不同，这一节把它们全部列出。凡与上面各节不同之处，在 Android 上以本节为准。</p>
+<h3>什么会离开你的手机</h3>
+<p>只有一样，而且它属于 Google，不属于我们。Android 版 Pausely 用 <strong>Google 的 ML Kit</strong>（Gemini Nano）在手机上运行 AI，ML Kit 会向 Google 发送关于它自身的诊断信息和使用统计：手机的制造商、型号和 Android 版本，Pausely 的包名和版本，ML Kit 为这次安装和这台设备使用的标识符，性能数据，错误代码，以及设置的语言。这些数据加密传输，Google 表示不会转给第三方——见 <a href="https://developers.google.com/ml-kit/android-data-disclosure">Google 关于 ML Kit 的数据披露</a>和 <a href="https://policies.google.com/privacy">Google 隐私权政策</a>。其中从不包含你输入的内容、你选择的 App、你的时间或你的日志。</p>
+<p>除此之外什么都不会离开。Android 版 Pausely <strong>没有 Meta 的 SDK</strong>，没有广告，也没有自己的分析，从不读取你的广告 ID。<strong>AI 反思在手机上写成</strong>，在支持的手机上由 Gemini Nano 完成，你的文字留在手机里：Android 版 Pausely 不向 Pausely 的服务器或 OpenAI 发送任何内容。Android 可能会通过 Google 的系统服务下载或更新模型。如果以后的版本加入其他写法，本政策会先说明，并且在你选择之前保持关闭。</p>
+<h3>无障碍服务</h3>
+<p>为了在 App 打开的那一刻在它前面放一个暂停，Pausely 使用 Android 的无障碍服务。只有你能打开它：先由 Pausely 在自己的页面上说明服务能看到什么，再由你在 Android 设置里开启。Pausely 不是无障碍工具，你随时可以在 Android 的无障碍设置里关闭这项服务；之后 Pausely 就不再暂停你的 App。它能看到：</p>
+<ul>
+  <li><strong>哪个 App 在前台</strong>，包括分屏中获得焦点的 App，这样暂停会在你使用所选 App 之前出现。你没有选的 App 在检查的那一刻就被舍弃。</li>
+  <li><strong>你打开的网站地址</strong>，限于 Chrome、Samsung Internet、Firefox、Edge 和 Brave，并且只在你保护了网站时。只拿域名和你的列表比对。对于设有每日上限的网站，Pausely 会在手机上保存该域名及其在前台的时长，最多两天。页面内容、路径和搜索词从不读取，也不保存。</li>
+  <li>打开<strong>短视频与时间</strong>后（在你开启之前一直关闭，并需单独同意），你在所选 App 里花的时间，以及视频播放器的布局和位置，用来估算你看了多少条短视频。在 YouTube Shorts 中，它可能会比对屏幕上显示的频道和音频标签。这些标签和位置只在内存中停留片刻，从不保存；只保留今天的分钟数和短视频总数，存在手机上。这个数字是估算，可能会漏算。</li>
+</ul>
+<p>这项服务从不读取你的消息、你输入的内容、你的密码或通知，也从不替你点按、输入或滚动。它看到的任何内容都不会离开你的手机。</p>
+<h3>使用情况访问权限，以及留在手机上的内容</h3>
+<p>如果你在 Android 设置中允许使用情况访问权限，Pausely 会读取你所选 App 的使用时长，用于你的进展、每日目标和每日上限。在 Android 上，Pausely 通过名称而不是 Apple 的密封令牌知道你选了哪些 App，并把这份列表连同你的规则、暂停、时间、日志、心情记录、设置和 Premium 状态，保存在手机上它的私有存储中。Pausely 关闭了 Android 的应用备份，因此这些内容都不会进入 Google 备份。计步器只在你选择去散步代替刷手机时使用，数据留在手机上；通知也在手机上生成，没有推送服务器。</p>
+<h3>购买</h3>
+<p>Premium 通过 Google Play 销售。付款在你和 Google 之间进行，适用 Google 隐私权政策，Pausely 从不会看到你的银行卡。Google Play 只告诉 Pausely 购买是否有效，Pausely 不会把任何购买信息发送到任何地方。</p>
+<h3>用 Google Play“数据安全”部分的说法</h3>
+<p><strong>收集：</strong>设备或其他 ID，以及诊断信息，由 Google 的 ML Kit 收集，用于分析。<strong>共享：</strong>无。<strong>传输时加密：</strong>是。没有账户、没有广告 ID、没有位置信息，也没有个人信息。</p>
+<h3>在 Android 上删除你的数据</h3>
+<p>{RESET}会清除 Pausely 保存在手机上的全部内容；它不会取消 Google Play 订阅，订阅请在 Google Play 中管理。在 Android 的应用设置中清除 Pausely 的存储空间，或卸载它，效果相同。ML Kit 已经发送的内容由 Google 保存，适用 Google 隐私权政策。</p>
+""",
+
 "p.delete.h": "删除你的数据",
 "p.delete.b": """
 <p>Pausely 拥有的一切，都可以在 App 内抹掉，不必来问我们：</p>
@@ -346,7 +371,7 @@ COPY = {
 
 "p.changes.h": "本政策的变更",
 "p.changes.b": """
-<p>随着 App 的变化，我们可能会更新本政策。更新时顶部的日期会一并变动，重要变更会写进 App 的版本说明。最近一次实质性变更随 Pausely 1.3 而来：Meta 的 SDK，用来衡量我们的广告效果；以及新的时间功能——{K_time_per_app}、{K_time_banners}和短视频估算——它们和每日目标一样，在你的设备上统计你在自己选的 App 里花了多长时间。在那之前，AI 反思从 Google 换成了 OpenAI，并增加了在你的 iPhone 上选用 Apple Intelligence 的选项。变更之后继续使用 Pausely，即表示你接受修订后的政策。</p>
+<p>随着 App 的变化，我们可能会更新本政策。更新时顶部的日期会一并变动，重要变更会写进 App 的版本说明。最近一次变更在 {DATE}，加入了 Android 版 Pausely，见<a href="{BASE}{L}/privacy/#android">Android 版 Pausely</a>。在那之前是 Pausely 1.3：Meta 的 SDK，用来衡量我们的广告效果；以及新的时间功能——{K_time_per_app}、{K_time_banners}和短视频估算——它们和每日目标一样，在你的设备上统计你在自己选的 App 里花了多长时间。在那之前，AI 反思从 Google 换成了 OpenAI，并增加了在你的 iPhone 上选用 Apple Intelligence 的选项。变更之后继续使用 Pausely，即表示你接受修订后的政策。</p>
 """,
 
 "p.contact.h": "联系我们",

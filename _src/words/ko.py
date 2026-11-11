@@ -17,7 +17,7 @@ COPY = {
 "ui.rights": "모든 권리 보유.",
 "ui.store_soon": "App Store에 곧 출시",
 "ui.store_get": "App Store에서 다운로드",
-"ui.date": "2026년 11월 7일",
+"ui.date": "2026년 11월 11일",
 "ui.last_updated": "마지막 업데이트: {DATE}",
 
 "k.settings": "설정",
@@ -195,7 +195,7 @@ COPY = {
 "p.eyebrow": "개인정보 처리방침",
 "p.h1": "알게 된 것은 당신의 기기가 갖습니다.",
 "p.sub": "Pausely에는 계정이 없고, 당신에 대해 기록하는 것은 모두 기기에 남습니다. 기기를 떠나는 것은 두 가지입니다. 저희가 광고 성과를 측정할 수 있도록 Meta의 SDK가 알리는 것, 그리고 — 당신이 켜고 OpenAI가 작성하는 경우에만 — AI 되돌아보기에 입력한 말입니다. 이 페이지는 그 경계들이 정확히 어디인지에 대한 것입니다.",
-"p.meta": "{DATE}부터 유효 · iPhone 및 iPad용 Pausely 앱과 이 사이트에 적용됩니다",
+"p.meta": "{DATE}부터 유효 · iPhone, iPad 및 Android용 Pausely 앱과 이 사이트에 적용됩니다",
 
 "p.summary.h": "짧은 요약",
 "p.summary.b": """
@@ -206,7 +206,8 @@ COPY = {
   <li><strong>AI 되돌아보기</strong>. 당신이 켜기 전까지 꺼져 있습니다. Apple Intelligence가 있는 iPhone에서는 기기 자체에서 작성될 수 있고, 그때는 아무것도 떠나지 않습니다. OpenAI가 작성할 때는 그 하나의 멈춤에 입력한 말이 그 순간에 대한 네 가지 작은 사실과 함께 Pausely의 서버로, 그리고 OpenAI로 갑니다. <a href="{BASE}{L}/privacy/#ai">자세히.</a></li>
 </ul>
 <div class="callout"><span class="tile">{eye-off}</span><div>일지는 결코 기기를 떠나지 않습니다. 기분 기록도 결코 떠나지 않습니다. 다른 앱에서 보내는 시간도 결코 떠나지 않습니다. 어떤 앱을 골랐는지도 떠나지 않습니다 — 그것은 당신의 기기 안에서조차 Pausely가 읽을 수 없기 때문입니다.</div></div>
-<p style="margin-top:16px">Apple의 개인정보 라벨 용어로는 <strong>추적 없음</strong>, 저희 광고 성과를 측정하기 위해 Meta의 SDK가 수집하는 <strong>식별자, 사용 데이터, 구매, 진단, 기타 데이터</strong>, 그리고 당신과 연결되지 않고 AI 되돌아보기가 작동하도록 하는 데에만 쓰이는 <strong>사용자 콘텐츠</strong>입니다. 이 방침은 {COMPANY}가 발행하는 iPhone 및 iPad용 Pausely 앱과 이 웹사이트에 적용됩니다.</p>
+<p style="margin-top:16px">Apple의 개인정보 라벨 용어로는 <strong>추적 없음</strong>, 저희 광고 성과를 측정하기 위해 Meta의 SDK가 수집하는 <strong>식별자, 사용 데이터, 구매, 진단, 기타 데이터</strong>, 그리고 당신과 연결되지 않고 AI 되돌아보기가 작동하도록 하는 데에만 쓰이는 <strong>사용자 콘텐츠</strong>입니다. 이 방침은 {COMPANY}가 발행하는 iPhone, iPad 및 Android용 Pausely 앱과 이 웹사이트에 적용됩니다.</p>
+<p style="margin-top:16px"><strong>Android에서</strong> Pausely는 똑같이 작동하지만 Apple이 아닌 Google의 도구를 쓰며, 휴대폰 밖으로 나가는 것도 다릅니다. Meta의 SDK가 없고, AI 되돌아보기는 휴대폰 밖으로 나가지 않으며, Google의 ML Kit가 자신에 대한 진단 정보를 Google에 보냅니다. 자세한 내용은 <a href="{BASE}{L}/privacy/#android">Android의 Pausely</a>에 있습니다.</p>
 """,
 
 "p.collect.h": "저희가 수집하는 것",
@@ -327,6 +328,30 @@ COPY = {
 <p>저희는 개인 데이터를 누구에게도 팔거나 빌려주지 않으며, 데이터 중개업체와 아무것도 공유하지 않습니다.</p>
 """,
 
+"p.android.h": "Android의 Pausely",
+"p.android.b": """
+<p class="lead">Google Play에서 받는 Android용 Pausely도 같은 약속을 지킵니다. <strong>계정이 없고, 기록하는 모든 것은 당신의 휴대폰에 남습니다.</strong> Apple이 아닌 Android 자체의 도구로 만들어져서 몇 가지는 다르게 작동하며, 이 섹션에서 그 차이를 모두 설명합니다. 위의 섹션과 다른 부분은 Android에서 이 섹션이 적용됩니다.</p>
+<h3>휴대폰 밖으로 나가는 것</h3>
+<p>하나뿐이며, 그것은 저희가 아니라 Google의 것입니다. Android용 Pausely는 <strong>Google의 ML Kit</strong>(Gemini Nano)으로 휴대폰에서 AI를 실행하고, ML Kit는 자신에 대한 진단 정보와 사용 통계를 Google에 보냅니다. 휴대폰의 제조사, 모델, Android 버전, Pausely의 패키지 이름과 버전, ML Kit가 설치와 기기에 쓰는 식별자, 성능 수치, 오류 코드, 설정된 언어입니다. 암호화되어 전송되며, Google은 이를 제3자에게 넘기지 않는다고 밝힙니다. <a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit에 대한 Google의 공개 내용</a>과 <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>을 참고하세요. 여기에는 당신이 입력한 내용, 고른 앱, 사용 시간, 일지가 절대 들어가지 않습니다.</p>
+<p>그 밖에는 아무것도 나가지 않습니다. Android용 Pausely에는 <strong>Meta의 SDK가 없고</strong>, 광고도 자체 분석도 없으며, 광고 ID를 읽지 않습니다. <strong>AI 되돌아보기는 휴대폰에서 쓰이며</strong>, 지원되는 기기라면 Gemini Nano가 쓰고, 당신의 말은 그곳에 남습니다. Android용 Pausely는 Pausely 서버에도 OpenAI에도 아무것도 보내지 않습니다. Android는 Google의 시스템 서비스를 통해 모델을 내려받거나 업데이트할 수 있습니다. 이후 버전에서 다른 방식을 추가한다면 이 방침에서 먼저 알리고, 당신이 선택할 때까지 꺼 둡니다.</p>
+<h3>접근성 서비스</h3>
+<p>앱이 열리는 순간 그 앞에 멈춤을 두기 위해, Pausely는 Android의 접근성 서비스를 사용합니다. 이 서비스는 Pausely가 자체 화면에서 서비스가 무엇을 보는지 설명한 뒤, 당신이 Android 설정에서 직접 켜야만 켜집니다. Pausely는 접근성 도구가 아니며, Android의 접근성 설정에서 언제든 서비스를 끌 수 있습니다. 그러면 Pausely는 더 이상 앱 앞에서 멈추지 않습니다. 서비스가 보는 것은 다음과 같습니다.</p>
+<ul>
+  <li><strong>앞에 있는 앱</strong>. 화면 분할에서 포커스된 앱도 포함합니다. 고른 앱을 쓰기 전에 멈춤이 나타나도록 하기 위해서입니다. 고르지 않은 앱은 확인하는 즉시 버려집니다.</li>
+  <li><strong>여는 사이트의 주소</strong>. Chrome, Samsung Internet, Firefox, Edge, Brave에서, 웹사이트를 보호하는 경우에만 해당합니다. 목록과 비교하는 것은 도메인뿐입니다. 하루 한도가 있는 사이트는 그 도메인과 앞에 있던 시간을 최대 이틀 동안 휴대폰에 보관합니다. 페이지 내용, 경로, 검색어는 읽거나 보관하지 않습니다.</li>
+  <li><strong>릴스와 사용 시간</strong>을 켠 경우(켜기 전까지는 꺼져 있고, 별도의 동의를 받습니다), 고른 앱에서 보낸 시간과, 본 릴스 수를 추정하기 위한 동영상 플레이어의 배치와 위치. YouTube Shorts에서는 화면에 보이는 채널 이름과 사운드 라벨을 비교할 수 있습니다. 이 라벨과 위치는 잠깐 메모리에만 있고 저장되지 않으며, 오늘의 분과 릴스 합계만 휴대폰에 남습니다. 이 수는 추정치이며 놓치는 영상이 있을 수 있습니다.</li>
+</ul>
+<p>이 서비스는 당신의 메시지, 입력 내용, 비밀번호, 알림을 읽지 않으며, 당신 대신 탭하거나 입력하거나 스크롤하지 않습니다. 서비스가 본 것은 휴대폰 밖으로 나가지 않습니다.</p>
+<h3>사용 정보 접근과 휴대폰에 남는 것</h3>
+<p>Android 설정에서 사용 정보 접근을 허용하면, Pausely는 고른 앱이 얼마나 사용됐는지 읽어 진행 상황, 하루 목표, 한도에 씁니다. Android에서 Pausely는 고른 앱을 Apple의 봉인된 토큰이 아니라 이름으로 알고, 그 목록을 규칙, 멈춤, 시간, 일지, 기분 기록, 설정, Premium 상태와 함께 휴대폰의 전용 저장 공간에 보관합니다. Pausely는 Android의 앱 백업을 꺼 두었으므로, 이 중 어느 것도 Google 백업에 들어가지 않습니다. 대신 고른 산책 중에만 쓰는 걸음 수 측정도 휴대폰에 남고, 알림은 휴대폰에서 만들어집니다. 푸시 서버는 없습니다.</p>
+<h3>구매</h3>
+<p>Premium은 Google Play를 통해 판매됩니다. 결제는 당신과 Google 사이에서 Google 개인정보처리방침에 따라 이루어지며, Pausely는 카드를 보지 않습니다. Google Play는 구매가 활성 상태인지만 Pausely에 알려 주고, Pausely는 구매에 관해 어디에도 아무것도 보내지 않습니다.</p>
+<h3>Google Play 데이터 보안 용어로는</h3>
+<p><strong>수집:</strong> 기기 또는 기타 ID와 진단 정보. Google의 ML Kit가 분석 목적으로 수집합니다. <strong>공유:</strong> 없음. <strong>전송 중 암호화:</strong> 예. 계정, 광고 ID, 위치, 개인 정보는 없습니다.</p>
+<h3>Android에서 데이터 삭제하기</h3>
+<p>{RESET}는 Pausely가 휴대폰에 보관하는 모든 것을 지웁니다. Google Play 구독은 해지되지 않으니 Google Play에서 관리하세요. Android 앱 설정에서 Pausely의 저장공간을 지우거나 앱을 삭제해도 같습니다. ML Kit가 이미 보낸 것은 Google이 Google 개인정보처리방침에 따라 보관합니다.</p>
+""",
+
 "p.delete.h": "데이터 삭제",
 "p.delete.b": """
 <p>Pausely가 가진 것은 모두, 저희에게 청하지 않고도 앱 안에서 지울 수 있습니다.</p>
@@ -346,7 +371,7 @@ COPY = {
 
 "p.changes.h": "이 방침의 변경",
 "p.changes.b": """
-<p>앱이 달라짐에 따라 이 방침을 갱신할 수 있습니다. 그럴 때는 맨 위의 날짜가 함께 바뀌고, 중요한 변경은 앱의 출시 노트에 적습니다. 가장 최근의 실질적 변경은 Pausely 1.3에서 이루어졌습니다. 저희 광고 성과를 측정하는 Meta의 SDK, 그리고 새로운 시간 기능인 {K_time_per_app}, {K_time_banners}, 짧은 영상 추정치입니다. 이 시간 기능들은 하루 목표와 마찬가지로, 당신이 고른 앱에서 얼마나 시간을 보내는지 기기 안에서 셉니다. 그 전에는 AI 되돌아보기가 Google에서 OpenAI로 옮겨 갔고, 당신의 iPhone에서 Apple Intelligence를 고를 수 있게 되었습니다. 변경 이후에도 Pausely를 계속 쓰시는 것은 개정된 방침에 동의하시는 것으로 봅니다.</p>
+<p>앱이 달라짐에 따라 이 방침을 갱신할 수 있습니다. 그럴 때는 맨 위의 날짜가 함께 바뀌고, 중요한 변경은 앱의 출시 노트에 적습니다. 가장 최근의 변경은 {DATE}에 Android용 Pausely를 추가한 것입니다(<a href="{BASE}{L}/privacy/#android">Android의 Pausely</a> 참고). 그 전의 변경은 Pausely 1.3에서 이루어졌습니다. 저희 광고 성과를 측정하는 Meta의 SDK, 그리고 새로운 시간 기능인 {K_time_per_app}, {K_time_banners}, 짧은 영상 추정치입니다. 이 시간 기능들은 하루 목표와 마찬가지로, 당신이 고른 앱에서 얼마나 시간을 보내는지 기기 안에서 셉니다. 그 전에는 AI 되돌아보기가 Google에서 OpenAI로 옮겨 갔고, 당신의 iPhone에서 Apple Intelligence를 고를 수 있게 되었습니다. 변경 이후에도 Pausely를 계속 쓰시는 것은 개정된 방침에 동의하시는 것으로 봅니다.</p>
 """,
 
 "p.contact.h": "문의",

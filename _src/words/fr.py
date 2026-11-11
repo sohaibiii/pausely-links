@@ -17,7 +17,7 @@ COPY = {
 "ui.rights": "Tous droits réservés.",
 "ui.store_soon": "Bientôt sur l’App Store",
 "ui.store_get": "Télécharger dans l’App Store",
-"ui.date": "7 novembre 2026",
+"ui.date": "11 novembre 2026",
 "ui.last_updated": "Dernière mise à jour : {DATE}",
 
 "k.settings": "Réglages",
@@ -195,7 +195,7 @@ COPY = {
 "p.eyebrow": "Politique de confidentialité",
 "p.h1": "Votre appareil garde ce qu’il sait.",
 "p.sub": "Pausely n’a aucun compte, et tout ce qu’il enregistre à votre sujet reste sur votre appareil. Deux choses en sortent : ce que le SDK de Meta signale pour que nous puissions mesurer l’efficacité de nos publicités, et — seulement si vous l’activez et qu’OpenAI l’écrit — ce que vous tapez dans la réflexion IA. Cette page dit exactement où passent ces lignes.",
-"p.meta": "En vigueur au {DATE} · s’applique à l’app Pausely pour iPhone et iPad, et à ce site",
+"p.meta": "En vigueur au {DATE} · s’applique à l’app Pausely pour iPhone, iPad et Android, et à ce site",
 
 "p.summary.h": "La version courte",
 "p.summary.b": """
@@ -206,7 +206,8 @@ COPY = {
   <li><strong>La réflexion IA</strong>, qui est désactivée jusqu’à ce que vous l’activiez. Sur un iPhone doté d’Apple Intelligence, elle peut être écrite sur le téléphone lui-même, et alors rien ne sort. Quand c’est OpenAI qui l’écrit, les mots que vous tapez dans cette unique pause vont au serveur de Pausely puis à OpenAI, avec quatre petits renseignements sur l’instant. <a href="{BASE}{L}/privacy/#ai">Détails.</a></li>
 </ul>
 <div class="callout"><span class="tile">{eye-off}</span><div>Votre journal ne quitte jamais votre appareil. Vos bilans d’humeur ne partent jamais. Les minutes que vous passez dans d’autres apps ne partent jamais. Les apps que vous avez choisies ne partent jamais — Pausely ne peut pas lire cela, même sur votre propre appareil.</div></div>
-<p style="margin-top:16px">Dans les termes des étiquettes de confidentialité d’Apple : <strong>aucun suivi</strong> ; <strong>identifiants, données d’utilisation, achats, diagnostics et autres données</strong>, collectés par le SDK de Meta pour mesurer l’efficacité de nos publicités ; et <strong>contenu utilisateur</strong>, non lié à votre identité, utilisé uniquement pour faire fonctionner la réflexion IA. Cette politique s’applique à l’app Pausely pour iPhone et iPad, publiée par {COMPANY}, et à ce site web.</p>
+<p style="margin-top:16px">Dans les termes des étiquettes de confidentialité d’Apple : <strong>aucun suivi</strong> ; <strong>identifiants, données d’utilisation, achats, diagnostics et autres données</strong>, collectés par le SDK de Meta pour mesurer l’efficacité de nos publicités ; et <strong>contenu utilisateur</strong>, non lié à votre identité, utilisé uniquement pour faire fonctionner la réflexion IA. Cette politique s’applique à l’app Pausely pour iPhone, iPad et Android, publiée par {COMPANY}, et à ce site web.</p>
+<p style="margin-top:16px"><strong>Sur Android</strong>, Pausely fonctionne de la même façon, mais avec les outils de Google plutôt que ceux d’Apple, et ce qui quitte le téléphone est différent : pas de SDK de Meta, la réflexion IA ne quitte jamais le téléphone, et ML Kit de Google envoie à Google des diagnostics sur lui-même. <a href="{BASE}{L}/privacy/#android">Pausely sur Android</a> détaille tout cela.</p>
 """,
 
 "p.collect.h": "Ce que nous collectons",
@@ -327,6 +328,30 @@ COPY = {
 <p>Nous ne vendons ni ne louons de données personnelles à quiconque, et nous ne partageons rien avec des courtiers en données.</p>
 """,
 
+"p.android.h": "Pausely sur Android",
+"p.android.b": """
+<p class="lead">Pausely pour Android, sur Google Play, tient la même promesse : <strong>pas de compte, et tout ce qu’il enregistre reste sur votre téléphone.</strong> Il est construit avec les outils d’Android plutôt qu’avec ceux d’Apple, donc certaines choses fonctionnent autrement, et cette section les décrit toutes. Là où elle diffère des sections précédentes, c’est elle qui s’applique sur Android.</p>
+<h3>Ce qui quitte votre téléphone</h3>
+<p>Une seule chose, et elle appartient à Google, pas à nous. Pausely pour Android fait tourner son IA sur le téléphone avec <strong>ML Kit de Google</strong> (Gemini Nano), et ML Kit envoie à Google des diagnostics et des statistiques d’utilisation sur lui-même : le fabricant, le modèle et la version d’Android du téléphone, le nom de paquet et la version de Pausely, des identifiants que ML Kit utilise pour l’installation et l’appareil, des mesures de performances, des codes d’erreur et les langues configurées. Ces données sont chiffrées en transit, et Google indique ne pas les transmettre à des tiers — voir <a href="https://developers.google.com/ml-kit/android-data-disclosure">les informations de Google sur ML Kit</a> et <a href="https://policies.google.com/privacy">les Règles de confidentialité de Google</a>. Elles ne contiennent jamais ce que vous tapez, les apps que vous avez choisies, votre temps ni votre journal.</p>
+<p>Rien d’autre ne sort. Pausely pour Android <strong>ne contient pas le SDK de Meta</strong>, ni publicité ni analyse propre, et ne lit jamais votre identifiant publicitaire. <strong>La réflexion IA est rédigée sur le téléphone</strong>, par Gemini Nano, là où le téléphone le permet, et vos mots y restent : Pausely pour Android n’envoie rien au serveur de Pausely ni à OpenAI. Android peut télécharger ou mettre à jour le modèle via les services système de Google. Si une version future ajoute une autre manière de la rédiger, cette politique le dira d’abord, et elle restera désactivée jusqu’à ce que vous la choisissiez.</p>
+<h3>Le service d’accessibilité</h3>
+<p>Pour placer une pause devant une app au moment où elle s’ouvre, Pausely utilise le service d’accessibilité d’Android. Vous seul pouvez l’activer, dans les paramètres d’Android, après que Pausely a expliqué sur son propre écran ce que le service voit. Pausely n’est pas un outil d’accessibilité, et vous pouvez désactiver le service à tout moment dans les paramètres d’Accessibilité d’Android ; Pausely cesse alors de mettre vos apps en pause. Il voit :</p>
+<ul>
+  <li><strong>Quelle app est au premier plan</strong>, y compris l’app active en écran partagé, pour que la pause apparaisse avant que vous utilisiez une app choisie. Les apps que vous n’avez pas choisies sont écartées dès qu’elles sont vérifiées.</li>
+  <li><strong>L’adresse du site que vous ouvrez</strong> dans Chrome, Samsung Internet, Firefox, Edge ou Brave — seulement si vous protégez un site web. Seul son domaine est comparé à votre liste. Pour un site avec une limite quotidienne, Pausely conserve ce domaine et la durée pendant laquelle il était au premier plan jusqu’à deux jours, sur le téléphone. Le contenu des pages, les chemins et les recherches ne sont jamais lus ni conservés.</li>
+  <li>Avec <strong>Reels et temps</strong> — désactivé jusqu’à ce que vous l’activiez, avec son propre consentement —, le temps que vous passez dans les apps choisies, ainsi que la disposition et la position du lecteur vidéo, pour estimer combien de reels vous avez regardés. Sur YouTube Shorts, il peut comparer les libellés de chaîne et de son affichés. Ces libellés et positions restent un instant en mémoire et ne sont jamais enregistrés ; seuls les minutes et les totaux de reels du jour sont conservés, sur le téléphone. Le chiffre est une estimation et peut manquer des vidéos.</li>
+</ul>
+<p>Le service ne lit jamais vos messages, ce que vous tapez, vos mots de passe ni vos notifications, et ne touche, ne tape ni ne fait défiler quoi que ce soit à votre place. Rien de ce qu’il voit ne quitte votre téléphone.</p>
+<h3>Accès aux données d’utilisation, et ce qui reste sur le téléphone</h3>
+<p>Si vous autorisez l’accès aux données d’utilisation dans les paramètres d’Android, Pausely lit combien de temps les apps choisies ont été utilisées, pour votre progression, votre objectif quotidien et vos limites. Sur Android, Pausely connaît les apps choisies par leur nom, et non par les jetons scellés d’Apple, et conserve cette liste — avec vos règles, pauses, temps, journal, bilans d’humeur, réglages et statut Premium — dans son stockage privé sur le téléphone. La sauvegarde des apps d’Android est désactivée pour Pausely, donc rien de tout cela ne part dans une sauvegarde Google. Le podomètre, utilisé seulement pendant une marche choisie à la place, reste sur le téléphone, et les notifications sont créées sur le téléphone ; il n’y a pas de serveur push.</p>
+<h3>Achats</h3>
+<p>Premium est vendu via Google Play. Le paiement se fait entre vous et Google, selon les Règles de confidentialité de Google, et Pausely ne voit jamais votre carte. Google Play indique à Pausely si un achat est actif, et Pausely n’envoie rien sur les achats nulle part.</p>
+<h3>Dans les termes de la section Sécurité des données de Google Play</h3>
+<p><strong>Collectées :</strong> identifiants de l’appareil ou autres et diagnostics, par ML Kit de Google, à des fins d’analyse. <strong>Partagées :</strong> rien. <strong>Chiffrées en transit :</strong> oui. Pas de compte, pas d’identifiant publicitaire, pas de localisation et aucune information personnelle.</p>
+<h3>Supprimer vos données sur Android</h3>
+<p>{RESET} efface tout ce que Pausely conserve sur le téléphone ; cela ne résilie pas un abonnement Google Play, que vous gérez dans Google Play. Vider le stockage de Pausely dans les paramètres d’apps d’Android, ou le désinstaller, fait de même. Ce que ML Kit a déjà envoyé est conservé par Google, selon les Règles de confidentialité de Google.</p>
+""",
+
 "p.delete.h": "Supprimer vos données",
 "p.delete.b": """
 <p>Tout ce que détient Pausely s’efface depuis l’app, sans nous le demander :</p>
@@ -346,7 +371,7 @@ COPY = {
 
 "p.changes.h": "Modifications de cette politique",
 "p.changes.b": """
-<p>Nous pouvons mettre à jour cette politique à mesure que l’app évolue. La date en haut se déplace quand nous le faisons, et les changements importants seront signalés dans les notes de version de l’app. Le changement de fond le plus récent est arrivé avec Pausely 1.3 : le SDK de Meta, qui mesure l’efficacité de nos publicités, et de nouvelles fonctions liées au temps — l’écran {K_time_per_app}, les {K_time_banners} et l’estimation des vidéos courtes — qui, comme l’objectif quotidien, comptabilisent sur votre appareil le temps que vous passez dans les apps que vous choisissez. Avant cela, la réflexion IA est passée de Google à OpenAI, et a gagné la possibilité de choisir Apple Intelligence sur votre iPhone. Continuer à utiliser Pausely après un changement signifie que vous acceptez la politique révisée.</p>
+<p>Nous pouvons mettre à jour cette politique à mesure que l’app évolue. La date en haut se déplace quand nous le faisons, et les changements importants seront signalés dans les notes de version de l’app. Le changement le plus récent, du {DATE}, ajoute Pausely pour Android — voir <a href="{BASE}{L}/privacy/#android">Pausely sur Android</a>. Avant cela est arrivé Pausely 1.3 : le SDK de Meta, qui mesure l’efficacité de nos publicités, et de nouvelles fonctions liées au temps — l’écran {K_time_per_app}, les {K_time_banners} et l’estimation des vidéos courtes — qui, comme l’objectif quotidien, comptabilisent sur votre appareil le temps que vous passez dans les apps que vous choisissez. Avant cela, la réflexion IA est passée de Google à OpenAI, et a gagné la possibilité de choisir Apple Intelligence sur votre iPhone. Continuer à utiliser Pausely après un changement signifie que vous acceptez la politique révisée.</p>
 """,
 
 "p.contact.h": "Contact",
