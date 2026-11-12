@@ -17,7 +17,7 @@ COPY = {
 "ui.rights": "無断複写・転載を禁じます。",
 "ui.store_soon": "App Storeに近日登場",
 "ui.store_get": "App Storeでダウンロード",
-"ui.date": "2026年11月11日",
+"ui.date": "2026年11月12日",
 "ui.last_updated": "最終更新：{DATE}",
 
 "k.settings": "設定",
@@ -207,7 +207,7 @@ COPY = {
 </ul>
 <div class="callout"><span class="tile">{eye-off}</span><div>日記が端末から出ていくことはありません。気分の記録が出ていくこともありません。ほかのAppで過ごした時間も出ていきません。どのAppを選んだかも出ていきません——それはあなた自身の端末の上でさえ、Pauselyには読めないからです。</div></div>
 <p style="margin-top:16px">Appleのプライバシーラベルの言葉でいえば、<strong>トラッキングはありません</strong>。<strong>識別子、使用状況データ、購入、診断、その他のデータ</strong>は、私たちが広告の効果を測るためにMetaのSDKが収集します。<strong>ユーザーコンテンツ</strong>は、あなたとは結び付けられず、AIリフレクションの機能のためだけに使われます。このポリシーは、{COMPANY}が公開するiPhone、iPad、Android向けPauselyアプリと、このウェブサイトに適用されます。</p>
-<p style="margin-top:16px"><strong>Androidでは</strong>、Pauselyは同じように動きますが、AppleではなくGoogleの仕組みを使い、スマートフォンの外に出るものも異なります。MetaのSDKはなく、AIリフレクションはスマートフォンの外に出ず、GoogleのML KitがML Kit自身についての診断情報をGoogleに送ります。詳しくは<a href="{BASE}{L}/privacy/#android">Android版Pausely</a>をご覧ください。</p>
+<p style="margin-top:16px"><strong>Androidでは</strong>、Pauselyは同じように動きますが、AppleではなくGoogleの仕組みを使います。MetaのSDKはなく、GoogleのML KitがML Kit自身についての診断情報をGoogleに送り、AIリフレクションはApple Intelligenceの代わりにGemini Nanoを、App Attestの代わりにGoogle Play Integrityを使います。詳しくは<a href="{BASE}{L}/privacy/#android">Android版Pausely</a>をご覧ください。</p>
 """,
 
 "p.collect.h": "収集するもの",
@@ -332,8 +332,11 @@ COPY = {
 "p.android.b": """
 <p class="lead">Google Playで配信しているAndroid版Pauselyも、同じ約束を守ります。<strong>アカウントはなく、記録するものはすべてあなたのスマートフォンに残ります。</strong>AppleではなくAndroid自身の仕組みで作られているため、いくつかの点で動き方が異なります。このセクションでその違いをすべて説明します。上のセクションと異なる点については、Androidではこのセクションが適用されます。</p>
 <h3>スマートフォンの外に出るもの</h3>
-<p>出るのはひとつだけで、それは私たちではなくGoogleのものです。Android版Pauselyは、<strong>GoogleのML Kit</strong>（Gemini Nano）を使ってAIをスマートフォン上で動かします。ML Kitは、ML Kit自身についての診断情報と利用統計をGoogleに送ります。内容は、スマートフォンのメーカー、機種、Androidのバージョン、Pauselyのパッケージ名とバージョン、ML Kitがインストールと端末に使う識別子、パフォーマンスの数値、エラーコード、設定されている言語です。これらは暗号化して送られ、Googleは第三者に渡さないとしています。詳しくは<a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kitに関するGoogleの開示</a>と<a href="https://policies.google.com/privacy">Googleのプライバシーポリシー</a>をご覧ください。あなたが入力した内容、選んだApp、使った時間、日記が含まれることはありません。</p>
-<p>ほかには何も出ません。Android版Pauselyには<strong>MetaのSDKは入っておらず</strong>、広告も独自の分析もなく、広告IDを読むこともありません。<strong>AIリフレクションはスマートフォン上で書かれ</strong>、対応している端末ではGemini Nanoが書きます。あなたの言葉はそこにとどまり、Android版PauselyはPauselyのサーバーにもOpenAIにも何も送りません。AndroidはGoogleのシステムサービスを通じてモデルをダウンロードまたは更新することがあります。今後のバージョンで別の書き方を加える場合は、先にこのポリシーでお知らせし、あなたが選ぶまでオフのままにします。</p>
+<p>出るものは2つで、2つ目はあなたがオンにした場合だけです。</p>
+<p><strong>GoogleのML Kitの診断情報。</strong>Android版Pauselyは、GoogleのML Kit（Gemini Nano）を使ってAIをスマートフォン上で動かします。ML Kitは、ML Kit自身についての診断情報と利用統計をGoogleに送ります。内容は、スマートフォンのメーカー、機種、Androidのバージョン、Pauselyのパッケージ名とバージョン、ML Kitがインストールと端末に使う識別子、パフォーマンスの数値、エラーコード、設定されている言語です。これらは暗号化して送られ、Googleは第三者に渡さないとしています。詳しくは<a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kitに関するGoogleの開示</a>と<a href="https://policies.google.com/privacy">Googleのプライバシーポリシー</a>をご覧ください。あなたが入力した内容、選んだApp、使った時間、日記が含まれることはありません。</p>
+<p><strong>AIリフレクション（オンにした場合）。</strong>オンにするまではオフで、上の<a href="{BASE}{L}/privacy/#ai">AIリフレクション</a>で説明しているとおりに動きます。違いは、Appleの仕組みの代わりにGoogleの仕組みを使うことです。Gemini Nanoに対応したスマートフォンでは、ほかを選ばないかぎりスマートフォン上で書かれ、そのときは何も外に出ません。それ以外の場合、または{K_settings} → {K_ai_reflection} → {K_written_by}でOpenAIを選んだ場合は、OpenAIがPauselyのサーバーを通じて書き、iPhoneと同じものが送られます。開こうとしているAppの名前、今日そのAppに手を伸ばした回数、いまの時刻、連続記録、そしてその一呼吸に入力した言葉です。週ごとの文章が送るのは、その週の集計だけです。日記を読むのは、スマートフォン上のGemini Nanoだけです。</p>
+<p>AppleのApp Attestの代わりに、<strong>Google Play Integrity</strong>が、リクエストがGoogle Playからインストールされた本物のPauselyから、本物のスマートフォンで送られていることを私たちのサーバーに示します。PauselyはこのインストールのためにつくったランダムなコードにひもづくチェックをGoogle Playに求め、私たちのサーバーがGoogleにその確認を求めます。このコードは、あなたのアカウントでも、スマートフォンのIDでも、広告IDでもありません。サーバーはこれを、そのインストールの1日の回数を数えるためのキーとしてだけ保持し、2日後に削除します。AIリフレクションをオフにすると、スマートフォンからも消えます。Pauselyのサーバーはほかに何も保存しません。OpenAIは受け取ったものを最長30日間保持し、それでモデルを学習させることはありません。</p>
+<p>ほかには何も出ません。Android版Pauselyには<strong>MetaのSDKは入っておらず</strong>、広告も独自の分析もなく、広告IDを読むこともありません。</p>
 <h3>ユーザー補助サービス</h3>
 <p>Appが開いた瞬間にその前へ一呼吸を置くために、PauselyはAndroidのユーザー補助サービスを使います。これをオンにできるのはあなただけで、Pauselyが自身の画面でサービスに見えるものを説明したあとに、Androidの設定で行います。Pauselyはユーザー補助のためのツールではありません。サービスはAndroidのユーザー補助の設定でいつでもオフにでき、その場合PauselyはあなたのAppの前で一呼吸を置かなくなります。サービスに見えるものは次のとおりです。</p>
 <ul>
@@ -347,9 +350,9 @@ COPY = {
 <h3>購入</h3>
 <p>PremiumはGoogle Playを通じて販売しています。支払いはあなたとGoogleのあいだで、Googleのプライバシーポリシーのもとで行われ、Pauselyがカード情報を見ることはありません。Google Playは購入が有効かどうかだけをPauselyに伝え、Pauselyは購入について何もどこにも送りません。</p>
 <h3>Google Playの「データ セーフティ」の言葉でいえば</h3>
-<p><strong>収集：</strong>デバイスなどのIDと診断情報。GoogleのML Kitが分析のために収集します。<strong>共有：</strong>なし。<strong>転送時の暗号化：</strong>あり。アカウント、広告ID、位置情報、個人情報はありません。</p>
+<p><strong>収集：</strong>デバイスなどのIDと診断情報。GoogleのML Kitが分析のために収集します。OpenAIがAIリフレクションを書く場合に限り、そこに入力した内容（ユーザー作成コンテンツ）、開こうとしているAppの名前（インストール済みアプリ）、いくつかの集計（アプリ操作）を機能のために、そしてインストールのコード（デバイスなどのID）をセキュリティのために収集します。<strong>共有：</strong>なし。<strong>転送時の暗号化：</strong>あり。アカウント、広告ID、位置情報、個人情報はありません。</p>
 <h3>Androidでデータを削除する</h3>
-<p>{RESET}で、Pauselyがスマートフォンに保存しているものはすべて消えます。Google Playの定期購入は解約されないので、Google Playで管理してください。Androidのアプリ設定でPauselyのストレージを消去するか、アンインストールしても同じです。ML Kitがすでに送ったものはGoogleが保持し、Googleのプライバシーポリシーに従います。</p>
+<p>{RESET}で、Pauselyがスマートフォンに保存しているものはすべて消えます。Google Playの定期購入は解約されないので、Google Playで管理してください。Androidのアプリ設定でPauselyのストレージを消去するか、アンインストールしても同じです。私たちのサーバーが保持するのは、インストールごとの1日の回数だけで、期間は2日間です。ML Kitがすでに送ったものはGoogleが保持し、Googleのプライバシーポリシーに従います。OpenAIは受け取ったものを最長30日間保持します。</p>
 """,
 
 "p.delete.h": "データの削除",

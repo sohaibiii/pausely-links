@@ -17,7 +17,7 @@ COPY = {
 "ui.rights": "모든 권리 보유.",
 "ui.store_soon": "App Store에 곧 출시",
 "ui.store_get": "App Store에서 다운로드",
-"ui.date": "2026년 11월 11일",
+"ui.date": "2026년 11월 12일",
 "ui.last_updated": "마지막 업데이트: {DATE}",
 
 "k.settings": "설정",
@@ -207,7 +207,7 @@ COPY = {
 </ul>
 <div class="callout"><span class="tile">{eye-off}</span><div>일지는 결코 기기를 떠나지 않습니다. 기분 기록도 결코 떠나지 않습니다. 다른 앱에서 보내는 시간도 결코 떠나지 않습니다. 어떤 앱을 골랐는지도 떠나지 않습니다 — 그것은 당신의 기기 안에서조차 Pausely가 읽을 수 없기 때문입니다.</div></div>
 <p style="margin-top:16px">Apple의 개인정보 라벨 용어로는 <strong>추적 없음</strong>, 저희 광고 성과를 측정하기 위해 Meta의 SDK가 수집하는 <strong>식별자, 사용 데이터, 구매, 진단, 기타 데이터</strong>, 그리고 당신과 연결되지 않고 AI 되돌아보기가 작동하도록 하는 데에만 쓰이는 <strong>사용자 콘텐츠</strong>입니다. 이 방침은 {COMPANY}가 발행하는 iPhone, iPad 및 Android용 Pausely 앱과 이 웹사이트에 적용됩니다.</p>
-<p style="margin-top:16px"><strong>Android에서</strong> Pausely는 똑같이 작동하지만 Apple이 아닌 Google의 도구를 쓰며, 휴대폰 밖으로 나가는 것도 다릅니다. Meta의 SDK가 없고, AI 되돌아보기는 휴대폰 밖으로 나가지 않으며, Google의 ML Kit가 자신에 대한 진단 정보를 Google에 보냅니다. 자세한 내용은 <a href="{BASE}{L}/privacy/#android">Android의 Pausely</a>에 있습니다.</p>
+<p style="margin-top:16px"><strong>Android에서</strong> Pausely는 똑같이 작동하지만 Apple이 아닌 Google의 도구를 씁니다. Meta의 SDK가 없고, Google의 ML Kit가 자신에 대한 진단 정보를 Google에 보내며, AI 되돌아보기는 Apple Intelligence 대신 Gemini Nano를, App Attest 대신 Google Play Integrity를 씁니다. 자세한 내용은 <a href="{BASE}{L}/privacy/#android">Android의 Pausely</a>에 있습니다.</p>
 """,
 
 "p.collect.h": "저희가 수집하는 것",
@@ -332,8 +332,11 @@ COPY = {
 "p.android.b": """
 <p class="lead">Google Play에서 받는 Android용 Pausely도 같은 약속을 지킵니다. <strong>계정이 없고, 기록하는 모든 것은 당신의 휴대폰에 남습니다.</strong> Apple이 아닌 Android 자체의 도구로 만들어져서 몇 가지는 다르게 작동하며, 이 섹션에서 그 차이를 모두 설명합니다. 위의 섹션과 다른 부분은 Android에서 이 섹션이 적용됩니다.</p>
 <h3>휴대폰 밖으로 나가는 것</h3>
-<p>하나뿐이며, 그것은 저희가 아니라 Google의 것입니다. Android용 Pausely는 <strong>Google의 ML Kit</strong>(Gemini Nano)으로 휴대폰에서 AI를 실행하고, ML Kit는 자신에 대한 진단 정보와 사용 통계를 Google에 보냅니다. 휴대폰의 제조사, 모델, Android 버전, Pausely의 패키지 이름과 버전, ML Kit가 설치와 기기에 쓰는 식별자, 성능 수치, 오류 코드, 설정된 언어입니다. 암호화되어 전송되며, Google은 이를 제3자에게 넘기지 않는다고 밝힙니다. <a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit에 대한 Google의 공개 내용</a>과 <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>을 참고하세요. 여기에는 당신이 입력한 내용, 고른 앱, 사용 시간, 일지가 절대 들어가지 않습니다.</p>
-<p>그 밖에는 아무것도 나가지 않습니다. Android용 Pausely에는 <strong>Meta의 SDK가 없고</strong>, 광고도 자체 분석도 없으며, 광고 ID를 읽지 않습니다. <strong>AI 되돌아보기는 휴대폰에서 쓰이며</strong>, 지원되는 기기라면 Gemini Nano가 쓰고, 당신의 말은 그곳에 남습니다. Android용 Pausely는 Pausely 서버에도 OpenAI에도 아무것도 보내지 않습니다. Android는 Google의 시스템 서비스를 통해 모델을 내려받거나 업데이트할 수 있습니다. 이후 버전에서 다른 방식을 추가한다면 이 방침에서 먼저 알리고, 당신이 선택할 때까지 꺼 둡니다.</p>
+<p>두 가지이며, 두 번째는 당신이 켰을 때만입니다.</p>
+<p><strong>Google ML Kit의 진단 정보.</strong> Android용 Pausely는 Google의 ML Kit(Gemini Nano)으로 휴대폰에서 AI를 실행하고, ML Kit는 자신에 대한 진단 정보와 사용 통계를 Google에 보냅니다. 휴대폰의 제조사, 모델, Android 버전, Pausely의 패키지 이름과 버전, ML Kit가 설치와 기기에 쓰는 식별자, 성능 수치, 오류 코드, 설정된 언어입니다. 암호화되어 전송되며, Google은 이를 제3자에게 넘기지 않는다고 밝힙니다. <a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit에 대한 Google의 공개 내용</a>과 <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>을 참고하세요. 여기에는 당신이 입력한 내용, 고른 앱, 사용 시간, 일지가 절대 들어가지 않습니다.</p>
+<p><strong>AI 되돌아보기(켰을 때).</strong> 켜기 전까지는 꺼져 있으며, 위의 <a href="{BASE}{L}/privacy/#ai">AI 되돌아보기</a>에서 설명한 대로 작동하되 Apple 대신 Google의 도구를 씁니다. Gemini Nano를 지원하는 휴대폰에서는 다른 것을 고르지 않는 한 휴대폰에서 쓰이며, 그때는 아무것도 밖으로 나가지 않습니다. 그 밖의 경우, 또는 {K_settings} → {K_ai_reflection} → {K_written_by}에서 OpenAI를 고르면 OpenAI가 Pausely 서버를 거쳐 쓰고, iPhone과 같은 것이 전송됩니다. 지금 여는 앱의 이름, 오늘 그 앱에 손을 뻗은 횟수, 지금 시각, 연속 기록, 그리고 그 멈춤에 입력한 말입니다. 주간 글은 그 주의 집계만 보냅니다. 일지는 휴대폰의 Gemini Nano만 읽습니다.</p>
+<p>Apple의 App Attest 대신 <strong>Google Play Integrity</strong>가, 요청이 Google Play에서 설치한 진짜 Pausely에서 진짜 휴대폰으로 왔다는 것을 저희 서버에 보여 줍니다. Pausely는 이 설치를 위해 만든 무작위 코드에 묶인 확인을 Google Play에 요청하고, 저희 서버는 Google에 그 확인을 요청합니다. 이 코드는 당신의 계정도, 휴대폰 ID도, 광고 ID도 아닙니다. 서버는 이것을 그 설치의 하루 횟수를 세는 키로만 보관하고 이틀 뒤에 지우며, AI 되돌아보기를 끄면 휴대폰에서도 지워집니다. Pausely 서버는 그 밖에 아무것도 저장하지 않습니다. OpenAI는 받은 것을 최대 30일간 보관하며, 그것으로 모델을 학습시키지 않습니다.</p>
+<p>그 밖에는 아무것도 나가지 않습니다. Android용 Pausely에는 <strong>Meta의 SDK가 없고</strong>, 광고도 자체 분석도 없으며, 광고 ID를 읽지 않습니다.</p>
 <h3>접근성 서비스</h3>
 <p>앱이 열리는 순간 그 앞에 멈춤을 두기 위해, Pausely는 Android의 접근성 서비스를 사용합니다. 이 서비스는 Pausely가 자체 화면에서 서비스가 무엇을 보는지 설명한 뒤, 당신이 Android 설정에서 직접 켜야만 켜집니다. Pausely는 접근성 도구가 아니며, Android의 접근성 설정에서 언제든 서비스를 끌 수 있습니다. 그러면 Pausely는 더 이상 앱 앞에서 멈추지 않습니다. 서비스가 보는 것은 다음과 같습니다.</p>
 <ul>
@@ -347,9 +350,9 @@ COPY = {
 <h3>구매</h3>
 <p>Premium은 Google Play를 통해 판매됩니다. 결제는 당신과 Google 사이에서 Google 개인정보처리방침에 따라 이루어지며, Pausely는 카드를 보지 않습니다. Google Play는 구매가 활성 상태인지만 Pausely에 알려 주고, Pausely는 구매에 관해 어디에도 아무것도 보내지 않습니다.</p>
 <h3>Google Play 데이터 보안 용어로는</h3>
-<p><strong>수집:</strong> 기기 또는 기타 ID와 진단 정보. Google의 ML Kit가 분석 목적으로 수집합니다. <strong>공유:</strong> 없음. <strong>전송 중 암호화:</strong> 예. 계정, 광고 ID, 위치, 개인 정보는 없습니다.</p>
+<p><strong>수집:</strong> 기기 또는 기타 ID와 진단 정보. Google의 ML Kit가 분석 목적으로 수집합니다. OpenAI가 AI 되돌아보기를 쓸 때에만, 그곳에 입력한 내용(사용자 제작 콘텐츠), 지금 여는 앱의 이름(설치된 앱), 몇 가지 집계(앱 상호작용)를 기능을 위해, 그리고 설치 코드(기기 또는 기타 ID)를 보안을 위해 추가로 수집합니다. <strong>공유:</strong> 없음. <strong>전송 중 암호화:</strong> 예. 계정, 광고 ID, 위치, 개인 정보는 없습니다.</p>
 <h3>Android에서 데이터 삭제하기</h3>
-<p>{RESET}는 Pausely가 휴대폰에 보관하는 모든 것을 지웁니다. Google Play 구독은 해지되지 않으니 Google Play에서 관리하세요. Android 앱 설정에서 Pausely의 저장공간을 지우거나 앱을 삭제해도 같습니다. ML Kit가 이미 보낸 것은 Google이 Google 개인정보처리방침에 따라 보관합니다.</p>
+<p>{RESET}는 Pausely가 휴대폰에 보관하는 모든 것을 지웁니다. Google Play 구독은 해지되지 않으니 Google Play에서 관리하세요. Android 앱 설정에서 Pausely의 저장공간을 지우거나 앱을 삭제해도 같습니다. 저희 서버는 설치별 하루 횟수만 이틀 동안 보관합니다. ML Kit가 이미 보낸 것은 Google이 Google 개인정보처리방침에 따라 보관하며, OpenAI는 받은 것을 최대 30일간 보관합니다.</p>
 """,
 
 "p.delete.h": "데이터 삭제",
