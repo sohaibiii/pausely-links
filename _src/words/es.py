@@ -17,7 +17,7 @@ COPY = {
 "ui.rights": "Todos los derechos reservados.",
 "ui.store_soon": "Muy pronto en el App Store",
 "ui.store_get": "Consíguelo en el App Store",
-"ui.date": "12 de noviembre de 2026",
+"ui.date": "19 de noviembre de 2026",
 "ui.last_updated": "Última actualización: {DATE}",
 
 "k.settings": "Ajustes",
@@ -194,31 +194,32 @@ COPY = {
 
 "p.eyebrow": "Política de Privacidad",
 "p.h1": "Tu dispositivo se queda con lo que sabe.",
-"p.sub": "Pausely no tiene cuenta, y todo lo que registra sobre ti se queda en tu dispositivo. Dos cosas salen de él: lo que comunica el SDK de Meta para que podamos medir nuestros anuncios y — solo si activas la reflexión con IA y la escribe OpenAI — lo que escribes en ella. Esta página trata exactamente de dónde están esas líneas.",
+"p.sub": "Pausely no tiene cuenta, y todo lo que registra sobre ti se queda en tu dispositivo. Tres cosas salen de él: el registro de lo que compras, guardado por RevenueCat; lo que comunica el SDK de Meta para que podamos medir nuestros anuncios; y — solo si activas la reflexión con IA y la escribe OpenAI — lo que escribes en ella. Esta página trata exactamente de dónde están esas líneas.",
 "p.meta": "En vigor desde el {DATE} · se aplica a la app Pausely para iPhone, iPad y Android, y a este sitio",
 
 "p.summary.h": "La versión corta",
 "p.summary.b": """
 <p class="lead">Pausely no tiene cuenta. <strong>Todo lo que registra — qué apps proteges, cuánto tiempo pasas en ellas, tus pausas, tu diario — se escribe en tu dispositivo y se queda ahí.</strong> Pausely ni siquiera puede leer qué apps elegiste; eso lo guarda Tiempo de uso de Apple.</p>
-<p><strong>Dos cosas salen de tu dispositivo</strong>, y esta página enumera cada parte de ambas:</p>
+<p><strong>Tres cosas salen de tu dispositivo</strong>, y esta página enumera cada parte de cada una:</p>
 <ul>
+  <li><strong>El registro de tus compras</strong>, guardado por RevenueCat, que vende Premium en nuestro nombre a través del App Store: qué plan compraste y cuándo, si se renueva y un identificador que genera para esta instalación. Nunca llega a saber qué apps proteges, cómo las usas ni nada de lo que escribes. <a href="{BASE}{L}/privacy/#purchases">Detalles.</a></li>
   <li><strong>El SDK de Meta</strong>, a partir de Pausely 1.3, para que podamos saber cuáles de nuestros anuncios en Facebook e Instagram trajeron a la gente hasta la app. Le dice a Meta cuándo se instala o se abre Pausely y cuándo se compra un plan, junto con el tipo de dispositivo y un identificador que genera para esta instalación. Nunca llega a saber qué apps proteges, cómo las usas ni nada de lo que escribes, y, como Pausely nunca pide rastrearte, Meta no recibe ningún identificador de publicidad. <a href="{BASE}{L}/privacy/#ads">Detalles.</a></li>
   <li><strong>La reflexión con IA</strong>, que está desactivada hasta que tú la actives. En un iPhone con Apple Intelligence se puede escribir en el propio teléfono, y entonces no sale nada. Cuando la escribe OpenAI, las palabras que escribes en esa única pausa van al servidor de Pausely y de ahí a OpenAI, junto con cuatro datos pequeños sobre ese momento. <a href="{BASE}{L}/privacy/#ai">Detalles.</a></li>
 </ul>
 <div class="callout"><span class="tile">{eye-off}</span><div>Tu diario no sale nunca de tu dispositivo. Tus registros de ánimo no salen nunca. Los minutos que pasas en otras apps no salen nunca. Qué apps elegiste no sale nunca — Pausely no puede leer eso ni siquiera en tu propio dispositivo.</div></div>
-<p style="margin-top:16px">En el lenguaje de las etiquetas de privacidad de Apple: <strong>sin rastreo</strong>; <strong>identificadores, datos de uso, compras, diagnósticos y otros datos</strong>, recopilados por el SDK de Meta para medir nuestros anuncios; y <strong>contenido del usuario</strong>, no vinculado contigo, usado solo para que funcione la reflexión con IA. Esta política se aplica a la app Pausely para iPhone, iPad y Android, publicada por {COMPANY}, y a este sitio web.</p>
+<p style="margin-top:16px">En el lenguaje de las etiquetas de privacidad de Apple: <strong>sin rastreo</strong>; <strong>identificadores, datos de uso, compras, diagnósticos y otros datos</strong>, recopilados por el SDK de Meta para medir nuestros anuncios; <strong>compras</strong>, registradas por RevenueCat para vender Premium; y <strong>contenido del usuario</strong>, no vinculado contigo, usado solo para que funcione la reflexión con IA. Esta política se aplica a la app Pausely para iPhone, iPad y Android, publicada por {COMPANY}, y a este sitio web.</p>
 <p style="margin-top:16px"><strong>En Android</strong>, Pausely funciona igual, pero con las herramientas de Google en lugar de las de Apple: no hay SDK de Meta, ML Kit de Google envía a Google diagnósticos sobre sí mismo, y la reflexión con IA usa Gemini Nano en lugar de Apple Intelligence y Google Play Integrity en lugar de App Attest. <a href="{BASE}{L}/privacy/#android">Pausely en Android</a> lo explica todo.</p>
 """,
 
 "p.collect.h": "Qué recopilamos",
 "p.collect.b": """
-<p>«Recopilar», en el sentido de Apple y en el nuestro, significa transmitir datos fuera del dispositivo y guardarlos en algún sitio que no sea pasajero. Con esa medida, Pausely recopila lo que comunica el SDK de Meta para que podamos medir nuestros anuncios y — solo si activas la reflexión con IA y la escribe OpenAI — las palabras que escribes en esa única pantalla. Nada más.</p>
+<p>«Recopilar», en el sentido de Apple y en el nuestro, significa transmitir datos fuera del dispositivo y guardarlos en algún sitio que no sea pasajero. Con esa medida, Pausely recopila el registro de tus compras, guardado por RevenueCat; lo que comunica el SDK de Meta para que podamos medir nuestros anuncios; y — solo si activas la reflexión con IA y la escribe OpenAI — las palabras que escribes en esa única pantalla. Nada más.</p>
 <div class="table-wrap"><table>
 <tr><th>Categoría</th><th>¿Se recopila?</th><th>Qué significa</th></tr>
 <tr><td>Datos de contacto</td><td>No</td><td>No hay cuenta, ni inicio de sesión, ni campo de correo en ninguna parte de la app.</td></tr>
 <tr><td>Identificadores</td><td><strong>Sí — el SDK de Meta</strong></td><td>Un identificador que el SDK genera para esta instalación de Pausely y que envía con sus eventos. No es tu nombre, ni tu ID de Apple, ni el identificador de publicidad: Pausely nunca pide permiso mediante la transparencia en el rastreo de las apps, así que iOS no entrega ninguno. Pausely, por su parte, no tiene ID de usuario ni ID de dispositivo.</td></tr>
 <tr><td>Datos de uso</td><td><strong>Sí — el SDK de Meta</strong></td><td>Que Pausely se instaló, y cada vez que se abre y durante cuánto tiempo. Eso es todo: Pausely no registra ningún evento propio, y nada de lo que cuenta — tus pausas, tus victorias, los minutos que pasas en otras apps — se envía jamás. Todo eso se queda en tu dispositivo, para tus propias pantallas.</td></tr>
-<tr><td>Compras</td><td><strong>Sí — el SDK de Meta</strong></td><td>Cuando se compra un plan, empieza una prueba gratuita o se renueva una suscripción, el SDK lo detecta en tu dispositivo y comunica qué plan es, su precio y su moneda. El pago en sí es de Apple, en su hoja del App Store; Pausely nunca ve una tarjeta.</td></tr>
+<tr><td>Compras</td><td><strong>Sí — RevenueCat y el SDK de Meta</strong></td><td>RevenueCat guarda el registro de cada compra para que podamos vender Premium: qué plan, cuándo se compró, su precio y su moneda, y si se renueva, junto con un identificador que genera para esta instalación. El SDK de Meta también detecta cuándo se compra un plan, empieza una prueba gratuita o se renueva una suscripción, y comunica qué plan es, su precio y su moneda. El pago en sí es de Apple, en su hoja del App Store; Pausely nunca ve una tarjeta.</td></tr>
 <tr><td>Diagnósticos</td><td><strong>Sí — el SDK de Meta</strong></td><td>Informes de fallos del propio código de Meta. Pausely no tiene informe propio de fallos ni de rendimiento.</td></tr>
 <tr><td>Otros datos</td><td><strong>Sí — el SDK de Meta</strong></td><td>Detalles técnicos que se envían con los eventos de Meta, como el tipo de dispositivo, su versión de iOS, su idioma y su zona horaria.</td></tr>
 <tr><td>Contenido del usuario</td><td><strong>Solo la reflexión con IA</strong></td><td>Tu diario, tus registros de ánimo y tus alternativas propias se guardan en el dispositivo y en ningún otro sitio. Si — y solo si — activas la reflexión con IA y la escribe OpenAI, las palabras que escribes en <em>esa única pantalla</em> se envían, para que pueda volver una pregunta. Nada más de lo que escribes se envía jamás.</td></tr>
@@ -254,7 +255,7 @@ COPY = {
 """,
 "p.ads.h": "El SDK de Meta: para medir nuestros anuncios",
 "p.ads.b": """
-<p class="lead">Pausely se anuncia en Facebook e Instagram. <strong>A partir de Pausely 1.3, la app incluye el kit de desarrollo de software (SDK) de Meta</strong> para que podamos saber cuáles de esos anuncios trajeron a la gente hasta Pausely. Es el único código de otra empresa que hay en la app. Solo se ejecuta dentro de la propia app — nunca en las partes que dibujan la pantalla de bloqueo, cuentan tu tiempo o dibujan los widgets — y Pausely nunca le entrega nada propio.</p>
+<p class="lead">Pausely se anuncia en Facebook e Instagram. <strong>A partir de Pausely 1.3, la app incluye el kit de desarrollo de software (SDK) de Meta</strong> para que podamos saber cuáles de esos anuncios trajeron a la gente hasta Pausely. Aparte del de RevenueCat, que vende Premium, es el único código de otra empresa que hay en la app. Solo se ejecuta dentro de la propia app — nunca en las partes que dibujan la pantalla de bloqueo, cuentan tu tiempo o dibujan los widgets — y Pausely nunca le entrega nada propio.</p>
 <h3>Qué envía a Meta</h3>
 <ul>
   <li>Que Pausely se <strong>instaló</strong>, y cada vez que se <strong>abre</strong> y durante cuánto tiempo.</li>
@@ -307,7 +308,20 @@ COPY = {
 
 "p.purchases.h": "Compras",
 "p.purchases.b": """
-<p>Premium se vende a través del App Store de Apple con StoreKit. La transacción es entre tú y Apple, bajo la <a href="https://www.apple.com/legal/privacy/">política de privacidad de Apple</a>. Apple le dice a Pausely si una compra está activa — nada más — y Pausely no le dice a Apple nada sobre cómo usas la app. Con una compra no viajan datos de uso, ni diario, ni selección de apps, ni identificador nuestro. Por separado, el SDK de Meta detecta las compras en tu dispositivo y las comunica para que podamos medir nuestros anuncios — mira <a href="{BASE}{L}/privacy/#ads">el SDK de Meta</a>.</p>
+<p>Premium se vende a través del App Store de Apple. El pago es entre tú y Apple, bajo la <a href="https://www.apple.com/legal/privacy/">política de privacidad de Apple</a>, y Pausely nunca ve una tarjeta.</p>
+<p><strong>RevenueCat</strong> guarda en nuestro nombre el registro de las compras: muestra los planes en la app, completa cada compra con el App Store y le dice a Pausely qué tienes. Es nuestro proveedor de servicios y solo trabaja para nosotros.</p>
+<h3>Qué recibe RevenueCat</h3>
+<ul>
+  <li>El registro del App Store de cada compra de Pausely — qué plan, cuándo se compró, su precio y su moneda, si es una prueba gratuita, si se renueva y si se comparte mediante En familia.</li>
+  <li>Un <strong>identificador que genera</strong> para esta instalación de Pausely. No es tu nombre, ni tu correo, ni tu ID de Apple, ni el identificador de publicidad de tu dispositivo.</li>
+  <li><strong>Detalles técnicos</strong>: la versión de la app, la versión de iOS, el idioma del dispositivo y el país de su App Store. Como cualquier servidor, el de RevenueCat también ve la dirección IP desde la que llega todo esto.</li>
+</ul>
+<h3>Qué no recibe nunca</h3>
+<ul>
+  <li><strong>Qué apps proteges</strong>, cuánto tiempo pasas en ellas, tus pausas, reglas, diario y registros de ánimo, o cualquier cosa que escribas.</li>
+  <li><strong>Nada sobre quién eres.</strong> Pausely nunca te pide iniciar sesión y nunca le da a RevenueCat un nombre ni un correo, su recopilación de identificadores del dispositivo está desactivada, y no se usa ninguna de sus conexiones con empresas de publicidad o de analítica.</li>
+</ul>
+<p>RevenueCat guarda el registro bajo la <a href="https://www.revenuecat.com/privacy">Política de Privacidad de RevenueCat</a>, y podemos hacer que lo borre en cualquier momento — consulta <a href="{BASE}{L}/privacy/#delete">Eliminar tus datos</a>. Las versiones anteriores de Pausely venden Premium únicamente a través del App Store, y Apple solo les dice si una compra está activa. Por separado, el SDK de Meta detecta las compras en tu dispositivo y las comunica para que podamos medir nuestros anuncios — mira <a href="{BASE}{L}/privacy/#ads">el SDK de Meta</a>.</p>
 """,
 
 "p.notifications.h": "Notificaciones, widgets y pantalla bloqueada",
@@ -318,10 +332,11 @@ COPY = {
 
 "p.third.h": "Terceros",
 "p.third.b": """
-<p>Pausely contiene <strong>una única pieza de código de terceros: el SDK de Meta</strong>, descrito <a href="{BASE}{L}/privacy/#ads">más arriba</a>. No hay en la app ningún otro código de analítica, de publicidad ni de informes de fallos. Estas son las partes implicadas, y solo estas:</p>
+<p>Pausely contiene <strong>dos piezas de código de terceros: el SDK de RevenueCat</strong>, que vende Premium (consulta <a href="{BASE}{L}/privacy/#purchases">Compras</a>), <strong>y el SDK de Meta</strong>, descrito <a href="{BASE}{L}/privacy/#ads">más arriba</a>. No hay en la app ningún otro código de analítica, de publicidad ni de informes de fallos. Estas son las partes implicadas, y solo estas:</p>
 <ul>
   <li><strong>Apple</strong> gestiona el App Store, procesa las compras, aplica la protección de Tiempo de uso, ejecuta Apple Intelligence en tu iPhone si la reflexión con IA lo usa y — si has aceptado compartir con los desarrolladores — puede compartir con nosotros informes de fallos bajo su propia política.</li>
   <li><strong>Meta</strong> recibe lo que comunica su SDK para que podamos medir nuestros anuncios, y nada más.</li>
+  <li><strong>RevenueCat</strong> guarda el registro de las compras y las completa con el App Store, como nuestro proveedor de servicios. Recibe lo que se enumera en Compras, y nada más.</li>
   <li><strong>Cloudflare</strong> aloja el servidor de Pausely. Cuando OpenAI escribe la reflexión con IA, tus palabras pasan por él camino del modelo, y no guarda ninguna.</li>
   <li><strong>OpenAI</strong> ejecuta el modelo que hay detrás de la reflexión con IA cuando la escribe, y solo mientras tengas esa función activada. Recibe lo que se enumera arriba y nada más, y no lo usa para entrenar sus modelos. Las versiones anteriores de la app usan <strong>Google</strong> para esto.</li>
 </ul>
@@ -359,12 +374,12 @@ COPY = {
 "p.delete.b": """
 <p>Todo lo que tiene Pausely se puede borrar desde dentro de la app, sin pedírnoslo:</p>
 <div class="callout"><span class="tile">{trash}</span><div>{RESET}<br><span class="small">Vacía cada pausa, victoria, regla, entrada del diario y registro de ánimo, retira las protecciones, cancela los horarios y te devuelve al principio. Se niega mientras el modo estricto está corriendo — el único compromiso que le pediste a la app que te hiciera cumplir — y no toca tu suscripción, que pertenece a tu ID de Apple.</span></div></div>
-<p style="margin-top:16px">Borrar la app quita también todos sus datos del dispositivo, incluido el identificador que el SDK de Meta generó para ella. De nuestro lado no hay nada que borrar: nuestro servidor no guarda ningún registro de una petición una vez la ha respondido. Lo que el SDK de Meta ya haya enviado lo conserva Meta, bajo la <a href="https://www.facebook.com/privacy/policy/">Política de Privacidad de Meta</a>. Aun así, puedes escribirnos — mira la página <a href="{BASE}{L}/delete-data/">Tus datos</a>.</p>
+<p style="margin-top:16px">Borrar la app quita también todos sus datos del dispositivo, incluidos los identificadores que el SDK de Meta y RevenueCat generaron para ella. Nuestro servidor no guarda ningún registro de una petición una vez la ha respondido. <strong>RevenueCat conserva el registro de tus compras</strong> después de que la app desaparezca, porque una suscripción pertenece a tu ID de Apple y sobrevive a la app; para que se borre, escribe a {MAIL} con el ID de pedido que figura en el correo del recibo de Apple, y haremos que se borre. Lo que el SDK de Meta ya haya enviado lo conserva Meta, bajo la <a href="https://www.facebook.com/privacy/policy/">Política de Privacidad de Meta</a>. Más información en la página <a href="{BASE}{L}/delete-data/">Tus datos</a>.</p>
 """,
 
 "p.rights.h": "Tus derechos",
 "p.rights.b": """
-<p>Vivas donde vivas — incluido bajo el RGPD, el RGPD del Reino Unido y la CCPA/CPRA — tienes derecho a acceder, corregir, exportar, restringir y borrar los datos personales que una empresa tenga sobre ti, a oponerte a su tratamiento y a reclamar ante una autoridad de control. Pausely no tiene ningún perfil tuyo y no guarda nada después de responder una reflexión, así que de nuestro lado no hay nada que entregar ni que borrar; los datos de tu dispositivo ya están en tus manos, y los propios controles de la app ejercen cada uno de esos derechos por ti. Lo que envió el SDK de Meta lo conserva Meta, y la <a href="https://www.facebook.com/privacy/policy/">Política de Privacidad de Meta</a> explica cómo ejercer tus derechos ante Meta. Si tienes alguna pregunta, o crees que tenemos algo que esta página no describe, escribe a {MAIL} y te responderemos.</p>
+<p>Vivas donde vivas — incluido bajo el RGPD, el RGPD del Reino Unido y la CCPA/CPRA — tienes derecho a acceder, corregir, exportar, restringir y borrar los datos personales que una empresa tenga sobre ti, a oponerte a su tratamiento y a reclamar ante una autoridad de control. Pausely no tiene ningún perfil tuyo y no guarda nada después de responder una reflexión. El único registro que se guarda en otro sitio en nuestro nombre es el de tus compras, en RevenueCat: escribe a {MAIL} con el ID de pedido que figura en el correo del recibo de Apple y te enviaremos una copia o haremos que se borre. Los datos de tu dispositivo ya están en tus manos, y los propios controles de la app ejercen cada uno de esos derechos por ti. Lo que envió el SDK de Meta lo conserva Meta, y la <a href="https://www.facebook.com/privacy/policy/">Política de Privacidad de Meta</a> explica cómo ejercer tus derechos ante Meta. Si tienes alguna pregunta, o crees que tenemos algo que esta página no describe, escribe a {MAIL} y te responderemos.</p>
 """,
 
 "p.children.h": "Menores",
@@ -374,7 +389,7 @@ COPY = {
 
 "p.changes.h": "Cambios en esta política",
 "p.changes.b": """
-<p>Podemos actualizar esta política a medida que la app cambie. La fecha de arriba se mueve cuando lo hacemos, y los cambios importantes se anotarán en las notas de versión de la app. El cambio más reciente, del {DATE}, incorpora Pausely para Android — consulta <a href="{BASE}{L}/privacy/#android">Pausely en Android</a>. Antes llegó Pausely 1.3: el SDK de Meta, que mide nuestros anuncios, y nuevas funciones de tiempo — la pantalla {K_time_per_app}, los {K_time_banners} y la estimación de vídeos cortos — que, como el objetivo diario, cuentan en tu dispositivo cuánto tiempo pasas en las apps que eliges. Antes de eso, la reflexión con IA pasó de Google a OpenAI, y ganó la posibilidad de elegir Apple Intelligence en tu iPhone. Seguir usando Pausely después de un cambio significa que aceptas la política revisada.</p>
+<p>Podemos actualizar esta política a medida que la app cambie. La fecha de arriba se mueve cuando lo hacemos, y los cambios importantes se anotarán en las notas de versión de la app. El cambio más reciente, del {DATE}, incorpora RevenueCat, que ahora vende Premium y guarda el registro de las compras — consulta <a href="{BASE}{L}/privacy/#purchases">Compras</a>. Antes llegó Pausely para Android — consulta <a href="{BASE}{L}/privacy/#android">Pausely en Android</a>. Antes llegó Pausely 1.3: el SDK de Meta, que mide nuestros anuncios, y nuevas funciones de tiempo — la pantalla {K_time_per_app}, los {K_time_banners} y la estimación de vídeos cortos — que, como el objetivo diario, cuentan en tu dispositivo cuánto tiempo pasas en las apps que eliges. Antes de eso, la reflexión con IA pasó de Google a OpenAI, y ganó la posibilidad de elegir Apple Intelligence en tu iPhone. Seguir usando Pausely después de un cambio significa que aceptas la política revisada.</p>
 """,
 
 "p.contact.h": "Contacto",
@@ -472,14 +487,14 @@ COPY = {
 
 "d.where.h": "Qué se guarda y dónde",
 "d.where.b": """
-<p class="lead">Pausely no tiene cuenta, y su servidor no guarda registro de nadie. Todo lo que Pausely tiene por su parte está en tu dispositivo, y puedes borrarlo sin pedírnoslo.</p>
+<p class="lead">Pausely no tiene cuenta, y su servidor no guarda registro de nadie. Todo lo que Pausely tiene por su parte está en tu dispositivo, y puedes borrarlo sin pedírnoslo. El único registro que se guarda en otro sitio en nuestro nombre — el de tus compras, en RevenueCat — lo borramos cuando nos lo pidas.</p>
 <div class="table-wrap"><table>
 <tr><th>Datos</th><th>Dónde viven</th><th>Cómo quitarlos</th></tr>
 <tr><td>Reglas, historial de pausas, racha, diario, registros de ánimo, alternativas, ajustes</td><td>El almacenamiento privado de la app en tu dispositivo</td><td>{RESET}, o borra la app</td></tr>
 <tr><td>Minutos en las apps que elegiste — para tu objetivo, tus límites, la estimación de vídeos cortos y los avisos de tiempo</td><td>El almacenamiento privado de la app en tu dispositivo, hasta sesenta días</td><td>{RESET}, o borra la app. Desactivar los avisos de tiempo borra los suyos</td></tr>
 <tr><td>Tu selección de apps</td><td>Tokens opacos de Tiempo de uso en el almacenamiento privado de la app</td><td>Igual que arriba; revocar el acceso a Tiempo de uso en los Ajustes de iOS también termina toda protección</td></tr>
 <tr><td>Instantánea del widget</td><td>Un archivo pequeño de recuentos y fechas en tu dispositivo</td><td>Se quita con el restablecimiento y con la app</td></tr>
-<tr><td>Derecho a Premium</td><td>Tu ID de Apple (Apple) y una copia de su estado en tu dispositivo</td><td>Se gestiona en los ajustes de tu App Store — ver más abajo</td></tr>
+<tr><td>Derecho a Premium</td><td>Tu ID de Apple (Apple), una copia de su estado en tu dispositivo y el registro de tus compras en RevenueCat, que vende Premium en nuestro nombre</td><td>La suscripción se gestiona en los ajustes de tu App Store — ver más abajo. Para que se borre el registro de RevenueCat, pídenoslo — ver el final de esta página</td></tr>
 <tr><td>Lo que envió el SDK de Meta — instalaciones, aperturas, compras, el tipo de dispositivo y el identificador que generó</td><td>Meta, bajo la <a href="https://www.facebook.com/privacy/policy/">Política de Privacidad de Meta</a>. El identificador en sí se guarda en el almacenamiento de la app en tu dispositivo</td><td>Borrar la app borra el identificador, y una instalación nueva empieza con uno nuevo. Para lo que conserva Meta, mira la política de Meta</td></tr>
 <tr><td>Lo que escribiste en una reflexión con IA</td><td>Solo tu dispositivo, cuando la reflexión la escribió Apple Intelligence. Cuando la escribió OpenAI: nuestro servidor no guarda ni la entrada ni la respuesta; OpenAI conserva entradas y salidas hasta 30 días (Google, en versiones anteriores: hasta 24 horas)</td><td>Nada que borrar de nuestro lado. Desactiva la función en {K_settings} → {K_ai_reflection} y no se enviará nada más nunca</td></tr>
 <tr><td>Una cuenta, un perfil, algo con tu nombre</td><td>—</td><td>No existe. Nunca tuvimos ninguna que borrar.</td></tr>
@@ -504,7 +519,7 @@ COPY = {
 """,
 "d.email.h": "Pregúntanos",
 "d.email.b": """
-<p>Si quieres confirmación por escrito de lo que tenemos sobre ti, o tienes alguna pregunta sobre lo que envió el SDK de Meta, escribe a {MAIL} desde cualquier dirección. Responderemos en un plazo de 30 días. Por favor, no nos envíes tu diario, tus registros de ánimo ni capturas de ellos: no los necesitamos para responder.</p>
+<p>Si quieres confirmación por escrito de lo que tenemos sobre ti, quieres que se borre el registro de tus compras en RevenueCat o tienes alguna pregunta sobre lo que envió el SDK de Meta, escribe a {MAIL} desde cualquier dirección. Para el registro de compras, incluye el ID de pedido que figura en el correo del recibo de Apple: es la única forma de distinguir un registro anónimo de otro. Responderemos en un plazo de 30 días. Por favor, no nos envíes tu diario, tus registros de ánimo ni capturas de ellos: no los necesitamos para responder.</p>
 """,
 
 "nf.eyebrow": "404",
