@@ -246,7 +246,7 @@ COPY = {
 "p.screentime.h": "스크린 타임: 당신의 앱과 시간",
 "p.screentime.b": """
 <p>Pausely는 Apple의 스크린 타임 프레임워크(Family Controls, Managed Settings, Device Activity) 위에 만들어졌습니다. 접근 권한은 Apple 자신의 요청 화면을 통해 한 번만 허용하고, {K_settings} → {K_screen_time}에서 언제든 거둘 수 있습니다.</p>
-<p>앱을 고르면 Apple의 선택 화면은 <strong>토큰</strong>을 돌려줍니다. iOS에게는 그 앱을 가리키는 값이지만, Pausely에게도 당신의 기기 밖에서도 아무 뜻이 없는 값입니다. Pausely는 고른 앱을 가려 달라고 iOS에 부탁하기 위해 그 토큰을 보관하며, 번들 식별자를 받는 일은 결코 없습니다. 자기 구성 요소들 사이에서 토큰을 견주어야 할 때는 토큰 자체가 아니라 단방향 해시를 견줍니다. 아래에서 설명하는 봉인된 화면을 빼면, Pausely가 앱 이름을 읽을 수 있는 유일한 곳은 차단 화면입니다. iOS는 당신이 지금 마주한 앱의 이름을 Pausely가 볼 수 있게 해 줍니다. 멈춤이 — 그리고 AI 되돌아보기를 쓴다면 그것도 — “어떤 앱” 대신 “Instagram”이라고 말할 수 있도록요. 그 이름은 당신의 기기에 남습니다. OpenAI가 작성할 때의 AI 되돌아보기 요청만이 예외입니다.</p>
+<p>앱을 고르면 Apple의 선택 화면은 <strong>토큰</strong>을 돌려줍니다. iOS에게는 그 앱을 가리키는 값이지만, Pausely에게도 당신의 기기 밖에서도 아무 뜻이 없는 값입니다. Pausely는 고른 앱을 가려 달라고 iOS에 부탁하기 위해 그 토큰을 보관하며, 번들 식별자를 받는 일은 결코 없습니다. 자기 구성 요소들 사이에서 토큰을 견주어야 할 때는 토큰 자체가 아니라 단방향 해시를 견줍니다. 아래에서 설명하는 봉인된 화면을 빼면, Pausely는 앱 이름을 알지 못합니다. 지금 여는 앱의 이름은 iOS가 차단 화면과 멈춤 화면에 보여 주지만, Pausely는 그것을 보관하지도 어디로 보내지도 않습니다. 그래서 AI 되돌아보기는 그 앱을 “어떤 앱”이라고 부릅니다.</p>
 <h3>그 앱에서 보내는 시간</h3>
 <p>하루 목표, 한도, 짧은 영상 추정치, {K_time_banners}에 쓰일 수 있도록, iOS는 당신이 고른 앱의 오늘 사용 시간이 몇 분을 더 넘길 때마다 Pausely에 알려 줍니다. Pausely는 하루 단위로 사용 시간(분)을 적어 둡니다. 이 기록은 당신의 기기에 있고, 어디로도 보내지지 않으며, {RESET}로 지워집니다.</p>
 <p>{K_time_per_app} 화면, 그리고 멈춤 화면에서 앱 아이콘 아래에 표시되는 사용 시간은 Apple이 봉인된 샌드박스 안에서 실행하는 확장 프로그램이 그립니다. 이 확장 프로그램은 앱 이름과 분 단위의 정확한 시간을 보지만, 네트워크를 쓸 수도, 무엇을 돌려줄 수도 없습니다. 그래서 Pausely의 나머지 부분은 그것을 결코 알지 못하고, 그 화면에 있는 어떤 것도 보관되지 않습니다.</p>
@@ -285,7 +285,6 @@ COPY = {
 <p><strong>Apple Intelligence</strong>가 있는 iPhone에서는 Apple의 모델이 질문과 주간 글을 <strong>기기 자체에서</strong> 쓸 수 있습니다. 그때는 아래에 나열된 어떤 것도 기기를 떠나지 않습니다. 요청은 이루어지지 않고, 아무것도 보관되지 않습니다. Apple Intelligence를 쓸 수 있는 곳에서는 처음부터 이 방식으로 시작합니다. 그렇지 않은 경우 — 또는 {K_settings} → {K_ai_reflection} → {K_written_by}에서 OpenAI를 고른 경우 — <strong>OpenAI</strong>가 작성하며, 이 섹션의 나머지 내용이 적용됩니다. Apple Intelligence를 골랐는데 그것이 답할 수 없으면, 멈춤은 대신 기본 질문을 보여 줍니다. 당신의 말은, 가지 않기로 당신이 정한 곳으로 결코 가지 않습니다.</p>
 <h3>OpenAI가 작성할 때 보내는 것</h3>
 <ul>
-  <li><strong>지금 열려는 앱의 표시 이름</strong> — 그 순간 이미 당신 화면에 떠 있는 이름입니다.</li>
   <li><strong>세 개의 숫자</strong>: 오늘 몇 번 열었는지, 지금 몇 시인지, 연속 기록이 며칠인지.</li>
   <li><strong>그 화면에 입력한 말</strong> — 그 순간에.</li>
 </ul>
@@ -349,7 +348,7 @@ COPY = {
 <h3>휴대폰 밖으로 나가는 것</h3>
 <p>두 가지이며, 두 번째는 당신이 켰을 때만입니다.</p>
 <p><strong>Google ML Kit의 진단 정보.</strong> Android용 Pausely는 Google의 ML Kit(Gemini Nano)으로 휴대폰에서 AI를 실행하고, ML Kit는 자신에 대한 진단 정보와 사용 통계를 Google에 보냅니다. 휴대폰의 제조사, 모델, Android 버전, Pausely의 패키지 이름과 버전, ML Kit가 설치와 기기에 쓰는 식별자, 성능 수치, 오류 코드, 설정된 언어입니다. 암호화되어 전송되며, Google은 이를 제3자에게 넘기지 않는다고 밝힙니다. <a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit에 대한 Google의 공개 내용</a>과 <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>을 참고하세요. 여기에는 당신이 입력한 내용, 고른 앱, 사용 시간, 일지가 절대 들어가지 않습니다.</p>
-<p><strong>AI 되돌아보기(켰을 때).</strong> 켜기 전까지는 꺼져 있으며, 위의 <a href="{BASE}{L}/privacy/#ai">AI 되돌아보기</a>에서 설명한 대로 작동하되 Apple 대신 Google의 도구를 씁니다. Gemini Nano를 지원하는 휴대폰에서는 다른 것을 고르지 않는 한 휴대폰에서 쓰이며, 그때는 아무것도 밖으로 나가지 않습니다. 그 밖의 경우, 또는 {K_settings} → {K_ai_reflection} → {K_written_by}에서 OpenAI를 고르면 OpenAI가 Pausely 서버를 거쳐 쓰고, iPhone과 같은 것이 전송됩니다. 지금 여는 앱의 이름, 오늘 그 앱에 손을 뻗은 횟수, 지금 시각, 연속 기록, 그리고 그 멈춤에 입력한 말입니다. 주간 글은 그 주의 집계만 보냅니다. 일지는 휴대폰의 Gemini Nano만 읽습니다.</p>
+<p><strong>AI 되돌아보기(켰을 때).</strong> 켜기 전까지는 꺼져 있으며, 위의 <a href="{BASE}{L}/privacy/#ai">AI 되돌아보기</a>에서 설명한 대로 작동하되 Apple 대신 Google의 도구를 씁니다. Gemini Nano를 지원하는 휴대폰에서는 다른 것을 고르지 않는 한 휴대폰에서 쓰이며, 그때는 아무것도 밖으로 나가지 않습니다. 그 밖의 경우, 또는 {K_settings} → {K_ai_reflection} → {K_written_by}에서 OpenAI를 고르면 OpenAI가 Pausely 서버를 거쳐 쓰고, 다음이 전송됩니다. 지금 여는 앱의 이름(iPhone과 달리 Android에서는 Pausely가 이것을 읽을 수 있습니다), 오늘 그 앱에 손을 뻗은 횟수, 지금 시각, 연속 기록, 그리고 그 멈춤에 입력한 말입니다. 주간 글은 그 주의 집계만 보냅니다. 일지는 휴대폰의 Gemini Nano만 읽습니다.</p>
 <p>Apple의 App Attest 대신 <strong>Google Play Integrity</strong>가, 요청이 Google Play에서 설치한 진짜 Pausely에서 진짜 휴대폰으로 왔다는 것을 저희 서버에 보여 줍니다. Pausely는 이 설치를 위해 만든 무작위 코드에 묶인 확인을 Google Play에 요청하고, 저희 서버는 Google에 그 확인을 요청합니다. 이 코드는 당신의 계정도, 휴대폰 ID도, 광고 ID도 아닙니다. 서버는 이것을 그 설치의 하루 횟수를 세는 키로만 보관하고 이틀 뒤에 지우며, AI 되돌아보기를 끄면 휴대폰에서도 지워집니다. Pausely 서버는 그 밖에 아무것도 저장하지 않습니다. OpenAI는 받은 것을 최대 30일간 보관하며, 그것으로 모델을 학습시키지 않습니다.</p>
 <p>그 밖에는 아무것도 나가지 않습니다. Android용 Pausely에는 <strong>Meta의 SDK가 없고</strong>, 광고도 자체 분석도 없으며, 광고 ID를 읽지 않습니다.</p>
 <h3>접근성 서비스</h3>
@@ -389,7 +388,7 @@ COPY = {
 
 "p.changes.h": "이 방침의 변경",
 "p.changes.b": """
-<p>앱이 달라짐에 따라 이 방침을 갱신할 수 있습니다. 그럴 때는 맨 위의 날짜가 함께 바뀌고, 중요한 변경은 앱의 출시 노트에 적습니다. 가장 최근의 변경은 {DATE}에 RevenueCat을 추가한 것입니다. 이제 RevenueCat이 Premium을 판매하고 구매 기록을 보관합니다(<a href="{BASE}{L}/privacy/#purchases">구매</a> 참고). 그 전에는 Android용 Pausely가 추가되었습니다(<a href="{BASE}{L}/privacy/#android">Android의 Pausely</a> 참고). 그 전의 변경은 Pausely 1.3에서 이루어졌습니다. 저희 광고 성과를 측정하는 Meta의 SDK, 그리고 새로운 시간 기능인 {K_time_per_app}, {K_time_banners}, 짧은 영상 추정치입니다. 이 시간 기능들은 하루 목표와 마찬가지로, 당신이 고른 앱에서 얼마나 시간을 보내는지 기기 안에서 셉니다. 그 전에는 AI 되돌아보기가 Google에서 OpenAI로 옮겨 갔고, 당신의 iPhone에서 Apple Intelligence를 고를 수 있게 되었습니다. 변경 이후에도 Pausely를 계속 쓰시는 것은 개정된 방침에 동의하시는 것으로 봅니다.</p>
+<p>앱이 달라짐에 따라 이 방침을 갱신할 수 있습니다. 그럴 때는 맨 위의 날짜가 함께 바뀌고, 중요한 변경은 앱의 출시 노트에 적습니다. 가장 최근의 변경은 {DATE}에 RevenueCat을 추가한 것입니다. 이제 RevenueCat이 Premium을 판매하고 구매 기록을 보관합니다(<a href="{BASE}{L}/privacy/#purchases">구매</a> 참고). 같은 날, iPhone의 AI 되돌아보기가 보내는 것에서 지금 여는 앱의 이름을 뺐습니다. iPhone에서는 Pausely가 앱 이름을 읽을 수 없어서, 되돌아보기는 그 앱을 “어떤 앱”이라고 부릅니다. 그 전에는 Android용 Pausely가 추가되었습니다(<a href="{BASE}{L}/privacy/#android">Android의 Pausely</a> 참고). 그 전의 변경은 Pausely 1.3에서 이루어졌습니다. 저희 광고 성과를 측정하는 Meta의 SDK, 그리고 새로운 시간 기능인 {K_time_per_app}, {K_time_banners}, 짧은 영상 추정치입니다. 이 시간 기능들은 하루 목표와 마찬가지로, 당신이 고른 앱에서 얼마나 시간을 보내는지 기기 안에서 셉니다. 그 전에는 AI 되돌아보기가 Google에서 OpenAI로 옮겨 갔고, 당신의 iPhone에서 Apple Intelligence를 고를 수 있게 되었습니다. 변경 이후에도 Pausely를 계속 쓰시는 것은 개정된 방침에 동의하시는 것으로 봅니다.</p>
 """,
 
 "p.contact.h": "문의",

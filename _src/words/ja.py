@@ -246,7 +246,7 @@ COPY = {
 "p.screentime.h": "スクリーンタイム：あなたのAppと、あなたの時間",
 "p.screentime.b": """
 <p>PauselyはAppleのスクリーンタイムのフレームワーク（Family Controls、Managed Settings、Device Activity）の上に作られています。アクセスの許可はApple自身の確認画面で一度だけ行い、{K_settings} → {K_screen_time}でいつでも取り消せます。</p>
-<p>Appを選ぶと、Appleのピッカーは<strong>トークン</strong>を返します。iOSに対してそのAppを指し示す値ですが、Pauselyにとっては何の意味も持たず、あなたの端末の外でも意味を持ちません。Pauselyは、選ばれたAppを覆うようiOSに頼めるよう、そのトークンを保存します。バンドル識別子を受け取ることはけっしてありません。自分自身の構成要素どうしでトークンを照合する必要があるときは、トークンそのものではなく、一方向のハッシュを比べます。下で説明する密閉された画面を除けば、PauselyがApp名を読める場所はブロック画面ひとつだけです。iOSは、あなたがいま前に立っているAppの名前をPauselyに見せます。一呼吸が——使っていればAIリフレクションも——「あるApp」ではなく「Instagram」と言えるようにするためです。その名前は、OpenAIが書くときのAIリフレクションのリクエストに含まれる場合を除いて、端末に残ります。</p>
+<p>Appを選ぶと、Appleのピッカーは<strong>トークン</strong>を返します。iOSに対してそのAppを指し示す値ですが、Pauselyにとっては何の意味も持たず、あなたの端末の外でも意味を持ちません。Pauselyは、選ばれたAppを覆うようiOSに頼めるよう、そのトークンを保存します。バンドル識別子を受け取ることはけっしてありません。自分自身の構成要素どうしでトークンを照合する必要があるときは、トークンそのものではなく、一方向のハッシュを比べます。下で説明する密閉された画面を除けば、PauselyがAppの名前を知ることはありません。開こうとしているAppの名前は、iOSがブロック画面と一呼吸の画面に表示しますが、Pauselyはそれを保存も送信もしません。AIリフレクションがそのAppを「あるApp」と呼ぶのはそのためです。</p>
 <h3>そこで過ごす時間</h3>
 <p>1日の目標、上限、ショート動画の本数の推定、{K_time_banners}のために、選んだAppの今日の使用時間が数分ずつ増えるたびに、iOSがそれをPauselyに伝えます。Pauselyは1日ごとの時間を分単位で書き留めます。それは端末の上にあり、どこにも送られず、{RESET}で消えます。</p>
 <p>{K_time_per_app}の画面と、一呼吸の画面でAppのアイコンの下に出る時間は、Appleが密閉されたサンドボックスのなかで動かす拡張機能が描いています。拡張機能はApp名と分単位の正確な時間を見ますが、ネットワークを使うことも、何かを返すこともできません。そのため、Pauselyのほかの部分がそれを知ることはなく、その画面にあるものは何も保存されません。</p>
@@ -285,7 +285,6 @@ COPY = {
 <p><strong>Apple Intelligence</strong>を搭載したiPhoneでは、Appleのモデルが問いと週ごとの文章を<strong>端末そのもので</strong>書くことができます。そのとき、下に挙げるものは何も端末から出ていきません。リクエストは行われず、何も保持されません。Apple Intelligenceが使えるところでは、はじめはこうなっています。それ以外の場合——または{K_settings} → {K_ai_reflection} → {K_written_by}でOpenAIを選んだ場合——は<strong>OpenAI</strong>が書き、この節の残りが当てはまります。Apple Intelligenceを選んでいて、それが答えられないときは、一呼吸が代わりにシンプルな問いかけを表示します。あなたの言葉が、行くべきではないとあなたが決めた場所へ行くことは、けっしてありません。</p>
 <h3>OpenAIが書くときに送られるもの</h3>
 <ul>
-  <li><strong>いま開こうとしているAppの表示名</strong>——その瞬間、すでにあなたの画面に出ている名前です。</li>
   <li><strong>3つの数字</strong>：今日そのAppを開いた回数、いまの時刻、そして連続記録の長さ。</li>
   <li><strong>その画面に入力した言葉</strong>——その瞬間に。</li>
 </ul>
@@ -349,7 +348,7 @@ COPY = {
 <h3>スマートフォンの外に出るもの</h3>
 <p>出るものは2つで、2つ目はあなたがオンにした場合だけです。</p>
 <p><strong>GoogleのML Kitの診断情報。</strong>Android版Pauselyは、GoogleのML Kit（Gemini Nano）を使ってAIをスマートフォン上で動かします。ML Kitは、ML Kit自身についての診断情報と利用統計をGoogleに送ります。内容は、スマートフォンのメーカー、機種、Androidのバージョン、Pauselyのパッケージ名とバージョン、ML Kitがインストールと端末に使う識別子、パフォーマンスの数値、エラーコード、設定されている言語です。これらは暗号化して送られ、Googleは第三者に渡さないとしています。詳しくは<a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kitに関するGoogleの開示</a>と<a href="https://policies.google.com/privacy">Googleのプライバシーポリシー</a>をご覧ください。あなたが入力した内容、選んだApp、使った時間、日記が含まれることはありません。</p>
-<p><strong>AIリフレクション（オンにした場合）。</strong>オンにするまではオフで、上の<a href="{BASE}{L}/privacy/#ai">AIリフレクション</a>で説明しているとおりに動きます。違いは、Appleの仕組みの代わりにGoogleの仕組みを使うことです。Gemini Nanoに対応したスマートフォンでは、ほかを選ばないかぎりスマートフォン上で書かれ、そのときは何も外に出ません。それ以外の場合、または{K_settings} → {K_ai_reflection} → {K_written_by}でOpenAIを選んだ場合は、OpenAIがPauselyのサーバーを通じて書き、iPhoneと同じものが送られます。開こうとしているAppの名前、今日そのAppに手を伸ばした回数、いまの時刻、連続記録、そしてその一呼吸に入力した言葉です。週ごとの文章が送るのは、その週の集計だけです。日記を読むのは、スマートフォン上のGemini Nanoだけです。</p>
+<p><strong>AIリフレクション（オンにした場合）。</strong>オンにするまではオフで、上の<a href="{BASE}{L}/privacy/#ai">AIリフレクション</a>で説明しているとおりに動きます。違いは、Appleの仕組みの代わりにGoogleの仕組みを使うことです。Gemini Nanoに対応したスマートフォンでは、ほかを選ばないかぎりスマートフォン上で書かれ、そのときは何も外に出ません。それ以外の場合、または{K_settings} → {K_ai_reflection} → {K_written_by}でOpenAIを選んだ場合は、OpenAIがPauselyのサーバーを通じて書き、次のものが送られます。開こうとしているAppの名前（iPhoneと違い、AndroidではPauselyがこれを読めます）、今日そのAppに手を伸ばした回数、いまの時刻、連続記録、そしてその一呼吸に入力した言葉です。週ごとの文章が送るのは、その週の集計だけです。日記を読むのは、スマートフォン上のGemini Nanoだけです。</p>
 <p>AppleのApp Attestの代わりに、<strong>Google Play Integrity</strong>が、リクエストがGoogle Playからインストールされた本物のPauselyから、本物のスマートフォンで送られていることを私たちのサーバーに示します。PauselyはこのインストールのためにつくったランダムなコードにひもづくチェックをGoogle Playに求め、私たちのサーバーがGoogleにその確認を求めます。このコードは、あなたのアカウントでも、スマートフォンのIDでも、広告IDでもありません。サーバーはこれを、そのインストールの1日の回数を数えるためのキーとしてだけ保持し、2日後に削除します。AIリフレクションをオフにすると、スマートフォンからも消えます。Pauselyのサーバーはほかに何も保存しません。OpenAIは受け取ったものを最長30日間保持し、それでモデルを学習させることはありません。</p>
 <p>ほかには何も出ません。Android版Pauselyには<strong>MetaのSDKは入っておらず</strong>、広告も独自の分析もなく、広告IDを読むこともありません。</p>
 <h3>ユーザー補助サービス</h3>
@@ -389,7 +388,7 @@ COPY = {
 
 "p.changes.h": "このポリシーの変更",
 "p.changes.b": """
-<p>アプリの変化に合わせて、このポリシーを更新することがあります。そのときは上部の日付が変わり、重要な変更はアプリのリリースノートに記載します。直近の変更は{DATE}のもので、Premiumを販売し、購入の記録を保持するようになったRevenueCatを加えました（<a href="{BASE}{L}/privacy/#purchases">購入</a>をご覧ください）。その前の変更では、Android版Pauselyを加えました（<a href="{BASE}{L}/privacy/#android">Android版Pausely</a>をご覧ください）。その前の変更は、Pausely 1.3とともに行われました。私たちの広告の効果を測るMetaのSDKと、新しい時間に関する機能——{K_time_per_app}、{K_time_banners}、ショート動画の本数の推定——です。これらの機能は、1日の目標と同じように、あなたが選んだAppで過ごす時間を端末の上で数えます。その前には、AIリフレクションがGoogleからOpenAIに移り、あなたのiPhoneでApple Intelligenceを選べるようになりました。変更後もPauselyを使い続けることは、改訂後のポリシーに同意したことを意味します。</p>
+<p>アプリの変化に合わせて、このポリシーを更新することがあります。そのときは上部の日付が変わり、重要な変更はアプリのリリースノートに記載します。直近の変更は{DATE}のもので、Premiumを販売し、購入の記録を保持するようになったRevenueCatを加えました（<a href="{BASE}{L}/privacy/#purchases">購入</a>をご覧ください）。同じ日に、iPhoneのAIリフレクションが送るものから、開こうとしているAppの名前を外しました。iPhoneではPauselyがAppの名前を読めないため、リフレクションはそのAppを「あるApp」と呼びます。その前の変更では、Android版Pauselyを加えました（<a href="{BASE}{L}/privacy/#android">Android版Pausely</a>をご覧ください）。その前の変更は、Pausely 1.3とともに行われました。私たちの広告の効果を測るMetaのSDKと、新しい時間に関する機能——{K_time_per_app}、{K_time_banners}、ショート動画の本数の推定——です。これらの機能は、1日の目標と同じように、あなたが選んだAppで過ごす時間を端末の上で数えます。その前には、AIリフレクションがGoogleからOpenAIに移り、あなたのiPhoneでApple Intelligenceを選べるようになりました。変更後もPauselyを使い続けることは、改訂後のポリシーに同意したことを意味します。</p>
 """,
 
 "p.contact.h": "お問い合わせ",
