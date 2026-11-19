@@ -89,7 +89,7 @@ NAV_ORDER = ["support", "about", "privacy", "terms", "data"]
 # the table of contents, and the two copy keys (`<prefix>.<id>.h` and `.b`).
 SUPPORT_CARDS = ["how", "requirements", "start", "faq", "trouble", "contact"]
 PRIVACY_CARDS = [
-    "summary", "collect", "device", "screentime", "ads", "ai", "purchases",
+    "summary", "collect", "device", "screentime", "ads", "analytics", "ai", "purchases",
     "notifications", "third", "android", "delete", "rights", "children", "changes", "contact",
 ]
 TERMS_CARDS = [

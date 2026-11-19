@@ -194,38 +194,40 @@ COPY = {
 
 "p.eyebrow": "隐私政策",
 "p.h1": "它知道的，留在你的设备里。",
-"p.sub": "Pausely 没有账号，它记录的关于你的一切都留在你的设备上。有三样东西会离开：你的购买记录，由 RevenueCat 保管；Meta 的 SDK 为了让我们衡量广告效果而上报的内容；以及你在 AI 反思里打下的文字——但只有在你打开了它、并且由 OpenAI 来写时才会。这一页讲的就是这些界线到底划在哪里。",
+"p.sub": "Pausely 没有账号，它记录的关于你的一切都留在你的设备上。有四样东西会离开：你的购买记录，由 RevenueCat 保管；Meta 的 SDK 为了让我们衡量广告效果而上报的内容；Google Analytics 统计的关于 App 使用情况的内容；以及你在 AI 反思里打下的文字——但只有在你打开了它、并且由 OpenAI 来写时才会。这一页讲的就是这些界线到底划在哪里。",
 "p.meta": "自 {DATE} 起生效 · 适用于 iPhone、iPad 和 Android 版 Pausely App，以及本网站",
 
 "p.summary.h": "简短版本",
 "p.summary.b": """
 <p class="lead">Pausely 没有账号。<strong>它记录的一切——你保护了哪些 App、你在它们上面花了多长时间、你的暂停、你的日志——都写在你的设备上，并留在那里。</strong>连你选了哪些 App，Pausely 都读不出来；那是 Apple 的“屏幕使用时间”保管的。</p>
-<p><strong>有三样东西会离开你的设备</strong>，本页会列出其中每一样的每一个部分：</p>
+<p><strong>有四样东西会离开你的设备</strong>，本页会列出其中每一样的每一个部分：</p>
 <ul>
   <li><strong>你的购买记录</strong>，由替我们通过 App Store 出售 Premium 的 RevenueCat 保管：你买了哪个方案、什么时候买的、是否续期，以及它为这次安装生成的一个标识符。它永远不会得知你保护了哪些 App、你如何使用它们，或你写下的任何内容。<a href="{BASE}{L}/privacy/#purchases">详情。</a></li>
   <li><strong>Meta 的 SDK</strong>，自 Pausely 1.3 起加入，好让我们知道是我们在 Facebook 和 Instagram 上的哪些广告把人们带到了这个 App。它会在 Pausely 被安装或打开、以及购买方案时告诉 Meta，同时附上设备类型和它为这次安装生成的一个标识符。它永远不会得知你保护了哪些 App、你如何使用它们，或你写下的任何内容；而且因为 Pausely 从不请求追踪你，Meta 拿不到任何广告标识符。<a href="{BASE}{L}/privacy/#ads">详情。</a></li>
+  <li><strong>Google Analytics for Firebase</strong>，好让我们了解有多少人在用 Pausely、又是怎么用的：它何时被打开、每次打开多久、它的哪些页面被查看、设备类型、设备的大致位置，以及它为这次安装生成的一个标识符。它永远不会得知你保护了哪些 App、你如何使用它们，或你写下的任何内容，也不会读取任何广告标识符。<a href="{BASE}{L}/privacy/#analytics">详情。</a></li>
   <li><strong>AI 反思</strong>，它在你打开之前一直关着。在配备 Apple Intelligence 的 iPhone 上，它可以直接在手机上写成，这时什么都不会离开。由 OpenAI 来写时，你在那一次暂停里打下的文字会连同关于那一刻的四个小事实一起，送到 Pausely 的服务器，再到 OpenAI。<a href="{BASE}{L}/privacy/#ai">详情。</a></li>
 </ul>
 <div class="callout"><span class="tile">{eye-off}</span><div>你的日志永远不会离开你的设备。你的心情记录永远不会离开。你在其他 App 里花的分钟数永远不会离开。你选了哪些 App 也不会离开——因为哪怕在你自己的设备上，Pausely 都读不出它。</div></div>
-<p style="margin-top:16px">用 Apple 隐私标签的说法：<strong>没有追踪</strong>；<strong>标识符、使用数据、购买、诊断和其他数据</strong>，由 Meta 的 SDK 收集，用于衡量我们的广告效果；<strong>购买</strong>，由 RevenueCat 记录，用于出售 Premium；以及<strong>用户内容</strong>，不与你关联，仅用于让 AI 反思正常运作。本政策适用于由 {COMPANY} 发行的 iPhone、iPad 和 Android 版 Pausely App，以及本网站。</p>
-<p style="margin-top:16px"><strong>在 Android 上</strong>，Pausely 的运作方式相同，只是用的是 Google 的工具而不是 Apple 的：没有 Meta 的 SDK，Google 的 ML Kit 会向 Google 发送关于它自身的诊断信息，而 AI 反思用 Gemini Nano 代替 Apple Intelligence，用 Google Play Integrity 代替 App Attest。<a href="{BASE}{L}/privacy/#android">Android 版 Pausely</a> 一节有完整说明。</p>
+<p style="margin-top:16px">用 Apple 隐私标签的说法：<strong>没有追踪</strong>；<strong>标识符、使用数据、购买、诊断和其他数据</strong>，由 Meta 的 SDK 收集，用于衡量我们的广告效果；<strong>标识符、使用数据、粗略位置和购买</strong>，由 Google Analytics 收集，用于了解 App 的使用情况；<strong>购买</strong>，由 RevenueCat 记录，用于出售 Premium；以及<strong>用户内容</strong>，不与你关联，仅用于让 AI 反思正常运作。本政策适用于由 {COMPANY} 发行的 iPhone、iPad 和 Android 版 Pausely App，以及本网站。</p>
+<p style="margin-top:16px"><strong>在 Android 上</strong>，Pausely 的运作方式相同，只是用的是 Google 的工具而不是 Apple 的：没有 Meta 的 SDK，也没有 Google Analytics，Google 的 ML Kit 会向 Google 发送关于它自身的诊断信息，而 AI 反思用 Gemini Nano 代替 Apple Intelligence，用 Google Play Integrity 代替 App Attest。<a href="{BASE}{L}/privacy/#android">Android 版 Pausely</a> 一节有完整说明。</p>
 """,
 
 "p.collect.h": "我们收集什么",
 "p.collect.b": """
-<p>“收集”，无论按 Apple 的定义还是我们的定义，都是指把数据传出设备，并保存在某个非临时的地方。以这个标准衡量，Pausely 收集的是由 RevenueCat 保管的你的购买记录；Meta 的 SDK 为了让我们衡量广告效果而上报的内容；以及——只有在你打开 AI 反思、且由 OpenAI 来写时——你在那一个屏幕上打下的文字。别无其他。</p>
+<p>“收集”，无论按 Apple 的定义还是我们的定义，都是指把数据传出设备，并保存在某个非临时的地方。以这个标准衡量，Pausely 收集的是由 RevenueCat 保管的你的购买记录；Meta 的 SDK 为了让我们衡量广告效果而上报的内容；Google Analytics 统计的关于 App 使用情况的内容；以及——只有在你打开 AI 反思、且由 OpenAI 来写时——你在那一个屏幕上打下的文字。别无其他。</p>
 <div class="table-wrap"><table>
 <tr><th>类别</th><th>是否收集？</th><th>这意味着什么</th></tr>
 <tr><td>联系信息</td><td>否</td><td>App 里没有任何账号、登录或邮箱输入框。</td></tr>
-<tr><td>标识符</td><td><strong>是——Meta 的 SDK</strong></td><td>SDK 为这次安装的 Pausely 生成、并随它的事件一起发送的一个标识符。不是你的名字，不是你的 Apple 账户，也不是广告标识符：Pausely 从不申请 App 跟踪透明度权限，所以 iOS 不会把它交出来。Pausely 自己既没有用户 ID，也没有设备 ID。</td></tr>
-<tr><td>使用数据</td><td><strong>是——Meta 的 SDK</strong></td><td>Pausely 被安装了，以及它每一次被打开、每次打开多久。这就是全部：Pausely 不记录任何自己的事件，它统计的任何东西——你的暂停、你的成功、你在其他 App 里花的分钟数——都从不发送。这些都留在你的设备上，供你自己的页面使用。</td></tr>
-<tr><td>购买</td><td><strong>是——RevenueCat 和 Meta 的 SDK</strong></td><td>RevenueCat 保管每一笔购买的记录，好让我们出售 Premium：是哪个方案、何时购买、它的价格和币种，以及是否续期，并附上它为这次安装生成的一个标识符。每当购买方案、开始免费试用或订阅续期时，Meta 的 SDK 也会察觉到，并上报是哪个方案、它的价格和币种。付款本身是 Apple 的事，发生在 App Store 的面板里；Pausely 从不接触银行卡。</td></tr>
+<tr><td>标识符</td><td><strong>是——Meta 的 SDK 和 Google Analytics</strong></td><td>它们各自为这次安装的 Pausely 生成、并随上报内容一起发送的一个标识符。不是你的名字，不是你的 Apple 账户，也不是广告标识符：Pausely 从不申请 App 跟踪透明度权限，所以 iOS 不会把它交出来，而 Google Analytics 既不读取广告标识符，也不读取供应商标识符。Pausely 自己既没有用户 ID，也没有设备 ID。</td></tr>
+<tr><td>使用数据</td><td><strong>是——Meta 的 SDK 和 Google Analytics</strong></td><td>Pausely 被安装了，以及它每一次被打开、每次打开多久；Google Analytics 还会统计它的哪些页面被查看。这就是全部：Pausely 不记录任何自己的事件，它统计的任何东西——你的暂停、你的成功、你在其他 App 里花的分钟数——都从不发送。这些都留在你的设备上，供你自己的页面使用。</td></tr>
+<tr><td>购买</td><td><strong>是——RevenueCat、Meta 的 SDK 和 Google Analytics</strong></td><td>RevenueCat 保管每一笔购买的记录，好让我们出售 Premium：是哪个方案、何时购买、它的价格和币种，以及是否续期，并附上它为这次安装生成的一个标识符。每当购买方案、开始免费试用或订阅续期时，Meta 的 SDK 也会察觉到，并上报是哪个方案、它的价格和币种；Google Analytics 也会以同样的方式统计它察觉到的购买。付款本身是 Apple 的事，发生在 App Store 的面板里；Pausely 从不接触银行卡。</td></tr>
 <tr><td>诊断</td><td><strong>是——Meta 的 SDK</strong></td><td>来自 Meta 自己代码的崩溃报告。Pausely 没有自己的崩溃或性能上报。</td></tr>
 <tr><td>其他数据</td><td><strong>是——Meta 的 SDK</strong></td><td>随 Meta 的事件一起发送的技术细节，例如设备类型、它的 iOS 版本、语言和时区。</td></tr>
 <tr><td>用户内容</td><td><strong>仅 AI 反思</strong></td><td>你的日志、心情记录和自定义替代选项都保存在设备上，别无他处。只有当你打开 AI 反思、且由 OpenAI 来写时——也仅在那时——你在<em>那一个屏幕</em>上打下的文字才会被发送，好让一个问题能返回给你。你写下的其他任何内容都永远不会被发送。</td></tr>
-<tr><td>位置、健康、通讯录、浏览、搜索</td><td>否</td><td>Pausely 不会请求获取你的位置、你的健康记录或你的通讯录，也看不到你的浏览或你的搜索。当你选择去散步、以此代替看手机时，它会在散步期间用手机的运动传感器数你的步数，把数字显示出来，然后就忘掉它。</td></tr>
+<tr><td>位置</td><td><strong>粗略——Google Analytics</strong></td><td>一个大致的位置——国家、地区、城市——由 Google 根据 Google Analytics 的数据发来时所用的、经过掩码处理的 IP 地址推算得出。Pausely 从不请求获取你的位置，也从不读取它。</td></tr>
+<tr><td>健康、通讯录、浏览、搜索</td><td>否</td><td>Pausely 不会请求获取你的位置、你的健康记录或你的通讯录，也看不到你的浏览或你的搜索。当你选择去散步、以此代替看手机时，它会在散步期间用手机的运动传感器数你的步数，把数字显示出来，然后就忘掉它。</td></tr>
 </table></div>
-<p style="margin-top:14px"><strong>追踪：</strong>没有。Pausely 从不请求追踪你的许可，所以 iOS 不会把你设备的广告标识符交给 Meta 的 SDK，而 SDK 会告诉 Meta：不允许追踪。我们不会把与你有关的任何内容，同其他公司的 App 或网站的数据关联起来，也不会与数据经纪商共享任何东西。</p>
+<p style="margin-top:14px"><strong>追踪：</strong>没有。Pausely 从不请求追踪你的许可，所以 iOS 不会把你设备的广告标识符交给 Meta 的 SDK，而 SDK 会告诉 Meta：不允许追踪。Google Analytics 不读取任何广告标识符；对 Pausely 而言，Google 信号、与 Google 共享数据以及广告个性化均已关闭。我们不会把与你有关的任何内容，同其他公司的 App 或网站的数据关联起来，也不会与数据经纪商共享任何东西。</p>
 """,
 
 "p.device.h": "留在你设备上的东西",
@@ -255,7 +257,7 @@ COPY = {
 """,
 "p.ads.h": "Meta 的 SDK——衡量我们的广告效果",
 "p.ads.b": """
-<p class="lead">Pausely 在 Facebook 和 Instagram 上投放广告。<strong>从 Pausely 1.3 起，App 中包含了 Meta 的软件开发工具包（SDK）</strong>，好让我们知道是其中哪些广告把人们带到了 Pausely。除了出售 Premium 的 RevenueCat 的代码，它是这个 App 里唯一一段别家的代码。它只在 App 本身之内运行——从不在绘制拦截屏、统计你的时间或绘制小组件的那些部分里运行——而且 Pausely 从不把自己的任何东西交给它。</p>
+<p class="lead">Pausely 在 Facebook 和 Instagram 上投放广告。<strong>从 Pausely 1.3 起，App 中包含了 Meta 的软件开发工具包（SDK）</strong>，好让我们知道是其中哪些广告把人们带到了 Pausely。它是这个 App 里三段别家代码中的一段，另外两段是出售 Premium 的 RevenueCat 的代码，以及统计 App 使用情况的 Google Analytics。它只在 App 本身之内运行——从不在绘制拦截屏、统计你的时间或绘制小组件的那些部分里运行——而且 Pausely 从不把自己的任何东西交给它。</p>
 <h3>它会发给 Meta 什么</h3>
 <ul>
   <li>Pausely 被<strong>安装</strong>了，以及它每一次被<strong>打开</strong>、每次打开多久。</li>
@@ -275,6 +277,28 @@ COPY = {
 </ul>
 <p>SDK 中那些会读取你屏幕上内容的功能——你在文本框里打下的内容、你点按的按钮的标签、一个屏幕的布局——对 Pausely 都已关闭，在 App 里和 Meta 的设置里都是如此，而且会一直关着。</p>
 <p>Meta 依据 <a href="https://www.facebook.com/privacy/policy/">Meta 的隐私政策</a>保存它收到的内容；该政策说明了这些内容会保存多久，以及如何向 Meta 行使你的权利。这个标识符存放在你设备上 Pausely 的存储里：删除 App 就会删除它，重新安装则会从一个新的标识符开始。</p>
+""",
+
+"p.analytics.h": "Google Analytics——App 的使用情况",
+"p.analytics.b": """
+<p class="lead">从 2026 年 11 月下旬起，<strong>Pausely 中包含了 Google Analytics for Firebase</strong>，好让我们了解有多少人在使用这个 App、使用得有多频繁，以及他们使用其中的哪些页面。它只在 App 本身之内运行——从不在绘制拦截屏、统计你的时间或绘制小组件的那些部分里运行——而且 Pausely 从不把自己的任何东西告诉它。</p>
+<h3>它自己会收集什么</h3>
+<ul>
+  <li>Pausely <strong>第一次被打开</strong>、每一次<strong>会话</strong>及其持续时长，以及 App 或 iOS 何时<strong>更新</strong>。</li>
+  <li>Pausely 的哪些<strong>页面</strong>被查看。</li>
+  <li>有<strong>方案被购买</strong>——是哪个方案、它的价格——这是它在你的设备上察觉到的。</li>
+  <li><strong>技术细节</strong>，例如设备类型、它的 iOS 版本、它的语言和 App 的版本。</li>
+  <li>一个<strong>大致的位置</strong>——国家、地区、城市——由 Google 根据数据发来时所用的、经过掩码处理的 IP 地址推算得出。Pausely 从不请求获取你的位置。</li>
+  <li>它为这次安装的 Pausely <strong>生成的一个标识符</strong>。它不是你的名字、你的 Apple 账户、你设备的广告标识符，也不是设备的供应商标识符。</li>
+</ul>
+<h3>它永远拿不到什么</h3>
+<ul>
+  <li><strong>你保护了哪些 App</strong>，或你在它们上面花了多长时间。</li>
+  <li><strong>你的暂停、规则、成功、日志和心情记录</strong>，或你打下的任何内容——包括你在 AI 反思里打下的内容。</li>
+  <li><strong>Pausely 自己的任何事件。</strong>它只收集上面列出的内容，而且是它自己收集的；Pausely 从不告诉它任何事。</li>
+  <li><strong>任何用于广告的东西。</strong>它不读取任何广告标识符，它的广告功能在 App 中已关闭，而且对 Pausely 而言，Google 信号、与 Google 共享数据以及广告个性化均已关闭。</li>
+</ul>
+<p>Google 依据 <a href="https://policies.google.com/privacy">Google 隐私权政策</a>保存它收到的内容。App 里没有关闭它的设置；删除 App 就会删除它的标识符，重新安装则会从一个新的标识符开始。</p>
 """,
 
 "p.ai.h": "AI 反思——只在你打开它时",
@@ -331,10 +355,11 @@ COPY = {
 
 "p.third.h": "第三方",
 "p.third.b": """
-<p>Pausely 里有<strong>两段第三方代码：RevenueCat 的 SDK</strong>，用于出售 Premium（见<a href="{BASE}{L}/privacy/#purchases">购买</a>），<strong>以及 Meta 的 SDK</strong>，<a href="{BASE}{L}/privacy/#ads">上文</a>已有说明。App 里没有其他任何分析统计、广告或崩溃上报代码。参与其中的是以下几方，也仅有这几方：</p>
+<p>Pausely 里有<strong>三段第三方代码：RevenueCat 的 SDK</strong>，用于出售 Premium（见<a href="{BASE}{L}/privacy/#purchases">购买</a>）；<strong>Meta 的 SDK</strong>，<a href="{BASE}{L}/privacy/#ads">上文</a>已有说明；<strong>以及 Google Analytics for Firebase</strong>，<a href="{BASE}{L}/privacy/#analytics">上文</a>也有说明。App 里没有其他任何分析统计、广告或崩溃上报代码。参与其中的是以下几方，也仅有这几方：</p>
 <ul>
   <li><strong>Apple</strong> 运营 App Store、处理购买、执行“屏幕使用时间”的遮挡，并在 AI 反思使用 Apple Intelligence 时，于你的 iPhone 上运行它；如果你已同意与开发者共享，它还可能依据自身政策向我们提供崩溃日志。</li>
   <li><strong>Meta</strong> 接收它的 SDK 为了让我们衡量广告效果而上报的内容，别无其他。</li>
+  <li><strong>Google</strong> 接收 Google Analytics 收集的内容，好让我们了解 App 的使用情况，别无其他。</li>
   <li><strong>RevenueCat</strong> 作为我们的服务提供商，保管购买记录，并与 App Store 完成购买。它接收“购买”一节中列出的内容，别无其他。</li>
   <li><strong>Cloudflare</strong> 托管 Pausely 的服务器。由 OpenAI 来写 AI 反思时，你的文字会在送往模型的途中经过它，它不保存其中任何内容。</li>
   <li><strong>OpenAI</strong> 在由它来写 AI 反思时运行背后的模型，且仅在你打开该功能期间。它收到的只有上面列出的内容，别无其他，也不会用来训练自己的模型。早期版本的 App 由 <strong>Google</strong> 承担这一角色。</li>
@@ -373,12 +398,12 @@ COPY = {
 "p.delete.b": """
 <p>Pausely 拥有的一切，都可以在 App 内抹掉，不必来问我们：</p>
 <div class="callout"><span class="tile">{trash}</span><div>{RESET}<br><span class="small">清空每一次暂停、每一次成功、每条规则、每篇日志和每次心情记录，撤下遮挡，收回时间表，把你带回起点。严格模式运行时它会拒绝执行——那是你请这个 App 替你守住的唯一一个承诺——而且它不会动你的订阅，那属于你的 Apple 账户。</span></div></div>
-<p style="margin-top:16px">删除 App，也会把它在设备上的全部数据一并带走，包括 Meta 的 SDK 和 RevenueCat 为它生成的标识符。我们的服务器在回答完一次请求之后，不会留下关于它的任何记录。<strong>App 删除之后，RevenueCat 仍会保管你的购买记录</strong>，因为订阅属于你的 Apple 账户，比 App 存在得更久；如需删除，请附上 Apple 收据邮件中的订单号，写信到 {MAIL}，我们会让 RevenueCat 将其删除。Meta 的 SDK 已经发出的内容由 Meta 保管，受 <a href="https://www.facebook.com/privacy/policy/">Meta 的隐私政策</a>约束。更多内容见<a href="{BASE}{L}/delete-data/">你的数据</a>页面。</p>
+<p style="margin-top:16px">删除 App，也会把它在设备上的全部数据一并带走，包括 Meta 的 SDK、RevenueCat 和 Google Analytics 为它生成的标识符。我们的服务器在回答完一次请求之后，不会留下关于它的任何记录。<strong>App 删除之后，RevenueCat 仍会保管你的购买记录</strong>，因为订阅属于你的 Apple 账户，比 App 存在得更久；如需删除，请附上 Apple 收据邮件中的订单号，写信到 {MAIL}，我们会让 RevenueCat 将其删除。Meta 的 SDK 和 Google Analytics 已经发出的内容分别由 Meta 和 Google 保管，受 <a href="https://www.facebook.com/privacy/policy/">Meta 的隐私政策</a>和 <a href="https://policies.google.com/privacy">Google 隐私权政策</a>约束。更多内容见<a href="{BASE}{L}/delete-data/">你的数据</a>页面。</p>
 """,
 
 "p.rights.h": "你的权利",
 "p.rights.b": """
-<p>无论你住在哪里——包括在 GDPR、英国 GDPR 和 CCPA/CPRA 之下——你都有权访问、更正、导出、限制、反对处理和删除一家公司持有的关于你的个人数据，并向监管机构投诉。Pausely 没有关于你的任何画像，一次反思被回答之后也不留下任何东西。在别处替我们保存的记录只有一份，那就是你在 RevenueCat 的购买记录：附上 Apple 收据邮件中的订单号，写信到 {MAIL}，我们就会把一份副本发给你，或让 RevenueCat 将其删除。你设备上的数据本来就在你手里，而 App 自己的操作就替你行使了上述每一项权利。Meta 的 SDK 发出的内容由 Meta 保管，<a href="https://www.facebook.com/privacy/policy/">Meta 的隐私政策</a>说明了如何在那里行使你的权利。如果你有疑问，或者认为我们持有本页没有描述的东西，请写信到 {MAIL}，我们会回复。</p>
+<p>无论你住在哪里——包括在 GDPR、英国 GDPR 和 CCPA/CPRA 之下——你都有权访问、更正、导出、限制、反对处理和删除一家公司持有的关于你的个人数据，并向监管机构投诉。Pausely 没有关于你的任何画像，一次反思被回答之后也不留下任何东西。在别处替我们保存的记录只有一份，那就是你在 RevenueCat 的购买记录：附上 Apple 收据邮件中的订单号，写信到 {MAIL}，我们就会把一份副本发给你，或让 RevenueCat 将其删除。你设备上的数据本来就在你手里，而 App 自己的操作就替你行使了上述每一项权利。Meta 的 SDK 和 Google Analytics 发出的内容分别由 Meta 和 Google 保管，<a href="https://www.facebook.com/privacy/policy/">Meta 的隐私政策</a>和 <a href="https://policies.google.com/privacy">Google 隐私权政策</a>说明了如何在那里行使你的权利。如果你有疑问，或者认为我们持有本页没有描述的东西，请写信到 {MAIL}，我们会回复。</p>
 """,
 
 "p.children.h": "儿童",
@@ -388,7 +413,7 @@ COPY = {
 
 "p.changes.h": "本政策的变更",
 "p.changes.b": """
-<p>随着 App 的变化，我们可能会更新本政策。更新时顶部的日期会一并变动，重要变更会写进 App 的版本说明。最近一次变更在 {DATE}，加入了 RevenueCat，它现在负责出售 Premium 并保管购买记录，见<a href="{BASE}{L}/privacy/#purchases">购买</a>。同一天，我们从 iPhone 上 AI 反思发送的内容中去掉了你正要打开的 App 的名称：在 iPhone 上 Pausely 读不到 App 的名称，所以反思称它为“某个 App”。在那之前是 Android 版 Pausely，见<a href="{BASE}{L}/privacy/#android">Android 版 Pausely</a>。在那之前是 Pausely 1.3：Meta 的 SDK，用来衡量我们的广告效果；以及新的时间功能——{K_time_per_app}、{K_time_banners}和短视频估算——它们和每日目标一样，在你的设备上统计你在自己选的 App 里花了多长时间。在那之前，AI 反思从 Google 换成了 OpenAI，并增加了在你的 iPhone 上选用 Apple Intelligence 的选项。变更之后继续使用 Pausely，即表示你接受修订后的政策。</p>
+<p>随着 App 的变化，我们可能会更新本政策。更新时顶部的日期会一并变动，重要变更会写进 App 的版本说明。最近一次变更在 {DATE}，加入了 Google Analytics for Firebase，它统计 App 的使用情况，见 <a href="{BASE}{L}/privacy/#analytics">Google Analytics</a>。同一天，我们加入了 RevenueCat，它现在负责出售 Premium 并保管购买记录，见<a href="{BASE}{L}/privacy/#purchases">购买</a>；并从 iPhone 上 AI 反思发送的内容中去掉了你正要打开的 App 的名称：在 iPhone 上 Pausely 读不到 App 的名称，所以反思称它为“某个 App”。在那之前是 Android 版 Pausely，见<a href="{BASE}{L}/privacy/#android">Android 版 Pausely</a>。在那之前是 Pausely 1.3：Meta 的 SDK，用来衡量我们的广告效果；以及新的时间功能——{K_time_per_app}、{K_time_banners}和短视频估算——它们和每日目标一样，在你的设备上统计你在自己选的 App 里花了多长时间。在那之前，AI 反思从 Google 换成了 OpenAI，并增加了在你的 iPhone 上选用 Apple Intelligence 的选项。变更之后继续使用 Pausely，即表示你接受修订后的政策。</p>
 """,
 
 "p.contact.h": "联系我们",
@@ -495,6 +520,7 @@ COPY = {
 <tr><td>小组件快照</td><td>你设备上一个只含计数与日期的小文件</td><td>随重置一起移除，也随 App 一起移除</td></tr>
 <tr><td>Premium 权益</td><td>你的 Apple 账户（Apple 侧）、其状态在你设备上的一份副本，以及你在 RevenueCat 的购买记录——RevenueCat 替我们出售 Premium</td><td>订阅在你的 App Store 设置中管理——见下文。如需删除 RevenueCat 的记录，请向我们提出——见本页末尾</td></tr>
 <tr><td>Meta 的 SDK 发出的内容——安装、启动、购买、设备类型，以及它生成的标识符</td><td>Meta，受 <a href="https://www.facebook.com/privacy/policy/">Meta 的隐私政策</a>约束。标识符本身保存在你设备上 App 的存储里</td><td>删除 App 会删除这个标识符，重新安装则会从一个新的标识符开始。Meta 持有的内容，请参阅 Meta 的政策</td></tr>
+<tr><td>Google Analytics 收集的内容——会话、查看过的页面、购买、设备类型、大致位置，以及它生成的标识符</td><td>Google，受 <a href="https://policies.google.com/privacy">Google 隐私权政策</a>约束。标识符本身保存在你设备上 App 的存储里</td><td>删除 App 会删除这个标识符，重新安装则会从一个新的标识符开始。Google 持有的内容，请参阅 Google 的政策</td></tr>
 <tr><td>你在一次 AI 反思中打下的内容</td><td>由 Apple Intelligence 写反思时，只在你的设备上。由 OpenAI 写时：我们的服务器既不保存提问也不保存回答；OpenAI 会把输入和输出保留最多 30 天（早期版本由 Google 保留最多 24 小时）</td><td>我们这边没有可删的东西。在{K_settings} → {K_ai_reflection}中关闭该功能，此后就不会再发送任何内容</td></tr>
 <tr><td>账号、个人资料，或任何带着你名字的东西</td><td>—</td><td>并不存在。我们从来就没有可删的。</td></tr>
 </table></div>

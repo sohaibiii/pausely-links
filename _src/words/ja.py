@@ -194,38 +194,40 @@ COPY = {
 
 "p.eyebrow": "プライバシーポリシー",
 "p.h1": "知ったことは、あなたの端末が持っています。",
-"p.sub": "Pauselyにはアカウントがなく、あなたについて記録するものはすべて端末に残ります。端末から出ていくのは3つ。RevenueCatが保持する、あなたが購入したものの記録、私たちが広告の効果を測るためにMetaのSDKが報告するもの、そしてAIリフレクションに入力したもの——3つ目は、あなたがオンにし、OpenAIが書く場合に限ります。このページは、その境界がどこにあるかについてのものです。",
+"p.sub": "Pauselyにはアカウントがなく、あなたについて記録するものはすべて端末に残ります。端末から出ていくのは4つ。RevenueCatが保持する、あなたが購入したものの記録、私たちが広告の効果を測るためにMetaのSDKが報告するもの、アプリがどう使われているかについてGoogle Analyticsが数えるもの、そしてAIリフレクションに入力したもの——4つ目は、あなたがオンにし、OpenAIが書く場合に限ります。このページは、その境界がどこにあるかについてのものです。",
 "p.meta": "{DATE}から有効 · iPhone、iPad、Android向けPauselyアプリと、このサイトに適用されます",
 
 "p.summary.h": "短い版",
 "p.summary.b": """
 <p class="lead">Pauselyにはアカウントがありません。<strong>記録するものはすべて——どのAppを守っているか、そこでどれだけ時間を過ごしているか、一呼吸、日記——端末に書かれ、そこにとどまります。</strong>どのAppを選んだかさえPauselyには読めず、それはAppleのスクリーンタイムが預かっています。</p>
-<p><strong>端末から出ていくものは3つあります</strong>。このページでは、そのそれぞれを余すところなく挙げています。</p>
+<p><strong>端末から出ていくものは4つあります</strong>。このページでは、そのそれぞれを余すところなく挙げています。</p>
 <ul>
   <li><strong>あなたの購入の記録</strong>。App Storeを通じて私たちのためにPremiumを販売するRevenueCatが保持します。どのプランをいつ購入したか、それが更新されるかどうか、そしてこのインストールのためにRevenueCatが作る識別子です。どのAppを守っているか、それをどう使っているか、何を書いたかを、RevenueCatが知ることはけっしてありません。<a href="{BASE}{L}/privacy/#purchases">詳細。</a></li>
   <li><strong>MetaのSDK</strong>。Pausely 1.3から含まれており、FacebookとInstagramに出している私たちの広告のうち、どれをきっかけに人がアプリに来たのかを、私たちが知るためのものです。Pauselyがインストールされたこと、開かれたこと、プランが購入されたことを、端末の種類、そしてこのインストールのためにSDKが作る識別子とともにMetaに伝えます。どのAppを守っているか、それをどう使っているか、何を書いたかを、SDKが知ることはけっしてありません。また、Pauselyがあなたのトラッキングを求めることはないので、Metaに広告識別子が渡ることもありません。<a href="{BASE}{L}/privacy/#ads">詳細。</a></li>
+  <li><strong>Google Analytics for Firebase</strong>。どれだけの人がPauselyを使っているか、そしてどのように使っているかを、私たちが知るためのものです。具体的には、Pauselyがいつ開かれ、どれだけのあいだ開いていたか、どの画面が表示されたか、端末の種類、端末のおおよその場所、そしてこのインストールのためにGoogle Analyticsが作る識別子です。どのAppを守っているか、それをどう使っているか、何を書いたかを、Google Analyticsが知ることはけっしてなく、広告識別子を読み取ることもありません。<a href="{BASE}{L}/privacy/#analytics">詳細。</a></li>
   <li><strong>AIリフレクション</strong>。あなたがオンにするまではオフです。Apple Intelligenceを搭載したiPhoneでは端末そのもので書くこともでき、その場合は何も出ていきません。OpenAIが書く場合は、その一呼吸に入力した言葉が、その瞬間についての4つの小さな事実とともに、Pauselyのサーバーへ、そしてOpenAIへ送られます。<a href="{BASE}{L}/privacy/#ai">詳細。</a></li>
 </ul>
 <div class="callout"><span class="tile">{eye-off}</span><div>日記が端末から出ていくことはありません。気分の記録が出ていくこともありません。ほかのAppで過ごした時間も出ていきません。どのAppを選んだかも出ていきません——それはあなた自身の端末の上でさえ、Pauselyには読めないからです。</div></div>
-<p style="margin-top:16px">Appleのプライバシーラベルの言葉でいえば、<strong>トラッキングはありません</strong>。<strong>識別子、使用状況データ、購入、診断、その他のデータ</strong>は、私たちが広告の効果を測るためにMetaのSDKが収集します。<strong>購入</strong>は、Premiumを販売するためにRevenueCatが記録します。<strong>ユーザーコンテンツ</strong>は、あなたとは結び付けられず、AIリフレクションの機能のためだけに使われます。このポリシーは、{COMPANY}が公開するiPhone、iPad、Android向けPauselyアプリと、このウェブサイトに適用されます。</p>
-<p style="margin-top:16px"><strong>Androidでは</strong>、Pauselyは同じように動きますが、AppleではなくGoogleの仕組みを使います。MetaのSDKはなく、GoogleのML KitがML Kit自身についての診断情報をGoogleに送り、AIリフレクションはApple Intelligenceの代わりにGemini Nanoを、App Attestの代わりにGoogle Play Integrityを使います。詳しくは<a href="{BASE}{L}/privacy/#android">Android版Pausely</a>をご覧ください。</p>
+<p style="margin-top:16px">Appleのプライバシーラベルの言葉でいえば、<strong>トラッキングはありません</strong>。<strong>識別子、使用状況データ、購入、診断、その他のデータ</strong>は、私たちが広告の効果を測るためにMetaのSDKが収集します。<strong>識別子、使用状況データ、おおよその位置情報、購入</strong>は、アプリがどう使われているかを私たちが知るためにGoogle Analyticsが収集します。<strong>購入</strong>は、Premiumを販売するためにRevenueCatが記録します。<strong>ユーザーコンテンツ</strong>は、あなたとは結び付けられず、AIリフレクションの機能のためだけに使われます。このポリシーは、{COMPANY}が公開するiPhone、iPad、Android向けPauselyアプリと、このウェブサイトに適用されます。</p>
+<p style="margin-top:16px"><strong>Androidでは</strong>、Pauselyは同じように動きますが、AppleではなくGoogleの仕組みを使います。MetaのSDKもGoogle Analyticsもなく、GoogleのML KitがML Kit自身についての診断情報をGoogleに送り、AIリフレクションはApple Intelligenceの代わりにGemini Nanoを、App Attestの代わりにGoogle Play Integrityを使います。詳しくは<a href="{BASE}{L}/privacy/#android">Android版Pausely</a>をご覧ください。</p>
 """,
 
 "p.collect.h": "収集するもの",
 "p.collect.b": """
-<p>「収集」とは、Appleの意味でも私たちの意味でも、データを端末の外へ送信し、一時的ではない形でどこかに保持することです。その物差しで測ると、Pauselyが収集するのは、RevenueCatが保持するあなたの購入の記録、私たちが広告の効果を測るためにMetaのSDKが報告するもの、そして——AIリフレクションをオンにし、OpenAIが書く場合に限り——その一画面に入力した言葉です。ほかには何もありません。</p>
+<p>「収集」とは、Appleの意味でも私たちの意味でも、データを端末の外へ送信し、一時的ではない形でどこかに保持することです。その物差しで測ると、Pauselyが収集するのは、RevenueCatが保持するあなたの購入の記録、私たちが広告の効果を測るためにMetaのSDKが報告するもの、アプリがどう使われているかについてGoogle Analyticsが数えるもの、そして——AIリフレクションをオンにし、OpenAIが書く場合に限り——その一画面に入力した言葉です。ほかには何もありません。</p>
 <div class="table-wrap"><table>
 <tr><th>カテゴリ</th><th>収集しますか？</th><th>その意味</th></tr>
 <tr><td>連絡先情報</td><td>いいえ</td><td>アプリのどこにも、アカウントもサインインもメールアドレスの入力欄もありません。</td></tr>
-<tr><td>識別子</td><td><strong>はい——MetaのSDK</strong></td><td>このPauselyのインストールのためにSDKが作り、そのイベントとともに送る識別子です。あなたの名前でも、Apple IDでも、広告識別子でもありません。PauselyがApp Tracking Transparencyを求めることはないため、iOSが広告識別子を渡すことはありません。Pausely自身は、ユーザーIDも端末IDも持っていません。</td></tr>
-<tr><td>使用状況データ</td><td><strong>はい——MetaのSDK</strong></td><td>Pauselyがインストールされたこと、そして開かれるたびに、そのことと開いていた時間。それがすべてです。Pauselyが独自のイベントをSDKに記録させることはなく、Pauselyが数えているもの——一呼吸、成果、ほかのAppで過ごした時間——が送られることもけっしてありません。それらはあなた自身の画面のために、端末に残ります。</td></tr>
-<tr><td>購入</td><td><strong>はい——RevenueCatとMetaのSDK</strong></td><td>私たちがPremiumを販売できるよう、RevenueCatが購入ごとの記録を保持します。どのプランか、いつ購入されたか、その価格と通貨、そして更新されるかどうかを、このインストールのためにRevenueCatが作る識別子とともに。MetaのSDKもまた、プランが購入されたとき、無料トライアルが始まったとき、またはサブスクリプションが更新されたときにそれに気づき、どのプランか、その価格、その通貨を報告します。支払いそのものはApp Storeのシートで行われるAppleのものです。Pauselyがカードを見ることはありません。</td></tr>
+<tr><td>識別子</td><td><strong>はい——MetaのSDKとGoogle Analytics</strong></td><td>このPauselyのインストールのためにそれぞれが作り、報告するものとともに送る識別子です。あなたの名前でも、Apple IDでも、広告識別子でもありません。PauselyがApp Tracking Transparencyを求めることはないため、iOSが広告識別子を渡すことはなく、Google Analyticsは広告識別子もベンダー識別子も読み取りません。Pausely自身は、ユーザーIDも端末IDも持っていません。</td></tr>
+<tr><td>使用状況データ</td><td><strong>はい——MetaのSDKとGoogle Analytics</strong></td><td>Pauselyがインストールされたこと、そして開かれるたびに、そのことと開いていた時間。Google Analyticsは、Pauselyのどの画面が表示されたかも数えます。それがすべてです。Pauselyが独自のイベントを記録することはなく、Pauselyが数えているもの——一呼吸、成果、ほかのAppで過ごした時間——が送られることもけっしてありません。それらはあなた自身の画面のために、端末に残ります。</td></tr>
+<tr><td>購入</td><td><strong>はい——RevenueCat、MetaのSDK、Google Analytics</strong></td><td>私たちがPremiumを販売できるよう、RevenueCatが購入ごとの記録を保持します。どのプランか、いつ購入されたか、その価格と通貨、そして更新されるかどうかを、このインストールのためにRevenueCatが作る識別子とともに。MetaのSDKもまた、プランが購入されたとき、無料トライアルが始まったとき、またはサブスクリプションが更新されたときにそれに気づき、どのプランか、その価格、その通貨を報告します。Google Analyticsも、気づいた購入を同じように数えます。支払いそのものはApp Storeのシートで行われるAppleのものです。Pauselyがカードを見ることはありません。</td></tr>
 <tr><td>診断</td><td><strong>はい——MetaのSDK</strong></td><td>Meta自身のコードのクラッシュレポートです。Pauselyは独自のクラッシュ報告も性能計測も持っていません。</td></tr>
 <tr><td>その他のデータ</td><td><strong>はい——MetaのSDK</strong></td><td>Metaのイベントとともに送られる技術的な情報。端末の種類、iOSのバージョン、言語、タイムゾーンなどです。</td></tr>
 <tr><td>ユーザーコンテンツ</td><td><strong>AIリフレクションのみ</strong></td><td>日記、気分の記録、自分で作った代わりの選択肢は端末に保存され、ほかのどこにもありません。AIリフレクションをオンにし、OpenAIが書く場合に限り——そのときだけ——<em>その一画面</em>に入力した言葉が送られます。問いが返ってくるようにするためです。あなたが書くほかのものが送られることはけっしてありません。</td></tr>
-<tr><td>位置情報、健康、連絡先、閲覧、検索</td><td>いいえ</td><td>Pauselyは位置情報も、健康の記録も、連絡先も求めず、閲覧内容も検索内容も見ません。スマホの代わりに選んだ散歩のあいだは、端末のモーションセンサーで歩数を数えて表示し、そのあと忘れます。</td></tr>
+<tr><td>位置情報</td><td><strong>おおよそ——Google Analytics</strong></td><td>Google Analyticsのデータが届く元の、マスクされたIPアドレスから、Googleが割り出す大まかな位置——国、地域、都市——です。Pauselyがあなたの位置情報を求めることも、読み取ることもけっしてありません。</td></tr>
+<tr><td>健康、連絡先、閲覧、検索</td><td>いいえ</td><td>Pauselyは位置情報も、健康の記録も、連絡先も求めず、閲覧内容も検索内容も見ません。スマホの代わりに選んだ散歩のあいだは、端末のモーションセンサーで歩数を数えて表示し、そのあと忘れます。</td></tr>
 </table></div>
-<p style="margin-top:14px"><strong>トラッキング：</strong>ありません。Pauselyがあなたをトラッキングする許可を求めることはないため、iOSは端末の広告識別子をMetaのSDKに渡さず、SDKはトラッキングが許可されていないことをMetaに伝えます。私たちはあなたに関する情報を、ほかの企業のAppやウェブサイトのデータと結び付けることはなく、データブローカーに何も共有しません。</p>
+<p style="margin-top:14px"><strong>トラッキング：</strong>ありません。Pauselyがあなたをトラッキングする許可を求めることはないため、iOSは端末の広告識別子をMetaのSDKに渡さず、SDKはトラッキングが許可されていないことをMetaに伝えます。Google Analyticsは広告識別子を読み取らず、Pauselyについては、Googleシグナル、Googleとのデータ共有、広告のパーソナライズがオフになっています。私たちはあなたに関する情報を、ほかの企業のAppやウェブサイトのデータと結び付けることはなく、データブローカーに何も共有しません。</p>
 """,
 
 "p.device.h": "端末に残るもの",
@@ -255,7 +257,7 @@ COPY = {
 """,
 "p.ads.h": "MetaのSDK——私たちの広告の効果を測るために",
 "p.ads.b": """
-<p class="lead">PauselyはFacebookとInstagramに広告を出しています。<strong>Pausely 1.3から、アプリにはMetaのソフトウェア開発キット（SDK）が含まれています</strong>。それらの広告のうち、どれをきっかけに人がPauselyに来たのかを、私たちが知るためです。Premiumを販売するRevenueCatのものを除けば、アプリに含まれる他社のコードは、これひとつだけです。SDKが動くのはアプリ本体のなかだけで——ブロック画面を描く部分、あなたの時間を数える部分、ウィジェットを描く部分では、けっして動きません——PauselyがSDKに自分のものを何ひとつ渡すこともありません。</p>
+<p class="lead">PauselyはFacebookとInstagramに広告を出しています。<strong>Pausely 1.3から、アプリにはMetaのソフトウェア開発キット（SDK）が含まれています</strong>。それらの広告のうち、どれをきっかけに人がPauselyに来たのかを、私たちが知るためです。アプリに含まれる他社のコードは3つあり、これはそのひとつです。ほかの2つは、Premiumを販売するRevenueCatのものと、アプリがどう使われているかを数えるGoogle Analyticsです。SDKが動くのはアプリ本体のなかだけで——ブロック画面を描く部分、あなたの時間を数える部分、ウィジェットを描く部分では、けっして動きません——PauselyがSDKに自分のものを何ひとつ渡すこともありません。</p>
 <h3>Metaに送るもの</h3>
 <ul>
   <li>Pauselyが<strong>インストールされた</strong>こと、そして<strong>開かれる</strong>たびに、そのことと開いていた時間。</li>
@@ -275,6 +277,28 @@ COPY = {
 </ul>
 <p>画面に表示されているものを読み取ることのできるSDKの機能——テキスト欄に入力した内容、タップしたボタンのラベル、画面のレイアウト——は、Pauselyについては、アプリでもMetaの設定でもオフになっており、今後もオフのままです。</p>
 <p>Metaは、受け取ったものを<a href="https://www.facebook.com/privacy/policy/">Metaのプライバシーポリシー</a>のもとで保持します。そこには、どれだけのあいだ保持されるか、そしてMetaに対してあなたの権利をどう行使するかが書かれています。識別子は、端末上のPauselyの保存領域にあります。アプリを削除すればそれも消え、新しくインストールすると新しい識別子で始まります。</p>
+""",
+
+"p.analytics.h": "Google Analytics——アプリがどう使われているか",
+"p.analytics.b": """
+<p class="lead">2026年11月下旬から、<strong>PauselyにはGoogle Analytics for Firebaseが含まれています</strong>。どれだけの人がアプリを使っているか、どれくらいの頻度で使っているか、そしてどの画面を使っているかを、私たちが知るためです。Google Analyticsが動くのはアプリ本体のなかだけで——ブロック画面を描く部分、あなたの時間を数える部分、ウィジェットを描く部分では、けっして動きません——PauselyがGoogle Analyticsに独自のものを何ひとつ伝えることもありません。</p>
+<h3>Google Analyticsが自分で収集するもの</h3>
+<ul>
+  <li>Pauselyが<strong>はじめて開かれた</strong>こと、<strong>セッション</strong>ごとにその長さ、そしてアプリまたはiOSが<strong>アップデートされた</strong>こと。</li>
+  <li>Pauselyのどの<strong>画面</strong>が表示されたか。</li>
+  <li><strong>プランが購入された</strong>こと——どのプランか、その価格——を、Google Analyticsが端末上で気づいたとおりに。</li>
+  <li>端末の種類、iOSのバージョン、言語、アプリのバージョンなどの<strong>技術的な情報</strong>。</li>
+  <li>データが届く元の、マスクされたIPアドレスから、Googleが割り出す<strong>大まかな位置</strong>——国、地域、都市。Pauselyがあなたの位置情報を求めることはけっしてありません。</li>
+  <li>このPauselyのインストールのために<strong>Google Analyticsが作る識別子</strong>。あなたの名前でも、Apple IDでも、端末の広告識別子やベンダー識別子でもありません。</li>
+</ul>
+<h3>けっして受け取らないもの</h3>
+<ul>
+  <li><strong>どのAppを守っているか</strong>、そしてそこでどれだけ時間を過ごしているか。</li>
+  <li><strong>一呼吸、ルール、成果、日記、気分の記録</strong>、そしてあなたが入力するものすべて——AIリフレクションに入力するものも含めて。</li>
+  <li><strong>Pausely独自のイベント。</strong>Google Analyticsが収集するのは上に挙げたものだけで、それはGoogle Analyticsが自分で集めるものです。Pauselyが何かをGoogle Analyticsに伝えることはけっしてありません。</li>
+  <li><strong>広告のためのもの。</strong>広告識別子を読み取ることはなく、その広告機能はアプリでオフにしてあり、Pauselyについては、Googleシグナル、Googleとのデータ共有、広告のパーソナライズがオフになっています。</li>
+</ul>
+<p>Googleは、受け取ったものを<a href="https://policies.google.com/privacy">Googleのプライバシーポリシー</a>のもとで保持します。アプリにはGoogle Analyticsをオフにする設定はありません。アプリを削除すればその識別子は消え、新しくインストールすると新しい識別子で始まります。</p>
 """,
 
 "p.ai.h": "AIリフレクション——あなたがオンにした場合だけ",
@@ -331,10 +355,11 @@ COPY = {
 
 "p.third.h": "第三者",
 "p.third.b": """
-<p>Pauselyに含まれる<strong>第三者のコードは2つ、RevenueCatのSDK</strong>と<strong>MetaのSDK</strong>です。RevenueCatのSDKはPremiumを販売するためのもので（<a href="{BASE}{L}/privacy/#purchases">購入</a>をご覧ください）、MetaのSDKについては<a href="{BASE}{L}/privacy/#ads">上記</a>で説明しています。アプリにはほかに、解析、広告、クラッシュ報告のためのコードはありません。関わる相手は次のとおりで、それ以外はありません。</p>
+<p>Pauselyに含まれる<strong>第三者のコードは3つ、RevenueCatのSDK</strong>、<strong>MetaのSDK</strong>、<strong>Google Analytics for Firebase</strong>です。RevenueCatのSDKはPremiumを販売するためのもので（<a href="{BASE}{L}/privacy/#purchases">購入</a>をご覧ください）、MetaのSDKについては<a href="{BASE}{L}/privacy/#ads">上記</a>で、Google Analytics for Firebaseについては<a href="{BASE}{L}/privacy/#analytics">上記</a>で説明しています。アプリにはほかに、解析、広告、クラッシュ報告のためのコードはありません。関わる相手は次のとおりで、それ以外はありません。</p>
 <ul>
   <li><strong>Apple</strong>はApp Storeを運営し、購入を処理し、スクリーンタイムの遮蔽を実行し、AIリフレクションがApple Intelligenceを使う場合はあなたのiPhoneでそれを動かします。また、あなたが開発者との共有に同意している場合、Apple自身のポリシーのもとでクラッシュログを私たちに共有することがあります。</li>
   <li><strong>Meta</strong>は、私たちが広告の効果を測れるようSDKが報告するものを受け取り、それ以外は何も受け取りません。</li>
+  <li><strong>Google</strong>は、アプリがどう使われているかを私たちが知れるよう、Google Analyticsが収集するものを受け取り、それ以外は何も受け取りません。</li>
   <li><strong>RevenueCat</strong>は、私たちのサービスプロバイダーとして、購入の記録を保持し、App Storeとのあいだで購入を完了させます。「購入」の節に挙げたものを受け取り、それ以外は何も受け取りません。</li>
   <li><strong>Cloudflare</strong>はPauselyのサーバーをホストしています。OpenAIがAIリフレクションを書くとき、あなたの言葉はモデルへ向かう途中でここを通りますが、何も保存されません。</li>
   <li><strong>OpenAI</strong>は、AIリフレクションを書くとき、その背後でモデルを動かします。あなたがその機能をオンにしているあいだだけです。上に挙げたものだけを受け取り、それ以外は受け取らず、モデルの学習には使いません。以前のバージョンのアプリでは、この役割を<strong>Google</strong>が担います。</li>
@@ -373,12 +398,12 @@ COPY = {
 "p.delete.b": """
 <p>Pauselyが持っているものはすべて、私たちに頼まなくても、アプリのなかから消せます。</p>
 <div class="callout"><span class="tile">{trash}</span><div>{RESET}<br><span class="small">一呼吸も、成果も、ルールも、日記も、気分の記録もすべて空にし、遮蔽を解き、スケジュールを取り下げて、はじめの状態に戻します。厳格モードが動いているあいだは実行できません——あなたがアプリに守らせると決めた、ただひとつの約束だからです。またサブスクリプションには触れません。それはあなたのApple IDに属しているからです。</span></div></div>
-<p style="margin-top:16px">アプリを削除すれば、MetaのSDKとRevenueCatがアプリのために作った識別子も含めて、そのデータも端末から消えます。私たちのサーバーは、応答したあとのリクエストについて何の記録も残しません。<strong>RevenueCatは、アプリがなくなったあとも、あなたの購入の記録を保持します</strong>。サブスクリプションはあなたのApple IDに属し、アプリがなくなっても続くからです。削除をご希望の場合は、Appleの領収書メールにある注文番号を添えて{MAIL}までご連絡ください。私たちがRevenueCatに削除してもらいます。MetaのSDKがすでに送ったものは、<a href="https://www.facebook.com/privacy/policy/">Metaのプライバシーポリシー</a>のもとでMetaが保持しています。詳しくは<a href="{BASE}{L}/delete-data/">あなたのデータ</a>のページをご覧ください。</p>
+<p style="margin-top:16px">アプリを削除すれば、MetaのSDK、RevenueCat、Google Analyticsがアプリのために作った識別子も含めて、そのデータも端末から消えます。私たちのサーバーは、応答したあとのリクエストについて何の記録も残しません。<strong>RevenueCatは、アプリがなくなったあとも、あなたの購入の記録を保持します</strong>。サブスクリプションはあなたのApple IDに属し、アプリがなくなっても続くからです。削除をご希望の場合は、Appleの領収書メールにある注文番号を添えて{MAIL}までご連絡ください。私たちがRevenueCatに削除してもらいます。MetaのSDKとGoogle Analyticsがすでに送ったものは、<a href="https://www.facebook.com/privacy/policy/">Metaのプライバシーポリシー</a>と<a href="https://policies.google.com/privacy">Googleのプライバシーポリシー</a>のもとで、MetaとGoogleがそれぞれ保持しています。詳しくは<a href="{BASE}{L}/delete-data/">あなたのデータ</a>のページをご覧ください。</p>
 """,
 
 "p.rights.h": "あなたの権利",
 "p.rights.b": """
-<p>どこにお住まいでも——GDPR、英国GDPR、CCPA/CPRAのもとを含めて——企業が保持するあなたの個人データについて、アクセス、訂正、持ち出し、制限、消去を求める権利、その取り扱いに異議を述べる権利、そして監督機関に申し立てる権利があります。Pauselyはあなたのプロフィールを持たず、リフレクションに答えたあとは何も残しません。私たちのためにほかの場所で保持されている記録はひとつだけで、それはRevenueCatにある、あなたの購入の記録です。Appleの領収書メールにある注文番号を添えて{MAIL}までご連絡いただければ、その写しをお送りするか、RevenueCatに削除してもらいます。端末のデータはすでにあなたの手のなかにあり、アプリ自身の操作がそれらの権利をひとつ残らず行使します。MetaのSDKが送ったものはMetaが保持しており、そこでの権利の行使のしかたは<a href="https://www.facebook.com/privacy/policy/">Metaのプライバシーポリシー</a>に説明されています。ご質問がある場合、またはこのページに書かれていないものを私たちが保持しているとお考えの場合は、{MAIL}までご連絡ください。お返事します。</p>
+<p>どこにお住まいでも——GDPR、英国GDPR、CCPA/CPRAのもとを含めて——企業が保持するあなたの個人データについて、アクセス、訂正、持ち出し、制限、消去を求める権利、その取り扱いに異議を述べる権利、そして監督機関に申し立てる権利があります。Pauselyはあなたのプロフィールを持たず、リフレクションに答えたあとは何も残しません。私たちのためにほかの場所で保持されている記録はひとつだけで、それはRevenueCatにある、あなたの購入の記録です。Appleの領収書メールにある注文番号を添えて{MAIL}までご連絡いただければ、その写しをお送りするか、RevenueCatに削除してもらいます。端末のデータはすでにあなたの手のなかにあり、アプリ自身の操作がそれらの権利をひとつ残らず行使します。MetaのSDKとGoogle Analyticsが送ったものはMetaとGoogleがそれぞれ保持しており、そこでの権利の行使のしかたは<a href="https://www.facebook.com/privacy/policy/">Metaのプライバシーポリシー</a>と<a href="https://policies.google.com/privacy">Googleのプライバシーポリシー</a>に説明されています。ご質問がある場合、またはこのページに書かれていないものを私たちが保持しているとお考えの場合は、{MAIL}までご連絡ください。お返事します。</p>
 """,
 
 "p.children.h": "お子さまについて",
@@ -388,7 +413,7 @@ COPY = {
 
 "p.changes.h": "このポリシーの変更",
 "p.changes.b": """
-<p>アプリの変化に合わせて、このポリシーを更新することがあります。そのときは上部の日付が変わり、重要な変更はアプリのリリースノートに記載します。直近の変更は{DATE}のもので、Premiumを販売し、購入の記録を保持するようになったRevenueCatを加えました（<a href="{BASE}{L}/privacy/#purchases">購入</a>をご覧ください）。同じ日に、iPhoneのAIリフレクションが送るものから、開こうとしているAppの名前を外しました。iPhoneではPauselyがAppの名前を読めないため、リフレクションはそのAppを「あるApp」と呼びます。その前の変更では、Android版Pauselyを加えました（<a href="{BASE}{L}/privacy/#android">Android版Pausely</a>をご覧ください）。その前の変更は、Pausely 1.3とともに行われました。私たちの広告の効果を測るMetaのSDKと、新しい時間に関する機能——{K_time_per_app}、{K_time_banners}、ショート動画の本数の推定——です。これらの機能は、1日の目標と同じように、あなたが選んだAppで過ごす時間を端末の上で数えます。その前には、AIリフレクションがGoogleからOpenAIに移り、あなたのiPhoneでApple Intelligenceを選べるようになりました。変更後もPauselyを使い続けることは、改訂後のポリシーに同意したことを意味します。</p>
+<p>アプリの変化に合わせて、このポリシーを更新することがあります。そのときは上部の日付が変わり、重要な変更はアプリのリリースノートに記載します。直近の変更は{DATE}のもので、アプリがどう使われているかを数えるGoogle Analytics for Firebaseを加えました（<a href="{BASE}{L}/privacy/#analytics">Google Analytics</a>をご覧ください）。同じ日に、Premiumを販売し、購入の記録を保持するようになったRevenueCatを加え（<a href="{BASE}{L}/privacy/#purchases">購入</a>をご覧ください）、iPhoneのAIリフレクションが送るものから、開こうとしているAppの名前を外しました。iPhoneではPauselyがAppの名前を読めないため、リフレクションはそのAppを「あるApp」と呼びます。その前の変更では、Android版Pauselyを加えました（<a href="{BASE}{L}/privacy/#android">Android版Pausely</a>をご覧ください）。その前の変更は、Pausely 1.3とともに行われました。私たちの広告の効果を測るMetaのSDKと、新しい時間に関する機能——{K_time_per_app}、{K_time_banners}、ショート動画の本数の推定——です。これらの機能は、1日の目標と同じように、あなたが選んだAppで過ごす時間を端末の上で数えます。その前には、AIリフレクションがGoogleからOpenAIに移り、あなたのiPhoneでApple Intelligenceを選べるようになりました。変更後もPauselyを使い続けることは、改訂後のポリシーに同意したことを意味します。</p>
 """,
 
 "p.contact.h": "お問い合わせ",
@@ -495,6 +520,7 @@ COPY = {
 <tr><td>ウィジェット用のスナップショット</td><td>端末上の、数と日付だけの小さなファイル</td><td>リセットでも、アプリの削除でも消えます</td></tr>
 <tr><td>Premiumの権利</td><td>あなたのApple ID（Apple側）、端末にあるその状態の控え、そして私たちのためにPremiumを販売するRevenueCatにある、あなたの購入の記録</td><td>サブスクリプションはApp Storeの設定で管理します——下記参照。RevenueCatの記録を削除するには、私たちにご依頼ください——このページの最後を参照</td></tr>
 <tr><td>MetaのSDKが送ったもの——インストール、起動、購入、端末の種類、SDKが作った識別子</td><td>Meta。<a href="https://www.facebook.com/privacy/policy/">Metaのプライバシーポリシー</a>のもとで保持されます。識別子そのものは、端末上のアプリの保存領域にあります</td><td>アプリを削除すれば識別子も消え、新しくインストールすると新しい識別子で始まります。Metaが保持するものについては、Metaのポリシーをご覧ください</td></tr>
+<tr><td>Google Analyticsが収集したもの——セッション、表示された画面、購入、端末の種類、大まかな位置、Google Analyticsが作った識別子</td><td>Google。<a href="https://policies.google.com/privacy">Googleのプライバシーポリシー</a>のもとで保持されます。識別子そのものは、端末上のアプリの保存領域にあります</td><td>アプリを削除すれば識別子も消え、新しくインストールすると新しい識別子で始まります。Googleが保持するものについては、Googleのポリシーをご覧ください</td></tr>
 <tr><td>AIリフレクションに入力した内容</td><td>Apple Intelligenceがリフレクションを書いた場合は、あなたの端末のなかだけ。OpenAIが書いた場合：当社のサーバーは入力も応答も保存せず、OpenAIは入力と出力を最大30日間保持します（以前のバージョンではGoogleが最大24時間）</td><td>私たちの側に削除するものはありません。{K_settings} → {K_ai_reflection}で機能をオフにすれば、それ以降は何も送られません</td></tr>
 <tr><td>アカウント、プロフィール、あなたの名前が付いた何か</td><td>—</td><td>存在しません。削除すべきものを持ったことがありません。</td></tr>
 </table></div>
