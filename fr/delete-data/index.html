@@ -8,16 +8,16 @@
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F4F6F9">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0E1116">
-<meta property="og:title" content="Supprimer vos données — Pausely">
+<meta property="og:title" content="Supprimer vos données · Pausely">
 <meta property="og:description" content="Comment effacer tout ce que Pausely détient sur votre appareil, ce qu’il advient de votre abonnement, et ce que le SDK de Meta et la réflexion IA laissent ailleurs.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr">
 <meta property="og:url" content="https://sohaibiii.github.io/pausely-links/fr/delete-data/">
 <link rel="canonical" href="https://sohaibiii.github.io/pausely-links/fr/delete-data/">
 <link rel="alternate" hreflang="en" href="https://sohaibiii.github.io/pausely-links/delete-data/"><link rel="alternate" hreflang="de" href="https://sohaibiii.github.io/pausely-links/de/delete-data/"><link rel="alternate" hreflang="es" href="https://sohaibiii.github.io/pausely-links/es/delete-data/"><link rel="alternate" hreflang="fr" href="https://sohaibiii.github.io/pausely-links/fr/delete-data/"><link rel="alternate" hreflang="ja" href="https://sohaibiii.github.io/pausely-links/ja/delete-data/"><link rel="alternate" hreflang="ko" href="https://sohaibiii.github.io/pausely-links/ko/delete-data/"><link rel="alternate" hreflang="pt-BR" href="https://sohaibiii.github.io/pausely-links/pt-BR/delete-data/"><link rel="alternate" hreflang="zh-Hans" href="https://sohaibiii.github.io/pausely-links/zh-Hans/delete-data/"><link rel="alternate" hreflang="x-default" href="https://sohaibiii.github.io/pausely-links/delete-data/">
-<link rel="icon" href="/pausely-links/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/pausely-links/icon.png" type="image/png" sizes="128x128">
 <link rel="apple-touch-icon" href="/pausely-links/apple-touch-icon.png">
-<title>Supprimer vos données — Pausely</title>
+<title>Supprimer vos données · Pausely</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
@@ -63,18 +63,18 @@ small,.small{font-size:14px;color:var(--ink-2)}
 code{font:.92em ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--fill);padding:.1em .4em;border-radius:6px}
 kbd{font:inherit;background:var(--fill);border-radius:8px;padding:.05em .5em;white-space:nowrap}
 
-/* top bar — the one glass surface, like the app's navigation layer */
+/* top bar: the one glass surface, like the app's navigation layer */
 .topbar{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 82%,transparent);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line)}
 .topbar .in{max-width:var(--wide);margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
 .brand{display:inline-flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-weight:700;font-size:19px;letter-spacing:-.01em}
-.orb{width:22px;height:22px;border-radius:50%;flex:none;background:radial-gradient(circle at 38% 32%,var(--orb-core) 0,var(--orb-edge) 62%,color-mix(in srgb,var(--orb-edge) 70%,#0E1116) 100%);box-shadow:0 0 0 1px var(--hero-stroke),0 0 14px var(--orb-glow)}
+.mark{width:28px;height:28px;border-radius:22.37%;flex:none;display:block;box-shadow:0 0 0 1px var(--hero-stroke)}
 nav.pages{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
 nav.pages a{text-decoration:none;color:var(--ink-2);font-size:15px;font-weight:500;padding:7px 12px;border-radius:999px}
 nav.pages a[aria-current="page"]{color:var(--accent);background:var(--accent-soft)}
 nav.pages a:hover{color:var(--ink)}
 @media (max-width:640px){nav.pages{margin-left:0;width:100%;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none;padding-bottom:2px}nav.pages::-webkit-scrollbar{display:none}nav.pages a{flex:none}}
 
-/* language tabs — the same page, in the reader's own language */
+/* language tabs: the same page, in the reader's own language */
 .langrow{border-top:1px solid var(--line)}
 .langrow .in{max-width:var(--wide);margin:0 auto;padding:7px 20px;display:flex;align-items:center;gap:12px}
 .langrow .lbl{flex:none;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
@@ -85,7 +85,7 @@ nav.langs a:hover{color:var(--ink);background:var(--fill)}
 nav.langs a[aria-current="page"]{color:var(--accent);background:var(--accent-soft)}
 @media (max-width:640px){.langrow .lbl{display:none}.langrow .in{padding:6px 20px}}
 
-/* hero — the home screen's dark island, dark in both appearances */
+/* hero: the home screen's dark island, dark in both appearances */
 .hero-wrap{max-width:var(--wide);margin:24px auto 0;padding:0 20px}
 .hero{position:relative;overflow:hidden;border-radius:var(--r-hero);background:linear-gradient(180deg,var(--hero-top),var(--hero-bottom));color:var(--hero-ink);box-shadow:inset 0 0 0 1px var(--hero-stroke),0 24px 60px rgba(14,17,22,.18);padding:clamp(36px,6vw,64px) clamp(24px,5vw,56px)}
 .hero::before{content:"";position:absolute;inset:-40% auto auto -20%;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,var(--hero-glow) 0,transparent 62%);pointer-events:none}
@@ -182,7 +182,7 @@ footer a:hover{color:var(--accent)}
 <a class="skip" href="#content">Aller au contenu</a>
 <header class="topbar">
   <div class="in">
-    <a class="brand" href="/pausely-links/fr/"><span class="orb" aria-hidden="true"></span>Pausely</a>
+    <a class="brand" href="/pausely-links/fr/"><img class="mark" src="/pausely-links/icon.png" alt="" width="28" height="28">Pausely</a>
     <nav class="pages" aria-label="Pages"><a href="/pausely-links/fr/">Aide</a><a href="/pausely-links/fr/about/">À propos</a><a href="/pausely-links/fr/privacy/">Confidentialité</a><a href="/pausely-links/fr/terms/">Conditions</a><a href="/pausely-links/fr/delete-data/" aria-current="page">Vos données</a></nav>
   </div>
   <div class="langrow"><div class="in">
@@ -192,18 +192,18 @@ footer a:hover{color:var(--accent)}
 </header>
 <div class="hero-wrap"><section class="hero"><div class="eyebrow"><span class="dot" aria-hidden="true"></span>Vos données</div><h1>Supprimer vos données</h1><p class="sub">Tout ce que Pausely lui-même sait est sur votre appareil. Voici comment l’effacer, ce qu’il advient de votre abonnement, et ce qui est conservé ailleurs.</p><p class="meta">Voir aussi la <a href="/pausely-links/fr/privacy/">Politique de confidentialité</a></p></section></div>
 <main id="content"><div class="grid with-toc"><aside class="toc" aria-label="Sur cette page"><div class="lbl">Sur cette page</div><ol><li><a href="#where">Ce qui est stocké, et où</a></li><li><a href="#inapp">L’effacer dans l’app</a></li><li><a href="#uninstall">Supprimer l’app</a></li><li><a href="#subscription">Votre abonnement</a></li><li><a href="#email">Demandez-nous</a></li></ol></aside><div class="stack"><section class="card" id="where"><h2>Ce qui est stocké, et où</h2>
-<p class="lead">Pausely n’a aucun compte, et son serveur ne tient de registre sur personne. Tout ce que Pausely lui-même détient est sur votre appareil, et vous pouvez l’effacer sans nous le demander. Le seul registre tenu ailleurs pour nous — celui de vos achats, chez RevenueCat — nous le supprimons quand vous le demandez.</p>
+<p class="lead">Pausely n’a aucun compte, et son serveur ne tient de registre sur personne. Tout ce que Pausely lui-même détient est sur votre appareil, et vous pouvez l’effacer sans nous le demander. Le seul registre tenu ailleurs pour nous (celui de vos achats, chez RevenueCat), nous le supprimons quand vous le demandez.</p>
 <div class="table-wrap"><table>
 <tr><th>Données</th><th>Où elles vivent</th><th>Comment les retirer</th></tr>
 <tr><td>Règles, historique des pauses, série, journal, bilans d’humeur, alternatives, réglages</td><td>L’espace privé de l’app sur votre appareil</td><td><kbd>Réglages</kbd> → <kbd>Vos données</kbd> → <kbd>Réinitialiser toutes les données</kbd>, ou supprimez l’app</td></tr>
-<tr><td>Minutes passées dans les apps que vous avez choisies — pour votre objectif, vos limites, l’estimation des vidéos courtes et les alertes de temps</td><td>L’espace privé de l’app sur votre appareil, jusqu’à soixante jours</td><td><kbd>Réglages</kbd> → <kbd>Vos données</kbd> → <kbd>Réinitialiser toutes les données</kbd>, ou supprimez l’app. Désactiver les alertes de temps efface leurs minutes</td></tr>
+<tr><td>Minutes passées dans les apps que vous avez choisies (pour votre objectif, vos limites, l’estimation des vidéos courtes et les alertes de temps)</td><td>L’espace privé de l’app sur votre appareil, jusqu’à soixante jours</td><td><kbd>Réglages</kbd> → <kbd>Vos données</kbd> → <kbd>Réinitialiser toutes les données</kbd>, ou supprimez l’app. Désactiver les alertes de temps efface leurs minutes</td></tr>
 <tr><td>Votre sélection d’apps</td><td>Des jetons Temps d’écran opaques dans l’espace privé de l’app</td><td>Comme ci-dessus ; retirer l’accès au Temps d’écran dans les Réglages d’iOS met aussi fin à toute protection</td></tr>
 <tr><td>Instantané des widgets</td><td>Un petit fichier de décomptes et de dates sur votre appareil</td><td>Retiré avec la réinitialisation et avec l’app</td></tr>
-<tr><td>Droit à Premium</td><td>Votre identifiant Apple (Apple), une copie de son état sur votre appareil, et le registre de vos achats chez RevenueCat, qui vend Premium pour nous</td><td>L’abonnement est géré dans vos réglages App Store — voir plus bas. Pour faire supprimer le registre tenu par RevenueCat, demandez-nous — voir la fin de cette page</td></tr>
-<tr><td>Ce que le SDK de Meta a envoyé — les installations, les ouvertures, les achats, le type d’appareil et l’identifiant qu’il a généré</td><td>Chez Meta, selon la <a href="https://www.facebook.com/privacy/policy/">Politique de confidentialité de Meta</a>. L’identifiant lui-même est conservé dans l’espace de stockage de l’app sur votre appareil</td><td>Supprimer l’app supprime l’identifiant, et une nouvelle installation commence avec un nouvel identifiant. Pour ce que détient Meta, voir la politique de Meta</td></tr>
-<tr><td>Ce que Google Analytics a collecté — les sessions, les écrans consultés, les achats, le type d’appareil, une localisation générale et l’identifiant qu’il a généré</td><td>Chez Google, selon <a href="https://policies.google.com/privacy">les Règles de confidentialité de Google</a>. L’identifiant lui-même est conservé dans l’espace de stockage de l’app sur votre appareil</td><td>Supprimer l’app supprime l’identifiant, et une nouvelle installation commence avec un nouvel identifiant. Pour ce que détient Google, voir les Règles de confidentialité de Google</td></tr>
+<tr><td>Droit à Premium</td><td>Votre identifiant Apple (Apple), une copie de son état sur votre appareil, et le registre de vos achats chez RevenueCat, qui vend Premium pour nous</td><td>L’abonnement est géré dans vos réglages App Store (voir plus bas). Pour faire supprimer le registre tenu par RevenueCat, demandez-nous (voir la fin de cette page)</td></tr>
+<tr><td>Ce que le SDK de Meta a envoyé : les installations, les ouvertures, les achats, le type d’appareil et l’identifiant qu’il a généré</td><td>Chez Meta, selon la <a href="https://www.facebook.com/privacy/policy/">Politique de confidentialité de Meta</a>. L’identifiant lui-même est conservé dans l’espace de stockage de l’app sur votre appareil</td><td>Supprimer l’app supprime l’identifiant, et une nouvelle installation commence avec un nouvel identifiant. Pour ce que détient Meta, voir la politique de Meta</td></tr>
+<tr><td>Ce que Google Analytics a collecté : les sessions, les écrans consultés, les achats, le type d’appareil, une localisation générale et l’identifiant qu’il a généré</td><td>Chez Google, selon <a href="https://policies.google.com/privacy">les Règles de confidentialité de Google</a>. L’identifiant lui-même est conservé dans l’espace de stockage de l’app sur votre appareil</td><td>Supprimer l’app supprime l’identifiant, et une nouvelle installation commence avec un nouvel identifiant. Pour ce que détient Google, voir les Règles de confidentialité de Google</td></tr>
 <tr><td>Ce que vous avez tapé dans une réflexion IA</td><td>Sur votre appareil uniquement, quand c’est Apple Intelligence qui a écrit la réflexion. Quand c’est OpenAI qui l’a écrite : notre serveur ne stocke ni la question ni la réponse ; OpenAI conserve les entrées et les sorties jusqu’à 30 jours (Google, pour les versions précédentes : jusqu’à 24 heures)</td><td>Rien à supprimer de notre côté. Désactivez la fonction dans <kbd>Réglages</kbd> → <kbd>Réflexion IA</kbd> et plus rien ne sera jamais envoyé</td></tr>
-<tr><td>Un compte, un profil, quoi que ce soit à votre nom</td><td>—</td><td>Il n’y en a pas. Nous n’en avons jamais eu à supprimer.</td></tr>
+<tr><td>Un compte, un profil, quoi que ce soit à votre nom</td><td>Nulle part</td><td>Il n’y en a pas. Nous n’en avons jamais eu à supprimer.</td></tr>
 </table></div>
 </section><section class="card" id="inapp"><h2>L’effacer dans l’app</h2>
 <ol class="steps">
@@ -215,9 +215,9 @@ footer a:hover{color:var(--accent)}
 </section><section class="card" id="uninstall"><h2>Supprimer l’app</h2>
 <p>Supprimer Pausely de votre appareil emporte avec lui toutes ses données, y compris les jetons Temps d’écran, et met fin immédiatement à toute protection. Si l’app est incluse dans une sauvegarde iCloud ou une sauvegarde locale chiffrée, cette copie appartient à votre identifiant Apple et relève des conditions d’Apple ; nous n’y avons aucun accès.</p>
 </section><section class="card" id="subscription"><h2>Votre abonnement</h2>
-<p>Ni la réinitialisation des données ni la suppression de l’app ne résilie un abonnement — il appartient à votre identifiant Apple, pas à l’app. Résiliez-le dans les <a href="https://apps.apple.com/account/subscriptions">réglages d’abonnements App Store</a> ; il reste actif jusqu’à la fin de la période en cours. Les remboursements sont gérés par l’<a href="https://support.apple.com/billing">assistance Apple</a>. Un achat à vie ne se renouvelle pas et n’a rien à résilier.</p>
+<p>Ni la réinitialisation des données ni la suppression de l’app ne résilie un abonnement : il appartient à votre identifiant Apple, pas à l’app. Résiliez-le dans les <a href="https://apps.apple.com/account/subscriptions">réglages d’abonnements App Store</a> ; il reste actif jusqu’à la fin de la période en cours. Les remboursements sont gérés par l’<a href="https://support.apple.com/billing">assistance Apple</a>. Un achat à vie ne se renouvelle pas et n’a rien à résilier.</p>
 </section><section class="card" id="email"><h2>Demandez-nous</h2>
-<p>Si vous souhaitez une confirmation écrite de ce que nous détenons sur vous, si vous souhaitez faire supprimer le registre de vos achats chez RevenueCat, ou si vous avez une question sur ce que le SDK de Meta a envoyé, écrivez à <a href="mailto:topsol.org@gmail.com">topsol.org@gmail.com</a> depuis n’importe quelle adresse. Pour le registre de vos achats, indiquez le numéro de commande figurant sur le reçu qu’Apple vous envoie par e-mail : c’est le seul moyen de distinguer un registre anonyme d’un autre. Nous répondrons sous 30 jours. Merci de ne pas nous envoyer votre journal, vos bilans d’humeur ni des captures d’écran de ceux-ci — nous n’en avons pas besoin pour répondre.</p>
+<p>Si vous souhaitez une confirmation écrite de ce que nous détenons sur vous, si vous souhaitez faire supprimer le registre de vos achats chez RevenueCat, ou si vous avez une question sur ce que le SDK de Meta a envoyé, écrivez à <a href="mailto:topsol.org@gmail.com">topsol.org@gmail.com</a> depuis n’importe quelle adresse. Pour le registre de vos achats, indiquez le numéro de commande figurant sur le reçu qu’Apple vous envoie par e-mail : c’est le seul moyen de distinguer un registre anonyme d’un autre. Nous répondrons sous 30 jours. Merci de ne pas nous envoyer votre journal, vos bilans d’humeur ni des captures d’écran de ceux-ci : nous n’en avons pas besoin pour répondre.</p>
 </section></div></div></main>
 <footer><div class="in">
   <div>© 2026 Pausely · TOPSOL · Tous droits réservés.</div>

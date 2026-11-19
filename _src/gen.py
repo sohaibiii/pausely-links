@@ -148,18 +148,18 @@ small,.small{font-size:14px;color:var(--ink-2)}
 code{font:.92em ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--fill);padding:.1em .4em;border-radius:6px}
 kbd{font:inherit;background:var(--fill);border-radius:8px;padding:.05em .5em;white-space:nowrap}
 
-/* top bar — the one glass surface, like the app's navigation layer */
+/* top bar: the one glass surface, like the app's navigation layer */
 .topbar{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 82%,transparent);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line)}
 .topbar .in{max-width:var(--wide);margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
 .brand{display:inline-flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-weight:700;font-size:19px;letter-spacing:-.01em}
-.orb{width:22px;height:22px;border-radius:50%;flex:none;background:radial-gradient(circle at 38% 32%,var(--orb-core) 0,var(--orb-edge) 62%,color-mix(in srgb,var(--orb-edge) 70%,#0E1116) 100%);box-shadow:0 0 0 1px var(--hero-stroke),0 0 14px var(--orb-glow)}
+.mark{width:28px;height:28px;border-radius:22.37%;flex:none;display:block;box-shadow:0 0 0 1px var(--hero-stroke)}
 nav.pages{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
 nav.pages a{text-decoration:none;color:var(--ink-2);font-size:15px;font-weight:500;padding:7px 12px;border-radius:999px}
 nav.pages a[aria-current="page"]{color:var(--accent);background:var(--accent-soft)}
 nav.pages a:hover{color:var(--ink)}
 @media (max-width:640px){nav.pages{margin-left:0;width:100%;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none;padding-bottom:2px}nav.pages::-webkit-scrollbar{display:none}nav.pages a{flex:none}}
 
-/* language tabs — the same page, in the reader's own language */
+/* language tabs: the same page, in the reader's own language */
 .langrow{border-top:1px solid var(--line)}
 .langrow .in{max-width:var(--wide);margin:0 auto;padding:7px 20px;display:flex;align-items:center;gap:12px}
 .langrow .lbl{flex:none;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
@@ -170,7 +170,7 @@ nav.langs a:hover{color:var(--ink);background:var(--fill)}
 nav.langs a[aria-current="page"]{color:var(--accent);background:var(--accent-soft)}
 @media (max-width:640px){.langrow .lbl{display:none}.langrow .in{padding:6px 20px}}
 
-/* hero — the home screen's dark island, dark in both appearances */
+/* hero: the home screen's dark island, dark in both appearances */
 .hero-wrap{max-width:var(--wide);margin:24px auto 0;padding:0 20px}
 .hero{position:relative;overflow:hidden;border-radius:var(--r-hero);background:linear-gradient(180deg,var(--hero-top),var(--hero-bottom));color:var(--hero-ink);box-shadow:inset 0 0 0 1px var(--hero-stroke),0 24px 60px rgba(14,17,22,.18);padding:clamp(36px,6vw,64px) clamp(24px,5vw,56px)}
 .hero::before{content:"";position:absolute;inset:-40% auto auto -20%;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,var(--hero-glow) 0,transparent 62%);pointer-events:none}
@@ -391,7 +391,7 @@ def page(code, prefix, key, title, description, hero_html, body, toc=None, canon
 <meta property="og:url" content="{E(SITE + prefix + canonical)}">
 <link rel="canonical" href="{E(SITE + prefix + canonical)}">
 {alternates}
-<link rel="icon" href="{BASE}/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="{BASE}/icon.png" type="image/png" sizes="128x128">
 <link rel="apple-touch-icon" href="{BASE}/apple-touch-icon.png">
 <title>{E(title)}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -403,7 +403,7 @@ def page(code, prefix, key, title, description, hero_html, body, toc=None, canon
 <a class="skip" href="#content">{fmt("ui.skip")}</a>
 <header class="topbar">
   <div class="in">
-    <a class="brand" href="{BASE + prefix}/"><span class="orb" aria-hidden="true"></span>{APP}</a>
+    <a class="brand" href="{BASE + prefix}/"><img class="mark" src="{BASE}/icon.png" alt="" width="28" height="28">{APP}</a>
     <nav class="pages" aria-label="{E(fmt("ui.pages"))}">{nav}</nav>
   </div>
   <div class="langrow"><div class="in">
@@ -508,7 +508,12 @@ def render_404():
                 hero_html, body, None, "/404.html")
 
 
-FAVICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><radialGradient id="g" cx="38%" cy="32%" r="70%"><stop offset="0" stop-color="#D1FAF2"/><stop offset=".62" stop-color="#5ED4C6"/><stop offset="1" stop-color="#3FA599"/></radialGradient></defs><rect width="64" height="64" rx="16" fill="#0E1116"/><circle cx="32" cy="32" r="20" fill="url(#g)"/><path d="M27 24v16M37 24v16" stroke="#0E1116" stroke-width="4" stroke-linecap="round"/></svg>"""
+# The site's icons, `icon.png` (the header's mark and the browser tab's, with
+# the app icon's own rounded corners) and `apple-touch-icon.png` (square: iOS
+# rounds it), are the app's icon itself, made from
+# Pausely/Resources/Assets.xcassets/AppIcon.appiconset/AppIcon-1024.png
+# (2026-11-20, the owner's ask; it was a drawn orb before). Static files, not
+# written here.
 
 
 def sitemap():
@@ -549,6 +554,5 @@ if __name__ == "__main__":
         for rel, content in render(code, prefix):
             write(os.path.join(prefix.lstrip("/"), rel) if prefix else rel, content)
     write("404.html", render_404())
-    write("favicon.svg", FAVICON)
     write("sitemap.xml", sitemap())
     write("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {SITE}/sitemap.xml\n")

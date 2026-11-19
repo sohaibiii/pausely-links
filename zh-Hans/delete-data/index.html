@@ -8,16 +8,16 @@
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F4F6F9">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0E1116">
-<meta property="og:title" content="删除你的数据 — Pausely">
+<meta property="og:title" content="删除你的数据 · Pausely">
 <meta property="og:description" content="如何抹掉 Pausely 在你设备上拥有的一切、订阅会怎样，以及 Meta 的 SDK 和 AI 反思在别处留下了什么。">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_Hans">
 <meta property="og:url" content="https://sohaibiii.github.io/pausely-links/zh-Hans/delete-data/">
 <link rel="canonical" href="https://sohaibiii.github.io/pausely-links/zh-Hans/delete-data/">
 <link rel="alternate" hreflang="en" href="https://sohaibiii.github.io/pausely-links/delete-data/"><link rel="alternate" hreflang="de" href="https://sohaibiii.github.io/pausely-links/de/delete-data/"><link rel="alternate" hreflang="es" href="https://sohaibiii.github.io/pausely-links/es/delete-data/"><link rel="alternate" hreflang="fr" href="https://sohaibiii.github.io/pausely-links/fr/delete-data/"><link rel="alternate" hreflang="ja" href="https://sohaibiii.github.io/pausely-links/ja/delete-data/"><link rel="alternate" hreflang="ko" href="https://sohaibiii.github.io/pausely-links/ko/delete-data/"><link rel="alternate" hreflang="pt-BR" href="https://sohaibiii.github.io/pausely-links/pt-BR/delete-data/"><link rel="alternate" hreflang="zh-Hans" href="https://sohaibiii.github.io/pausely-links/zh-Hans/delete-data/"><link rel="alternate" hreflang="x-default" href="https://sohaibiii.github.io/pausely-links/delete-data/">
-<link rel="icon" href="/pausely-links/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/pausely-links/icon.png" type="image/png" sizes="128x128">
 <link rel="apple-touch-icon" href="/pausely-links/apple-touch-icon.png">
-<title>删除你的数据 — Pausely</title>
+<title>删除你的数据 · Pausely</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
@@ -63,18 +63,18 @@ small,.small{font-size:14px;color:var(--ink-2)}
 code{font:.92em ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--fill);padding:.1em .4em;border-radius:6px}
 kbd{font:inherit;background:var(--fill);border-radius:8px;padding:.05em .5em;white-space:nowrap}
 
-/* top bar — the one glass surface, like the app's navigation layer */
+/* top bar: the one glass surface, like the app's navigation layer */
 .topbar{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 82%,transparent);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line)}
 .topbar .in{max-width:var(--wide);margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
 .brand{display:inline-flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-weight:700;font-size:19px;letter-spacing:-.01em}
-.orb{width:22px;height:22px;border-radius:50%;flex:none;background:radial-gradient(circle at 38% 32%,var(--orb-core) 0,var(--orb-edge) 62%,color-mix(in srgb,var(--orb-edge) 70%,#0E1116) 100%);box-shadow:0 0 0 1px var(--hero-stroke),0 0 14px var(--orb-glow)}
+.mark{width:28px;height:28px;border-radius:22.37%;flex:none;display:block;box-shadow:0 0 0 1px var(--hero-stroke)}
 nav.pages{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
 nav.pages a{text-decoration:none;color:var(--ink-2);font-size:15px;font-weight:500;padding:7px 12px;border-radius:999px}
 nav.pages a[aria-current="page"]{color:var(--accent);background:var(--accent-soft)}
 nav.pages a:hover{color:var(--ink)}
 @media (max-width:640px){nav.pages{margin-left:0;width:100%;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none;padding-bottom:2px}nav.pages::-webkit-scrollbar{display:none}nav.pages a{flex:none}}
 
-/* language tabs — the same page, in the reader's own language */
+/* language tabs: the same page, in the reader's own language */
 .langrow{border-top:1px solid var(--line)}
 .langrow .in{max-width:var(--wide);margin:0 auto;padding:7px 20px;display:flex;align-items:center;gap:12px}
 .langrow .lbl{flex:none;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
@@ -85,7 +85,7 @@ nav.langs a:hover{color:var(--ink);background:var(--fill)}
 nav.langs a[aria-current="page"]{color:var(--accent);background:var(--accent-soft)}
 @media (max-width:640px){.langrow .lbl{display:none}.langrow .in{padding:6px 20px}}
 
-/* hero — the home screen's dark island, dark in both appearances */
+/* hero: the home screen's dark island, dark in both appearances */
 .hero-wrap{max-width:var(--wide);margin:24px auto 0;padding:0 20px}
 .hero{position:relative;overflow:hidden;border-radius:var(--r-hero);background:linear-gradient(180deg,var(--hero-top),var(--hero-bottom));color:var(--hero-ink);box-shadow:inset 0 0 0 1px var(--hero-stroke),0 24px 60px rgba(14,17,22,.18);padding:clamp(36px,6vw,64px) clamp(24px,5vw,56px)}
 .hero::before{content:"";position:absolute;inset:-40% auto auto -20%;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,var(--hero-glow) 0,transparent 62%);pointer-events:none}
@@ -182,7 +182,7 @@ footer a:hover{color:var(--accent)}
 <a class="skip" href="#content">跳到正文</a>
 <header class="topbar">
   <div class="in">
-    <a class="brand" href="/pausely-links/zh-Hans/"><span class="orb" aria-hidden="true"></span>Pausely</a>
+    <a class="brand" href="/pausely-links/zh-Hans/"><img class="mark" src="/pausely-links/icon.png" alt="" width="28" height="28">Pausely</a>
     <nav class="pages" aria-label="页面"><a href="/pausely-links/zh-Hans/">帮助</a><a href="/pausely-links/zh-Hans/about/">关于</a><a href="/pausely-links/zh-Hans/privacy/">隐私</a><a href="/pausely-links/zh-Hans/terms/">条款</a><a href="/pausely-links/zh-Hans/delete-data/" aria-current="page">你的数据</a></nav>
   </div>
   <div class="langrow"><div class="in">
@@ -192,18 +192,18 @@ footer a:hover{color:var(--accent)}
 </header>
 <div class="hero-wrap"><section class="hero"><div class="eyebrow"><span class="dot" aria-hidden="true"></span>你的数据</div><h1>删除你的数据</h1><p class="sub">Pausely 本身知道的一切都在你的设备上。这里说明怎样抹掉它、订阅会怎样，以及别处还保存着什么。</p><p class="meta">另见<a href="/pausely-links/zh-Hans/privacy/">隐私政策</a></p></section></div>
 <main id="content"><div class="grid with-toc"><aside class="toc" aria-label="本页内容"><div class="lbl">本页内容</div><ol><li><a href="#where">什么存在哪里</a></li><li><a href="#inapp">在 App 里抹掉</a></li><li><a href="#uninstall">删除 App</a></li><li><a href="#subscription">你的订阅</a></li><li><a href="#email">问问我们</a></li></ol></aside><div class="stack"><section class="card" id="where"><h2>什么存在哪里</h2>
-<p class="lead">Pausely 没有账号，它的服务器也不为任何人留档。Pausely 本身拥有的一切都在你的设备上，你不必问我们就能抹掉。在别处替我们保存的唯一一份记录——你在 RevenueCat 的购买记录——只要你提出，我们就会删除。</p>
+<p class="lead">Pausely 没有账号，它的服务器也不为任何人留档。Pausely 本身拥有的一切都在你的设备上，你不必问我们就能抹掉。在别处替我们保存的唯一一份记录（你在 RevenueCat 的购买记录），只要你提出，我们就会删除。</p>
 <div class="table-wrap"><table>
 <tr><th>数据</th><th>存放在哪里</th><th>怎样移除</th></tr>
 <tr><td>规则、暂停历史、连续记录、日志、心情记录、替代选项、设置</td><td>你设备上属于 App 的私有存储</td><td><kbd>设置</kbd> → <kbd>你的数据</kbd> → <kbd>重置全部数据</kbd>，或删除 App</td></tr>
-<tr><td>你选中的 App 里的使用分钟数——用于你的每日目标、每日上限、短视频估算和使用时间提醒</td><td>你设备上属于 App 的私有存储，最多保留六十天</td><td><kbd>设置</kbd> → <kbd>你的数据</kbd> → <kbd>重置全部数据</kbd>，或删除 App。关闭使用时间提醒，会清除为它记下的分钟数</td></tr>
+<tr><td>你选中的 App 里的使用分钟数，用于你的每日目标、每日上限、短视频估算和使用时间提醒</td><td>你设备上属于 App 的私有存储，最多保留六十天</td><td><kbd>设置</kbd> → <kbd>你的数据</kbd> → <kbd>重置全部数据</kbd>，或删除 App。关闭使用时间提醒，会清除为它记下的分钟数</td></tr>
 <tr><td>你选中的 App</td><td>App 私有存储中不透明的“屏幕使用时间”令牌</td><td>同上；在 iOS 设置中收回“屏幕使用时间”权限，也会结束全部遮挡</td></tr>
 <tr><td>小组件快照</td><td>你设备上一个只含计数与日期的小文件</td><td>随重置一起移除，也随 App 一起移除</td></tr>
-<tr><td>Premium 权益</td><td>你的 Apple 账户（Apple 侧）、其状态在你设备上的一份副本，以及你在 RevenueCat 的购买记录——RevenueCat 替我们出售 Premium</td><td>订阅在你的 App Store 设置中管理——见下文。如需删除 RevenueCat 的记录，请向我们提出——见本页末尾</td></tr>
-<tr><td>Meta 的 SDK 发出的内容——安装、启动、购买、设备类型，以及它生成的标识符</td><td>Meta，受 <a href="https://www.facebook.com/privacy/policy/">Meta 的隐私政策</a>约束。标识符本身保存在你设备上 App 的存储里</td><td>删除 App 会删除这个标识符，重新安装则会从一个新的标识符开始。Meta 持有的内容，请参阅 Meta 的政策</td></tr>
-<tr><td>Google Analytics 收集的内容——会话、查看过的页面、购买、设备类型、大致位置，以及它生成的标识符</td><td>Google，受 <a href="https://policies.google.com/privacy">Google 隐私权政策</a>约束。标识符本身保存在你设备上 App 的存储里</td><td>删除 App 会删除这个标识符，重新安装则会从一个新的标识符开始。Google 持有的内容，请参阅 Google 的政策</td></tr>
+<tr><td>Premium 权益</td><td>你的 Apple 账户（Apple 侧）、其状态在你设备上的一份副本，以及你在 RevenueCat 的购买记录（RevenueCat 替我们出售 Premium）</td><td>订阅在你的 App Store 设置中管理（见下文）。如需删除 RevenueCat 的记录，请向我们提出（见本页末尾）</td></tr>
+<tr><td>Meta 的 SDK 发出的内容：安装、启动、购买、设备类型，以及它生成的标识符</td><td>Meta，受 <a href="https://www.facebook.com/privacy/policy/">Meta 的隐私政策</a>约束。标识符本身保存在你设备上 App 的存储里</td><td>删除 App 会删除这个标识符，重新安装则会从一个新的标识符开始。Meta 持有的内容，请参阅 Meta 的政策</td></tr>
+<tr><td>Google Analytics 收集的内容：会话、查看过的页面、购买、设备类型、大致位置，以及它生成的标识符</td><td>Google，受 <a href="https://policies.google.com/privacy">Google 隐私权政策</a>约束。标识符本身保存在你设备上 App 的存储里</td><td>删除 App 会删除这个标识符，重新安装则会从一个新的标识符开始。Google 持有的内容，请参阅 Google 的政策</td></tr>
 <tr><td>你在一次 AI 反思中打下的内容</td><td>由 Apple Intelligence 写反思时，只在你的设备上。由 OpenAI 写时：我们的服务器既不保存提问也不保存回答；OpenAI 会把输入和输出保留最多 30 天（早期版本由 Google 保留最多 24 小时）</td><td>我们这边没有可删的东西。在<kbd>设置</kbd> → <kbd>AI 反思</kbd>中关闭该功能，此后就不会再发送任何内容</td></tr>
-<tr><td>账号、个人资料，或任何带着你名字的东西</td><td>—</td><td>并不存在。我们从来就没有可删的。</td></tr>
+<tr><td>账号、个人资料，或任何带着你名字的东西</td><td>无</td><td>并不存在。我们从来就没有可删的。</td></tr>
 </table></div>
 </section><section class="card" id="inapp"><h2>在 App 里抹掉</h2>
 <ol class="steps">
@@ -215,9 +215,9 @@ footer a:hover{color:var(--accent)}
 </section><section class="card" id="uninstall"><h2>删除 App</h2>
 <p>把 Pausely 从设备上删除，会连同它的全部数据（包括“屏幕使用时间”令牌）一起带走，并立刻结束全部遮挡。如果这个 App 被包含在 iCloud 备份或加密的本地备份里，那份副本属于你的 Apple 账户，受 Apple 的条款约束；我们无法访问它。</p>
 </section><section class="card" id="subscription"><h2>你的订阅</h2>
-<p>重置数据和删除 App 都不会取消订阅——它属于你的 Apple 账户，而不是这个 App。请在 <a href="https://apps.apple.com/account/subscriptions">App Store 订阅设置</a>中取消；在当前周期结束之前它仍然有效。退款由 <a href="https://support.apple.com/billing">Apple 支持</a>处理。永久购买不会续期，也没有什么需要取消。</p>
+<p>重置数据和删除 App 都不会取消订阅，它属于你的 Apple 账户，而不是这个 App。请在 <a href="https://apps.apple.com/account/subscriptions">App Store 订阅设置</a>中取消；在当前周期结束之前它仍然有效。退款由 <a href="https://support.apple.com/billing">Apple 支持</a>处理。永久购买不会续期，也没有什么需要取消。</p>
 </section><section class="card" id="email"><h2>问问我们</h2>
-<p>如果你想要一份书面确认，说明我们持有哪些关于你的信息，想删除你在 RevenueCat 的购买记录，或者对 Meta 的 SDK 发出的内容有疑问，请从任意邮箱写信到 <a href="mailto:topsol.org@gmail.com">topsol.org@gmail.com</a>。涉及购买记录时，请附上 Apple 收据邮件中的订单号：这是区分一份匿名记录与另一份的唯一办法。我们会在 30 天内回复。请不要把你的日志、心情记录或它们的截图发给我们——回答你的问题并不需要它们。</p>
+<p>如果你想要一份书面确认，说明我们持有哪些关于你的信息，想删除你在 RevenueCat 的购买记录，或者对 Meta 的 SDK 发出的内容有疑问，请从任意邮箱写信到 <a href="mailto:topsol.org@gmail.com">topsol.org@gmail.com</a>。涉及购买记录时，请附上 Apple 收据邮件中的订单号：这是区分一份匿名记录与另一份的唯一办法。我们会在 30 天内回复。请不要把你的日志、心情记录或它们的截图发给我们，回答你的问题并不需要它们。</p>
 </section></div></div></main>
 <footer><div class="in">
   <div>© 2026 Pausely · TOPSOL · 保留所有权利。</div>

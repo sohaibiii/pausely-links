@@ -8,16 +8,16 @@
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F4F6F9">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0E1116">
-<meta property="og:title" content="Eliminar tus datos — Pausely">
+<meta property="og:title" content="Eliminar tus datos · Pausely">
 <meta property="og:description" content="Cómo borrar todo lo que Pausely tiene en tu dispositivo, qué pasa con tu suscripción, y qué dejan en otros sitios el SDK de Meta y la reflexión con IA.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es">
 <meta property="og:url" content="https://sohaibiii.github.io/pausely-links/es/delete-data/">
 <link rel="canonical" href="https://sohaibiii.github.io/pausely-links/es/delete-data/">
 <link rel="alternate" hreflang="en" href="https://sohaibiii.github.io/pausely-links/delete-data/"><link rel="alternate" hreflang="de" href="https://sohaibiii.github.io/pausely-links/de/delete-data/"><link rel="alternate" hreflang="es" href="https://sohaibiii.github.io/pausely-links/es/delete-data/"><link rel="alternate" hreflang="fr" href="https://sohaibiii.github.io/pausely-links/fr/delete-data/"><link rel="alternate" hreflang="ja" href="https://sohaibiii.github.io/pausely-links/ja/delete-data/"><link rel="alternate" hreflang="ko" href="https://sohaibiii.github.io/pausely-links/ko/delete-data/"><link rel="alternate" hreflang="pt-BR" href="https://sohaibiii.github.io/pausely-links/pt-BR/delete-data/"><link rel="alternate" hreflang="zh-Hans" href="https://sohaibiii.github.io/pausely-links/zh-Hans/delete-data/"><link rel="alternate" hreflang="x-default" href="https://sohaibiii.github.io/pausely-links/delete-data/">
-<link rel="icon" href="/pausely-links/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/pausely-links/icon.png" type="image/png" sizes="128x128">
 <link rel="apple-touch-icon" href="/pausely-links/apple-touch-icon.png">
-<title>Eliminar tus datos — Pausely</title>
+<title>Eliminar tus datos · Pausely</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
@@ -63,18 +63,18 @@ small,.small{font-size:14px;color:var(--ink-2)}
 code{font:.92em ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--fill);padding:.1em .4em;border-radius:6px}
 kbd{font:inherit;background:var(--fill);border-radius:8px;padding:.05em .5em;white-space:nowrap}
 
-/* top bar — the one glass surface, like the app's navigation layer */
+/* top bar: the one glass surface, like the app's navigation layer */
 .topbar{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 82%,transparent);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line)}
 .topbar .in{max-width:var(--wide);margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
 .brand{display:inline-flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-weight:700;font-size:19px;letter-spacing:-.01em}
-.orb{width:22px;height:22px;border-radius:50%;flex:none;background:radial-gradient(circle at 38% 32%,var(--orb-core) 0,var(--orb-edge) 62%,color-mix(in srgb,var(--orb-edge) 70%,#0E1116) 100%);box-shadow:0 0 0 1px var(--hero-stroke),0 0 14px var(--orb-glow)}
+.mark{width:28px;height:28px;border-radius:22.37%;flex:none;display:block;box-shadow:0 0 0 1px var(--hero-stroke)}
 nav.pages{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
 nav.pages a{text-decoration:none;color:var(--ink-2);font-size:15px;font-weight:500;padding:7px 12px;border-radius:999px}
 nav.pages a[aria-current="page"]{color:var(--accent);background:var(--accent-soft)}
 nav.pages a:hover{color:var(--ink)}
 @media (max-width:640px){nav.pages{margin-left:0;width:100%;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none;padding-bottom:2px}nav.pages::-webkit-scrollbar{display:none}nav.pages a{flex:none}}
 
-/* language tabs — the same page, in the reader's own language */
+/* language tabs: the same page, in the reader's own language */
 .langrow{border-top:1px solid var(--line)}
 .langrow .in{max-width:var(--wide);margin:0 auto;padding:7px 20px;display:flex;align-items:center;gap:12px}
 .langrow .lbl{flex:none;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
@@ -85,7 +85,7 @@ nav.langs a:hover{color:var(--ink);background:var(--fill)}
 nav.langs a[aria-current="page"]{color:var(--accent);background:var(--accent-soft)}
 @media (max-width:640px){.langrow .lbl{display:none}.langrow .in{padding:6px 20px}}
 
-/* hero — the home screen's dark island, dark in both appearances */
+/* hero: the home screen's dark island, dark in both appearances */
 .hero-wrap{max-width:var(--wide);margin:24px auto 0;padding:0 20px}
 .hero{position:relative;overflow:hidden;border-radius:var(--r-hero);background:linear-gradient(180deg,var(--hero-top),var(--hero-bottom));color:var(--hero-ink);box-shadow:inset 0 0 0 1px var(--hero-stroke),0 24px 60px rgba(14,17,22,.18);padding:clamp(36px,6vw,64px) clamp(24px,5vw,56px)}
 .hero::before{content:"";position:absolute;inset:-40% auto auto -20%;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,var(--hero-glow) 0,transparent 62%);pointer-events:none}
@@ -182,7 +182,7 @@ footer a:hover{color:var(--accent)}
 <a class="skip" href="#content">Ir al contenido</a>
 <header class="topbar">
   <div class="in">
-    <a class="brand" href="/pausely-links/es/"><span class="orb" aria-hidden="true"></span>Pausely</a>
+    <a class="brand" href="/pausely-links/es/"><img class="mark" src="/pausely-links/icon.png" alt="" width="28" height="28">Pausely</a>
     <nav class="pages" aria-label="Páginas"><a href="/pausely-links/es/">Ayuda</a><a href="/pausely-links/es/about/">Acerca de</a><a href="/pausely-links/es/privacy/">Privacidad</a><a href="/pausely-links/es/terms/">Términos</a><a href="/pausely-links/es/delete-data/" aria-current="page">Tus datos</a></nav>
   </div>
   <div class="langrow"><div class="in">
@@ -192,18 +192,18 @@ footer a:hover{color:var(--accent)}
 </header>
 <div class="hero-wrap"><section class="hero"><div class="eyebrow"><span class="dot" aria-hidden="true"></span>Tus datos</div><h1>Eliminar tus datos</h1><p class="sub">Todo lo que Pausely sabe por su parte está en tu dispositivo. Aquí tienes cómo borrarlo, qué pasa con tu suscripción y qué se guarda en cualquier otro sitio.</p><p class="meta">Mira también la <a href="/pausely-links/es/privacy/">Política de Privacidad</a></p></section></div>
 <main id="content"><div class="grid with-toc"><aside class="toc" aria-label="En esta página"><div class="lbl">En esta página</div><ol><li><a href="#where">Qué se guarda y dónde</a></li><li><a href="#inapp">Bórralo en la app</a></li><li><a href="#uninstall">Borrar la app</a></li><li><a href="#subscription">Tu suscripción</a></li><li><a href="#email">Pregúntanos</a></li></ol></aside><div class="stack"><section class="card" id="where"><h2>Qué se guarda y dónde</h2>
-<p class="lead">Pausely no tiene cuenta, y su servidor no guarda registro de nadie. Todo lo que Pausely tiene por su parte está en tu dispositivo, y puedes borrarlo sin pedírnoslo. El único registro que se guarda en otro sitio en nuestro nombre — el de tus compras, en RevenueCat — lo borramos cuando nos lo pidas.</p>
+<p class="lead">Pausely no tiene cuenta, y su servidor no guarda registro de nadie. Todo lo que Pausely tiene por su parte está en tu dispositivo, y puedes borrarlo sin pedírnoslo. El único registro que se guarda en otro sitio en nuestro nombre (el de tus compras, en RevenueCat) lo borramos cuando nos lo pidas.</p>
 <div class="table-wrap"><table>
 <tr><th>Datos</th><th>Dónde viven</th><th>Cómo quitarlos</th></tr>
 <tr><td>Reglas, historial de pausas, racha, diario, registros de ánimo, alternativas, ajustes</td><td>El almacenamiento privado de la app en tu dispositivo</td><td><kbd>Ajustes</kbd> → <kbd>Tus datos</kbd> → <kbd>Restablecer todos los datos</kbd>, o borra la app</td></tr>
-<tr><td>Minutos en las apps que elegiste — para tu objetivo, tus límites, la estimación de vídeos cortos y los avisos de tiempo</td><td>El almacenamiento privado de la app en tu dispositivo, hasta sesenta días</td><td><kbd>Ajustes</kbd> → <kbd>Tus datos</kbd> → <kbd>Restablecer todos los datos</kbd>, o borra la app. Desactivar los avisos de tiempo borra los suyos</td></tr>
+<tr><td>Minutos en las apps que elegiste (para tu objetivo, tus límites, la estimación de vídeos cortos y los avisos de tiempo)</td><td>El almacenamiento privado de la app en tu dispositivo, hasta sesenta días</td><td><kbd>Ajustes</kbd> → <kbd>Tus datos</kbd> → <kbd>Restablecer todos los datos</kbd>, o borra la app. Desactivar los avisos de tiempo borra los suyos</td></tr>
 <tr><td>Tu selección de apps</td><td>Tokens opacos de Tiempo de uso en el almacenamiento privado de la app</td><td>Igual que arriba; revocar el acceso a Tiempo de uso en los Ajustes de iOS también termina toda protección</td></tr>
 <tr><td>Instantánea del widget</td><td>Un archivo pequeño de recuentos y fechas en tu dispositivo</td><td>Se quita con el restablecimiento y con la app</td></tr>
-<tr><td>Derecho a Premium</td><td>Tu ID de Apple (Apple), una copia de su estado en tu dispositivo y el registro de tus compras en RevenueCat, que vende Premium en nuestro nombre</td><td>La suscripción se gestiona en los ajustes de tu App Store — ver más abajo. Para que se borre el registro de RevenueCat, pídenoslo — ver el final de esta página</td></tr>
-<tr><td>Lo que envió el SDK de Meta — instalaciones, aperturas, compras, el tipo de dispositivo y el identificador que generó</td><td>Meta, bajo la <a href="https://www.facebook.com/privacy/policy/">Política de Privacidad de Meta</a>. El identificador en sí se guarda en el almacenamiento de la app en tu dispositivo</td><td>Borrar la app borra el identificador, y una instalación nueva empieza con uno nuevo. Para lo que conserva Meta, mira la política de Meta</td></tr>
-<tr><td>Lo que recopiló Google Analytics — sesiones, pantallas vistas, compras, el tipo de dispositivo, una ubicación general y el identificador que generó</td><td>Google, bajo la <a href="https://policies.google.com/privacy">Política de Privacidad de Google</a>. El identificador en sí se guarda en el almacenamiento de la app en tu dispositivo</td><td>Borrar la app borra el identificador, y una instalación nueva empieza con uno nuevo. Para lo que conserva Google, mira la política de Google</td></tr>
+<tr><td>Derecho a Premium</td><td>Tu ID de Apple (Apple), una copia de su estado en tu dispositivo y el registro de tus compras en RevenueCat, que vende Premium en nuestro nombre</td><td>La suscripción se gestiona en los ajustes de tu App Store (ver más abajo). Para que se borre el registro de RevenueCat, pídenoslo (ver el final de esta página)</td></tr>
+<tr><td>Lo que envió el SDK de Meta: instalaciones, aperturas, compras, el tipo de dispositivo y el identificador que generó</td><td>Meta, bajo la <a href="https://www.facebook.com/privacy/policy/">Política de Privacidad de Meta</a>. El identificador en sí se guarda en el almacenamiento de la app en tu dispositivo</td><td>Borrar la app borra el identificador, y una instalación nueva empieza con uno nuevo. Para lo que conserva Meta, mira la política de Meta</td></tr>
+<tr><td>Lo que recopiló Google Analytics: sesiones, pantallas vistas, compras, el tipo de dispositivo, una ubicación general y el identificador que generó</td><td>Google, bajo la <a href="https://policies.google.com/privacy">Política de Privacidad de Google</a>. El identificador en sí se guarda en el almacenamiento de la app en tu dispositivo</td><td>Borrar la app borra el identificador, y una instalación nueva empieza con uno nuevo. Para lo que conserva Google, mira la política de Google</td></tr>
 <tr><td>Lo que escribiste en una reflexión con IA</td><td>Solo tu dispositivo, cuando la reflexión la escribió Apple Intelligence. Cuando la escribió OpenAI: nuestro servidor no guarda ni la entrada ni la respuesta; OpenAI conserva entradas y salidas hasta 30 días (Google, en versiones anteriores: hasta 24 horas)</td><td>Nada que borrar de nuestro lado. Desactiva la función en <kbd>Ajustes</kbd> → <kbd>Reflexión con IA</kbd> y no se enviará nada más nunca</td></tr>
-<tr><td>Una cuenta, un perfil, algo con tu nombre</td><td>—</td><td>No existe. Nunca tuvimos ninguna que borrar.</td></tr>
+<tr><td>Una cuenta, un perfil, algo con tu nombre</td><td>En ningún sitio</td><td>No existe. Nunca tuvimos ninguna que borrar.</td></tr>
 </table></div>
 </section><section class="card" id="inapp"><h2>Bórralo en la app</h2>
 <ol class="steps">

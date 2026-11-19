@@ -8,16 +8,16 @@
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F4F6F9">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0E1116">
-<meta property="og:title" content="Pausely — Aide">
+<meta property="og:title" content="Pausely · Aide">
 <meta property="og:description" content="L’aide officielle de Pausely, l’app qui place une pause devant les apps que vous avez choisies. Comment ça marche, prérequis, FAQ et contact.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr">
 <meta property="og:url" content="https://sohaibiii.github.io/pausely-links/fr/">
 <link rel="canonical" href="https://sohaibiii.github.io/pausely-links/fr/">
 <link rel="alternate" hreflang="en" href="https://sohaibiii.github.io/pausely-links/"><link rel="alternate" hreflang="de" href="https://sohaibiii.github.io/pausely-links/de/"><link rel="alternate" hreflang="es" href="https://sohaibiii.github.io/pausely-links/es/"><link rel="alternate" hreflang="fr" href="https://sohaibiii.github.io/pausely-links/fr/"><link rel="alternate" hreflang="ja" href="https://sohaibiii.github.io/pausely-links/ja/"><link rel="alternate" hreflang="ko" href="https://sohaibiii.github.io/pausely-links/ko/"><link rel="alternate" hreflang="pt-BR" href="https://sohaibiii.github.io/pausely-links/pt-BR/"><link rel="alternate" hreflang="zh-Hans" href="https://sohaibiii.github.io/pausely-links/zh-Hans/"><link rel="alternate" hreflang="x-default" href="https://sohaibiii.github.io/pausely-links/">
-<link rel="icon" href="/pausely-links/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/pausely-links/icon.png" type="image/png" sizes="128x128">
 <link rel="apple-touch-icon" href="/pausely-links/apple-touch-icon.png">
-<title>Pausely — Aide</title>
+<title>Pausely · Aide</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
@@ -63,18 +63,18 @@ small,.small{font-size:14px;color:var(--ink-2)}
 code{font:.92em ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--fill);padding:.1em .4em;border-radius:6px}
 kbd{font:inherit;background:var(--fill);border-radius:8px;padding:.05em .5em;white-space:nowrap}
 
-/* top bar — the one glass surface, like the app's navigation layer */
+/* top bar: the one glass surface, like the app's navigation layer */
 .topbar{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 82%,transparent);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line)}
 .topbar .in{max-width:var(--wide);margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
 .brand{display:inline-flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-weight:700;font-size:19px;letter-spacing:-.01em}
-.orb{width:22px;height:22px;border-radius:50%;flex:none;background:radial-gradient(circle at 38% 32%,var(--orb-core) 0,var(--orb-edge) 62%,color-mix(in srgb,var(--orb-edge) 70%,#0E1116) 100%);box-shadow:0 0 0 1px var(--hero-stroke),0 0 14px var(--orb-glow)}
+.mark{width:28px;height:28px;border-radius:22.37%;flex:none;display:block;box-shadow:0 0 0 1px var(--hero-stroke)}
 nav.pages{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
 nav.pages a{text-decoration:none;color:var(--ink-2);font-size:15px;font-weight:500;padding:7px 12px;border-radius:999px}
 nav.pages a[aria-current="page"]{color:var(--accent);background:var(--accent-soft)}
 nav.pages a:hover{color:var(--ink)}
 @media (max-width:640px){nav.pages{margin-left:0;width:100%;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none;padding-bottom:2px}nav.pages::-webkit-scrollbar{display:none}nav.pages a{flex:none}}
 
-/* language tabs — the same page, in the reader's own language */
+/* language tabs: the same page, in the reader's own language */
 .langrow{border-top:1px solid var(--line)}
 .langrow .in{max-width:var(--wide);margin:0 auto;padding:7px 20px;display:flex;align-items:center;gap:12px}
 .langrow .lbl{flex:none;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
@@ -85,7 +85,7 @@ nav.langs a:hover{color:var(--ink);background:var(--fill)}
 nav.langs a[aria-current="page"]{color:var(--accent);background:var(--accent-soft)}
 @media (max-width:640px){.langrow .lbl{display:none}.langrow .in{padding:6px 20px}}
 
-/* hero — the home screen's dark island, dark in both appearances */
+/* hero: the home screen's dark island, dark in both appearances */
 .hero-wrap{max-width:var(--wide);margin:24px auto 0;padding:0 20px}
 .hero{position:relative;overflow:hidden;border-radius:var(--r-hero);background:linear-gradient(180deg,var(--hero-top),var(--hero-bottom));color:var(--hero-ink);box-shadow:inset 0 0 0 1px var(--hero-stroke),0 24px 60px rgba(14,17,22,.18);padding:clamp(36px,6vw,64px) clamp(24px,5vw,56px)}
 .hero::before{content:"";position:absolute;inset:-40% auto auto -20%;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,var(--hero-glow) 0,transparent 62%);pointer-events:none}
@@ -182,7 +182,7 @@ footer a:hover{color:var(--accent)}
 <a class="skip" href="#content">Aller au contenu</a>
 <header class="topbar">
   <div class="in">
-    <a class="brand" href="/pausely-links/fr/"><span class="orb" aria-hidden="true"></span>Pausely</a>
+    <a class="brand" href="/pausely-links/fr/"><img class="mark" src="/pausely-links/icon.png" alt="" width="28" height="28">Pausely</a>
     <nav class="pages" aria-label="Pages"><a href="/pausely-links/fr/" aria-current="page">Aide</a><a href="/pausely-links/fr/about/">À propos</a><a href="/pausely-links/fr/privacy/">Confidentialité</a><a href="/pausely-links/fr/terms/">Conditions</a><a href="/pausely-links/fr/delete-data/">Vos données</a></nav>
   </div>
   <div class="langrow"><div class="in">
@@ -193,42 +193,42 @@ footer a:hover{color:var(--accent)}
 <div class="hero-wrap"><section class="hero"><div class="eyebrow"><span class="dot" aria-hidden="true"></span>Aide</div><h1>De l’aide pour Pausely</h1><p class="sub">Une respiration avant de faire défiler. Pausely se place devant les apps que vous avez choisies et demande d’abord dix secondes. Cette page explique comment ça marche, ce qu’il faut, et comment nous joindre.</p><div class="ctas"><span class="soon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.3 1.2 9.7.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.2-.8s1.9.8 3.2.8 2.1-1.2 2.9-2.4c.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.5-1-2.5-3.8zM14 5.5c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.2-.6 2.8-1.4z"/></svg> Bientôt sur l’App Store</span><a class="btn quiet" href="#faq">Lire la FAQ</a></div><p class="meta">Aucun compte · vos apps, votre temps et vos mots restent sur votre appareil · <a href="/pausely-links/fr/privacy/">Politique de confidentialité</a></p></section></div>
 <main id="content"><div class="grid with-toc"><aside class="toc" aria-label="Sur cette page"><div class="lbl">Sur cette page</div><ol><li><a href="#how">Comment fonctionne Pausely</a></li><li><a href="#requirements">Prérequis</a></li><li><a href="#start">Premiers pas</a></li><li><a href="#faq">Questions fréquentes</a></li><li><a href="#trouble">Dépannage</a></li><li><a href="#contact">Contact</a></li></ol></aside><div class="stack"><section class="card" id="how"><h2>Comment fonctionne Pausely</h2>
 <p class="lead">Pausely place un petit ralentisseur entre vous et les apps qui dévorent votre journée.</p>
-<p>Vous choisissez les apps que vous préféreriez utiliser moins. Ensuite, en toucher une ne l’ouvre plus tout de suite : Pausely se place devant, avec une courte pause — une respiration, une phrase à taper, ou une question sur la raison qui vous pousse à l’ouvrir. Si vous voulez quand même y aller, vous le pouvez, pour une durée limitée. Quand elle s’achève, la pause revient.</p>
-<p>Le but n’est pas de vous enfermer dehors. Il est de transformer une habitude automatique, guidée par le pouce, en une décision que vous prenez vraiment. Avec dix secondes pour y penser, la plupart des gens referment l’app — et Pausely compte cela comme une victoire.</p>
+<p>Vous choisissez les apps que vous préféreriez utiliser moins. Ensuite, en toucher une ne l’ouvre plus tout de suite : Pausely se place devant, avec une courte pause (une respiration, une phrase à taper, ou une question sur la raison qui vous pousse à l’ouvrir). Si vous voulez quand même y aller, vous le pouvez, pour une durée limitée. Quand elle s’achève, la pause revient.</p>
+<p>Le but n’est pas de vous enfermer dehors. Il est de transformer une habitude automatique, guidée par le pouce, en une décision que vous prenez vraiment. Avec dix secondes pour y penser, la plupart des gens referment l’app, et Pausely compte cela comme une victoire.</p>
 <ul class="rows">
   <li><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/></svg></span><div><b>Protection</b><span>Un interrupteur. Tant qu’il est actif, les apps que vous avez choisies affichent l’écran de blocage paisible de Pausely au lieu de s’ouvrir.</span></div></li>
   <li><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 8h11a3 3 0 1 0-3-3M3 12h15a3 3 0 1 1-3 3M3 16h8a2.5 2.5 0 1 1-2.5 2.5"/></svg></span><div><b>Trois pauses</b><span>Un exercice de respiration, un défi de saisie, ou nommer votre intention. La configuration choisit celle qui vous convient ; vous pouvez en changer à tout moment.</span></div></li>
-  <li><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b>Règles</b><span>Protégez certaines apps à certaines heures — le coucher, une journée de travail — avec leur propre pause et leur propre fenêtre. Une règle peut aussi bloquer complètement jusqu’à la fin de ses heures.</span></div></li>
-  <li><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span><div><b>Mode strict</b><span>Tenez-vous-y pendant une heure, une journée, ou jusqu’à l’heure de votre choix. Tant qu’il tourne, la protection ne peut pas être désactivée et les règles ne peuvent pas être supprimées — même pas par vous.</span></div></li>
+  <li><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b>Règles</b><span>Protégez certaines apps à certaines heures (le coucher, une journée de travail) avec leur propre pause et leur propre fenêtre. Une règle peut aussi bloquer complètement jusqu’à la fin de ses heures.</span></div></li>
+  <li><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span><div><b>Mode strict</b><span>Tenez-vous-y pendant une heure, une journée, ou jusqu’à l’heure de votre choix. Tant qu’il tourne, la protection ne peut pas être désactivée et les règles ne peuvent pas être supprimées, même pas par vous.</span></div></li>
   <li><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h14v16H6a2 2 0 0 0-2 2V5z"/><path d="M4 19a2 2 0 0 0 2 2h14"/></svg></span><div><b>Alternatives et journal</b><span>Jusqu’à trois alternatives saines apparaissent sur l’écran de pause comme une troisième issue, et il y a un journal pour les fois où vous préférez écrire plutôt que faire défiler.</span></div></li>
-  <li><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg></span><div><b>Progression</b><span>Pauses tenues, temps récupéré, votre série et un graphique hebdomadaire — plus des widgets sur l’écran d’accueil et un compte à rebours sur l’écran verrouillé pendant qu’une fenêtre est ouverte.</span></div></li>
-  <li><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.9L18.7 9.7l-4.9 1.8L12 16.4l-1.8-4.9L5.3 9.7l4.9-1.8L12 3z"/><path d="M18.5 16.5l.7 1.9 1.9.7-1.9.7-.7 1.9-.7-1.9-1.9-.7 1.9-.7.7-1.9z"/></svg></span><div><b>La réflexion IA, si vous la voulez</b><span>Désactivée jusqu’à ce que vous l’activiez. Elle transforme « pourquoi ouvrez-vous ceci ? » en un court échange, et rédige une note hebdomadaire sur votre semaine. Sur un iPhone doté d’Apple Intelligence, elle peut être écrite sur le téléphone lui-même ; sinon, c’est OpenAI qui l’écrit — voir <a href="/pausely-links/fr/privacy/#ai">Confidentialité</a>.</span></div></li>
+  <li><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg></span><div><b>Progression</b><span>Pauses tenues, temps récupéré, votre série et un graphique hebdomadaire, plus des widgets sur l’écran d’accueil et un compte à rebours sur l’écran verrouillé pendant qu’une fenêtre est ouverte.</span></div></li>
+  <li><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.9L18.7 9.7l-4.9 1.8L12 16.4l-1.8-4.9L5.3 9.7l4.9-1.8L12 3z"/><path d="M18.5 16.5l.7 1.9 1.9.7-1.9.7-.7 1.9-.7-1.9-1.9-.7 1.9-.7.7-1.9z"/></svg></span><div><b>La réflexion IA, si vous la voulez</b><span>Désactivée jusqu’à ce que vous l’activiez. Elle transforme « pourquoi ouvrez-vous ceci ? » en un court échange, et rédige une note hebdomadaire sur votre semaine. Sur un iPhone doté d’Apple Intelligence, elle peut être écrite sur le téléphone lui-même ; sinon, c’est OpenAI qui l’écrit (voir <a href="/pausely-links/fr/privacy/#ai">Confidentialité</a>).</span></div></li>
 </ul>
 </section><section class="card" id="requirements"><h2>Prérequis</h2>
 <div class="table-wrap"><table>
 <tr><th>Appareil</th><td><strong>iPhone ou iPad</strong> sous <strong>iOS 17 ou iPadOS 17</strong> ou plus récent. Une app, une mise en page, les deux appareils.</td></tr>
-<tr><th>Autorisation</th><td>L’accès au <strong>Temps d’écran</strong>, accordé une fois pendant la configuration via la demande d’Apple elle-même. Pausely utilise le framework Temps d’écran d’Apple — le système qui sert aussi aux limites d’apps intégrées à iOS — et c’est Apple, pas Pausely, qui bloque réellement une app.</td></tr>
+<tr><th>Autorisation</th><td>L’accès au <strong>Temps d’écran</strong>, accordé une fois pendant la configuration via la demande d’Apple elle-même. Pausely utilise le framework Temps d’écran d’Apple (le système qui sert aussi aux limites d’apps intégrées à iOS), et c’est Apple, pas Pausely, qui bloque réellement une app.</td></tr>
 <tr><th>Compte</th><td>Aucun. Il n’y a nulle part dans l’app d’inscription, de champ e-mail ni de mot de passe.</td></tr>
-<tr><th>Internet</th><td>Pas nécessaire. Chaque pause, règle, graphique et entrée de journal fonctionne hors ligne. Quand il y a une connexion, trois choses l’utilisent : le trafic propre d’Apple quand vous achetez ou restaurez Premium ; le SDK de Meta, qui signale les installations, les ouvertures et les achats pour que nous puissions mesurer l’efficacité de nos publicités ; et la réflexion IA quand OpenAI l’écrit — qui est désactivée jusqu’à ce que vous l’activiez.</td></tr>
-<tr><th>Notifications</th><td>Facultatives, et produites sur l’appareil. Pausely les utilise pour vous faire passer de l’écran de blocage à la pause et pour vous demander comment s’est passée une alternative — et, seulement si vous les activez, pour un rappel avant votre heure la plus difficile et pour les <kbd>Alertes de temps</kbd>. Il n’y a aucun serveur de notifications.</td></tr>
+<tr><th>Internet</th><td>Pas nécessaire. Chaque pause, règle, graphique et entrée de journal fonctionne hors ligne. Quand il y a une connexion, trois choses l’utilisent : le trafic propre d’Apple quand vous achetez ou restaurez Premium ; le SDK de Meta, qui signale les installations, les ouvertures et les achats pour que nous puissions mesurer l’efficacité de nos publicités ; et la réflexion IA quand OpenAI l’écrit, qui est désactivée jusqu’à ce que vous l’activiez.</td></tr>
+<tr><th>Notifications</th><td>Facultatives, et produites sur l’appareil. Pausely les utilise pour vous faire passer de l’écran de blocage à la pause et pour vous demander comment s’est passée une alternative, et, seulement si vous les activez, pour un rappel avant votre heure la plus difficile et pour les <kbd>Alertes de temps</kbd>. Il n’y a aucun serveur de notifications.</td></tr>
 <tr><th>Langues</th><td>Anglais, allemand, espagnol, français, japonais, coréen, portugais du Brésil et chinois simplifié. Pausely suit la langue de votre appareil, et vous pouvez en choisir une autre dans <kbd>Réglages</kbd> → <kbd>Langue</kbd>.</td></tr>
 </table></div>
 </section><section class="card" id="start"><h2>Premiers pas</h2>
 <p>La configuration tient en sept écrans et prend moins de trois minutes. Elle se termine avec la protection déjà active et votre première règle déjà écrite.</p>
 <ol class="steps">
-  <li><div><b>Dites quelle part de la journée revient à votre téléphone</b> — votre propre estimation, rien de mesuré.</div></li>
+  <li><div><b>Dites quelle part de la journée revient à votre téléphone</b> : votre propre estimation, rien de mesuré.</div></li>
   <li><div><b>Autorisez l’accès au Temps d’écran</b> quand Apple le demande. Pausely ne peut pas fonctionner sans lui, et vous pouvez le retirer à tout moment dans <kbd>Réglages</kbd> → <kbd>Temps d’écran</kbd>.</div></li>
-  <li><div><b>Choisissez vos apps</b> dans le sélecteur d’Apple. Pausely n’apprend jamais leurs noms — voir <a href="/pausely-links/fr/privacy/">Confidentialité</a>.</div></li>
+  <li><div><b>Choisissez vos apps</b> dans le sélecteur d’Apple. Pausely n’apprend jamais leurs noms (voir <a href="/pausely-links/fr/privacy/">Confidentialité</a>).</div></li>
   <li><div><b>Répondez à trois questions</b> qui choisissent la pause qui vous convient.</div></li>
-  <li><div><b>Ajoutez jusqu’à trois alternatives</b> — une promenade, un livre, un verre d’eau, ou quelque chose à vous avec un lien vers une autre app.</div></li>
+  <li><div><b>Ajoutez jusqu’à trois alternatives</b> : une promenade, un livre, un verre d’eau, ou quelque chose à vous avec un lien vers une autre app.</div></li>
   <li><div><b>Terminé.</b> Ouvrez une de vos apps et rencontrez la pause.</div></li>
 </ol>
 </section><section class="card" id="faq"><h2>Questions fréquentes</h2>
 <dl class="faq">
 <dt>Pausely est-il gratuit ?</dt>
-<dd>Oui. La version gratuite est un produit qui fonctionne, pas une démo : <strong>une règle</strong>, la <strong>pause respiration</strong> et l’<strong>intégralité de votre écran de progression</strong> — pauses, victoires, temps récupéré, la série et le graphique.</dd>
+<dd>Oui. La version gratuite est un produit qui fonctionne, pas une démo : <strong>une règle</strong>, la <strong>pause respiration</strong> et l’<strong>intégralité de votre écran de progression</strong> (pauses, victoires, temps récupéré, la série et le graphique).</dd>
 <dt>Qu’ajoute Premium ?</dt>
-<dd>Autant de règles que vous voulez, les deux autres pauses (taper pour continuer, poser une intention), le mode strict, l’analyse d’humeur qui compare comment vous vous sentez après une session et après y avoir renoncé, et la réflexion IA optionnelle avec son bilan hebdomadaire. Premium est un abonnement mensuel ou annuel — la formule annuelle commence par un <strong>essai gratuit</strong> — ou un achat unique à vie. Les prix sont affichés dans l’app et sur l’App Store de votre pays, et la facturation est gérée par Apple.</dd>
+<dd>Autant de règles que vous voulez, les deux autres pauses (taper pour continuer, poser une intention), le mode strict, l’analyse d’humeur qui compare comment vous vous sentez après une session et après y avoir renoncé, et la réflexion IA optionnelle avec son bilan hebdomadaire. Premium est un abonnement mensuel ou annuel (la formule annuelle commence par un <strong>essai gratuit</strong>) ou un achat unique à vie. Les prix sont affichés dans l’app et sur l’App Store de votre pays, et la facturation est gérée par Apple.</dd>
 <dt>Que se passe-t-il si mon abonnement expire ?</dt>
 <dd>Rien de ce que vous avez construit ne vous est retiré. Chaque règle continue de tourner et reste modifiable, et la pause que vous avez choisie reste devant vos apps. Seule la possibilité d’en ajouter se ferme. Une app qui cesserait de protéger votre téléphone parce qu’une carte a expiré vous laisserait tomber au moment précis où vous lui avez demandé de ne pas le faire.</dd>
 <dt>Puis-je restaurer un achat sur un nouvel appareil ?</dt>
@@ -236,15 +236,15 @@ footer a:hover{color:var(--accent)}
 <dt>Pourquoi Pausely ne peut-il pas me dire quelles apps j’ai bloquées ?</dt>
 <dd>Parce qu’il ne le sait vraiment pas. Le Temps d’écran d’Apple remet à Pausely des jetons opaques qui n’ont aucun sens en dehors de votre appareil : aucun nom d’app, aucun identifiant. Pausely peut demander à iOS de les bloquer ; il ne peut pas les lire.</dd>
 <dt>Je n’arrive pas à désactiver la protection. Est-ce un bug ?</dt>
-<dd>Vérifiez si le <strong>mode strict</strong> tourne — l’écran d’accueil le dit. Tant qu’il tourne, la protection ne peut pas être désactivée et les règles ne peuvent pas être supprimées, et c’est voulu. Il se termine tout seul à l’heure que vous avez choisie.</dd>
+<dd>Vérifiez si le <strong>mode strict</strong> tourne : l’écran d’accueil le dit. Tant qu’il tourne, la protection ne peut pas être désactivée et les règles ne peuvent pas être supprimées, et c’est voulu. Il se termine tout seul à l’heure que vous avez choisie.</dd>
 <dt>Pausely voit-il ce que je fais dans les autres apps ?</dt>
-<dd>Non. Il ne voit jamais votre navigation, vos messages ni quoi que ce soit à l’intérieur d’une autre app. iOS lui indique combien de temps les apps que vous avez choisies ont été ouvertes — pour votre objectif quotidien, vos limites et les fonctions liées au temps — et Pausely garde ces minutes sur votre appareil et ne les envoie jamais nulle part. En dehors de cela, il n’enregistre que ses propres événements — qu’une pause a été affichée, et ce que vous avez choisi — et les garde aussi sur votre appareil.</dd>
+<dd>Non. Il ne voit jamais votre navigation, vos messages ni quoi que ce soit à l’intérieur d’une autre app. iOS lui indique combien de temps les apps que vous avez choisies ont été ouvertes (pour votre objectif quotidien, vos limites et les fonctions liées au temps), et Pausely garde ces minutes sur votre appareil et ne les envoie jamais nulle part. En dehors de cela, il n’enregistre que ses propres événements (qu’une pause a été affichée, et ce que vous avez choisi) et les garde aussi sur votre appareil.</dd>
 <dt>Qu’est-ce que la réflexion IA, et est-elle active ?</dt>
-<dd>Elle est désactivée, jusqu’à ce que vous l’activiez. Quand vous le faites, une pause devient un court échange : vous tapez pourquoi vous ouvrez l’app, et une question vous revient. Elle rédige aussi une courte note sur votre semaine. Sur un iPhone doté d’Apple Intelligence, les deux peuvent être écrites sur le téléphone lui-même, et alors rien ne le quitte. Quand c’est OpenAI qui les écrit, ces mots vont au serveur de Pausely puis à OpenAI — jamais votre journal, jamais vos bilans d’humeur, jamais les apps que vous avez choisies. <kbd>Réglages</kbd> → <kbd>Réflexion IA</kbd> → <kbd>Ce qui est envoyé</kbd> énumère chaque champ, et la désactiver arrête tout cela.</dd>
+<dd>Elle est désactivée, jusqu’à ce que vous l’activiez. Quand vous le faites, une pause devient un court échange : vous tapez pourquoi vous ouvrez l’app, et une question vous revient. Elle rédige aussi une courte note sur votre semaine. Sur un iPhone doté d’Apple Intelligence, les deux peuvent être écrites sur le téléphone lui-même, et alors rien ne le quitte. Quand c’est OpenAI qui les écrit, ces mots vont au serveur de Pausely puis à OpenAI. Jamais votre journal, jamais vos bilans d’humeur, jamais les apps que vous avez choisies. <kbd>Réglages</kbd> → <kbd>Réflexion IA</kbd> → <kbd>Ce qui est envoyé</kbd> énumère chaque champ, et la désactiver arrête tout cela.</dd>
 <dt>Est-ce que ça marche sur iPad ? Sur Mac ?</dt>
 <dd>Sur iPad, oui : Pausely est une seule app pour iPhone et iPad, avec la même mise en page sur les deux, et elle fonctionne en Split View, Slide Over et Stage Manager. Sur Mac, non : les frameworks Temps d’écran sur lesquels Pausely repose n’y existent pas.</dd>
 <dt>Puis-je lire l’app dans ma langue ?</dt>
-<dd>Pausely parle huit langues et suit le réglage de votre appareil. Pour le lire dans une autre — sans rien changer d’autre sur votre appareil — ouvrez <kbd>Réglages</kbd> → <kbd>Langue</kbd>. Les écrans de blocage, les widgets et le compte à rebours suivent le même choix.</dd>
+<dd>Pausely parle huit langues et suit le réglage de votre appareil. Pour le lire dans une autre, sans rien changer d’autre sur votre appareil, ouvrez <kbd>Réglages</kbd> → <kbd>Langue</kbd>. Les écrans de blocage, les widgets et le compte à rebours suivent le même choix.</dd>
 <dt>Comment tout effacer ?</dt>
 <dd><kbd>Réglages</kbd> → <kbd>Vos données</kbd> → <kbd>Réinitialiser toutes les données</kbd>. Cela vide chaque pause, victoire, règle, entrée de journal et bilan d’humeur, retire les blocages et vous ramène au début. C’est refusé tant que le mode strict tourne. Les détails sont sur la page <a href="/pausely-links/fr/delete-data/">Vos données</a>.</dd>
 </dl>
@@ -254,11 +254,11 @@ footer a:hover{color:var(--accent)}
   <li>Vérifiez l’interrupteur <strong>Protection</strong> sur l’écran d’accueil.</li>
   <li>Vérifiez que l’accès au Temps d’écran est toujours accordé : <kbd>Réglages</kbd> → <kbd>Temps d’écran</kbd> → <kbd>Apps avec accès au Temps d’écran</kbd>. S’il a été retiré, Pausely affiche un écran de récupération avec un bouton pour redemander.</li>
   <li>Si l’app n’est que dans une <strong>règle</strong>, la pause n’apparaît que pendant les heures de cette règle.</li>
-  <li>Une <strong>fenêtre d’accès</strong> ouverte plus tôt tourne peut-être encore — le compte à rebours de l’écran verrouillé indique le temps restant.</li>
+  <li>Une <strong>fenêtre d’accès</strong> ouverte plus tôt tourne peut-être encore : le compte à rebours de l’écran verrouillé indique le temps restant.</li>
 </ul>
 <h3>L’écran de blocage apparaît mais la pause ne s’ouvre jamais</h3>
 <ul>
-  <li>Toucher le bouton de l’écran de blocage vous remet à l’app via une notification. Si les notifications sont désactivées pour Pausely, iOS ne peut pas livrer ce relais — activez-les dans <kbd>Réglages</kbd> → <kbd>Notifications</kbd> → <kbd>Pausely</kbd>.</li>
+  <li>Toucher le bouton de l’écran de blocage vous remet à l’app via une notification. Si les notifications sont désactivées pour Pausely, iOS ne peut pas livrer ce relais. Activez-les dans <kbd>Réglages</kbd> → <kbd>Notifications</kbd> → <kbd>Pausely</kbd>.</li>
   <li>Ouvrir Pausely directement ouvre également la pause en attente.</li>
 </ul>
 <h3>Les widgets sont en retard</h3>
@@ -268,8 +268,8 @@ footer a:hover{color:var(--accent)}
 <h3>Premium n’est pas reconnu</h3>
 <p>Touchez <kbd>Restaurer les achats</kbd> sur l’écran Premium, et vérifiez que l’appareil est connecté au même identifiant Apple que celui qui a fait l’achat. Les remboursements et les questions de facturation sont gérés par Apple via l’<a href="https://support.apple.com/billing">assistance Apple</a>.</p>
 </section><section class="card" id="contact"><h2>Contact</h2>
-<p>Une question, un bug, ou quelque chose qui devrait marcher et ne marche pas — écrivez-nous, et une personne vous répondra.</p>
-<div class="callout"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><div><strong><a href="mailto:topsol.org@gmail.com">topsol.org@gmail.com</a></strong><br><span class="small">Indiquez le modèle de votre appareil, la version d’iOS et ce que vous attendiez. Ne nous envoyez jamais votre journal ni vos bilans d’humeur — nous n’en avons pas besoin et préférerions ne pas les détenir.</span></div></div>
+<p>Une question, un bug, ou quelque chose qui devrait marcher et ne marche pas : écrivez-nous, et une personne vous répondra.</p>
+<div class="callout"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><div><strong><a href="mailto:topsol.org@gmail.com">topsol.org@gmail.com</a></strong><br><span class="small">Indiquez le modèle de votre appareil, la version d’iOS et ce que vous attendiez. Ne nous envoyez jamais votre journal ni vos bilans d’humeur : nous n’en avons pas besoin et préférerions ne pas les détenir.</span></div></div>
 <p style="margin-top:16px" class="small">La facturation, les remboursements et les changements d’abonnement sont gérés par Apple : <a href="https://apps.apple.com/account/subscriptions">gérer les abonnements</a> · <a href="https://support.apple.com/billing">demander un remboursement</a>.</p>
 </section></div></div></main>
 <footer><div class="in">

@@ -36,17 +36,17 @@ COPY = {
 "k.time_per_app": "앱별 시간",
 "k.time_banners": "사용 시간 알림",
 
-"meta.support.title": "Pausely — 도움말",
+"meta.support.title": "Pausely · 도움말",
 "meta.support.desc": "당신이 고른 앱 앞에 멈춤을 놓는 앱, Pausely의 공식 도움말. 작동 방식, 필요 조건, 자주 묻는 질문, 문의처.",
-"meta.about.title": "Pausely — 스크롤하기 전에, 한 번의 호흡",
+"meta.about.title": "Pausely: 스크롤하기 전에, 한 번의 호흡",
 "meta.about.desc": "Pausely는 하루를 삼키는 앱과 당신 사이에 작은 과속방지턱을 놓습니다. 계정이 없고, 당신의 앱과 시간, 당신의 말은 휴대폰에 남습니다.",
-"meta.privacy.title": "개인정보 처리방침 — Pausely",
+"meta.privacy.title": "개인정보 처리방침 · Pausely",
 "meta.privacy.desc": "Pausely가 기기에 두는 것, 저희가 광고 성과를 측정할 수 있도록 Meta의 SDK가 알리는 것, 그리고 선택 기능인 AI 되돌아보기가 보내는 것.",
-"meta.terms.title": "이용약관 — Pausely",
+"meta.terms.title": "이용약관 · Pausely",
 "meta.terms.desc": "Pausely 이용약관(EULA). 이 앱이 무엇이고 무엇이 아닌지, Premium 결제 방식, 그리고 엄격 모드가 당신에게 요구하는 것.",
-"meta.data.title": "데이터 삭제 — Pausely",
+"meta.data.title": "데이터 삭제 · Pausely",
 "meta.data.desc": "Pausely가 당신의 기기에 가진 모든 것을 지우는 방법, 구독은 어떻게 되는지, 그리고 Meta의 SDK와 AI 되돌아보기가 다른 곳에 남기는 것.",
-"meta.nf.title": "찾을 수 없음 — Pausely",
+"meta.nf.title": "찾을 수 없음 · Pausely",
 "meta.nf.desc": "페이지를 찾을 수 없습니다.",
 
 "s.eyebrow": "도움말",
@@ -59,15 +59,15 @@ COPY = {
 "s.how.b": """
 <p class="lead">Pausely는 하루를 삼키는 앱과 당신 사이에 작은 과속방지턱을 놓습니다.</p>
 <p>덜 쓰고 싶은 앱을 당신이 고릅니다. 그 뒤로는 앱을 눌러도 바로 열리지 않습니다. Pausely가 먼저 앞에 서서 짧은 멈춤을 건넵니다. 호흡이거나, 입력할 한 문장이거나, 지금 왜 여는지를 묻는 질문입니다. 그래도 들어가고 싶다면 들어갈 수 있습니다. 정해진 시간 동안만요. 그 시간이 끝나면 멈춤이 다시 돌아옵니다.</p>
-<p>목적은 당신을 가두는 것이 아닙니다. 엄지손가락이 이끄는 자동적인 습관을, 당신이 실제로 내리는 결정으로 바꾸는 것입니다. 생각할 10초가 주어지면 대부분은 앱을 닫습니다 — 그리고 Pausely는 그것을 성과로 셉니다.</p>
+<p>목적은 당신을 가두는 것이 아닙니다. 엄지손가락이 이끄는 자동적인 습관을, 당신이 실제로 내리는 결정으로 바꾸는 것입니다. 생각할 10초가 주어지면 대부분은 앱을 닫습니다. 그리고 Pausely는 그것을 성과로 셉니다.</p>
 <ul class="rows">
   <li><span class="tile">{shield}</span><div><b>보호</b><span>스위치 하나. 켜져 있는 동안 당신이 고른 앱은 열리는 대신 Pausely의 차분한 차단 화면을 보여줍니다.</span></div></li>
   <li><span class="tile">{wind}</span><div><b>세 가지 멈춤</b><span>호흡 연습, 입력 과제, 또는 의도 적기. 설정 과정에서 당신에게 맞는 것을 골라 주고, 언제든 바꿀 수 있습니다.</span></div></li>
-  <li><span class="tile">{clock}</span><div><b>규칙</b><span>특정 앱을 특정 시간에 지킵니다 — 잠들기 전, 일하는 시간 — 각각 고유한 멈춤과 고유한 시간을 두고요. 규칙은 그 시간이 끝날 때까지 완전히 막을 수도 있습니다.</span></div></li>
-  <li><span class="tile">{lock}</span><div><b>엄격 모드</b><span>한 시간, 하루, 또는 당신이 고른 시각까지 스스로와의 약속을 지킵니다. 켜져 있는 동안에는 보호를 끌 수 없고 규칙도 지울 수 없습니다 — 당신조차도요.</span></div></li>
+  <li><span class="tile">{clock}</span><div><b>규칙</b><span>특정 앱을 특정 시간(잠들기 전, 일하는 시간)에 지킵니다. 각각 고유한 멈춤과 고유한 시간을 두고요. 규칙은 그 시간이 끝날 때까지 완전히 막을 수도 있습니다.</span></div></li>
+  <li><span class="tile">{lock}</span><div><b>엄격 모드</b><span>한 시간, 하루, 또는 당신이 고른 시각까지 스스로와의 약속을 지킵니다. 켜져 있는 동안에는 보호를 끌 수 없고 규칙도 지울 수 없습니다. 당신조차도요.</span></div></li>
   <li><span class="tile">{book}</span><div><b>대안과 일지</b><span>건강한 대안을 최대 세 개까지 멈춤 화면에 세 번째 출구로 띄웁니다. 스크롤하기보다 쓰고 싶은 날을 위한 일지도 있습니다.</span></div></li>
-  <li><span class="tile">{chart}</span><div><b>기록</b><span>지켜낸 멈춤, 되찾은 시간, 연속 기록, 주간 그래프 — 여기에 홈 화면 위젯과, 접근 시간이 열려 있는 동안의 잠금 화면 카운트다운까지.</span></div></li>
-  <li><span class="tile">{sparkle}</span><div><b>원한다면, AI 되돌아보기</b><span>당신이 켜기 전까지는 꺼져 있습니다. “왜 이걸 열고 있나요?”를 짧은 대화로 바꾸고, 한 주에 대한 짧은 글도 씁니다. Apple Intelligence가 있는 iPhone에서는 기기 자체에서 작성될 수 있고, 그렇지 않으면 OpenAI가 작성합니다 — <a href="{BASE}{L}/privacy/#ai">개인정보</a>를 보세요.</span></div></li>
+  <li><span class="tile">{chart}</span><div><b>기록</b><span>지켜낸 멈춤, 되찾은 시간, 연속 기록, 주간 그래프. 여기에 홈 화면 위젯과, 접근 시간이 열려 있는 동안의 잠금 화면 카운트다운까지.</span></div></li>
+  <li><span class="tile">{sparkle}</span><div><b>원한다면, AI 되돌아보기</b><span>당신이 켜기 전까지는 꺼져 있습니다. “왜 이걸 열고 있나요?”를 짧은 대화로 바꾸고, 한 주에 대한 짧은 글도 씁니다. Apple Intelligence가 있는 iPhone에서는 기기 자체에서 작성될 수 있고, 그렇지 않으면 OpenAI가 작성합니다. <a href="{BASE}{L}/privacy/#ai">개인정보</a>를 보세요.</span></div></li>
 </ul>
 """,
 
@@ -75,9 +75,9 @@ COPY = {
 "s.requirements.b": """
 <div class="table-wrap"><table>
 <tr><th>기기</th><td><strong>iOS 17 또는 iPadOS 17</strong> 이상을 실행하는 <strong>iPhone 또는 iPad</strong>. 하나의 앱, 하나의 레이아웃, 두 기기 모두.</td></tr>
-<tr><th>권한</th><td><strong>스크린 타임</strong> 접근 권한. 설정 과정에서 Apple 자신의 요청 화면을 통해 한 번만 허용합니다. Pausely는 Apple의 스크린 타임 프레임워크 — iOS에 내장된 앱 시간 제한과 같은 시스템 — 를 사용하며, 앱을 실제로 막는 것은 Pausely가 아니라 Apple입니다.</td></tr>
+<tr><th>권한</th><td><strong>스크린 타임</strong> 접근 권한. 설정 과정에서 Apple 자신의 요청 화면을 통해 한 번만 허용합니다. Pausely는 Apple의 스크린 타임 프레임워크(iOS에 내장된 앱 시간 제한과 같은 시스템)를 사용하며, 앱을 실제로 막는 것은 Pausely가 아니라 Apple입니다.</td></tr>
 <tr><th>계정</th><td>없습니다. 앱 어디에도 가입, 이메일 입력란, 비밀번호가 없습니다.</td></tr>
-<tr><th>인터넷</th><td>필요하지 않습니다. 멈춤도, 규칙도, 그래프도, 일지도 오프라인에서 작동합니다. 연결되어 있을 때 네트워크를 쓰는 것은 세 가지입니다. Premium을 구매하거나 복원할 때의 Apple 자체 통신, 저희가 광고 성과를 측정할 수 있도록 설치·실행·구매를 알리는 Meta의 SDK, 그리고 OpenAI가 작성할 때의 AI 되돌아보기 — 이것은 당신이 켜기 전까지 꺼져 있습니다.</td></tr>
+<tr><th>인터넷</th><td>필요하지 않습니다. 멈춤도, 규칙도, 그래프도, 일지도 오프라인에서 작동합니다. 연결되어 있을 때 네트워크를 쓰는 것은 세 가지입니다. Premium을 구매하거나 복원할 때의 Apple 자체 통신, 저희가 광고 성과를 측정할 수 있도록 설치·실행·구매를 알리는 Meta의 SDK, 그리고 OpenAI가 작성할 때의 AI 되돌아보기입니다. 이것은 당신이 켜기 전까지 꺼져 있습니다.</td></tr>
 <tr><th>알림</th><td>선택 사항이며 기기에서 만들어집니다. 차단 화면에서 멈춤으로 넘겨주기 위해, 그리고 대안이 어땠는지 묻기 위해 씁니다. 당신이 켠 경우에만, 가장 힘든 시간 전의 알림과 {K_time_banners}에도 씁니다. 푸시 서버는 없습니다.</td></tr>
 <tr><th>언어</th><td>영어, 독일어, 스페인어, 프랑스어, 일본어, 한국어, 브라질 포르투갈어, 중국어 간체. Pausely는 기기의 언어를 따르지만, {K_settings} → {K_language}에서 다른 언어를 고를 수도 있습니다.</td></tr>
 </table></div>
@@ -87,11 +87,11 @@ COPY = {
 "s.start.b": """
 <p>설정은 일곱 화면, 3분이 채 걸리지 않습니다. 끝날 때쯤이면 보호는 이미 켜져 있고, 첫 규칙도 이미 쓰여 있습니다.</p>
 <ol class="steps">
-  <li><div><b>하루 중 얼마만큼을 휴대폰에 주고 있는지 답합니다</b> — 측정값이 아니라, 당신의 짐작입니다.</div></li>
+  <li><div><b>하루 중 얼마만큼을 휴대폰에 주고 있는지 답합니다</b>. 측정값이 아니라, 당신의 짐작입니다.</div></li>
   <li><div>Apple이 물으면 <b>스크린 타임 접근 권한을 허용합니다</b>. 이것 없이는 Pausely가 작동할 수 없고, {K_settings} → {K_screen_time}에서 언제든 거둘 수 있습니다.</div></li>
-  <li><div>Apple의 선택 화면에서 <b>앱을 고릅니다</b>. Pausely는 그 이름을 결코 알지 못합니다 — <a href="{BASE}{L}/privacy/">개인정보</a>를 보세요.</div></li>
+  <li><div>Apple의 선택 화면에서 <b>앱을 고릅니다</b>. Pausely는 그 이름을 결코 알지 못합니다. <a href="{BASE}{L}/privacy/">개인정보</a>를 보세요.</div></li>
   <li><div><b>세 가지 질문에 답합니다</b>. 당신에게 맞는 멈춤이 정해집니다.</div></li>
-  <li><div><b>대안을 세 개까지 더합니다</b> — 산책, 책, 물 한 잔, 또는 다른 앱으로 연결되는 나만의 것.</div></li>
+  <li><div><b>대안을 세 개까지 더합니다</b>. 산책, 책, 물 한 잔, 또는 다른 앱으로 연결되는 나만의 것.</div></li>
   <li><div><b>끝났습니다.</b> 고른 앱을 열어 멈춤을 만나 보세요.</div></li>
 </ol>
 """,
@@ -100,9 +100,9 @@ COPY = {
 "s.faq.b": """
 <dl class="faq">
 <dt>Pausely는 무료인가요?</dt>
-<dd>네. 무료는 체험판이 아니라 제대로 작동하는 제품입니다. <strong>규칙 하나</strong>, <strong>호흡 멈춤</strong>, 그리고 <strong>기록 화면 전체</strong> — 멈춤, 성과, 되찾은 시간, 연속 기록, 그래프.</dd>
+<dd>네. 무료는 체험판이 아니라 제대로 작동하는 제품입니다. <strong>규칙 하나</strong>, <strong>호흡 멈춤</strong>, 그리고 <strong>기록 화면 전체</strong>(멈춤, 성과, 되찾은 시간, 연속 기록, 그래프).</dd>
 <dt>Premium은 무엇을 더해 주나요?</dt>
-<dd>원하는 만큼의 규칙, 나머지 두 가지 멈춤(입력해서 통과하기, 의도 적기), 엄격 모드, 앱을 쓰고 난 뒤의 기분과 그냥 돌아섰을 때의 기분을 견주어 보여 주는 기분 분석, 그리고 주간 요약이 딸린 선택 기능인 AI 되돌아보기입니다. Premium은 월간 또는 연간 구독 — 연간은 <strong>무료 체험</strong>으로 시작합니다 — 이거나 한 번만 결제하는 평생 구매입니다. 가격은 앱과 거주 국가의 App Store에 표시되며, 결제는 Apple이 처리합니다.</dd>
+<dd>원하는 만큼의 규칙, 나머지 두 가지 멈춤(입력해서 통과하기, 의도 적기), 엄격 모드, 앱을 쓰고 난 뒤의 기분과 그냥 돌아섰을 때의 기분을 견주어 보여 주는 기분 분석, 그리고 주간 요약이 딸린 선택 기능인 AI 되돌아보기입니다. Premium은 월간 또는 연간 구독(연간은 <strong>무료 체험</strong>으로 시작합니다)이거나 한 번만 결제하는 평생 구매입니다. 가격은 앱과 거주 국가의 App Store에 표시되며, 결제는 Apple이 처리합니다.</dd>
 <dt>구독이 만료되면 어떻게 되나요?</dt>
 <dd>당신이 쌓아 온 것은 무엇도 사라지지 않습니다. 모든 규칙은 계속 돌아가고 수정도 할 수 있으며, 당신이 고른 멈춤도 계속 앱 앞에 섭니다. 닫히는 것은 “더 추가하는 일”뿐입니다. 카드가 만료됐다고 휴대폰을 지키는 일을 그만두는 앱은, 그러지 말아 달라고 부탁받은 바로 그 순간에 당신을 저버리는 셈이니까요.</dd>
 <dt>새 기기에서 구매를 복원할 수 있나요?</dt>
@@ -110,15 +110,15 @@ COPY = {
 <dt>어떤 앱을 막았는지 Pausely는 왜 알려 주지 못하나요?</dt>
 <dd>정말로 모르기 때문입니다. Apple의 스크린 타임은 당신의 기기 밖에서는 아무 의미가 없는 불투명한 토큰을 Pausely에 건넵니다. 앱 이름도, 식별자도 없습니다. Pausely는 iOS에 그것들을 막아 달라고 부탁할 수 있을 뿐, 읽을 수는 없습니다.</dd>
 <dt>보호를 끌 수가 없습니다. 고장인가요?</dt>
-<dd><strong>엄격 모드</strong>가 켜져 있는지 확인해 보세요 — 홈 화면에 표시됩니다. 켜져 있는 동안에는 보호를 끌 수 없고 규칙도 지울 수 없습니다. 그렇게 설계되어 있습니다. 당신이 고른 시각에 스스로 끝납니다.</dd>
+<dd><strong>엄격 모드</strong>가 켜져 있는지 확인해 보세요. 홈 화면에 표시됩니다. 켜져 있는 동안에는 보호를 끌 수 없고 규칙도 지울 수 없습니다. 그렇게 설계되어 있습니다. 당신이 고른 시각에 스스로 끝납니다.</dd>
 <dt>Pausely가 다른 앱에서 하는 일을 보나요?</dt>
-<dd>아니요. 당신의 웹 사용도, 메시지도, 다른 앱 안의 그 무엇도 결코 보지 않습니다. iOS는 하루 목표, 한도, 시간 기능을 위해 당신이 고른 앱이 얼마나 오래 열려 있었는지 Pausely에 알려 주고, Pausely는 그 사용 시간을 당신의 기기에 두며 어디로도 보내지 않습니다. 그 밖에 기록하는 것은 자기 자신의 사건 — 멈춤이 표시되었다는 것과, 당신이 무엇을 골랐는지 — 뿐이며, 그것 역시 당신의 기기에 남습니다.</dd>
+<dd>아니요. 당신의 웹 사용도, 메시지도, 다른 앱 안의 그 무엇도 결코 보지 않습니다. iOS는 하루 목표, 한도, 시간 기능을 위해 당신이 고른 앱이 얼마나 오래 열려 있었는지 Pausely에 알려 주고, Pausely는 그 사용 시간을 당신의 기기에 두며 어디로도 보내지 않습니다. 그 밖에 기록하는 것은 자기 자신의 사건(멈춤이 표시되었다는 것과, 당신이 무엇을 골랐는지)뿐이며, 그것 역시 당신의 기기에 남습니다.</dd>
 <dt>AI 되돌아보기는 무엇이고, 켜져 있나요?</dt>
-<dd>꺼져 있습니다. 당신이 켜기 전까지는요. 켜면 하나의 멈춤이 짧은 대화가 됩니다. 왜 앱을 여는지 적으면 질문이 되돌아옵니다. 한 주에 대한 짧은 글도 씁니다. Apple Intelligence가 있는 iPhone에서는 둘 다 기기 자체에서 작성될 수 있고, 그때는 아무것도 기기를 떠나지 않습니다. OpenAI가 작성할 때는 그 말들이 Pausely 자체 서버로, 그리고 OpenAI로 갑니다 — 일지도, 기분 기록도, 어떤 앱을 골랐는지도 결코 가지 않습니다. {K_settings} → {K_ai_reflection} → {K_what_is_sent}에 모든 항목이 나열되어 있고, 다시 끄면 그 모든 것이 멈춥니다.</dd>
+<dd>꺼져 있습니다. 당신이 켜기 전까지는요. 켜면 하나의 멈춤이 짧은 대화가 됩니다. 왜 앱을 여는지 적으면 질문이 되돌아옵니다. 한 주에 대한 짧은 글도 씁니다. Apple Intelligence가 있는 iPhone에서는 둘 다 기기 자체에서 작성될 수 있고, 그때는 아무것도 기기를 떠나지 않습니다. OpenAI가 작성할 때는 그 말들이 Pausely 자체 서버로, 그리고 OpenAI로 갑니다. 일지도, 기분 기록도, 어떤 앱을 골랐는지도 결코 가지 않습니다. {K_settings} → {K_ai_reflection} → {K_what_is_sent}에 모든 항목이 나열되어 있고, 다시 끄면 그 모든 것이 멈춥니다.</dd>
 <dt>iPad에서 되나요? Mac에서는요?</dt>
 <dd>iPad는 됩니다. Pausely는 iPhone과 iPad를 위한 하나의 앱이고, 두 기기의 레이아웃도 같으며, Split View와 Slide Over, Stage Manager에서도 작동합니다. Mac은 되지 않습니다. Pausely가 딛고 선 스크린 타임 프레임워크가 그곳에는 없기 때문입니다.</dd>
 <dt>제 언어로 읽을 수 있나요?</dt>
-<dd>Pausely는 여덟 개 언어를 하고, 기기의 설정을 따릅니다. 다른 언어로 읽고 싶다면 — 기기의 다른 설정은 그대로 둔 채 — {K_settings} → {K_language}를 여세요. 차단 화면도, 위젯도, 잠금 화면도 같은 선택을 따릅니다.</dd>
+<dd>Pausely는 여덟 개 언어를 하고, 기기의 설정을 따릅니다. 다른 언어로 읽고 싶다면, 기기의 다른 설정은 그대로 둔 채 {K_settings} → {K_language}를 여세요. 차단 화면도, 위젯도, 잠금 화면도 같은 선택을 따릅니다.</dd>
 <dt>전부 지우려면 어떻게 하나요?</dt>
 <dd>{RESET}. 모든 멈춤, 성과, 규칙, 일지, 기분 기록을 비우고, 차단을 내리고, 처음으로 되돌립니다. 엄격 모드가 켜져 있는 동안에는 거부합니다. 자세한 내용은 <a href="{BASE}{L}/delete-data/">내 데이터</a> 페이지에 있습니다.</dd>
 </dl>
@@ -131,11 +131,11 @@ COPY = {
   <li>홈 화면의 <strong>보호</strong> 스위치를 확인하세요.</li>
   <li>스크린 타임 접근 권한이 여전히 살아 있는지 확인하세요: {K_settings} → {K_screen_time} → {K_apps_with_st}. 권한이 거둬졌다면 Pausely가 다시 요청하는 버튼이 있는 복구 화면을 보여 줍니다.</li>
   <li>그 앱이 <strong>규칙</strong>에만 들어 있다면, 멈춤은 그 규칙의 시간대에만 나타납니다.</li>
-  <li>앞서 연 <strong>접근 시간</strong>이 아직 남아 있을 수 있습니다 — 잠금 화면의 카운트다운이 남은 시간을 보여 줍니다.</li>
+  <li>앞서 연 <strong>접근 시간</strong>이 아직 남아 있을 수 있습니다. 잠금 화면의 카운트다운이 남은 시간을 보여 줍니다.</li>
 </ul>
 <h3>차단 화면은 뜨는데 멈춤이 열리지 않습니다</h3>
 <ul>
-  <li>차단 화면의 버튼을 누르면 알림을 통해 앱으로 넘어갑니다. Pausely의 알림이 꺼져 있으면 iOS가 그 연결을 전달하지 못합니다 — {K_settings} → {K_notifications} → <kbd>Pausely</kbd>에서 켜 주세요.</li>
+  <li>차단 화면의 버튼을 누르면 알림을 통해 앱으로 넘어갑니다. Pausely의 알림이 꺼져 있으면 iOS가 그 연결을 전달하지 못합니다. {K_settings} → {K_notifications} → <kbd>Pausely</kbd>에서 켜 주세요.</li>
   <li>Pausely를 직접 열어도 기다리고 있던 멈춤이 열립니다.</li>
 </ul>
 <h3>위젯이 뒤처져 있습니다</h3>
@@ -148,36 +148,36 @@ COPY = {
 
 "s.contact.h": "문의",
 "s.contact.b": """
-<p>궁금한 점, 버그, 되어야 하는데 되지 않는 것 — 편지를 보내 주시면 사람이 답합니다.</p>
-<div class="callout"><span class="tile">{mail}</span><div><strong>{MAIL}</strong><br><span class="small">기기 모델, iOS 버전, 그리고 어떤 일이 일어날 거라 기대했는지 함께 적어 주세요. 일지나 기분 기록은 절대 보내지 마세요 — 저희에게 필요하지 않고, 갖고 있고 싶지도 않습니다.</span></div></div>
+<p>궁금한 점, 버그, 되어야 하는데 되지 않는 것, 무엇이든 편지를 보내 주시면 사람이 답합니다.</p>
+<div class="callout"><span class="tile">{mail}</span><div><strong>{MAIL}</strong><br><span class="small">기기 모델, iOS 버전, 그리고 어떤 일이 일어날 거라 기대했는지 함께 적어 주세요. 일지나 기분 기록은 절대 보내지 마세요. 저희에게 필요하지 않고, 갖고 있고 싶지도 않습니다.</span></div></div>
 <p style="margin-top:16px" class="small">결제, 환불, 구독 변경은 Apple이 처리합니다: <a href="https://apps.apple.com/account/subscriptions">구독 관리</a> · <a href="https://support.apple.com/billing">환불 요청</a>.</p>
 """,
 
 "a.eyebrow": "Pausely 소개",
 "a.h1": "스크롤하기 전에, 한 번의 호흡.",
-"a.sub": "덜 쓰고 싶은 앱을 고르세요. 그 뒤로는 하나를 열 때 먼저 멈춤이 옵니다 — 그리고 당신이 실제로 내리는 선택이.",
+"a.sub": "덜 쓰고 싶은 앱을 고르세요. 그 뒤로는 하나를 열 때 먼저 멈춤이, 그리고 당신이 실제로 내리는 선택이 옵니다.",
 "a.cta": "도움말",
 "a.meta": "계정 없음 · iPhone과 iPad · iOS 17 이상 · 여덟 개 언어",
-"a.lead": "Pausely는 하루를 삼키는 앱과 당신 사이에 작은 과속방지턱을 놓습니다. 가두는 것도, 훈계도 아닙니다 — 정말 열려던 것이 맞는지 정할 10초입니다.",
+"a.lead": "Pausely는 하루를 삼키는 앱과 당신 사이에 작은 과속방지턱을 놓습니다. 가두는 것도, 훈계도 아닙니다. 정말 열려던 것이 맞는지 정할 10초입니다.",
 
 "a.f1.h": "스크롤하기 전에, 한 번의 호흡.",
-"a.f1.p": "Pausely는 당신이 고른 앱 앞에 서서 먼저 10초를 청합니다 — 호흡 연습이거나, 입력할 한 문장이거나, 의도를 적어 볼 잠깐의 시간입니다.",
+"a.f1.p": "Pausely는 당신이 고른 앱 앞에 서서 먼저 10초를 청합니다. 호흡 연습이거나, 입력할 한 문장이거나, 의도를 적어 볼 잠깐의 시간입니다.",
 "a.f2.h": "왜 그것을 열고 있나요?",
 "a.f2.p": "반사를 결정으로 바꾸고, 그 결정을 일부러 내리세요. 생각할 기회만 주어지면 사람들은 대개 앱을 닫습니다.",
 "a.f3.h": "돌아서는 것도 성과입니다.",
-"a.f3.p": "성과로 남기거나, 5분만 들어가거나 — 가두지도, 훈계하지도 않습니다. 당신이 정한 대안이 세 번째 출구로 멈춤 화면에 놓입니다.",
+"a.f3.p": "성과로 남기거나, 5분만 들어가거나. 가두지도, 훈계하지도 않습니다. 당신이 정한 대안이 세 번째 출구로 멈춤 화면에 놓입니다.",
 "a.f4.h": "시간이 돌아오는 것을 보세요.",
-"a.f4.p": "지켜낸 모든 멈춤, 되찾은 시간, 연속 기록과 주간 그래프 — 홈 화면 위젯과 잠금 화면 카운트다운까지 함께.",
+"a.f4.p": "지켜낸 모든 멈춤, 되찾은 시간, 연속 기록과 주간 그래프, 홈 화면 위젯과 잠금 화면 카운트다운까지 함께.",
 "a.f5.h": "당신의 앱, 당신의 규칙.",
 "a.f5.p": "앱마다 스위치와 멈춤을, 저녁과 근무일을 위한 일정과 함께. 부탁하면 엄격 모드가 당신을 그 약속에 붙들어 둡니다.",
 "a.f6.h": "알게 된 것은 당신의 기기가 갖습니다.",
-"a.f6.p": '계정이 없습니다. 당신의 앱, 시간, 멈춤, 일지는 기기에 남습니다. 어떤 앱을 골랐는지조차 Pausely는 읽지 못합니다 — 그건 Apple이 갖고 있습니다. Meta의 SDK는 저희 광고 중 어떤 것을 보고 당신이 여기에 왔는지 알려 주고, 선택 기능인 AI 되돌아보기는 OpenAI가 작성할 때에만 당신이 거기에 입력한 것을 보냅니다. <a href="{BASE}{L}/privacy/">정확히 무엇이 기기를 떠나는지.</a>',
+"a.f6.p": '계정이 없습니다. 당신의 앱, 시간, 멈춤, 일지는 기기에 남습니다. 어떤 앱을 골랐는지조차 Pausely는 읽지 못합니다. 그건 Apple이 갖고 있습니다. Meta의 SDK는 저희 광고 중 어떤 것을 보고 당신이 여기에 왔는지 알려 주고, 선택 기능인 AI 되돌아보기는 OpenAI가 작성할 때에만 당신이 거기에 입력한 것을 보냅니다. <a href="{BASE}{L}/privacy/">정확히 무엇이 기기를 떠나는지.</a>',
 
 "a.price.h": "가격",
 "a.price.b": """
-<p>무료는 체험판이 아니라 제대로 작동하는 제품이고, 당신이 설정한 것은 무엇도 사라지지 않습니다 — 구독이 만료되어도요.</p>
+<p>무료는 체험판이 아니라 제대로 작동하는 제품이고, 당신이 설정한 것은 무엇도 사라지지 않습니다. 구독이 만료되어도요.</p>
 <div class="tiers" style="margin-top:16px">
-  <div class="tier"><div class="lbl">무료</div><div class="price">0원</div><ul><li>규칙 하나</li><li>호흡 멈춤</li><li>기록 화면 전체 — 성과, 되찾은 시간, 연속 기록, 그래프</li><li>위젯과 잠금 화면 카운트다운</li></ul></div>
+  <div class="tier"><div class="lbl">무료</div><div class="price">0원</div><ul><li>규칙 하나</li><li>호흡 멈춤</li><li>기록 화면 전체(성과, 되찾은 시간, 연속 기록, 그래프)</li><li>위젯과 잠금 화면 카운트다운</li></ul></div>
   <div class="tier premium"><div class="lbl">Premium</div><div class="price">월간 · 연간 · 평생</div><ul><li>원하는 만큼의 규칙</li><li>세 가지 멈춤 모두</li><li>엄격 모드</li><li>기분 분석</li><li>선택 기능인 AI 되돌아보기와 주간 요약</li><li>연간은 무료 체험으로 시작</li></ul></div>
 </div>
 <p class="small" style="margin-top:14px">가격은 앱과 거주 국가의 App Store에 표시됩니다. 결제는 Apple이 처리합니다. <a href="{BASE}{L}/terms/#subscriptions">구독 약관.</a></p>
@@ -188,18 +188,18 @@ COPY = {
 <p>Pausely는 iOS에 내장된 앱 시간 제한을 움직이는 것과 같은 프레임워크를 씁니다. Apple은 그 목적으로 심사한 앱에만 이 권한을 주며, 당신과 앱 사이에 실제로 서 있는 것은 Pausely가 아니라 Apple입니다. 그래서 Pausely는 이름을 한 번도 알지 못한 채로 앱을 막을 수 있습니다.</p>
 <ul class="rows" style="margin-top:16px">
   <li><span class="tile">{tablet}</span><div><b>iPhone과 iPad, 하나의 앱</b><span>두 기기 모두 같은 한 단 레이아웃이며, Split View와 Slide Over, Stage Manager에서도 얌전히 작동합니다. iOS 17 또는 iPadOS 17 이상.</span></div></li>
-  <li><span class="tile">{globe}</span><div><b>여덟 개 언어</b><span>영어, 독일어, 스페인어, 프랑스어, 일본어, 한국어, 브라질 포르투갈어, 중국어 간체 — 차단 화면과 위젯까지 포함해서요. 기기의 다른 설정은 그대로 둔 채 {K_settings} → {K_language}에서 고르세요.</span></div></li>
+  <li><span class="tile">{globe}</span><div><b>여덟 개 언어</b><span>영어, 독일어, 스페인어, 프랑스어, 일본어, 한국어, 브라질 포르투갈어, 중국어 간체. 차단 화면과 위젯까지 포함해서요. 기기의 다른 설정은 그대로 둔 채 {K_settings} → {K_language}에서 고르세요.</span></div></li>
 </ul>
 """,
 
 "p.eyebrow": "개인정보 처리방침",
 "p.h1": "알게 된 것은 당신의 기기가 갖습니다.",
-"p.sub": "Pausely에는 계정이 없고, 당신에 대해 기록하는 것은 모두 기기에 남습니다. 기기를 떠나는 것은 네 가지입니다. RevenueCat이 보관하는 당신의 구매 기록, 저희가 광고 성과를 측정할 수 있도록 Meta의 SDK가 알리는 것, 앱이 어떻게 쓰이는지에 대해 Google Analytics가 세는 것, 그리고 — 당신이 켜고 OpenAI가 작성하는 경우에만 — AI 되돌아보기에 입력한 말입니다. 이 페이지는 그 경계들이 정확히 어디인지에 대한 것입니다.",
+"p.sub": "Pausely에는 계정이 없고, 당신에 대해 기록하는 것은 모두 기기에 남습니다. 기기를 떠나는 것은 네 가지입니다. RevenueCat이 보관하는 당신의 구매 기록, 저희가 광고 성과를 측정할 수 있도록 Meta의 SDK가 알리는 것, 앱이 어떻게 쓰이는지에 대해 Google Analytics가 세는 것, 그리고 당신이 켜고 OpenAI가 작성하는 경우에만, AI 되돌아보기에 입력한 말입니다. 이 페이지는 그 경계들이 정확히 어디인지에 대한 것입니다.",
 "p.meta": "{DATE}부터 유효 · iPhone, iPad 및 Android용 Pausely 앱과 이 사이트에 적용됩니다",
 
 "p.summary.h": "짧은 요약",
 "p.summary.b": """
-<p class="lead">Pausely에는 계정이 없습니다. <strong>기록하는 것은 모두 — 어떤 앱을 지키는지, 그 앱에서 얼마나 시간을 보내는지, 멈춤, 일지 — 당신의 기기에 쓰여 그대로 남습니다.</strong> 어떤 앱을 골랐는지조차 Pausely는 읽지 못합니다. 그것은 Apple의 스크린 타임이 갖고 있습니다.</p>
+<p class="lead">Pausely에는 계정이 없습니다. <strong>기록하는 것은 모두(어떤 앱을 지키는지, 그 앱에서 얼마나 시간을 보내는지, 멈춤, 일지) 당신의 기기에 쓰여 그대로 남습니다.</strong> 어떤 앱을 골랐는지조차 Pausely는 읽지 못합니다. 그것은 Apple의 스크린 타임이 갖고 있습니다.</p>
 <p><strong>기기를 떠나는 것은 네 가지</strong>이며, 이 페이지는 그 각각의 모든 부분을 나열합니다.</p>
 <ul>
   <li><strong>당신의 구매 기록</strong>. App Store를 통해 저희를 대신해 Premium을 판매하는 RevenueCat이 보관합니다. 여기에 담기는 것은 어떤 요금제를 언제 구매했는지, 그것이 갱신되는지, 그리고 RevenueCat이 이 설치를 위해 스스로 만들어 낸 식별자입니다. RevenueCat은 어떤 앱을 지키는지도, 그 앱을 어떻게 쓰는지도, 당신이 적는 그 무엇도 결코 알지 못합니다. <a href="{BASE}{L}/privacy/#purchases">자세히.</a></li>
@@ -207,24 +207,24 @@ COPY = {
   <li><strong>Firebase용 Google Analytics</strong>. 얼마나 많은 사람이 Pausely를 어떻게 쓰는지 저희가 볼 수 있도록 들어 있습니다. 여기에 담기는 것은 앱이 언제 열리고 얼마나 오래 열려 있는지, 앱의 어떤 화면이 보였는지, 기기의 종류, 기기가 대략 어디에 있는지, 그리고 이 설치를 위해 스스로 만들어 낸 식별자입니다. 어떤 앱을 지키는지도, 그 앱을 어떻게 쓰는지도, 당신이 적는 그 무엇도 결코 알지 못하며, 광고 식별자를 읽지 않습니다. <a href="{BASE}{L}/privacy/#analytics">자세히.</a></li>
   <li><strong>AI 되돌아보기</strong>. 당신이 켜기 전까지 꺼져 있습니다. Apple Intelligence가 있는 iPhone에서는 기기 자체에서 작성될 수 있고, 그때는 아무것도 떠나지 않습니다. OpenAI가 작성할 때는 그 하나의 멈춤에 입력한 말이 그 순간에 대한 네 가지 작은 사실과 함께 Pausely의 서버로, 그리고 OpenAI로 갑니다. <a href="{BASE}{L}/privacy/#ai">자세히.</a></li>
 </ul>
-<div class="callout"><span class="tile">{eye-off}</span><div>일지는 결코 기기를 떠나지 않습니다. 기분 기록도 결코 떠나지 않습니다. 다른 앱에서 보내는 시간도 결코 떠나지 않습니다. 어떤 앱을 골랐는지도 떠나지 않습니다 — 그것은 당신의 기기 안에서조차 Pausely가 읽을 수 없기 때문입니다.</div></div>
+<div class="callout"><span class="tile">{eye-off}</span><div>일지는 결코 기기를 떠나지 않습니다. 기분 기록도 결코 떠나지 않습니다. 다른 앱에서 보내는 시간도 결코 떠나지 않습니다. 어떤 앱을 골랐는지도 떠나지 않습니다. 그것은 당신의 기기 안에서조차 Pausely가 읽을 수 없기 때문입니다.</div></div>
 <p style="margin-top:16px">Apple의 개인정보 라벨 용어로는 <strong>추적 없음</strong>, 저희 광고 성과를 측정하기 위해 Meta의 SDK가 수집하는 <strong>식별자, 사용 데이터, 구매, 진단, 기타 데이터</strong>, 앱이 어떻게 쓰이는지 이해하기 위해 Google Analytics가 수집하는 <strong>식별자, 사용 데이터, 대략적인 위치, 구매</strong>, Premium을 판매하기 위해 RevenueCat이 기록하는 <strong>구매</strong>, 그리고 당신과 연결되지 않고 AI 되돌아보기가 작동하도록 하는 데에만 쓰이는 <strong>사용자 콘텐츠</strong>입니다. 이 방침은 {COMPANY}가 발행하는 iPhone, iPad 및 Android용 Pausely 앱과 이 웹사이트에 적용됩니다.</p>
 <p style="margin-top:16px"><strong>Android에서</strong> Pausely는 똑같이 작동하지만 Apple이 아닌 Google의 도구를 씁니다. Meta의 SDK도 Google Analytics도 없고, Google의 ML Kit가 자신에 대한 진단 정보를 Google에 보내며, AI 되돌아보기는 Apple Intelligence 대신 Gemini Nano를, App Attest 대신 Google Play Integrity를 씁니다. 자세한 내용은 <a href="{BASE}{L}/privacy/#android">Android의 Pausely</a>에 있습니다.</p>
 """,
 
 "p.collect.h": "저희가 수집하는 것",
 "p.collect.b": """
-<p>“수집”이란, Apple의 뜻으로도 저희의 뜻으로도, 데이터를 기기 밖으로 전송해 일시적이지 않은 형태로 어딘가에 보관하는 것입니다. 그 잣대로 보면 Pausely가 수집하는 것은 RevenueCat이 보관하는 당신의 구매 기록, 저희가 광고 성과를 측정할 수 있도록 Meta의 SDK가 알리는 것, 앱이 어떻게 쓰이는지에 대해 Google Analytics가 세는 것, 그리고 — AI 되돌아보기를 켜고 OpenAI가 작성하는 경우에만 — 그 한 화면에 입력한 말입니다. 그 밖에는 없습니다.</p>
+<p>“수집”이란, Apple의 뜻으로도 저희의 뜻으로도, 데이터를 기기 밖으로 전송해 일시적이지 않은 형태로 어딘가에 보관하는 것입니다. 그 잣대로 보면 Pausely가 수집하는 것은 RevenueCat이 보관하는 당신의 구매 기록, 저희가 광고 성과를 측정할 수 있도록 Meta의 SDK가 알리는 것, 앱이 어떻게 쓰이는지에 대해 Google Analytics가 세는 것, 그리고 AI 되돌아보기를 켜고 OpenAI가 작성하는 경우에만, 그 한 화면에 입력한 말입니다. 그 밖에는 없습니다.</p>
 <div class="table-wrap"><table>
 <tr><th>범주</th><th>수집하나요?</th><th>그 뜻</th></tr>
 <tr><td>연락처 정보</td><td>아니요</td><td>앱 어디에도 계정도, 로그인도, 이메일 입력란도 없습니다.</td></tr>
-<tr><td>식별자</td><td><strong>예 — Meta의 SDK와 Google Analytics</strong></td><td>각각이 이 Pausely 설치를 위해 만들어 내어 자신이 알리는 것과 함께 보내는 식별자. 당신의 이름도, Apple 계정도, 광고 식별자도 아닙니다. Pausely는 앱 추적 투명성 권한을 결코 요청하지 않으므로, iOS는 광고 식별자를 내주지 않으며, Google Analytics는 광고 식별자도 공급업체 식별자도 읽지 않습니다. Pausely 자체에는 사용자 ID도 기기 ID도 없습니다.</td></tr>
-<tr><td>사용 데이터</td><td><strong>예 — Meta의 SDK와 Google Analytics</strong></td><td>Pausely가 설치되었다는 것, 그리고 열릴 때마다 그 사실과 얼마나 오래 열려 있었는지. Google Analytics는 Pausely의 어떤 화면이 보였는지도 셉니다. 그것이 전부입니다. Pausely는 자체 이벤트를 하나도 기록하지 않으며, Pausely가 세는 것 — 멈춤, 성과, 다른 앱에서 보내는 시간 — 은 어느 것도 전송되지 않습니다. 그것들은 당신 자신의 화면을 위해 기기에 남습니다.</td></tr>
-<tr><td>구매</td><td><strong>예 — RevenueCat, Meta의 SDK, Google Analytics</strong></td><td>RevenueCat은 저희가 Premium을 판매할 수 있도록 각 구매의 기록을 보관합니다. 어떤 요금제인지, 언제 구매되었는지, 그 가격과 통화, 그리고 갱신되는지를, 이 설치를 위해 스스로 만들어 낸 식별자와 함께요. Meta의 SDK도 요금제가 구매되거나, 무료 체험이 시작되거나, 구독이 갱신되는 것을 알아차리고, 어떤 요금제인지, 그 가격과 통화를 알립니다. Google Analytics도 알아차린 구매를 같은 방식으로 셉니다. 결제 자체는 App Store 시트에서 이루어지는 Apple의 일이며, Pausely는 카드를 보지 않습니다.</td></tr>
-<tr><td>진단</td><td><strong>예 — Meta의 SDK</strong></td><td>Meta 자신의 코드에서 나온 충돌 보고서. Pausely에는 자체 충돌 보고나 성능 측정 도구가 없습니다.</td></tr>
-<tr><td>기타 데이터</td><td><strong>예 — Meta의 SDK</strong></td><td>Meta의 이벤트와 함께 보내지는 기술적 세부 정보. 기기의 종류, iOS 버전, 언어, 시간대 같은 것입니다.</td></tr>
-<tr><td>사용자 콘텐츠</td><td><strong>AI 되돌아보기만</strong></td><td>일지, 기분 기록, 직접 만든 대안은 기기에 저장되고 다른 어디에도 없습니다. AI 되돌아보기를 켜고 OpenAI가 작성하는 경우에만 — 오직 그때만 — <em>그 한 화면</em>에 입력한 말이 전송됩니다. 질문이 되돌아올 수 있도록요. 당신이 쓰는 다른 어떤 것도 결코 전송되지 않습니다.</td></tr>
-<tr><td>위치</td><td><strong>대략적으로 — Google Analytics</strong></td><td>Google Analytics의 데이터가 들어오는 마스킹된 IP 주소를 바탕으로 Google이 추정하는 대략적인 위치 — 국가, 지역, 도시. Pausely는 당신의 위치를 결코 요청하지 않으며, 읽지도 않습니다.</td></tr>
+<tr><td>식별자</td><td><strong>예(Meta의 SDK와 Google Analytics)</strong></td><td>각각이 이 Pausely 설치를 위해 만들어 내어 자신이 알리는 것과 함께 보내는 식별자. 당신의 이름도, Apple 계정도, 광고 식별자도 아닙니다. Pausely는 앱 추적 투명성 권한을 결코 요청하지 않으므로, iOS는 광고 식별자를 내주지 않으며, Google Analytics는 광고 식별자도 공급업체 식별자도 읽지 않습니다. Pausely 자체에는 사용자 ID도 기기 ID도 없습니다.</td></tr>
+<tr><td>사용 데이터</td><td><strong>예(Meta의 SDK와 Google Analytics)</strong></td><td>Pausely가 설치되었다는 것, 그리고 열릴 때마다 그 사실과 얼마나 오래 열려 있었는지. Google Analytics는 Pausely의 어떤 화면이 보였는지도 셉니다. 그것이 전부입니다. Pausely는 자체 이벤트를 하나도 기록하지 않으며, Pausely가 세는 것(멈춤, 성과, 다른 앱에서 보내는 시간)은 어느 것도 전송되지 않습니다. 그것들은 당신 자신의 화면을 위해 기기에 남습니다.</td></tr>
+<tr><td>구매</td><td><strong>예(RevenueCat, Meta의 SDK, Google Analytics)</strong></td><td>RevenueCat은 저희가 Premium을 판매할 수 있도록 각 구매의 기록을 보관합니다. 어떤 요금제인지, 언제 구매되었는지, 그 가격과 통화, 그리고 갱신되는지를, 이 설치를 위해 스스로 만들어 낸 식별자와 함께요. Meta의 SDK도 요금제가 구매되거나, 무료 체험이 시작되거나, 구독이 갱신되는 것을 알아차리고, 어떤 요금제인지, 그 가격과 통화를 알립니다. Google Analytics도 알아차린 구매를 같은 방식으로 셉니다. 결제 자체는 App Store 시트에서 이루어지는 Apple의 일이며, Pausely는 카드를 보지 않습니다.</td></tr>
+<tr><td>진단</td><td><strong>예(Meta의 SDK)</strong></td><td>Meta 자신의 코드에서 나온 충돌 보고서. Pausely에는 자체 충돌 보고나 성능 측정 도구가 없습니다.</td></tr>
+<tr><td>기타 데이터</td><td><strong>예(Meta의 SDK)</strong></td><td>Meta의 이벤트와 함께 보내지는 기술적 세부 정보. 기기의 종류, iOS 버전, 언어, 시간대 같은 것입니다.</td></tr>
+<tr><td>사용자 콘텐츠</td><td><strong>AI 되돌아보기만</strong></td><td>일지, 기분 기록, 직접 만든 대안은 기기에 저장되고 다른 어디에도 없습니다. AI 되돌아보기를 켜고 OpenAI가 작성하는 경우에만, 오직 그때만, <em>그 한 화면</em>에 입력한 말이 전송됩니다. 질문이 되돌아올 수 있도록요. 당신이 쓰는 다른 어떤 것도 결코 전송되지 않습니다.</td></tr>
+<tr><td>위치</td><td><strong>대략적으로(Google Analytics)</strong></td><td>Google Analytics의 데이터가 들어오는 마스킹된 IP 주소를 바탕으로 Google이 추정하는 대략적인 위치(국가, 지역, 도시). Pausely는 당신의 위치를 결코 요청하지 않으며, 읽지도 않습니다.</td></tr>
 <tr><td>건강, 연락처, 웹 사용, 검색</td><td>아니요</td><td>Pausely는 당신의 위치, 건강 기록, 연락처를 요청하지 않으며, 웹 사용이나 검색을 보지 않습니다. 휴대폰 대신 고른 산책 중에는 휴대폰의 동작 센서로 걸음 수를 세어 보여 주고, 그 수는 잊어버립니다.</td></tr>
 </table></div>
 <p style="margin-top:14px"><strong>추적:</strong> 없습니다. Pausely는 당신을 추적할 권한을 결코 요청하지 않으므로, iOS는 기기의 광고 식별자를 Meta의 SDK에 내주지 않으며, SDK는 추적이 허용되지 않는다고 Meta에 알립니다. Google Analytics는 광고 식별자를 읽지 않으며, Pausely에서는 Google signals, Google과의 데이터 공유, 광고 맞춤설정이 꺼져 있습니다. 저희는 당신에 관한 무엇도 다른 회사의 앱이나 웹사이트 데이터와 연결하지 않으며, 데이터 중개업체와 아무것도 공유하지 않습니다.</p>
@@ -234,13 +234,13 @@ COPY = {
 "p.device.b": """
 <p>Pausely는 다음을 iPhone 또는 iPad 안의 자기 전용 저장 공간에 보관합니다. 기기의 암호와 암호화로 보호됩니다. 그 어느 것도 업로드되지 않고, 저희가 백업하지도, 볼 수도 없습니다.</p>
 <ul>
-  <li><strong>고른 앱 목록</strong> — 지키는 앱, 그리고 {K_time_banners}에 고른 앱이 있다면 그 앱들도. 모두 Pausely가 읽을 수 없는 불투명한 스크린 타임 토큰으로 보관됩니다(아래 참조).</li>
-  <li><strong>규칙과 일정</strong> — 당신이 붙인 이름, 시간대, 그리고 멈춤의 종류.</li>
-  <li><strong>멈춤의 결과</strong> — 멈춤이 표시되었다는 것, 그 시각, 그리고 돌아섰는지, 들어갔는지, 대안을 골랐는지. 기록 화면도, 연속 기록도, 그래프도 이것으로 만들어집니다.</li>
-  <li><strong>고른 앱에서 보낸 시간</strong> — iOS가 세는 그대로의 하루 단위 사용 시간(분)으로, 하루 목표, 한도, 짧은 영상 추정치, {K_time_banners}에 쓰입니다. 최대 60일간 보관합니다.</li>
-  <li><strong>당신이 쓰는 것</strong> — 일지, 멈춤 화면에 입력한 말, 끝난 뒤의 기분 기록, 직접 만든 대안의 이름.</li>
-  <li><strong>설정</strong> — 고른 멈춤, 엄격 모드 상태, 대안, 주로 짧은 영상이라고 표시한 앱, 언어, 그 밖의 취향.</li>
-  <li><strong>Premium 권한</strong> — 무엇을 열어 줄지 앱이 알 수 있도록, 등급과 만료일.</li>
+  <li><strong>고른 앱 목록</strong>: 지키는 앱, 그리고 {K_time_banners}에 고른 앱이 있다면 그 앱들도. 모두 Pausely가 읽을 수 없는 불투명한 스크린 타임 토큰으로 보관됩니다(아래 참조).</li>
+  <li><strong>규칙과 일정</strong>: 당신이 붙인 이름, 시간대, 그리고 멈춤의 종류.</li>
+  <li><strong>멈춤의 결과</strong>: 멈춤이 표시되었다는 것, 그 시각, 그리고 돌아섰는지, 들어갔는지, 대안을 골랐는지. 기록 화면도, 연속 기록도, 그래프도 이것으로 만들어집니다.</li>
+  <li><strong>고른 앱에서 보낸 시간</strong>: iOS가 세는 그대로의 하루 단위 사용 시간(분)으로, 하루 목표, 한도, 짧은 영상 추정치, {K_time_banners}에 쓰입니다. 최대 60일간 보관합니다.</li>
+  <li><strong>당신이 쓰는 것</strong>: 일지, 멈춤 화면에 입력한 말, 끝난 뒤의 기분 기록, 직접 만든 대안의 이름.</li>
+  <li><strong>설정</strong>: 고른 멈춤, 엄격 모드 상태, 대안, 주로 짧은 영상이라고 표시한 앱, 언어, 그 밖의 취향.</li>
+  <li><strong>Premium 권한</strong>: 무엇을 열어 줄지 앱이 알 수 있도록, 등급과 만료일.</li>
 </ul>
 <p>iCloud 백업이나 암호화된 로컬 백업을 쓰신다면, Apple이 Pausely의 데이터를 그 백업에 포함할 수 있습니다. 그것은 당신의 Apple 계정과 Apple의 개인정보 약관 아래에 있고, 저희는 접근할 수 없습니다.</p>
 """,
@@ -255,13 +255,13 @@ COPY = {
 <p><strong>짧은 영상</strong> 수치는 추정치이며 언제나 “약”을 붙여 보여 줍니다. 표시한 앱에서 보낸 시간(분)을 당신이 정한 영상 한 개의 길이로 나눈 값입니다. Pausely는 영상도, 화면에 있는 그 밖의 어떤 것도 결코 보지 않습니다.</p>
 <p>Pausely는 당신의 웹 사용도, 메시지도, 어떤 앱 안에서 하는 일도 지켜보지 않습니다. 차단 화면을 그리고 그 가림을 집행하는 것은 iOS 자신입니다. 위의 사용 시간 외에 Pausely가 아는 것은 자기 멈춤이 표시되었다는 것과, 거기서 당신이 무엇을 골랐는지뿐입니다.</p>
 """,
-"p.ads.h": "Meta의 SDK — 저희 광고의 성과 측정",
+"p.ads.h": "Meta의 SDK: 저희 광고의 성과 측정",
 "p.ads.b": """
 <p class="lead">Pausely는 Facebook과 Instagram에 광고를 냅니다. 그 광고 중 어떤 광고를 보고 사람들이 Pausely에 왔는지 저희가 알 수 있도록, <strong>Pausely 1.3부터 앱에는 Meta의 소프트웨어 개발 키트(SDK)가 들어 있습니다.</strong> 이것은 앱에 들어 있는 다른 회사의 코드 세 가지 중 하나이며, 나머지 둘은 Premium을 판매하는 RevenueCat의 코드와, 앱이 어떻게 쓰이는지 세는 Google Analytics입니다. 이 SDK는 앱 자체 안에서만 실행되며, 차단 화면을 그리거나 당신의 시간을 세거나 위젯을 그리는 부분에서는 결코 실행되지 않습니다. 그리고 Pausely는 자기 것을 아무것도 SDK에 건네지 않습니다.</p>
 <h3>Meta에 보내는 것</h3>
 <ul>
   <li>Pausely가 <strong>설치</strong>되었다는 것, 그리고 <strong>열릴</strong> 때마다 그 사실과 얼마나 오래 열려 있었는지.</li>
-  <li>SDK가 기기에서 알아차리는 대로, <strong>요금제가 구매</strong>되었거나 무료 체험이 시작되었거나 구독이 갱신되었다는 것 — 어떤 요금제인지, 그 가격과 통화까지.</li>
+  <li>SDK가 기기에서 알아차리는 대로, <strong>요금제가 구매</strong>되었거나 무료 체험이 시작되었거나 구독이 갱신되었다는 것, 어떤 요금제인지, 그 가격과 통화까지.</li>
   <li>기기의 종류, iOS 버전, 언어, 시간대 같은 <strong>기술적 세부 정보</strong>.</li>
   <li>이 Pausely 설치를 위해 <strong>SDK가 만들어 낸 식별자</strong>. 당신의 이름도, Apple 계정도, 기기의 광고 식별자도 아닙니다.</li>
   <li>Meta 자신의 코드에서 나온 <strong>충돌 보고서</strong>.</li>
@@ -271,60 +271,60 @@ COPY = {
 <h3>결코 받지 않는 것</h3>
 <ul>
   <li><strong>어떤 앱을 지키는지</strong>, 또는 그 앱에서 얼마나 시간을 보내는지.</li>
-  <li><strong>멈춤, 규칙, 성과, 일지, 기분 기록</strong>, 또는 당신이 입력하는 그 무엇이든 — AI 되돌아보기에 입력하는 것도 포함해서.</li>
+  <li><strong>멈춤, 규칙, 성과, 일지, 기분 기록</strong>, 또는 당신이 입력하는 그 무엇이든, AI 되돌아보기에 입력하는 것도 포함해서.</li>
   <li><strong>Pausely 자체의 어떤 이벤트도.</strong> SDK는 위에 나열된 것, 곧 스스로 알아차리는 것만 알립니다. Pausely는 SDK에 결코 아무것도 알려 주지 않습니다.</li>
   <li><strong>광고 식별자.</strong> Pausely는 당신을 추적할 권한을 결코 요청하지 않으므로 iOS는 그것을 내주지 않으며, SDK는 추적이 허용되지 않는다고 Meta에 알립니다.</li>
 </ul>
-<p>화면에 있는 것을 읽을 수 있는 SDK의 기능 — 텍스트 입력란에 입력하는 내용, 누르는 버튼에 적힌 글자, 화면의 배치 — 은 Pausely에서는 앱 안에서도, Meta의 설정에서도 꺼져 있으며, 계속 꺼진 채로 있습니다.</p>
+<p>화면에 있는 것을 읽을 수 있는 SDK의 기능(텍스트 입력란에 입력하는 내용, 누르는 버튼에 적힌 글자, 화면의 배치)은 Pausely에서는 앱 안에서도, Meta의 설정에서도 꺼져 있으며, 계속 꺼진 채로 있습니다.</p>
 <p>Meta는 받은 것을 <a href="https://www.facebook.com/privacy/policy/">Meta의 개인정보 처리방침</a>에 따라 보관하며, 그 방침에 얼마나 오래 보관하는지와 Meta에 대해 권리를 행사하는 방법이 나와 있습니다. 식별자는 당신의 기기 안, Pausely의 저장 공간에 있습니다. 앱을 삭제하면 식별자도 삭제되고, 새로 설치하면 새 식별자로 시작합니다.</p>
 """,
 
-"p.analytics.h": "Google Analytics — 앱이 어떻게 쓰이는지",
+"p.analytics.h": "Google Analytics: 앱이 어떻게 쓰이는지",
 "p.analytics.b": """
 <p class="lead">2026년 11월 말부터 <strong>Pausely에는 Firebase용 Google Analytics가 들어 있습니다.</strong> 얼마나 많은 사람이 앱을 쓰는지, 얼마나 자주 쓰는지, 앱의 어떤 화면을 쓰는지 저희가 볼 수 있도록 하기 위해서입니다. Google Analytics는 앱 자체 안에서만 실행되며, 차단 화면을 그리거나 당신의 시간을 세거나 위젯을 그리는 부분에서는 결코 실행되지 않습니다. 그리고 Pausely는 자기 것을 아무것도 Google Analytics에 알려 주지 않습니다.</p>
 <h3>스스로 수집하는 것</h3>
 <ul>
   <li>Pausely가 <strong>처음 열렸다</strong>는 것, 각 <strong>세션</strong>과 그 세션이 얼마나 이어졌는지, 그리고 앱이나 iOS가 <strong>업데이트</strong>된 때.</li>
   <li>Pausely의 어떤 <strong>화면</strong>이 보였는지.</li>
-  <li>기기에서 알아차리는 대로, <strong>요금제가 구매</strong>되었다는 것 — 어떤 요금제인지와 그 가격까지.</li>
+  <li>기기에서 알아차리는 대로, <strong>요금제가 구매</strong>되었다는 것, 어떤 요금제인지와 그 가격까지.</li>
   <li>기기의 종류, iOS 버전, 언어, 앱 버전 같은 <strong>기술적 세부 정보</strong>.</li>
-  <li>데이터가 들어오는 마스킹된 IP 주소를 바탕으로 Google이 추정하는 <strong>대략적인 위치</strong> — 국가, 지역, 도시. Pausely는 당신의 위치를 결코 요청하지 않습니다.</li>
+  <li>데이터가 들어오는 마스킹된 IP 주소를 바탕으로 Google이 추정하는 <strong>대략적인 위치</strong>(국가, 지역, 도시). Pausely는 당신의 위치를 결코 요청하지 않습니다.</li>
   <li>이 Pausely 설치를 위해 <strong>스스로 만들어 낸 식별자</strong>. 당신의 이름도, Apple 계정도, 기기의 광고 식별자도, 기기의 공급업체 식별자도 아닙니다.</li>
 </ul>
 <h3>결코 받지 않는 것</h3>
 <ul>
   <li><strong>어떤 앱을 지키는지</strong>, 또는 그 앱에서 얼마나 시간을 보내는지.</li>
-  <li><strong>멈춤, 규칙, 성과, 일지, 기분 기록</strong>, 또는 당신이 입력하는 그 무엇이든 — AI 되돌아보기에 입력하는 것도 포함해서.</li>
+  <li><strong>멈춤, 규칙, 성과, 일지, 기분 기록</strong>, 또는 당신이 입력하는 그 무엇이든, AI 되돌아보기에 입력하는 것도 포함해서.</li>
   <li><strong>Pausely 자체의 어떤 이벤트도.</strong> 위에 나열된 것만 스스로 수집합니다. Pausely는 Google Analytics에 결코 아무것도 알려 주지 않습니다.</li>
   <li><strong>광고를 위한 그 무엇도.</strong> 광고 식별자를 읽지 않고, 광고 기능은 앱 안에서 꺼져 있으며, Pausely에서는 Google signals, Google과의 데이터 공유, 광고 맞춤설정이 꺼져 있습니다.</li>
 </ul>
 <p>Google은 받은 것을 <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>에 따라 보관합니다. 앱 안에는 이것을 끄는 설정이 없습니다. 앱을 삭제하면 그 식별자도 삭제되고, 새로 설치하면 새 식별자로 시작합니다.</p>
 """,
 
-"p.ai.h": "AI 되돌아보기 — 당신이 켤 때만",
+"p.ai.h": "AI 되돌아보기: 당신이 켤 때만",
 "p.ai.b": """
 <p class="lead">이것은 선택 사항인 Premium 기능입니다. <strong>Pausely를 설치한 시점에는 꺼져 있고, 당신이 켜기 전까지 꺼진 채로 있습니다.</strong> 다시 끄면 그 모든 것이 멈춥니다.</p>
 <p>켜면 하나의 멈춤이 짧은 대화가 됩니다. 왜 앱을 여는지 적으면, 훈계 대신 질문이 되돌아옵니다. 일주일에 한 번, 그 주가 어땠는지에 대한 짧은 글도 씁니다.</p>
 <h3>누가 작성하는지</h3>
-<p><strong>Apple Intelligence</strong>가 있는 iPhone에서는 Apple의 모델이 질문과 주간 글을 <strong>기기 자체에서</strong> 쓸 수 있습니다. 그때는 아래에 나열된 어떤 것도 기기를 떠나지 않습니다. 요청은 이루어지지 않고, 아무것도 보관되지 않습니다. Apple Intelligence를 쓸 수 있는 곳에서는 처음부터 이 방식으로 시작합니다. 그렇지 않은 경우 — 또는 {K_settings} → {K_ai_reflection} → {K_written_by}에서 OpenAI를 고른 경우 — <strong>OpenAI</strong>가 작성하며, 이 섹션의 나머지 내용이 적용됩니다. Apple Intelligence를 골랐는데 그것이 답할 수 없으면, 멈춤은 대신 기본 질문을 보여 줍니다. 당신의 말은, 가지 않기로 당신이 정한 곳으로 결코 가지 않습니다.</p>
+<p><strong>Apple Intelligence</strong>가 있는 iPhone에서는 Apple의 모델이 질문과 주간 글을 <strong>기기 자체에서</strong> 쓸 수 있습니다. 그때는 아래에 나열된 어떤 것도 기기를 떠나지 않습니다. 요청은 이루어지지 않고, 아무것도 보관되지 않습니다. Apple Intelligence를 쓸 수 있는 곳에서는 처음부터 이 방식으로 시작합니다. 그렇지 않은 경우, 또는 {K_settings} → {K_ai_reflection} → {K_written_by}에서 OpenAI를 고른 경우, <strong>OpenAI</strong>가 작성하며, 이 섹션의 나머지 내용이 적용됩니다. Apple Intelligence를 골랐는데 그것이 답할 수 없으면, 멈춤은 대신 기본 질문을 보여 줍니다. 당신의 말은, 가지 않기로 당신이 정한 곳으로 결코 가지 않습니다.</p>
 <h3>OpenAI가 작성할 때 보내는 것</h3>
 <ul>
   <li><strong>세 개의 숫자</strong>: 오늘 몇 번 열었는지, 지금 몇 시인지, 연속 기록이 며칠인지.</li>
-  <li><strong>그 화면에 입력한 말</strong> — 그 순간에.</li>
+  <li><strong>그 화면에 입력한 말</strong>, 그 순간에.</li>
 </ul>
 <p>주간 글은 더 적게 보냅니다. 그 주의 집계뿐, 그 밖에는 아무것도 없습니다. 앱 이름은 전혀 들어가지 않습니다.</p>
 <h3>결코 보내지 않는 것</h3>
 <ul>
-  <li><strong>일지.</strong> 아무에게도 보이지 않기 위해 쓰는 유일한 곳이며, 기기를 떠나는 일이 없습니다. Apple Intelligence가 있는 iPhone에서는 Pausely가 한 주 동안 쓴 일지에 대해 몇 줄을 쓸 수 있습니다 — 기기 안에서, 오직 그곳에서만요.</li>
+  <li><strong>일지.</strong> 아무에게도 보이지 않기 위해 쓰는 유일한 곳이며, 기기를 떠나는 일이 없습니다. Apple Intelligence가 있는 iPhone에서는 Pausely가 한 주 동안 쓴 일지에 대해 몇 줄을 쓸 수 있습니다. 기기 안에서, 오직 그곳에서만요.</li>
   <li><strong>기분 기록</strong>, 기분 자체, 거기 붙인 메모.</li>
-  <li><strong>고른 앱 목록</strong> — 어떤 앱을 지키는지, 몇 개인지 — 그리고 스크린 타임 토큰, 토큰 해시, 번들 식별자도 결코 보내지 않습니다.</li>
+  <li><strong>고른 앱 목록</strong>(어떤 앱을 지키는지, 몇 개인지), 그리고 스크린 타임 토큰, 토큰 해시, 번들 식별자도 결코 보내지 않습니다.</li>
   <li><strong>어떤 앱에서 얼마나 시간을 보내는지.</strong></li>
   <li><strong>규칙, 일정, 엄격 모드의 상태.</strong></li>
   <li><strong>당신을 특정하는 어떤 것.</strong> 계정도, 사용자 ID도, 광고 식별자도 보낼 것이 없습니다. 요청에는 Apple의 App Attest 증명이 실리는데, 이는 상대가 진짜 Pausely임을 저희 서버에 알리기 위한 것으로, 사람이 아니라 앱에 묶여 있고 요청 사이에서 당신을 따라다니지 않습니다.</li>
 </ul>
 <h3>어디로 가고, 얼마나 남는지</h3>
 <p>당신의 말은 <strong>Pausely 자체 서버</strong>로, 그리고 모델을 돌리는 <strong>OpenAI</strong>로 갑니다. Pausely가 당신의 기기에서 모델 제공사의 API를 직접 부르는 일은 없고, 앱 안에는 빼낼 수 있는 API 키도 없습니다.</p>
-<p><strong>Pausely의 서버는 요청마다 아무것도 저장하지 않습니다</strong> — 입력도, 응답도, 맥락도. 과도한 사용을 막기 위해 기기마다 하루에 숫자 하나만 — 그 기기가 되돌아보기를 몇 번 요청했는지를 무작위 기기 키로 — 보관하고, 이틀 뒤에 지웁니다. 로그에는 요청의 모양(시각, 걸린 시간, 성공 여부)만 남고 그 내용은 결코 남지 않습니다. <strong>OpenAI는 입력과 출력을 최대 30일간 보관합니다.</strong> 남용 감시 로그로서이며, 남용 여부를 확인하려고 살펴볼 수 있습니다. <strong>OpenAI는 그 어느 것도 모델 학습에 쓰지 않습니다.</strong></p>
+<p><strong>Pausely의 서버는 요청마다 아무것도 저장하지 않습니다</strong>. 입력도, 응답도, 맥락도. 과도한 사용을 막기 위해 기기마다 하루에 숫자 하나만(그 기기가 되돌아보기를 몇 번 요청했는지를 무작위 기기 키로) 보관하고, 이틀 뒤에 지웁니다. 로그에는 요청의 모양(시각, 걸린 시간, 성공 여부)만 남고 그 내용은 결코 남지 않습니다. <strong>OpenAI는 입력과 출력을 최대 30일간 보관합니다.</strong> 남용 감시 로그로서이며, 남용 여부를 확인하려고 살펴볼 수 있습니다. <strong>OpenAI는 그 어느 것도 모델 학습에 쓰지 않습니다.</strong></p>
 <p>이전 버전의 Pausely는 같은 말을 대신 <strong>Google</strong>로 보냅니다. Google은 입력과 출력을 최대 24시간 보관하고, 남용 여부를 확인하려고 입력을 살펴볼 수 있으며, 그것을 모델 학습에 쓰지 않습니다.</p>
 <p>{K_settings} → {K_ai_reflection} → {K_what_is_sent}에, 이 페이지와 같은 말로 모든 항목이 앱 안에 나열되어 있습니다.</p>
 """,
@@ -335,7 +335,7 @@ COPY = {
 <p><strong>RevenueCat</strong>은 저희를 위해 구매 기록을 보관합니다. 앱에 요금제를 보여 주고, 각 구매를 App Store와 함께 완료하며, 당신이 무엇을 보유하고 있는지 Pausely에 알려 줍니다. RevenueCat은 저희의 서비스 제공업체이며, 오직 저희를 위해서만 일합니다.</p>
 <h3>RevenueCat이 받는 것</h3>
 <ul>
-  <li>Pausely의 각 구매에 대한 App Store의 기록 — 어떤 요금제인지, 언제 구매되었는지, 그 가격과 통화, 무료 체험인지, 갱신되는지, 그리고 가족 공유로 공유되는지.</li>
+  <li>Pausely의 각 구매에 대한 App Store의 기록: 어떤 요금제인지, 언제 구매되었는지, 그 가격과 통화, 무료 체험인지, 갱신되는지, 그리고 가족 공유로 공유되는지.</li>
   <li>이 Pausely 설치를 위해 <strong>RevenueCat이 만들어 낸 식별자</strong>. 당신의 이름도, 이메일도, Apple 계정도, 기기의 광고 식별자도 아닙니다.</li>
   <li><strong>기술적 세부 정보</strong>: 앱 버전, iOS 버전, 기기의 언어와 App Store 국가. 여느 서버와 마찬가지로, RevenueCat의 서버도 이것들이 들어오는 IP 주소를 봅니다.</li>
 </ul>
@@ -344,13 +344,13 @@ COPY = {
   <li><strong>어떤 앱을 지키는지</strong>, 그 앱에서 얼마나 시간을 보내는지, 멈춤, 규칙, 일지, 기분 기록, 또는 당신이 입력하는 그 무엇이든.</li>
   <li><strong>당신이 누구인지에 관한 어떤 것도.</strong> Pausely는 당신을 로그인시키지 않고 RevenueCat에 이름이나 이메일을 결코 건네지 않으며, RevenueCat의 기기 식별자 수집은 꺼져 있고, 광고 회사나 분석 회사로 이어지는 RevenueCat의 연결은 어느 것도 쓰이지 않습니다.</li>
 </ul>
-<p>RevenueCat은 이 기록을 <a href="https://www.revenuecat.com/privacy">RevenueCat의 개인정보 처리방침</a>에 따라 보관하며, 저희는 언제든 그 기록이 삭제되도록 할 수 있습니다 — <a href="{BASE}{L}/privacy/#delete">데이터 삭제</a>를 보세요. 이전 버전의 Pausely는 App Store만으로 Premium을 판매하며, Apple은 그 버전들에 구매가 유효한지만 알려 줍니다. 이와 별개로, Meta의 SDK는 기기에서 구매를 알아차리고, 저희가 광고 성과를 측정할 수 있도록 이를 알립니다 — <a href="{BASE}{L}/privacy/#ads">Meta의 SDK</a>를 보세요.</p>
+<p>RevenueCat은 이 기록을 <a href="https://www.revenuecat.com/privacy">RevenueCat의 개인정보 처리방침</a>에 따라 보관하며, 저희는 언제든 그 기록이 삭제되도록 할 수 있습니다. <a href="{BASE}{L}/privacy/#delete">데이터 삭제</a>를 보세요. 이전 버전의 Pausely는 App Store만으로 Premium을 판매하며, Apple은 그 버전들에 구매가 유효한지만 알려 줍니다. 이와 별개로, Meta의 SDK는 기기에서 구매를 알아차리고, 저희가 광고 성과를 측정할 수 있도록 이를 알립니다. <a href="{BASE}{L}/privacy/#ads">Meta의 SDK</a>를 보세요.</p>
 """,
 
 "p.notifications.h": "알림, 위젯, 잠금 화면",
 "p.notifications.b": """
-<p><strong>알림</strong>은 선택 사항이며 당신의 기기에서 만들어집니다. 차단 화면에서 멈춤으로 넘겨주기 위해, 그리고 산책이나 책처럼 당신이 고른 대안의 시간이 다 되었을 때 어땠는지 묻기 위해 씁니다. 당신이 켠 경우에만 오는 것이 두 가지 더 있습니다. 하루 한 번 가장 힘든 시간 조금 전에 오는 알림, 그리고 당신이 고른 앱에서 오늘 얼마나 시간을 보냈는지 몇 분마다 알려 주는 {K_time_banners}(Premium)입니다. 사용 시간 알림은 앱 이름을 결코 말하지 않고 “이 앱”이라고 합니다. 알림은 잠금 화면에도 나타나기 때문입니다. 서버에서 오는 알림은 하나도 없습니다 — 푸시 서버도, 마케팅도 없습니다.</p>
-<p><strong>위젯과 라이브 액티비티</strong>가 보여 주는 것은 숫자, 분 단위 시간, 날짜입니다 — 오늘의 성과, 연속 기록, 되찾은 시간, 오늘의 사용 시간, 짧은 영상 추정치, 접근 시간의 남은 길이. 이들은 일부러 스크린 타임 접근 권한을 갖지 않으며, 어떤 앱을 막았는지 결코 보지 않습니다. 잠금 화면의 카운트다운이 부르는 것은 당신이 쓴 <em>규칙</em>의 이름(“잠들기 전”)이지 앱 이름이 아닙니다. 잠금 화면은 기기를 든 사람이면 누구나 읽을 수 있으니까요. 접근 시간이 열려 있는 동안에는 Dynamic Island가 오늘 Pausely를 거쳐 그 앱에서 보낸 시간도 셉니다. 잠금 화면에는 그것이 표시되지 않습니다.</p>
+<p><strong>알림</strong>은 선택 사항이며 당신의 기기에서 만들어집니다. 차단 화면에서 멈춤으로 넘겨주기 위해, 그리고 산책이나 책처럼 당신이 고른 대안의 시간이 다 되었을 때 어땠는지 묻기 위해 씁니다. 당신이 켠 경우에만 오는 것이 두 가지 더 있습니다. 하루 한 번 가장 힘든 시간 조금 전에 오는 알림, 그리고 당신이 고른 앱에서 오늘 얼마나 시간을 보냈는지 몇 분마다 알려 주는 {K_time_banners}(Premium)입니다. 사용 시간 알림은 앱 이름을 결코 말하지 않고 “이 앱”이라고 합니다. 알림은 잠금 화면에도 나타나기 때문입니다. 서버에서 오는 알림은 하나도 없습니다. 푸시 서버도, 마케팅도 없습니다.</p>
+<p><strong>위젯과 라이브 액티비티</strong>가 보여 주는 것은 숫자, 분 단위 시간, 날짜입니다. 오늘의 성과, 연속 기록, 되찾은 시간, 오늘의 사용 시간, 짧은 영상 추정치, 접근 시간의 남은 길이. 이들은 일부러 스크린 타임 접근 권한을 갖지 않으며, 어떤 앱을 막았는지 결코 보지 않습니다. 잠금 화면의 카운트다운이 부르는 것은 당신이 쓴 <em>규칙</em>의 이름(“잠들기 전”)이지 앱 이름이 아닙니다. 잠금 화면은 기기를 든 사람이면 누구나 읽을 수 있으니까요. 접근 시간이 열려 있는 동안에는 Dynamic Island가 오늘 Pausely를 거쳐 그 앱에서 보낸 시간도 셉니다. 잠금 화면에는 그것이 표시되지 않습니다.</p>
 """,
 
 "p.third.h": "제3자",
@@ -397,13 +397,13 @@ COPY = {
 "p.delete.h": "데이터 삭제",
 "p.delete.b": """
 <p>Pausely가 가진 것은 모두, 저희에게 청하지 않고도 앱 안에서 지울 수 있습니다.</p>
-<div class="callout"><span class="tile">{trash}</span><div>{RESET}<br><span class="small">모든 멈춤, 성과, 규칙, 일지, 기분 기록을 비우고, 가림을 내리고, 일정을 거두고, 처음으로 되돌립니다. 엄격 모드가 켜져 있는 동안에는 거부합니다 — 당신이 앱에게 지키게 한 단 하나의 약속이니까요 — 그리고 구독은 건드리지 않습니다. 그것은 당신의 Apple 계정에 속하기 때문입니다.</span></div></div>
+<div class="callout"><span class="tile">{trash}</span><div>{RESET}<br><span class="small">모든 멈춤, 성과, 규칙, 일지, 기분 기록을 비우고, 가림을 내리고, 일정을 거두고, 처음으로 되돌립니다. 엄격 모드가 켜져 있는 동안에는 거부합니다. 당신이 앱에게 지키게 한 단 하나의 약속이니까요. 그리고 구독은 건드리지 않습니다. 그것은 당신의 Apple 계정에 속하기 때문입니다.</span></div></div>
 <p style="margin-top:16px">앱을 삭제하면 그 데이터도 모두 기기에서 함께 사라집니다. Meta의 SDK, RevenueCat, Google Analytics가 앱을 위해 만들어 낸 식별자까지요. 저희 서버는 요청에 답한 뒤 그 요청에 대한 기록을 남기지 않습니다. 앱이 사라진 뒤에도 <strong>RevenueCat은 당신의 구매 기록을 보관합니다</strong>. 구독은 당신의 Apple 계정에 속하고 앱보다 오래 남기 때문입니다. 그 기록을 삭제하려면 Apple의 영수증 이메일에 있는 주문 번호를 적어 {MAIL}로 보내 주세요. 저희가 그 기록이 삭제되도록 하겠습니다. Meta의 SDK와 Google Analytics가 이미 보낸 것은 <a href="https://www.facebook.com/privacy/policy/">Meta의 개인정보 처리방침</a>과 <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>에 따라 Meta와 Google이 보관합니다. 더 자세한 내용은 <a href="{BASE}{L}/delete-data/">내 데이터</a> 페이지에 있습니다.</p>
 """,
 
 "p.rights.h": "당신의 권리",
 "p.rights.b": """
-<p>어디에 사시든 — GDPR, 영국 GDPR, CCPA/CPRA 아래를 포함해 — 기업이 보유한 당신의 개인 데이터에 접근하고, 정정하고, 내려받고, 처리를 제한하고, 처리에 반대하고, 지울 권리, 그리고 감독기관에 이의를 제기할 권리가 있습니다. Pausely는 당신에 대한 프로필을 갖고 있지 않고, 되돌아보기에 답한 뒤에는 아무것도 남기지 않습니다. 저희를 위해 다른 곳에 보관되는 유일한 기록은 RevenueCat에 있는 당신의 구매 기록입니다. Apple의 영수증 이메일에 있는 주문 번호를 적어 {MAIL}로 보내 주시면, 그 사본을 보내 드리거나 그 기록이 삭제되도록 하겠습니다. 기기의 데이터는 이미 당신의 손안에 있고, 앱 자체의 조작이 그 권리를 하나도 빠짐없이 대신 행사합니다. Meta의 SDK와 Google Analytics가 보낸 것은 Meta와 Google이 보관하며, 그곳에서 권리를 행사하는 방법은 <a href="https://www.facebook.com/privacy/policy/">Meta의 개인정보 처리방침</a>과 <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>에 설명되어 있습니다. 궁금한 점이 있거나, 이 페이지가 설명하지 않는 무언가를 저희가 갖고 있다고 생각하신다면 {MAIL}로 알려 주세요. 답을 드리겠습니다.</p>
+<p>어디에 사시든(GDPR, 영국 GDPR, CCPA/CPRA 아래를 포함해) 기업이 보유한 당신의 개인 데이터에 접근하고, 정정하고, 내려받고, 처리를 제한하고, 처리에 반대하고, 지울 권리, 그리고 감독기관에 이의를 제기할 권리가 있습니다. Pausely는 당신에 대한 프로필을 갖고 있지 않고, 되돌아보기에 답한 뒤에는 아무것도 남기지 않습니다. 저희를 위해 다른 곳에 보관되는 유일한 기록은 RevenueCat에 있는 당신의 구매 기록입니다. Apple의 영수증 이메일에 있는 주문 번호를 적어 {MAIL}로 보내 주시면, 그 사본을 보내 드리거나 그 기록이 삭제되도록 하겠습니다. 기기의 데이터는 이미 당신의 손안에 있고, 앱 자체의 조작이 그 권리를 하나도 빠짐없이 대신 행사합니다. Meta의 SDK와 Google Analytics가 보낸 것은 Meta와 Google이 보관하며, 그곳에서 권리를 행사하는 방법은 <a href="https://www.facebook.com/privacy/policy/">Meta의 개인정보 처리방침</a>과 <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>에 설명되어 있습니다. 궁금한 점이 있거나, 이 페이지가 설명하지 않는 무언가를 저희가 갖고 있다고 생각하신다면 {MAIL}로 알려 주세요. 답을 드리겠습니다.</p>
 """,
 
 "p.children.h": "아동에 대하여",
@@ -443,12 +443,12 @@ COPY = {
 "t.screentime.h": "4. 스크린 타임, 엄격 모드, 그리고 당신의 약속",
 "t.screentime.b": """
 <p>Pausely는 Apple의 스크린 타임 프레임워크에 기대고 있습니다. 가림을 집행하는 것은 Apple이고, Pausely는 그것을 부탁할 뿐입니다. 가림이 나타나는지, 얼마나 빨리 나타나는지, 재시동과 iOS 업데이트를 넘어 유지되는지는 결국 iOS가 정하는 일이며, 당사가 모든 상황에서 보장할 수는 없습니다.</p>
-<p><strong>엄격 모드</strong>는 당신이 당신 자신과 맺는 약속입니다. 켜져 있는 동안, 당신이 고른 기간 동안에는 보호를 끌 수 없고, 규칙을 지울 수 없고, 데이터를 초기화할 수 없습니다 — <em>당신도, 당사도 마찬가지입니다</em>. 요청이 있더라도 엄격 모드 세션을 미리 끝내 드릴 수 없습니다. 지킬 각오가 없는 세션은 시작하지 마시고, 제한 없이 써야 할 수도 있는 기기에서는 시작하지 마십시오. 앱을 삭제하면 모든 가림이 끝납니다(제3조 참조).</p>
+<p><strong>엄격 모드</strong>는 당신이 당신 자신과 맺는 약속입니다. 켜져 있는 동안, 당신이 고른 기간 동안에는 보호를 끌 수 없고, 규칙을 지울 수 없고, 데이터를 초기화할 수 없습니다. <em>당신도, 당사도 마찬가지입니다</em>. 요청이 있더라도 엄격 모드 세션을 미리 끝내 드릴 수 없습니다. 지킬 각오가 없는 세션은 시작하지 마시고, 제한 없이 써야 할 수도 있는 기기에서는 시작하지 마십시오. 앱을 삭제하면 모든 가림이 끝납니다(제3조 참조).</p>
 <p><strong>완전 차단 규칙</strong>은 그 시간대 동안 통과할 길을 두지 않습니다. 같은 경고가 적용됩니다.</p>
 """,
 "t.data.h": "5. 당신의 데이터와 기기",
 "t.data.b": """
-<p>Pausely가 기록하는 것은 모두 당신의 기기에 저장됩니다 — 무엇이 언제 기기를 떠나는지는 <a href="{BASE}{L}/privacy/">개인정보 처리방침</a>을 보십시오. 기기와 그 암호, 그 백업은 당신의 책임입니다. 앱을 삭제하거나, 모든 데이터를 초기화하거나, 백업 없이 기기를 잃으면 규칙도 일지도 기록도 사라지며, 당사에는 되돌릴 사본이 없습니다. Premium 구매는 별개입니다. 그것은 당신의 Apple 계정에 속하고, 그 계정으로 로그인한 어떤 기기에서도 복원할 수 있습니다.</p>
+<p>Pausely가 기록하는 것은 모두 당신의 기기에 저장됩니다. 무엇이 언제 기기를 떠나는지는 <a href="{BASE}{L}/privacy/">개인정보 처리방침</a>을 보십시오. 기기와 그 암호, 그 백업은 당신의 책임입니다. 앱을 삭제하거나, 모든 데이터를 초기화하거나, 백업 없이 기기를 잃으면 규칙도 일지도 기록도 사라지며, 당사에는 되돌릴 사본이 없습니다. Premium 구매는 별개입니다. 그것은 당신의 Apple 계정에 속하고, 그 계정으로 로그인한 어떤 기기에서도 복원할 수 있습니다.</p>
 <p>Pausely에 쓴 것은 당신의 것입니다. 당사는 그에 대해 어떤 권리도 주장하지 않으며, 당신이 AI 되돌아보기를 켜고 OpenAI가 작성하는 경우가 아니면 아무것도 받지 않습니다. 그 경우에도 제6조와 개인정보 처리방침이 설명하는 것만 전송됩니다.</p>
 """,
 "t.ai.h": "6. AI 되돌아보기",
@@ -461,11 +461,11 @@ COPY = {
 "t.subscriptions.b": """
 <p>Pausely는 무료로 내려받아 쓸 수 있습니다. <strong>Pausely Premium</strong>은 추가 기능을 열어 주며, 앱과 거주 국가의 App Store에 표시된 가격으로 다섯 가지 형태로 판매됩니다.</p>
 <ul>
-  <li><strong>Premium 월간</strong> — 매달 청구되는 자동 갱신 구독.</li>
-  <li><strong>Premium 연간</strong> — 매년 청구되는 자동 갱신 구독. 제공되는 경우 <strong>무료 체험</strong>으로 시작합니다.</li>
-  <li><strong>Premium 평생</strong> — 갱신되지 않는 일회성 구매.</li>
-  <li><strong>Premium 가족 연간</strong> — 매년 청구되는 자동 갱신 구독. 제공되는 경우 <strong>무료 체험</strong>으로 시작하며, 가족 공유로 최대 6명이 사용할 수 있습니다.</li>
-  <li><strong>Premium 가족 평생</strong> — 갱신되지 않는 일회성 구매. 가족 공유로 최대 6명이 사용할 수 있습니다.</li>
+  <li><strong>Premium 월간</strong>: 매달 청구되는 자동 갱신 구독.</li>
+  <li><strong>Premium 연간</strong>: 매년 청구되는 자동 갱신 구독. 제공되는 경우 <strong>무료 체험</strong>으로 시작합니다.</li>
+  <li><strong>Premium 평생</strong>: 갱신되지 않는 일회성 구매.</li>
+  <li><strong>Premium 가족 연간</strong>: 매년 청구되는 자동 갱신 구독. 제공되는 경우 <strong>무료 체험</strong>으로 시작하며, 가족 공유로 최대 6명이 사용할 수 있습니다.</li>
+  <li><strong>Premium 가족 평생</strong>: 갱신되지 않는 일회성 구매. 가족 공유로 최대 6명이 사용할 수 있습니다.</li>
 </ul>
 <p>두 가족 요금제는 Apple의 <strong>가족 공유</strong>를 통해 가족 그룹의 다른 구성원 최대 5명과 공유됩니다. 각자 자신의 기기에 있는 자신의 Pausely에서 Premium을 사용하며, 규칙, 앱, 기록 등 어떤 데이터도 서로 공유되지 않습니다. 나머지 세 가지는 본인만 사용할 수 있으며 공유되지 않습니다.</p>
 <p>결제는 구매 확인 시 당신의 Apple 계정으로 청구됩니다. 무료 체험은 종료 24시간 전까지 해지하지 않으면 유료 구독으로 전환됩니다. 구독은 현재 기간 종료 24시간 전까지 자동 갱신을 끄지 않는 한 같은 가격과 같은 기간으로 자동 갱신되며, 갱신 요금은 그 기간이 끝나기 전 24시간 이내에 청구됩니다. 구독은 <a href="https://apps.apple.com/account/subscriptions">App Store 구독 설정</a>에서 관리하거나 해지할 수 있습니다. 해지는 현재 기간이 끝날 때 효력이 생기며, 쓰지 않은 기간에 대한 부분 환불은 없습니다. 환불은 Apple이 자체 정책에 따라 처리합니다. 새 기기에서 Premium을 되찾으려면 앱 안의 {K_restore}을 쓰십시오.</p>
@@ -481,7 +481,7 @@ COPY = {
 """,
 "t.termination.h": "10. 종료",
 "t.termination.b": """
-<p>Pausely 사용은 앱을 삭제함으로써 언제든 그만둘 수 있습니다. 당신이 이 약관을 위반하는 경우 당사는 라이선스를 정지하거나 종료할 수 있습니다. 제5조, 제6조, 제8조, 제11조, 제12조, 제14조는 종료 후에도 존속합니다. 앱을 삭제해도 유효한 구독은 해지되지 않습니다 — App Store 설정에서 해지하십시오.</p>
+<p>Pausely 사용은 앱을 삭제함으로써 언제든 그만둘 수 있습니다. 당신이 이 약관을 위반하는 경우 당사는 라이선스를 정지하거나 종료할 수 있습니다. 제5조, 제6조, 제8조, 제11조, 제12조, 제14조는 종료 후에도 존속합니다. 앱을 삭제해도 유효한 구독은 해지되지 않습니다. App Store 설정에서 해지하십시오.</p>
 """,
 "t.warranty.h": "11. 보증과 책임",
 "t.warranty.b": """
@@ -511,18 +511,18 @@ COPY = {
 
 "d.where.h": "무엇이 어디에 저장되는지",
 "d.where.b": """
-<p class="lead">Pausely에는 계정이 없고, 그 서버는 누구에 대해서도 기록을 남기지 않습니다. Pausely 자신이 가진 것은 모두 당신의 기기에 있으며, 저희에게 청하지 않고도 지울 수 있습니다. 저희를 위해 다른 곳에 보관되는 유일한 기록 — RevenueCat에 있는 당신의 구매 기록 — 은 요청하시면 저희가 삭제합니다.</p>
+<p class="lead">Pausely에는 계정이 없고, 그 서버는 누구에 대해서도 기록을 남기지 않습니다. Pausely 자신이 가진 것은 모두 당신의 기기에 있으며, 저희에게 청하지 않고도 지울 수 있습니다. 저희를 위해 다른 곳에 보관되는 유일한 기록(RevenueCat에 있는 당신의 구매 기록)은 요청하시면 저희가 삭제합니다.</p>
 <div class="table-wrap"><table>
 <tr><th>데이터</th><th>있는 곳</th><th>지우는 방법</th></tr>
 <tr><td>규칙, 멈춤 기록, 연속 기록, 일지, 기분 기록, 대안, 설정</td><td>기기 안의 앱 전용 저장 공간</td><td>{RESET}, 또는 앱 삭제</td></tr>
-<tr><td>고른 앱에서 보낸 시간(분) — 하루 목표, 한도, 짧은 영상 추정치, 사용 시간 알림을 위한 것</td><td>기기 안의 앱 전용 저장 공간, 최대 60일간</td><td>{RESET}, 또는 앱 삭제. 사용 시간 알림을 끄면 그 기능의 기록이 지워집니다</td></tr>
+<tr><td>고른 앱에서 보낸 시간(분): 하루 목표, 한도, 짧은 영상 추정치, 사용 시간 알림을 위한 것</td><td>기기 안의 앱 전용 저장 공간, 최대 60일간</td><td>{RESET}, 또는 앱 삭제. 사용 시간 알림을 끄면 그 기능의 기록이 지워집니다</td></tr>
 <tr><td>고른 앱 목록</td><td>앱 전용 저장 공간 안의 불투명한 스크린 타임 토큰</td><td>위와 같습니다. iOS 설정에서 스크린 타임 접근 권한을 거두면 모든 가림도 끝납니다</td></tr>
 <tr><td>위젯용 스냅샷</td><td>기기 안의, 숫자와 날짜만 담긴 작은 파일</td><td>초기화할 때도, 앱을 지울 때도 함께 사라집니다</td></tr>
-<tr><td>Premium 권한</td><td>당신의 Apple 계정(Apple 쪽), 기기에 있는 그 상태의 사본, 그리고 저희를 대신해 Premium을 판매하는 RevenueCat에 있는 당신의 구매 기록</td><td>구독은 App Store 설정에서 관리합니다 — 아래 참조. RevenueCat의 기록을 삭제하려면 저희에게 요청하세요 — 이 페이지 끝 참조</td></tr>
-<tr><td>Meta의 SDK가 보낸 것 — 설치, 실행, 구매, 기기의 종류, 그리고 SDK가 만들어 낸 식별자</td><td>Meta가 <a href="https://www.facebook.com/privacy/policy/">Meta의 개인정보 처리방침</a>에 따라 보관합니다. 식별자 자체는 기기 안의 앱 저장 공간에 있습니다</td><td>앱을 삭제하면 식별자도 삭제되고, 새로 설치하면 새 식별자로 시작합니다. Meta가 가진 것은 Meta의 방침을 보십시오</td></tr>
-<tr><td>Google Analytics가 수집한 것 — 세션, 조회된 화면, 구매, 기기의 종류, 대략적인 위치, 그리고 Google Analytics가 만들어 낸 식별자</td><td>Google이 <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>에 따라 보관합니다. 식별자 자체는 기기 안의 앱 저장 공간에 있습니다</td><td>앱을 삭제하면 식별자도 삭제되고, 새로 설치하면 새 식별자로 시작합니다. Google이 가진 것은 Google의 방침을 보십시오</td></tr>
+<tr><td>Premium 권한</td><td>당신의 Apple 계정(Apple 쪽), 기기에 있는 그 상태의 사본, 그리고 저희를 대신해 Premium을 판매하는 RevenueCat에 있는 당신의 구매 기록</td><td>구독은 App Store 설정에서 관리합니다(아래 참조). RevenueCat의 기록을 삭제하려면 저희에게 요청하세요(이 페이지 끝 참조)</td></tr>
+<tr><td>Meta의 SDK가 보낸 것: 설치, 실행, 구매, 기기의 종류, 그리고 SDK가 만들어 낸 식별자</td><td>Meta가 <a href="https://www.facebook.com/privacy/policy/">Meta의 개인정보 처리방침</a>에 따라 보관합니다. 식별자 자체는 기기 안의 앱 저장 공간에 있습니다</td><td>앱을 삭제하면 식별자도 삭제되고, 새로 설치하면 새 식별자로 시작합니다. Meta가 가진 것은 Meta의 방침을 보십시오</td></tr>
+<tr><td>Google Analytics가 수집한 것: 세션, 조회된 화면, 구매, 기기의 종류, 대략적인 위치, 그리고 Google Analytics가 만들어 낸 식별자</td><td>Google이 <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>에 따라 보관합니다. 식별자 자체는 기기 안의 앱 저장 공간에 있습니다</td><td>앱을 삭제하면 식별자도 삭제되고, 새로 설치하면 새 식별자로 시작합니다. Google이 가진 것은 Google의 방침을 보십시오</td></tr>
 <tr><td>AI 되돌아보기에 입력한 내용</td><td>Apple Intelligence가 되돌아보기를 작성한 경우에는 당신의 기기에만 있습니다. OpenAI가 작성한 경우: 당사 서버는 입력도 응답도 저장하지 않고, OpenAI는 입력과 출력을 최대 30일간 보관합니다(이전 버전에서는 Google이 최대 24시간)</td><td>저희 쪽에는 지울 것이 없습니다. {K_settings} → {K_ai_reflection}에서 기능을 끄면 그 뒤로는 아무것도 전송되지 않습니다</td></tr>
-<tr><td>계정, 프로필, 당신의 이름이 붙은 무언가</td><td>—</td><td>없습니다. 지울 것을 가져 본 적이 없습니다.</td></tr>
+<tr><td>계정, 프로필, 당신의 이름이 붙은 무언가</td><td>해당 없음</td><td>없습니다. 지울 것을 가져 본 적이 없습니다.</td></tr>
 </table></div>
 """,
 "d.inapp.h": "앱에서 지우기",
@@ -540,11 +540,11 @@ COPY = {
 """,
 "d.subscription.h": "구독에 대하여",
 "d.subscription.b": """
-<p>데이터를 초기화해도, 앱을 삭제해도 구독은 해지되지 않습니다 — 그것은 앱이 아니라 당신의 Apple 계정에 속하기 때문입니다. <a href="https://apps.apple.com/account/subscriptions">App Store 구독 설정</a>에서 해지하십시오. 현재 기간이 끝날 때까지는 그대로 유효합니다. 환불은 <a href="https://support.apple.com/billing">Apple 지원</a>이 처리합니다. 평생 구매는 갱신되지 않으므로 해지할 것이 없습니다.</p>
+<p>데이터를 초기화해도, 앱을 삭제해도 구독은 해지되지 않습니다. 그것은 앱이 아니라 당신의 Apple 계정에 속하기 때문입니다. <a href="https://apps.apple.com/account/subscriptions">App Store 구독 설정</a>에서 해지하십시오. 현재 기간이 끝날 때까지는 그대로 유효합니다. 환불은 <a href="https://support.apple.com/billing">Apple 지원</a>이 처리합니다. 평생 구매는 갱신되지 않으므로 해지할 것이 없습니다.</p>
 """,
 "d.email.h": "물어보기",
 "d.email.b": """
-<p>저희가 당신에 대해 무엇을 갖고 있는지 서면 확인을 원하시거나, RevenueCat에 있는 당신의 구매 기록이 삭제되기를 원하시거나, Meta의 SDK가 보낸 것에 대해 궁금한 점이 있으시면 어떤 주소에서든 {MAIL}로 편지를 보내 주세요. 구매 기록에 대해서는 Apple의 영수증 이메일에 있는 주문 번호를 함께 적어 주세요. 익명의 기록을 서로 구별할 수 있는 유일한 방법입니다. 30일 안에 답을 드립니다. 일지나 기분 기록, 그 화면 사진은 보내지 말아 주세요 — 답을 드리는 데 필요하지 않습니다.</p>
+<p>저희가 당신에 대해 무엇을 갖고 있는지 서면 확인을 원하시거나, RevenueCat에 있는 당신의 구매 기록이 삭제되기를 원하시거나, Meta의 SDK가 보낸 것에 대해 궁금한 점이 있으시면 어떤 주소에서든 {MAIL}로 편지를 보내 주세요. 구매 기록에 대해서는 Apple의 영수증 이메일에 있는 주문 번호를 함께 적어 주세요. 익명의 기록을 서로 구별할 수 있는 유일한 방법입니다. 30일 안에 답을 드립니다. 일지나 기분 기록, 그 화면 사진은 보내지 말아 주세요. 답을 드리는 데 필요하지 않습니다.</p>
 """,
 
 "nf.eyebrow": "404",
