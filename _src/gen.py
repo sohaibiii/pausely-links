@@ -319,7 +319,7 @@ def context(code, prefix, C):
     for key in ("settings", "your_data", "reset_all", "restore", "screen_time",
                 "apps_with_st", "notifications", "ai_reflection", "what_is_sent",
                 "language", "premium", "protection", "written_by", "time_per_app",
-                "time_banners"):
+                "time_banners", "questions_about"):
         ctx["K_" + key] = f'<kbd>{C["k." + key]}</kbd>'
     return ctx
 

@@ -27,7 +27,7 @@ COPY = {
 "ui.rights": "All rights reserved.",
 "ui.store_soon": "Coming soon to the App Store",
 "ui.store_get": "Download on the App Store",
-"ui.date": "19 November 2026",
+"ui.date": "20 November 2026",
 "ui.last_updated": "Last updated: {DATE}",
 
 # The app's own words, so this site names a screen the way the screen does.
@@ -46,15 +46,16 @@ COPY = {
 "k.written_by": "Written by",
 "k.time_per_app": "Time per app",
 "k.time_banners": "Time banners",
+"k.questions_about": "Questions about",
 
 "meta.support.title": "Pausely · Support",
 "meta.support.desc": "Official support for Pausely, the app that puts a pause in front of the apps you chose. How it works, requirements, FAQ and contact.",
 "meta.about.title": "Pausely: A breath before the scroll",
 "meta.about.desc": "Pausely puts a small speed bump between you and the apps that eat your day. No account, and your apps, your time and your words stay on your phone.",
 "meta.privacy.title": "Privacy Policy · Pausely",
-"meta.privacy.desc": "What Pausely keeps on your device, what Meta's SDK reports so we can measure our ads, and what the optional AI reflection sends.",
+"meta.privacy.desc": "What Pausely keeps on your device, what Meta's SDK reports so we can measure our ads, and what the optional AI pauses send.",
 "meta.terms.title": "Terms of Use · Pausely",
-"meta.terms.desc": "Terms of Use (EULA) for Pausely: what the app is and is not, how Premium is billed, and what strict mode asks of you.",
+"meta.terms.desc": "Terms of Use (EULA) for Pausely: what the app is and is not, how Premium is billed, and what strict mode and Lock Pausely ask of you.",
 "meta.data.title": "Delete your data · Pausely",
 "meta.data.desc": "How to erase everything Pausely holds on your device, what happens to your subscription, and what Meta's SDK and the AI reflection leave elsewhere.",
 "meta.nf.title": "Not found · Pausely",
@@ -218,7 +219,7 @@ COPY = {
 # --- privacy --------------------------------------------------------------
 "p.eyebrow": "Privacy Policy",
 "p.h1": "Your phone keeps what it knows.",
-"p.sub": "Pausely has no account, and everything it records about you stays on your device. Four things leave it: the record of what you buy, kept by RevenueCat; what Meta's SDK reports so we can measure our ads; what Google Analytics counts about how the app is used; and, only if you switch it on and OpenAI writes it, what you type into the AI reflection. This page is about exactly where those lines are.",
+"p.sub": "Pausely has no account, and everything it records about you stays on your device. Four things leave it: the record of what you buy, kept by RevenueCat; what Meta's SDK reports so we can measure our ads; what Google Analytics counts about how the app is used; and, only if you switch them on, what the AI pauses send when OpenAI writes them. This page is about exactly where those lines are.",
 "p.meta": "Effective {DATE} · applies to the Pausely app for iPhone, iPad and Android, and to this site",
 
 "p.summary.h": "The short version",
@@ -229,16 +230,16 @@ COPY = {
   <li><strong>The record of your purchases</strong>, kept by RevenueCat, which sells Premium for us through the App Store: which plan you bought and when, whether it renews, and an identifier it makes up for this install. It never learns which apps you protect, how you use them or anything you write. <a href="{BASE}{L}/privacy/#purchases">Details.</a></li>
   <li><strong>Meta's SDK</strong>, from Pausely 1.3, so we can tell which of our ads on Facebook and Instagram brought people to the app. It tells Meta when Pausely is installed or opened and when a plan is bought, with the kind of device and an identifier it makes up for this install. It never learns which apps you protect, how you use them or anything you write, and because Pausely never asks to track you, Meta gets no advertising identifier. <a href="{BASE}{L}/privacy/#ads">Details.</a></li>
   <li><strong>Google Analytics for Firebase</strong>, so we can see how many people use Pausely and how: when it is opened and for how long, which of its screens are viewed, the kind of device, roughly where it is, and an identifier it makes up for this install. It never learns which apps you protect, how you use them or anything you write, and it reads no advertising identifier. <a href="{BASE}{L}/privacy/#analytics">Details.</a></li>
-  <li><strong>The AI reflection</strong>, which is off until you switch it on. On an iPhone with Apple Intelligence it can be written on the phone itself, and then nothing leaves. When OpenAI writes it, the words you type into that one pause go to Pausely's server and on to OpenAI, with four small facts about the moment. <a href="{BASE}{L}/privacy/#ai">Details.</a></li>
+  <li><strong>The AI pauses</strong>, which are off until you switch them on. The reflection can be written on an iPhone with Apple Intelligence, and then nothing leaves; when OpenAI writes it, the words you type into that one pause go to Pausely's server and on to OpenAI, with four small facts about the moment. The question pause is always written by OpenAI, and sends only the language Pausely is in, a country code from your Region setting and the last few questions it asked. <a href="{BASE}{L}/privacy/#ai">Details.</a></li>
 </ul>
 <div class="callout"><span class="tile">{eye-off}</span><div>Your journal never leaves your device. Your check-ins never leave. The minutes you spend in other apps never leave. Which apps you chose never leaves. Pausely cannot read that even on your own device.</div></div>
-<p style="margin-top:16px">In the terms of Apple's privacy labels: <strong>no tracking</strong>; <strong>identifiers, usage data, purchases, diagnostics and other data</strong>, collected by Meta's SDK to measure our ads; <strong>identifiers, usage data, coarse location and purchases</strong>, collected by Google Analytics to understand how the app is used; <strong>purchases</strong>, recorded by RevenueCat to sell Premium; and <strong>user content</strong>, not linked to you, used only to make the AI reflection work. This policy applies to the Pausely app for iPhone, iPad and Android, published by {COMPANY}, and to this website.</p>
+<p style="margin-top:16px">In the terms of Apple's privacy labels: <strong>no tracking</strong>; <strong>identifiers, usage data, purchases, diagnostics and other data</strong>, collected by Meta's SDK to measure our ads; <strong>identifiers, usage data, coarse location and purchases</strong>, collected by Google Analytics to understand how the app is used; <strong>purchases</strong>, recorded by RevenueCat to sell Premium; and <strong>user content and other data</strong>, not linked to you, used only to make the AI pauses work. This policy applies to the Pausely app for iPhone, iPad and Android, published by {COMPANY}, and to this website.</p>
 <p style="margin-top:16px"><strong>On Android</strong>, Pausely works the same way on Google's tools instead of Apple's: there is no Meta SDK and no Google Analytics, Google's ML Kit sends Google diagnostics about itself, and the AI reflection uses Gemini Nano in place of Apple Intelligence and Google Play Integrity in place of App Attest. <a href="{BASE}{L}/privacy/#android">Pausely on Android</a> sets out all of it.</p>
 """,
 
 "p.collect.h": "What we collect",
 "p.collect.b": """
-<p>"Collect", in Apple's sense and in ours, means transmitting data off the device and keeping it somewhere that is not transient. By that measure Pausely collects the record of your purchases, kept by RevenueCat; what Meta's SDK reports so we can measure our ads; what Google Analytics counts about how the app is used; and, only if you switch on the AI reflection and OpenAI writes it, the words you type into that one screen. Nothing else.</p>
+<p>"Collect", in Apple's sense and in ours, means transmitting data off the device and keeping it somewhere that is not transient. By that measure Pausely collects the record of your purchases, kept by RevenueCat; what Meta's SDK reports so we can measure our ads; what Google Analytics counts about how the app is used; and, only if you switch on the AI pauses and OpenAI writes them, what they send: the words you type into the reflection, and the language and country the question pause is written for. Nothing else.</p>
 <div class="table-wrap"><table>
 <tr><th>Category</th><th>Collected?</th><th>What that means</th></tr>
 <tr><td>Contact info</td><td>No</td><td>There is no account, no sign-in and no email field anywhere in the app.</td></tr>
@@ -246,9 +247,9 @@ COPY = {
 <tr><td>Usage data</td><td><strong>Yes (Meta's SDK and Google Analytics)</strong></td><td>That Pausely was installed, and each time it is opened and for how long; Google Analytics also counts which of its screens are viewed. That is all of it: Pausely logs no event of its own, and nothing it counts (your pauses, your wins, the minutes you spend in other apps) is ever sent. Those stay on your device, for your own screens.</td></tr>
 <tr><td>Purchases</td><td><strong>Yes (RevenueCat, Meta's SDK and Google Analytics)</strong></td><td>RevenueCat keeps the record of each purchase so we can sell Premium: which plan, when it was bought, its price and currency, and whether it renews, with an identifier it makes up for this install. Meta's SDK also notices when a plan is bought, a free trial starts or a subscription renews, and reports which plan, its price and its currency, and Google Analytics counts purchases it notices the same way. Payment itself is Apple's, in the App Store sheet; Pausely never sees a card.</td></tr>
 <tr><td>Diagnostics</td><td><strong>Yes (Meta's SDK)</strong></td><td>Crash reports from Meta's own code. Pausely has no crash or performance reporter of its own.</td></tr>
-<tr><td>Other data</td><td><strong>Yes (Meta's SDK)</strong></td><td>Technical details sent with Meta's events, such as the kind of device, its iOS version, its language and its time zone.</td></tr>
-<tr><td>User content</td><td><strong>Only the AI reflection</strong></td><td>Your journal, your check-ins and your custom alternatives are stored on the device and nowhere else. If, and only if, you switch the AI reflection on and OpenAI writes it, the words you type into <em>that one screen</em> are sent, so that a question can come back. Nothing else you write is ever sent.</td></tr>
-<tr><td>Location</td><td><strong>Roughly (Google Analytics)</strong></td><td>A general location (country, region, city) that Google works out from the masked IP address Google Analytics' data arrives from. Pausely never asks for your location and never reads it.</td></tr>
+<tr><td>Other data</td><td><strong>Yes (Meta's SDK and the question pause)</strong></td><td>Technical details sent with Meta's events, such as the kind of device, its iOS version, its language and its time zone. If you switch the AI pauses on, the question pause sends the language Pausely is in, a country code and the last few questions it asked, so that a new question can come back in your language, about your country.</td></tr>
+<tr><td>User content</td><td><strong>Only the AI reflection</strong></td><td>Your journal, your check-ins and your custom alternatives are stored on the device and nowhere else. If, and only if, you switch the AI pauses on and OpenAI writes the reflection, the words you type into <em>that one screen</em> are sent, so that a question can come back. Nothing else you write is ever sent.</td></tr>
+<tr><td>Location</td><td><strong>Roughly (Google Analytics)</strong></td><td>A general location (country, region, city) that Google works out from the masked IP address Google Analytics' data arrives from. The question pause's country comes from your Region setting, not from where you are. Pausely never asks for your location and never reads it.</td></tr>
 <tr><td>Health, contacts, browsing, search</td><td>No</td><td>Pausely does not ask for your location, your health records or your contacts, and does not see your browsing or your searches. During a walk you chose instead of your phone it counts your steps with the phone's motion sensor, shows the number, and forgets it.</td></tr>
 </table></div>
 <p style="margin-top:14px"><strong>Tracking:</strong> none. Pausely never asks for permission to track you, so iOS keeps your device's advertising identifier from Meta's SDK, and the SDK tells Meta that tracking is not allowed. Google Analytics reads no advertising identifier, and Google signals, data sharing with Google and ads personalisation are off for Pausely. We do not link anything about you with data from other companies' apps or websites, and we share nothing with data brokers.</p>
@@ -325,18 +326,26 @@ COPY = {
 <p>Google keeps what it receives under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. There is no setting in the app to turn it off; deleting the app removes its identifier, and a new install starts with a new one.</p>
 """,
 
-"p.ai.h": "The AI reflection: only if you switch it on",
+"p.ai.h": "The AI pauses: only if you switch them on",
 "p.ai.b": """
-<p class="lead">This is an optional Premium feature. <strong>It is off when you install Pausely and stays off until you switch it on</strong>, and switching it off again stops all of it.</p>
-<p>With it on, one pause becomes a short exchange: you type why you are opening the app, and a question comes back rather than a lecture. Once a week it also writes a short note about how your week went.</p>
-<h3>Who writes it</h3>
+<p class="lead">These are optional Premium features. <strong>They are off when you install Pausely and stay off until you switch them on</strong>, and switching them off again stops all of it.</p>
+<p>With them on, two pauses join the others. In the <strong>reflection</strong>, you type why you are opening the app, and a question comes back rather than a lecture; once a week it also writes a short note about how your week went. The <strong>question pause</strong> asks one multiple-choice question about your country, with one try to get it right.</p>
+<h3>Who writes the reflection</h3>
 <p>On an iPhone with <strong>Apple Intelligence</strong>, Apple's model can write the question and the weekly note <strong>on the phone itself</strong>. Then nothing listed below leaves your device: no request is made, and nothing is kept. That is how it starts wherever Apple Intelligence is available. Otherwise, or if you choose it at {K_settings} → {K_ai_reflection} → {K_written_by}, <strong>OpenAI</strong> writes it, and the rest of this section applies. If you chose Apple Intelligence and it cannot answer, the pause shows its plain question instead: your words never go somewhere you decided they should not.</p>
-<h3>What is sent when OpenAI writes it</h3>
+<h3>What the reflection sends when OpenAI writes it</h3>
 <ul>
   <li><strong>Three numbers</strong>: how many times you have opened it today, the time on the clock, and how long your streak is.</li>
   <li><strong>The words you type into that screen</strong>, in that moment.</li>
 </ul>
 <p>The weekly note sends less: counts for the week and nothing else. No app names appear in it at all.</p>
+<h3>The question pause</h3>
+<p>Pausely for iPhone and iPad offers it. It is <strong>always written by OpenAI</strong>, whatever you chose for the reflection: Apple's on-device model got too many answers wrong to be fair with only one try. It sends exactly three things:</p>
+<ul>
+  <li><strong>The language</strong> Pausely is in, so the question is written in it.</li>
+  <li><strong>A country code</strong>, from your phone's Region setting or the country you chose at {K_settings} → {K_ai_reflection} → {K_questions_about}. It is not a location: Pausely asks for no location permission and never reads where you are.</li>
+  <li><strong>The last few questions</strong> your phone was asked, so the next one is a different one.</li>
+</ul>
+<p>It sends nothing you typed (the pause has no text field), nothing about the app you were opening, and never the answer you gave: whether it was right is worked out on your phone. The question waiting for you, the recent questions and any wait after a wrong answer stay on your device. With the AI pauses off, without a connection, or if our server cannot answer, the typing pause stands in its place.</p>
 <h3>What is never sent</h3>
 <ul>
   <li><strong>Your journal.</strong> It is the one place you write for nobody, and it never leaves the device. On an iPhone with Apple Intelligence, Pausely can write a few lines about your week's entries, on the phone, and nowhere else.</li>
@@ -347,9 +356,10 @@ COPY = {
   <li><strong>Anything that identifies you.</strong> There is no account, no user ID and no advertising identifier to send. The request carries an Apple App Attest assertion, which tells our server that it is talking to a genuine copy of Pausely. It is scoped to the app, not to you, and does not follow you between requests.</li>
 </ul>
 <h3>Where it goes, and how long it is kept</h3>
-<p>Your words go to <strong>Pausely's own server</strong>, and on to <strong>OpenAI</strong>, which runs the model. Pausely never calls a model vendor's API from your device, and there is no API key inside the app to be extracted.</p>
-<p><strong>Pausely's server stores nothing per request</strong>: no prompt, no reply, no context. To stop runaway use it keeps one number per device per day (how many reflections that device asked for, under a random device key) and deletes it after two days. Its logs record the shape of a request (a timestamp, how long it took, whether it succeeded) and never its contents. <strong>OpenAI keeps inputs and outputs for up to 30 days</strong> in its abuse-monitoring logs, and may examine them to check for abuse. <strong>OpenAI does not use any of it to train its models.</strong></p>
-<p>Earlier versions of Pausely send the same words to <strong>Google</strong> instead, which keeps inputs and outputs for up to 24 hours, may examine prompts to check for abuse, and does not use them to train its models.</p>
+<p>What the AI pauses send goes to <strong>Pausely's own server</strong>, and on to <strong>OpenAI</strong>, which runs the model. Pausely never calls a model vendor's API from your device, and there is no API key inside the app to be extracted.</p>
+<p><strong>Pausely's server stores nothing per request</strong>: no prompt, no reply, no context. To stop runaway use it keeps one number per device per day (how many AI pauses that device asked for, under a random device key) and deletes it after two days. Its logs record the shape of a request (a timestamp, how long it took, whether it succeeded) and never its contents. <strong>OpenAI keeps inputs and outputs for up to 30 days</strong> in its abuse-monitoring logs, and may examine them to check for abuse. <strong>OpenAI does not use any of it to train its models.</strong></p>
+<p>Earlier versions of Pausely send the reflection's words to <strong>Google</strong> instead, which keeps inputs and outputs for up to 24 hours, may examine prompts to check for abuse, and does not use them to train its models.</p>
+<p><strong>Pausely from the China mainland App Store has no AI pauses.</strong> There, the reflection is the plain question about why you are opening the app, the question pause is the typing pause, and none of this section's requests are ever made.</p>
 <p>{K_settings} → {K_ai_reflection} → {K_what_is_sent} lists every field in the app itself, in the same words as this page.</p>
 """,
 
@@ -385,8 +395,8 @@ COPY = {
   <li><strong>Meta</strong> receives what its SDK reports so we can measure our ads, and nothing else.</li>
   <li><strong>Google</strong> receives what Google Analytics collects, so we can see how the app is used, and nothing else.</li>
   <li><strong>RevenueCat</strong> keeps the record of purchases and completes them with the App Store, as our service provider. It receives what is listed under Purchases, and nothing else.</li>
-  <li><strong>Cloudflare</strong> hosts Pausely's server. When OpenAI writes the AI reflection, your words pass through it on their way to the model, and it stores none of them.</li>
-  <li><strong>OpenAI</strong> runs the model behind the AI reflection when it writes it, and only for as long as you have that feature switched on. It receives what is listed above and nothing else, and it does not use it to train its models. Earlier versions of the app use <strong>Google</strong> for this instead.</li>
+  <li><strong>Cloudflare</strong> hosts Pausely's server. When OpenAI writes an AI pause, what it sends passes through Cloudflare on its way to the model, and Cloudflare stores none of it.</li>
+  <li><strong>OpenAI</strong> runs the model behind the AI pauses when it writes them, and only for as long as you have them switched on. It receives what is listed above and nothing else, and it does not use it to train its models. Earlier versions of the app use <strong>Google</strong> for the reflection instead.</li>
 </ul>
 <p>We do not sell or rent personal data to anyone, and we share nothing with data brokers.</p>
 """,
@@ -448,7 +458,7 @@ COPY = {
 # --- terms ----------------------------------------------------------------
 "t.eyebrow": "Terms of Use",
 "t.h1": "The agreement, in plain words.",
-"t.sub": "What Pausely does, what it does not promise, how Premium is billed, and what strict mode asks of you.",
+"t.sub": "What Pausely does, what it does not promise, how Premium is billed, and what strict mode and Lock Pausely ask of you.",
 "t.meta": "Effective {DATE} · Pausely by {COMPANY}",
 
 "t.acceptance.h": "1. Acceptance of Terms",
@@ -462,13 +472,14 @@ COPY = {
 "t.what.h": "3. What Pausely is, and is not",
 "t.what.b": """
 <p>Pausely is a self-directed tool that adds a pause before apps you choose, records the outcomes on your device, and shows you your own progress. It is designed to make an automatic habit into a conscious choice.</p>
-<p>Pausely is <strong>not</strong> a medical, psychological or therapeutic service, and nothing in it (including mood check-ins, journal prompts, insights and anything the AI reflection writes back) is advice, diagnosis or treatment. If you are struggling with compulsive use, anxiety, depression or anything else that affects your wellbeing, please speak to a qualified professional. In an emergency, call your local emergency number.</p>
-<p>Pausely is also <strong>not a security or parental-control product</strong>. It is designed to be exactly as strong as you ask it to be: the app can be deleted, Screen Time access can be revoked in iOS Settings, and the shield exists only while the app is installed and authorised.</p>
+<p>Pausely is <strong>not</strong> a medical, psychological or therapeutic service, and nothing in it (including mood check-ins, journal prompts, insights and anything the AI pauses write) is advice, diagnosis or treatment. If you are struggling with compulsive use, anxiety, depression or anything else that affects your wellbeing, please speak to a qualified professional. In an emergency, call your local emergency number.</p>
+<p>Pausely is also <strong>not a security or parental-control product</strong>. It is designed to be exactly as strong as you ask it to be. While Lock Pausely or strict mode holds, iOS stops apps being deleted, Pausely included; at any other time the app can be deleted. Screen Time access can always be revoked in iOS Settings, which lifts every shield and that lock, and the shield exists only while the app is installed and authorised.</p>
 """,
-"t.screentime.h": "4. Screen Time, strict mode and your commitments",
+"t.screentime.h": "4. Screen Time, strict mode, Lock Pausely and your commitments",
 "t.screentime.b": """
 <p>Pausely relies on Apple's Screen Time framework. Apple enforces the shield; Pausely asks for it. Whether a shield appears, how quickly, and whether it persists across restarts and iOS updates is ultimately determined by iOS, and we cannot guarantee it in every circumstance.</p>
-<p><strong>Strict mode</strong> is a commitment you make to yourself. While it runs, for the duration you chose, protection cannot be switched off, rules cannot be deleted and data cannot be reset, <em>including by you, and including by us</em>. We cannot end a strict-mode session early on request. Do not start one you are not prepared to keep, and do not start one on a device you may need unrestricted access to. Deleting the app ends every shield, as described in section 3.</p>
+<p><strong>Strict mode</strong> is a commitment you make to yourself. While it runs, for the duration you chose, protection cannot be switched off, rules cannot be deleted, data cannot be reset and apps cannot be deleted, <em>including by you, and including by us</em>. We cannot end a strict-mode session early on request. Do not start one you are not prepared to keep, and do not start one on a device you may need unrestricted access to.</p>
+<p><strong>Lock Pausely</strong> holds the same things until you turn it off, and every change, turning it off included, first waits for the length of time you chose. While Lock Pausely or strict mode holds, iOS stops <em>every</em> app on the device being deleted, not only Pausely. Revoking Pausely's Screen Time access in iOS Settings lifts both, as described in section 3.</p>
 <p>A <strong>hard-block rule</strong> offers no way through during its hours. The same warning applies.</p>
 """,
 "t.data.h": "5. Your data and your device",
@@ -476,11 +487,11 @@ COPY = {
 <p>Everything Pausely records is stored on your device. See the <a href="{BASE}{L}/privacy/">Privacy Policy</a> for what leaves it, and when. You are responsible for your device, its passcode and its backups. If you delete the app, reset all data, or lose the device without a backup, your rules, journal and history are gone, and we have no copy to restore. Your Premium purchase is separate: it belongs to your Apple ID and can be restored on any device signed into it.</p>
 <p>What you write into Pausely is yours. We claim no rights over it, and we receive none of it unless you switch on the AI reflection and OpenAI writes it, which sends only what section 6 and the Privacy Policy describe.</p>
 """,
-"t.ai.h": "6. The AI reflection",
+"t.ai.h": "6. The AI pauses",
 "t.ai.b": """
-<p>The AI reflection is an <strong>optional</strong> Premium feature that is <strong>off until you switch it on</strong>. With it on, it is written either on your iPhone by Apple Intelligence, which sends nothing, or by OpenAI, in which case the words you type into that one pause are sent to our server and on to OpenAI, which generates a response. Where both are available you choose at {K_settings} → {K_ai_reflection} → {K_written_by}. What is sent, what is never sent and how long anything is kept are set out in the <a href="{BASE}{L}/privacy/#ai">Privacy Policy</a>, and listed inside the app at {K_settings} → {K_ai_reflection} → {K_what_is_sent}.</p>
-<p>The response is <strong>generated text</strong>. It may be wrong, unhelpful, or not what you expected, and it is <strong>not advice of any kind</strong> (see section 3). Do not type anything into it you would not want processed by a third party, and do not rely on it for any decision that matters. We do not guarantee the availability, latency or continuity of the feature, and we may change the model behind it, limit its use, or withdraw it, without that affecting the rest of the app.</p>
-<p>You agree not to use the feature to generate unlawful, abusive or infringing content, or to attempt to extract the underlying model or its instructions. Switching the feature off stops all of it.</p>
+<p>The AI pauses are <strong>optional</strong> Premium features that are <strong>off until you switch them on</strong>. The reflection is written either on your iPhone by Apple Intelligence, which sends nothing, or by OpenAI, in which case the words you type into that one pause are sent to our server and on to OpenAI, which generates a response. Where both are available you choose at {K_settings} → {K_ai_reflection} → {K_written_by}. The question pause is always written by OpenAI, and sends only the language Pausely is in, a country code and the last few questions it asked. What is sent, what is never sent and how long anything is kept are set out in the <a href="{BASE}{L}/privacy/#ai">Privacy Policy</a>, and listed inside the app at {K_settings} → {K_ai_reflection} → {K_what_is_sent}.</p>
+<p>The response is <strong>generated text</strong>. It may be wrong, unhelpful, or not what you expected, and it is <strong>not advice of any kind</strong> (see section 3). The question pause's questions and answers are generated too: Pausely checks them, but one may occasionally be wrong, and a wrong answer only ever costs you a short wait. Do not type anything into the reflection you would not want processed by a third party, and do not rely on either for any decision that matters. We do not guarantee the availability, latency or continuity of these features, and we may change the model behind them, limit their use, or withdraw them, without that affecting the rest of the app.</p>
+<p>You agree not to use these features to generate unlawful, abusive or infringing content, or to attempt to extract the underlying model or its instructions. Switching them off stops all of it.</p>
 """,
 "t.subscriptions.h": "7. Premium, subscriptions and billing",
 "t.subscriptions.b": """
@@ -548,6 +559,7 @@ COPY = {
 <tr><td>What Meta's SDK sent: installs, launches, purchases, the kind of device and the identifier it made up</td><td>Meta, under <a href="https://www.facebook.com/privacy/policy/">Meta's Privacy Policy</a>. The identifier itself is kept in the app's storage on your device</td><td>Deleting the app deletes the identifier, and a new install starts with a new one. For what Meta holds, see Meta's policy</td></tr>
 <tr><td>What Google Analytics collected: sessions, screens viewed, purchases, the kind of device, a general location and the identifier it made up</td><td>Google, under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. The identifier itself is kept in the app's storage on your device</td><td>Deleting the app deletes the identifier, and a new install starts with a new one. For what Google holds, see Google's policy</td></tr>
 <tr><td>What you typed into an AI reflection</td><td>Your device only, when Apple Intelligence wrote the reflection. When OpenAI wrote it: our server stores no prompt and no reply; OpenAI keeps inputs and outputs for up to 30 days (Google, for earlier versions: up to 24 hours)</td><td>Nothing to delete on our side. Switch the feature off in {K_settings} → {K_ai_reflection} and nothing more is ever sent</td></tr>
+<tr><td>What the question pause sent: the language, a country code and the last few questions</td><td>Our server stores none of it. OpenAI keeps inputs and outputs for up to 30 days. The questions themselves, and any wait after a wrong answer, are kept on your device</td><td>Nothing to delete on our side. Switching the AI pauses off forgets the questions on your device, and nothing more is ever sent</td></tr>
 <tr><td>An account, a profile, anything with your name on it</td><td>Nowhere</td><td>There is none. We never had one to delete.</td></tr>
 </table></div>
 """,

@@ -17,7 +17,7 @@ COPY = {
 "ui.rights": "保留所有权利。",
 "ui.store_soon": "即将上架 App Store",
 "ui.store_get": "在 App Store 下载",
-"ui.date": "2026年11月19日",
+"ui.date": "2026年11月20日",
 "ui.last_updated": "最后更新：{DATE}",
 
 "k.settings": "设置",
@@ -35,15 +35,16 @@ COPY = {
 "k.written_by": "撰写者",
 "k.time_per_app": "各应用时间",
 "k.time_banners": "使用时间提醒",
+"k.questions_about": "提问范围",
 
 "meta.support.title": "Pausely · 帮助",
 "meta.support.desc": "Pausely 官方帮助。它会在你选中的 App 前放上一次暂停。工作方式、运行要求、常见问题与联系方式。",
 "meta.about.title": "Pausely：滑动之前，先喘口气",
 "meta.about.desc": "Pausely 在你和那些吃掉你一天的 App 之间放了一道小小的减速带。没有账号，你的 App、你的时间和你的文字都留在你的手机上。",
 "meta.privacy.title": "隐私政策 · Pausely",
-"meta.privacy.desc": "Pausely 留在你设备上的东西、Meta 的 SDK 为了让我们衡量广告效果而上报的内容，以及可选的 AI 反思会发送什么。",
+"meta.privacy.desc": "Pausely 留在你设备上的东西、Meta 的 SDK 为了让我们衡量广告效果而上报的内容，以及可选的 AI 暂停会发送什么。",
 "meta.terms.title": "使用条款 · Pausely",
-"meta.terms.desc": "Pausely 使用条款（EULA）：这个 App 是什么、不是什么，Premium 如何计费，以及严格模式对你的要求。",
+"meta.terms.desc": "Pausely 使用条款（EULA）：这个 App 是什么、不是什么，Premium 如何计费，以及严格模式和 Pausely 锁定对你的要求。",
 "meta.data.title": "删除你的数据 · Pausely",
 "meta.data.desc": "如何抹掉 Pausely 在你设备上拥有的一切、订阅会怎样，以及 Meta 的 SDK 和 AI 反思在别处留下了什么。",
 "meta.nf.title": "未找到 · Pausely",
@@ -198,7 +199,7 @@ COPY = {
 
 "p.eyebrow": "隐私政策",
 "p.h1": "它知道的，留在你的设备里。",
-"p.sub": "Pausely 没有账号，它记录的关于你的一切都留在你的设备上。有四样东西会离开：你的购买记录，由 RevenueCat 保管；Meta 的 SDK 为了让我们衡量广告效果而上报的内容；Google Analytics 统计的关于 App 使用情况的内容；以及你在 AI 反思里打下的文字，但只有在你打开了它、并且由 OpenAI 来写时才会。这一页讲的就是这些界线到底划在哪里。",
+"p.sub": "Pausely 没有账号，它记录的关于你的一切都留在你的设备上。有四样东西会离开：你的购买记录，由 RevenueCat 保管；Meta 的 SDK 为了让我们衡量广告效果而上报的内容；Google Analytics 统计的关于 App 使用情况的内容；以及 AI 暂停由 OpenAI 来写时发送的内容，但只有在你打开了它们时才会。这一页讲的就是这些界线到底划在哪里。",
 "p.meta": "自 {DATE} 起生效 · 适用于 iPhone、iPad 和 Android 版 Pausely App，以及本网站",
 
 "p.summary.h": "简短版本",
@@ -209,16 +210,16 @@ COPY = {
   <li><strong>你的购买记录</strong>，由替我们通过 App Store 出售 Premium 的 RevenueCat 保管：你买了哪个方案、什么时候买的、是否续期，以及它为这次安装生成的一个标识符。它永远不会得知你保护了哪些 App、你如何使用它们，或你写下的任何内容。<a href="{BASE}{L}/privacy/#purchases">详情。</a></li>
   <li><strong>Meta 的 SDK</strong>，自 Pausely 1.3 起加入，好让我们知道是我们在 Facebook 和 Instagram 上的哪些广告把人们带到了这个 App。它会在 Pausely 被安装或打开、以及购买方案时告诉 Meta，同时附上设备类型和它为这次安装生成的一个标识符。它永远不会得知你保护了哪些 App、你如何使用它们，或你写下的任何内容；而且因为 Pausely 从不请求追踪你，Meta 拿不到任何广告标识符。<a href="{BASE}{L}/privacy/#ads">详情。</a></li>
   <li><strong>Google Analytics for Firebase</strong>，好让我们了解有多少人在用 Pausely、又是怎么用的：它何时被打开、每次打开多久、它的哪些页面被查看、设备类型、设备的大致位置，以及它为这次安装生成的一个标识符。它永远不会得知你保护了哪些 App、你如何使用它们，或你写下的任何内容，也不会读取任何广告标识符。<a href="{BASE}{L}/privacy/#analytics">详情。</a></li>
-  <li><strong>AI 反思</strong>，它在你打开之前一直关着。在配备 Apple Intelligence 的 iPhone 上，它可以直接在手机上写成，这时什么都不会离开。由 OpenAI 来写时，你在那一次暂停里打下的文字会连同关于那一刻的四个小事实一起，送到 Pausely 的服务器，再到 OpenAI。<a href="{BASE}{L}/privacy/#ai">详情。</a></li>
+  <li><strong>AI 暂停</strong>，它们在你打开之前一直关着。反思可以在配备 Apple Intelligence 的 iPhone 上写成，这时什么都不会离开；由 OpenAI 来写时，你在那一次暂停里打下的文字会连同关于那一刻的四个小事实一起，送到 Pausely 的服务器，再到 OpenAI。问答暂停始终由 OpenAI 来写，只发送 Pausely 当前使用的语言、来自你“地区”设置的国家/地区代码，以及它最近问过的几道题。<a href="{BASE}{L}/privacy/#ai">详情。</a></li>
 </ul>
 <div class="callout"><span class="tile">{eye-off}</span><div>你的日志永远不会离开你的设备。你的心情记录永远不会离开。你在其他 App 里花的分钟数永远不会离开。你选了哪些 App 也不会离开，因为哪怕在你自己的设备上，Pausely 都读不出它。</div></div>
-<p style="margin-top:16px">用 Apple 隐私标签的说法：<strong>没有追踪</strong>；<strong>标识符、使用数据、购买、诊断和其他数据</strong>，由 Meta 的 SDK 收集，用于衡量我们的广告效果；<strong>标识符、使用数据、粗略位置和购买</strong>，由 Google Analytics 收集，用于了解 App 的使用情况；<strong>购买</strong>，由 RevenueCat 记录，用于出售 Premium；以及<strong>用户内容</strong>，不与你关联，仅用于让 AI 反思正常运作。本政策适用于由 {COMPANY} 发行的 iPhone、iPad 和 Android 版 Pausely App，以及本网站。</p>
+<p style="margin-top:16px">用 Apple 隐私标签的说法：<strong>没有追踪</strong>；<strong>标识符、使用数据、购买、诊断和其他数据</strong>，由 Meta 的 SDK 收集，用于衡量我们的广告效果；<strong>标识符、使用数据、粗略位置和购买</strong>，由 Google Analytics 收集，用于了解 App 的使用情况；<strong>购买</strong>，由 RevenueCat 记录，用于出售 Premium；以及<strong>用户内容和其他数据</strong>，不与你关联，仅用于让 AI 暂停正常运作。本政策适用于由 {COMPANY} 发行的 iPhone、iPad 和 Android 版 Pausely App，以及本网站。</p>
 <p style="margin-top:16px"><strong>在 Android 上</strong>，Pausely 的运作方式相同，只是用的是 Google 的工具而不是 Apple 的：没有 Meta 的 SDK，也没有 Google Analytics，Google 的 ML Kit 会向 Google 发送关于它自身的诊断信息，而 AI 反思用 Gemini Nano 代替 Apple Intelligence，用 Google Play Integrity 代替 App Attest。<a href="{BASE}{L}/privacy/#android">Android 版 Pausely</a> 一节有完整说明。</p>
 """,
 
 "p.collect.h": "我们收集什么",
 "p.collect.b": """
-<p>“收集”，无论按 Apple 的定义还是我们的定义，都是指把数据传出设备，并保存在某个非临时的地方。以这个标准衡量，Pausely 收集的是由 RevenueCat 保管的你的购买记录；Meta 的 SDK 为了让我们衡量广告效果而上报的内容；Google Analytics 统计的关于 App 使用情况的内容；以及（只有在你打开 AI 反思、且由 OpenAI 来写时）你在那一个屏幕上打下的文字。别无其他。</p>
+<p>“收集”，无论按 Apple 的定义还是我们的定义，都是指把数据传出设备，并保存在某个非临时的地方。以这个标准衡量，Pausely 收集的是由 RevenueCat 保管的你的购买记录；Meta 的 SDK 为了让我们衡量广告效果而上报的内容；Google Analytics 统计的关于 App 使用情况的内容；以及（只有在你打开 AI 暂停、且由 OpenAI 来写它们时）它们发送的内容：你在反思里打下的文字，以及问答暂停出题所用的语言和所针对的国家/地区。别无其他。</p>
 <div class="table-wrap"><table>
 <tr><th>类别</th><th>是否收集？</th><th>这意味着什么</th></tr>
 <tr><td>联系信息</td><td>否</td><td>App 里没有任何账号、登录或邮箱输入框。</td></tr>
@@ -226,9 +227,9 @@ COPY = {
 <tr><td>使用数据</td><td><strong>是（Meta 的 SDK 和 Google Analytics）</strong></td><td>Pausely 被安装了，以及它每一次被打开、每次打开多久；Google Analytics 还会统计它的哪些页面被查看。这就是全部：Pausely 不记录任何自己的事件，它统计的任何东西（你的暂停、你的成功、你在其他 App 里花的分钟数）都从不发送。这些都留在你的设备上，供你自己的页面使用。</td></tr>
 <tr><td>购买</td><td><strong>是（RevenueCat、Meta 的 SDK 和 Google Analytics）</strong></td><td>RevenueCat 保管每一笔购买的记录，好让我们出售 Premium：是哪个方案、何时购买、它的价格和币种，以及是否续期，并附上它为这次安装生成的一个标识符。每当购买方案、开始免费试用或订阅续期时，Meta 的 SDK 也会察觉到，并上报是哪个方案、它的价格和币种；Google Analytics 也会以同样的方式统计它察觉到的购买。付款本身是 Apple 的事，发生在 App Store 的面板里；Pausely 从不接触银行卡。</td></tr>
 <tr><td>诊断</td><td><strong>是（Meta 的 SDK）</strong></td><td>来自 Meta 自己代码的崩溃报告。Pausely 没有自己的崩溃或性能上报。</td></tr>
-<tr><td>其他数据</td><td><strong>是（Meta 的 SDK）</strong></td><td>随 Meta 的事件一起发送的技术细节，例如设备类型、它的 iOS 版本、语言和时区。</td></tr>
-<tr><td>用户内容</td><td><strong>仅 AI 反思</strong></td><td>你的日志、心情记录和自定义替代选项都保存在设备上，别无他处。只有当你打开 AI 反思、且由 OpenAI 来写时，也仅在那时，你在<em>那一个屏幕</em>上打下的文字才会被发送，好让一个问题能返回给你。你写下的其他任何内容都永远不会被发送。</td></tr>
-<tr><td>位置</td><td><strong>粗略（Google Analytics）</strong></td><td>一个大致的位置（国家、地区、城市），由 Google 根据 Google Analytics 的数据发来时所用的、经过掩码处理的 IP 地址推算得出。Pausely 从不请求获取你的位置，也从不读取它。</td></tr>
+<tr><td>其他数据</td><td><strong>是（Meta 的 SDK 和问答暂停）</strong></td><td>随 Meta 的事件一起发送的技术细节，例如设备类型、它的 iOS 版本、语言和时区。如果你打开 AI 暂停，问答暂停会发送 Pausely 当前使用的语言、一个国家/地区代码，以及它最近问过的几道题，好让一道新题以你的语言、就你所在的国家/地区返回给你。</td></tr>
+<tr><td>用户内容</td><td><strong>仅 AI 反思</strong></td><td>你的日志、心情记录和自定义替代选项都保存在设备上，别无他处。只有当你打开 AI 暂停、且由 OpenAI 来写反思时，也仅在那时，你在<em>那一个屏幕</em>上打下的文字才会被发送，好让一个问题能返回给你。你写下的其他任何内容都永远不会被发送。</td></tr>
+<tr><td>位置</td><td><strong>粗略（Google Analytics）</strong></td><td>一个大致的位置（国家、地区、城市），由 Google 根据 Google Analytics 的数据发来时所用的、经过掩码处理的 IP 地址推算得出。问答暂停的国家/地区来自你的“地区”设置，而不是你所在的地方。Pausely 从不请求获取你的位置，也从不读取它。</td></tr>
 <tr><td>健康、通讯录、浏览、搜索</td><td>否</td><td>Pausely 不会请求获取你的位置、你的健康记录或你的通讯录，也看不到你的浏览或你的搜索。当你选择去散步、以此代替看手机时，它会在散步期间用手机的运动传感器数你的步数，把数字显示出来，然后就忘掉它。</td></tr>
 </table></div>
 <p style="margin-top:14px"><strong>追踪：</strong>没有。Pausely 从不请求追踪你的许可，所以 iOS 不会把你设备的广告标识符交给 Meta 的 SDK，而 SDK 会告诉 Meta：不允许追踪。Google Analytics 不读取任何广告标识符；对 Pausely 而言，Google 信号、与 Google 共享数据以及广告个性化均已关闭。我们不会把与你有关的任何内容，同其他公司的 App 或网站的数据关联起来，也不会与数据经纪商共享任何东西。</p>
@@ -305,18 +306,26 @@ COPY = {
 <p>Google 依据 <a href="https://policies.google.com/privacy">Google 隐私权政策</a>保存它收到的内容。App 里没有关闭它的设置；删除 App 就会删除它的标识符，重新安装则会从一个新的标识符开始。</p>
 """,
 
-"p.ai.h": "AI 反思：只在你打开它时",
+"p.ai.h": "AI 暂停：只在你打开它们时",
 "p.ai.b": """
-<p class="lead">这是一个可选的 Premium 功能。<strong>你安装 Pausely 时它是关着的，并且会一直关着，直到你打开它</strong>；再把它关掉，这一切就都会停止。</p>
-<p>打开之后，其中一次暂停会变成一小段对话：你写下为什么要打开这个 App，回来的是一个问题，而不是一通说教。每周一次，它还会写一段关于你这一周过得如何的短文。</p>
-<h3>由谁来写</h3>
+<p class="lead">这些是可选的 Premium 功能。<strong>你安装 Pausely 时它们是关着的，并且会一直关着，直到你打开它们</strong>；再把它们关掉，这一切就都会停止。</p>
+<p>打开之后，会有两种暂停加入其他暂停之列。在<strong>反思</strong>里，你写下为什么要打开这个 App，回来的是一个问题，而不是一通说教；每周一次，它还会写一段关于你这一周过得如何的短文。<strong>问答暂停</strong>会问一道关于你所在国家/地区的选择题，只有一次答对的机会。</p>
+<h3>由谁来写反思</h3>
 <p>在配备 <strong>Apple Intelligence</strong> 的 iPhone 上，Apple 的模型可以<strong>直接在手机上</strong>写出那个问题和每周小结。这时，下面列出的任何内容都不会离开你的设备：不会发出任何请求，也不会保存任何东西。只要 Apple Intelligence 可用，它一开始就是这样设置的。否则（或者如果你在{K_settings} → {K_ai_reflection} → {K_written_by}中选择了 OpenAI），就由 <strong>OpenAI</strong> 来写，本节的其余内容也随之适用。如果你选择了 Apple Intelligence 而它无法作答，暂停就会改为显示它自己那个简单的问题：你的文字永远不会去到你已决定不让它们去的地方。</p>
-<h3>由 OpenAI 来写时会发送什么</h3>
+<h3>由 OpenAI 来写时，反思会发送什么</h3>
 <ul>
   <li><strong>三个数字</strong>：你今天打开过它几次、现在几点，以及你的连续记录有多长。</li>
   <li><strong>你在那个屏幕上打下的文字</strong>，就在那一刻。</li>
 </ul>
 <p>每周小结发送的更少：只有这一周的计数，别无其他。里面完全不会出现任何 App 名称。</p>
+<h3>问答暂停</h3>
+<p>iPhone 和 iPad 版 Pausely 提供这种暂停。无论你为反思选了由谁来写，它都<strong>始终由 OpenAI 来写</strong>：Apple 的设备端模型答错的题目太多，而只有一次机会，这样并不公平。它发送的恰好是以下三样东西：</p>
+<ul>
+  <li><strong>Pausely 当前使用的语言</strong>，好让题目用这种语言写出。</li>
+  <li><strong>一个国家/地区代码</strong>，来自你手机的“地区”设置，或你在{K_settings} → {K_ai_reflection} → {K_questions_about}中选择的国家/地区。它不是位置信息：Pausely 不请求任何位置权限，也从不读取你在哪里。</li>
+  <li><strong>你的手机最近被问过的几道题</strong>，好让下一道题换成不同的一道。</li>
+</ul>
+<p>它不会发送你输入的任何内容（这种暂停没有输入框），不会发送与你正要打开的 App 有关的任何信息，也从不发送你给出的答案：答得对不对，是在你的手机上判断的。等着你的那道题、最近问过的题，以及答错后的任何等待，都留在你的设备上。如果 AI 暂停关着、没有网络连接，或者我们的服务器无法作答，就由“输入才能继续”暂停代替它。</p>
 <h3>永远不会发送什么</h3>
 <ul>
   <li><strong>你的日志。</strong>那是你为了不给任何人看而书写的唯一地方，它从不离开设备。在配备 Apple Intelligence 的 iPhone 上，Pausely 可以就你这一周的日志写上几句，在手机上，别无他处。</li>
@@ -327,9 +336,10 @@ COPY = {
   <li><strong>任何能指认出你的东西。</strong>没有账号、没有用户 ID、没有广告标识符可供发送。请求会带上 Apple 的 App Attest 证明，它只是告诉我们的服务器：对面是一份货真价实的 Pausely。它绑定的是这个 App，不是你，也不会跨请求跟着你。</li>
 </ul>
 <h3>去到哪里，留多久</h3>
-<p>你的文字会送到 <strong>Pausely 自己的服务器</strong>，再到运行模型的 <strong>OpenAI</strong>。Pausely 从不从你的设备直接调用任何模型厂商的 API，App 里也没有可以被掏出来的 API 密钥。</p>
-<p><strong>Pausely 的服务器对每次请求什么都不保存</strong>：不保存提问、不保存回答、不保存上下文。为了制止失控的使用，它每台设备每天只保留一个数字（这台设备当天请求了多少次反思，记在一个随机的设备密钥下），两天后删除。它的日志只记下一次请求的形状（时间戳、耗时、是否成功），从不记录内容。<strong>OpenAI 会把输入和输出在其滥用监控日志中保留最多 30 天</strong>，并可能检查其中是否存在滥用。<strong>这些内容 OpenAI 都不会用来训练模型。</strong></p>
-<p>早期版本的 Pausely 会把同样的文字改送到 <strong>Google</strong>：Google 会把输入和输出保留最多 24 小时，可能检查输入是否存在滥用，也不会用来训练模型。</p>
+<p>AI 暂停发送的内容会送到 <strong>Pausely 自己的服务器</strong>，再到运行模型的 <strong>OpenAI</strong>。Pausely 从不从你的设备直接调用任何模型厂商的 API，App 里也没有可以被掏出来的 API 密钥。</p>
+<p><strong>Pausely 的服务器对每次请求什么都不保存</strong>：不保存提问、不保存回答、不保存上下文。为了制止失控的使用，它每台设备每天只保留一个数字（这台设备当天请求了多少次 AI 暂停，记在一个随机的设备密钥下），两天后删除。它的日志只记下一次请求的形状（时间戳、耗时、是否成功），从不记录内容。<strong>OpenAI 会把输入和输出在其滥用监控日志中保留最多 30 天</strong>，并可能检查其中是否存在滥用。<strong>这些内容 OpenAI 都不会用来训练模型。</strong></p>
+<p>早期版本的 Pausely 会把反思里的文字改送到 <strong>Google</strong>：Google 会把输入和输出保留最多 24 小时，可能检查输入是否存在滥用，也不会用来训练模型。</p>
+<p><strong>从中国大陆 App Store 下载的 Pausely 没有 AI 暂停。</strong>在那里，反思就是那个问你为什么要打开这个 App 的简单问题，问答暂停就是“输入才能继续”暂停，本节所述的任何请求都永远不会发出。</p>
 <p>{K_settings} → {K_ai_reflection} → {K_what_is_sent}在 App 内列出了每一个字段，用词与本页相同。</p>
 """,
 
@@ -365,8 +375,8 @@ COPY = {
   <li><strong>Meta</strong> 接收它的 SDK 为了让我们衡量广告效果而上报的内容，别无其他。</li>
   <li><strong>Google</strong> 接收 Google Analytics 收集的内容，好让我们了解 App 的使用情况，别无其他。</li>
   <li><strong>RevenueCat</strong> 作为我们的服务提供商，保管购买记录，并与 App Store 完成购买。它接收“购买”一节中列出的内容，别无其他。</li>
-  <li><strong>Cloudflare</strong> 托管 Pausely 的服务器。由 OpenAI 来写 AI 反思时，你的文字会在送往模型的途中经过它，它不保存其中任何内容。</li>
-  <li><strong>OpenAI</strong> 在由它来写 AI 反思时运行背后的模型，且仅在你打开该功能期间。它收到的只有上面列出的内容，别无其他，也不会用来训练自己的模型。早期版本的 App 由 <strong>Google</strong> 承担这一角色。</li>
+  <li><strong>Cloudflare</strong> 托管 Pausely 的服务器。由 OpenAI 来写某次 AI 暂停时，这次暂停发送的内容会在送往模型的途中经过 Cloudflare，而 Cloudflare 不保存其中任何内容。</li>
+  <li><strong>OpenAI</strong> 在由它来写 AI 暂停时运行背后的模型，且仅在你打开它们期间。它收到的只有上面列出的内容，别无其他，也不会用来训练自己的模型。早期版本的 App 在反思上改用 <strong>Google</strong>。</li>
 </ul>
 <p>我们不向任何人出售或出租个人数据，也不与数据经纪商共享任何东西。</p>
 """,
@@ -427,7 +437,7 @@ COPY = {
 
 "t.eyebrow": "使用条款",
 "t.h1": "这份约定，用大白话讲。",
-"t.sub": "Pausely 做什么、不承诺什么，Premium 如何计费，以及严格模式对你的要求。",
+"t.sub": "Pausely 做什么、不承诺什么，Premium 如何计费，以及严格模式和 Pausely 锁定对你的要求。",
 "t.meta": "自 {DATE} 起生效 · Pausely，由 {COMPANY} 提供",
 
 "t.acceptance.h": "1. 条款的接受",
@@ -441,13 +451,14 @@ COPY = {
 "t.what.h": "3. Pausely 是什么，以及不是什么",
 "t.what.b": """
 <p>Pausely 是一个自我约束的工具：它在你选中的 App 前加上一次暂停，把结果记录在你的设备上，并把你自己的进展呈现给你。它的用意，是把一个自动的习惯变成一次有意识的选择。</p>
-<p>Pausely <strong>不是</strong>医疗、心理或治疗服务，其中的任何内容（包括心情记录、日志提示、各种分析，以及 AI 反思写回来的任何文字）都不构成建议、诊断或治疗。如果你正被强迫性使用、焦虑、抑郁，或任何影响你身心状态的事情困扰，请与有资质的专业人士谈一谈。紧急情况下，请拨打当地的紧急电话。</p>
-<p>Pausely 同样<strong>不是安全产品，也不是家长控制产品</strong>。它被设计成恰好如你所要求的那么强：App 可以删除，“屏幕使用时间”权限可以在 iOS 设置中收回，而遮挡只在 App 处于已安装且已获授权的状态时存在。</p>
+<p>Pausely <strong>不是</strong>医疗、心理或治疗服务，其中的任何内容（包括心情记录、日志提示、各种分析，以及 AI 暂停写出的任何文字）都不构成建议、诊断或治疗。如果你正被强迫性使用、焦虑、抑郁，或任何影响你身心状态的事情困扰，请与有资质的专业人士谈一谈。紧急情况下，请拨打当地的紧急电话。</p>
+<p>Pausely 同样<strong>不是安全产品，也不是家长控制产品</strong>。它被设计成恰好如你所要求的那么强。在 Pausely 锁定或严格模式生效期间，iOS 会阻止删除 App，Pausely 也不例外；其他任何时候，这个 App 都可以删除。“屏幕使用时间”权限随时都可以在 iOS 设置中收回，这会解除全部遮挡以及那项锁定，而遮挡只在 App 处于已安装且已获授权的状态时存在。</p>
 """,
-"t.screentime.h": "4. “屏幕使用时间”、严格模式与你的承诺",
+"t.screentime.h": "4. “屏幕使用时间”、严格模式、Pausely 锁定与你的承诺",
 "t.screentime.b": """
 <p>Pausely 依赖 Apple 的“屏幕使用时间”框架。执行遮挡的是 Apple，Pausely 只是提出请求。遮挡是否出现、出现得多快，以及能否在重启和 iOS 更新之后延续，最终取决于 iOS，我们无法在所有情形下作出保证。</p>
-<p><strong>严格模式</strong>是你与自己立下的承诺。它运行期间，在你选定的时长内，保护无法关闭、规则无法删除、数据无法重置，<em>你不行，我们也不行</em>。我们无法应请求提前结束一次严格模式。不要开启一次你没准备好守住的严格模式，也不要在一台你可能需要不受限制使用的设备上开启它。删除 App 会结束全部遮挡，见第 3 条。</p>
+<p><strong>严格模式</strong>是你与自己立下的承诺。它运行期间，在你选定的时长内，保护无法关闭、规则无法删除、数据无法重置、App 无法删除，<em>你不行，我们也不行</em>。我们无法应请求提前结束一次严格模式。不要开启一次你没准备好守住的严格模式，也不要在一台你可能需要不受限制使用的设备上开启它。</p>
+<p><strong>Pausely 锁定</strong>会一直守住同样这些事项，直到你把它关掉；而每一项改动（包括把它关掉）都要先等过你选定的时长。在 Pausely 锁定或严格模式生效期间，iOS 会阻止删除设备上的<em>每一个</em> App，而不只是 Pausely。在 iOS 设置中收回 Pausely 的“屏幕使用时间”权限，会同时解除这两者，见第 3 条。</p>
 <p><strong>完全拦截的规则</strong>在其时段内不提供任何通行的余地。同样的提醒适用于它。</p>
 """,
 "t.data.h": "5. 你的数据与你的设备",
@@ -455,11 +466,11 @@ COPY = {
 <p>Pausely 记录的一切都保存在你的设备上。什么会离开设备、在什么时候离开，见<a href="{BASE}{L}/privacy/">隐私政策</a>。你的设备、它的密码和它的备份由你负责。如果你删除 App、重置全部数据，或在没有备份的情况下丢失设备，你的规则、日志和历史就没有了，我们这边没有副本可以恢复。你购买的 Premium 是另一回事：它属于你的 Apple 账户，可以在任何登录了该账户的设备上恢复。</p>
 <p>你写进 Pausely 的内容属于你。我们对此不主张任何权利，也不会收到其中任何内容，除非你打开 AI 反思、且由 OpenAI 来写。即便如此，被发送的也只是第 6 条和隐私政策所描述的那些。</p>
 """,
-"t.ai.h": "6. AI 反思",
+"t.ai.h": "6. AI 暂停",
 "t.ai.b": """
-<p>AI 反思是一个<strong>可选的</strong> Premium 功能，<strong>在你打开它之前一直关着</strong>。打开之后，它要么由 Apple Intelligence 在你的 iPhone 上写成，这样什么都不会发送；要么由 OpenAI 来写，这种情况下，你在那一次暂停里打下的文字会被发送到我们的服务器，再送到生成回应的 OpenAI。两者都可用时，由你在{K_settings} → {K_ai_reflection} → {K_written_by}中选择。发送什么、永远不发送什么，以及任何内容会被保留多久，都写在<a href="{BASE}{L}/privacy/#ai">隐私政策</a>里，并在 App 内的{K_settings} → {K_ai_reflection} → {K_what_is_sent}中逐条列出。</p>
-<p>返回的是<strong>生成的文字</strong>。它可能是错的、没有帮助的，或者不是你所期待的，并且<strong>不构成任何形式的建议</strong>（见第 3 条）。不要在其中输入你不希望被第三方处理的内容，也不要在任何要紧的决定上依赖它。我们不保证该功能的可用性、响应速度或持续提供，并可能更换其背后的模型、限制其使用，或将其撤下，而这不影响 App 的其余部分。</p>
-<p>你同意不使用该功能生成违法、辱骂或侵权的内容，也不试图套取底层模型或其指令。关闭该功能会让这一切停止。</p>
+<p>AI 暂停是<strong>可选的</strong> Premium 功能，<strong>在你打开它们之前一直关着</strong>。反思要么由 Apple Intelligence 在你的 iPhone 上写成，这样什么都不会发送；要么由 OpenAI 来写，这种情况下，你在那一次暂停里打下的文字会被发送到我们的服务器，再送到生成回应的 OpenAI。两者都可用时，由你在{K_settings} → {K_ai_reflection} → {K_written_by}中选择。问答暂停始终由 OpenAI 来写，只发送 Pausely 当前使用的语言、一个国家/地区代码，以及它最近问过的几道题。发送什么、永远不发送什么，以及任何内容会被保留多久，都写在<a href="{BASE}{L}/privacy/#ai">隐私政策</a>里，并在 App 内的{K_settings} → {K_ai_reflection} → {K_what_is_sent}中逐条列出。</p>
+<p>返回的是<strong>生成的文字</strong>。它可能是错的、没有帮助的，或者不是你所期待的，并且<strong>不构成任何形式的建议</strong>（见第 3 条）。问答暂停的题目和答案同样是生成的：Pausely 会检查它们，但偶尔仍可能有一道是错的，而答错的代价始终只是一小段等待。不要在反思中输入你不希望被第三方处理的内容，也不要在任何要紧的决定上依赖其中任何一项。我们不保证这些功能的可用性、响应速度或持续提供，并可能更换其背后的模型、限制其使用，或将其撤下，而这不影响 App 的其余部分。</p>
+<p>你同意不使用这些功能生成违法、辱骂或侵权的内容，也不试图套取底层模型或其指令。关闭它们会让这一切停止。</p>
 """,
 "t.subscriptions.h": "7. Premium、订阅与计费",
 "t.subscriptions.b": """
@@ -526,6 +537,7 @@ COPY = {
 <tr><td>Meta 的 SDK 发出的内容：安装、启动、购买、设备类型，以及它生成的标识符</td><td>Meta，受 <a href="https://www.facebook.com/privacy/policy/">Meta 的隐私政策</a>约束。标识符本身保存在你设备上 App 的存储里</td><td>删除 App 会删除这个标识符，重新安装则会从一个新的标识符开始。Meta 持有的内容，请参阅 Meta 的政策</td></tr>
 <tr><td>Google Analytics 收集的内容：会话、查看过的页面、购买、设备类型、大致位置，以及它生成的标识符</td><td>Google，受 <a href="https://policies.google.com/privacy">Google 隐私权政策</a>约束。标识符本身保存在你设备上 App 的存储里</td><td>删除 App 会删除这个标识符，重新安装则会从一个新的标识符开始。Google 持有的内容，请参阅 Google 的政策</td></tr>
 <tr><td>你在一次 AI 反思中打下的内容</td><td>由 Apple Intelligence 写反思时，只在你的设备上。由 OpenAI 写时：我们的服务器既不保存提问也不保存回答；OpenAI 会把输入和输出保留最多 30 天（早期版本由 Google 保留最多 24 小时）</td><td>我们这边没有可删的东西。在{K_settings} → {K_ai_reflection}中关闭该功能，此后就不会再发送任何内容</td></tr>
+<tr><td>问答暂停发送的内容：语言、一个国家/地区代码，以及最近几道题</td><td>我们的服务器不保存其中任何内容。OpenAI 会把输入和输出保留最多 30 天。题目本身，以及答错后的任何等待，都保存在你的设备上</td><td>我们这边没有可删的东西。关闭 AI 暂停会忘掉你设备上的这些题，此后就不会再发送任何内容</td></tr>
 <tr><td>账号、个人资料，或任何带着你名字的东西</td><td>无</td><td>并不存在。我们从来就没有可删的。</td></tr>
 </table></div>
 """,

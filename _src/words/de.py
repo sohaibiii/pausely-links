@@ -17,7 +17,7 @@ COPY = {
 "ui.rights": "Alle Rechte vorbehalten.",
 "ui.store_soon": "Bald im App Store",
 "ui.store_get": "Im App Store laden",
-"ui.date": "19. November 2026",
+"ui.date": "20. November 2026",
 "ui.last_updated": "Zuletzt aktualisiert: {DATE}",
 
 "k.settings": "Einstellungen",
@@ -35,15 +35,16 @@ COPY = {
 "k.written_by": "Geschrieben von",
 "k.time_per_app": "Zeit pro App",
 "k.time_banners": "Zeithinweise",
+"k.questions_about": "Fragen zu",
 
 "meta.support.title": "Pausely · Hilfe",
 "meta.support.desc": "Offizielle Hilfe zu Pausely, der App, die eine Pause vor die Apps stellt, die du ausgewählt hast. Wie es funktioniert, Voraussetzungen, FAQ und Kontakt.",
 "meta.about.title": "Pausely: Ein Atemzug vor dem Scrollen",
 "meta.about.desc": "Pausely legt eine kleine Bremsschwelle zwischen dich und die Apps, die deinen Tag auffressen. Kein Konto, und deine Apps, deine Zeit und deine Worte bleiben auf deinem Gerät.",
 "meta.privacy.title": "Datenschutzerklärung · Pausely",
-"meta.privacy.desc": "Was Pausely auf deinem Gerät behält, was Metas SDK meldet, damit wir unsere Anzeigen messen können, und was die optionale KI-Reflexion sendet.",
+"meta.privacy.desc": "Was Pausely auf deinem Gerät behält, was Metas SDK meldet, damit wir unsere Anzeigen messen können, und was die optionalen KI-Pausen senden.",
 "meta.terms.title": "Nutzungsbedingungen · Pausely",
-"meta.terms.desc": "Nutzungsbedingungen (EULA) für Pausely: was die App ist und was nicht, wie Premium abgerechnet wird und worauf der strenge Modus dich festlegt.",
+"meta.terms.desc": "Nutzungsbedingungen (EULA) für Pausely: was die App ist und was nicht, wie Premium abgerechnet wird und worauf der strenge Modus und die Pausely-Sperre dich festlegen.",
 "meta.data.title": "Daten löschen · Pausely",
 "meta.data.desc": "Wie du alles löschst, was Pausely auf deinem Gerät hat, was mit deinem Abo passiert und was Metas SDK und die KI-Reflexion anderswo hinterlassen.",
 "meta.nf.title": "Nicht gefunden · Pausely",
@@ -198,7 +199,7 @@ COPY = {
 
 "p.eyebrow": "Datenschutzerklärung",
 "p.h1": "Dein Gerät behält, was es weiß.",
-"p.sub": "Pausely hat kein Konto, und alles, was es über dich aufzeichnet, bleibt auf deinem Gerät. Vier Dinge verlassen es: die Aufzeichnung deiner Käufe, die RevenueCat aufbewahrt; was Metas SDK meldet, damit wir unsere Anzeigen messen können; was Google Analytics darüber zählt, wie die App genutzt wird; und (nur wenn du sie einschaltest und OpenAI sie schreibt) was du in die KI-Reflexion tippst. Auf dieser Seite steht genau, wo diese Linien verlaufen.",
+"p.sub": "Pausely hat kein Konto, und alles, was es über dich aufzeichnet, bleibt auf deinem Gerät. Vier Dinge verlassen es: die Aufzeichnung deiner Käufe, die RevenueCat aufbewahrt; was Metas SDK meldet, damit wir unsere Anzeigen messen können; was Google Analytics darüber zählt, wie die App genutzt wird; und (nur wenn du sie einschaltest) was die KI-Pausen senden, wenn OpenAI sie schreibt. Auf dieser Seite steht genau, wo diese Linien verlaufen.",
 "p.meta": "Gültig ab {DATE} · gilt für die Pausely-App für iPhone, iPad und Android und für diese Website",
 
 "p.summary.h": "Die kurze Fassung",
@@ -209,16 +210,16 @@ COPY = {
   <li><strong>Die Aufzeichnung deiner Käufe</strong>, aufbewahrt von RevenueCat, das Premium für uns über den App Store verkauft: welchen Tarif du gekauft hast und wann, ob er sich verlängert, und eine Kennung, die es für diese Installation erzeugt. Es erfährt nie, welche Apps du schützt, wie du sie nutzt oder was du schreibst. <a href="{BASE}{L}/privacy/#purchases">Einzelheiten.</a></li>
   <li><strong>Metas SDK</strong>, ab Pausely 1.3, damit wir sehen können, welche unserer Anzeigen auf Facebook und Instagram Menschen zur App gebracht haben. Es teilt Meta mit, wann Pausely installiert oder geöffnet und wann ein Tarif gekauft wird, zusammen mit der Art des Geräts und einer Kennung, die es für diese Installation erzeugt. Es erfährt nie, welche Apps du schützt, wie du sie nutzt oder was du schreibst, und weil Pausely nie darum bittet, dich zu tracken, bekommt Meta keine Werbekennung. <a href="{BASE}{L}/privacy/#ads">Einzelheiten.</a></li>
   <li><strong>Google Analytics for Firebase</strong>, damit wir sehen können, wie viele Menschen Pausely nutzen und wie: wann es geöffnet wird und wie lange, welche seiner Bildschirme angesehen werden, die Art des Geräts, ungefähr wo es sich befindet, und eine Kennung, die es für diese Installation erzeugt. Es erfährt nie, welche Apps du schützt, wie du sie nutzt oder was du schreibst, und es liest keine Werbekennung. <a href="{BASE}{L}/privacy/#analytics">Einzelheiten.</a></li>
-  <li><strong>Die KI-Reflexion</strong>, die aus ist, bis du sie einschaltest. Auf einem iPhone mit Apple Intelligence kann sie auf dem Telefon selbst geschrieben werden, und dann geht nichts hinaus. Wenn OpenAI sie schreibt, gehen die Wörter, die du in diese eine Pause tippst, an Pauselys Server und weiter an OpenAI, zusammen mit vier kleinen Angaben über den Moment. <a href="{BASE}{L}/privacy/#ai">Einzelheiten.</a></li>
+  <li><strong>Die KI-Pausen</strong>, die aus sind, bis du sie einschaltest. Die Reflexion kann auf einem iPhone mit Apple Intelligence geschrieben werden, und dann geht nichts hinaus; wenn OpenAI sie schreibt, gehen die Wörter, die du in diese eine Pause tippst, an Pauselys Server und weiter an OpenAI, zusammen mit vier kleinen Angaben über den Moment. Die Fragenpause wird immer von OpenAI geschrieben und sendet nur die Sprache, in der Pausely läuft, einen Ländercode aus deiner Regionseinstellung und die letzten paar Fragen, die sie gestellt hat. <a href="{BASE}{L}/privacy/#ai">Einzelheiten.</a></li>
 </ul>
 <div class="callout"><span class="tile">{eye-off}</span><div>Dein Tagebuch verlässt dein Gerät nie. Deine Check-ins verlassen es nie. Die Minuten, die du in anderen Apps verbringst, verlassen es nie. Welche Apps du ausgewählt hast, verlässt es nie. Pausely kann das nicht einmal auf deinem eigenen Gerät lesen.</div></div>
-<p style="margin-top:16px">In den Worten von Apples Datenschutz-Labels: <strong>kein Tracking</strong>; <strong>Kennungen, Nutzungsdaten, Käufe, Diagnose und sonstige Daten</strong>, von Metas SDK erfasst, um unsere Anzeigen zu messen; <strong>Kennungen, Nutzungsdaten, ungefährer Standort und Käufe</strong>, von Google Analytics erfasst, um zu verstehen, wie die App genutzt wird; <strong>Käufe</strong>, von RevenueCat aufgezeichnet, um Premium zu verkaufen; und <strong>Benutzerinhalte</strong>, nicht mit dir verknüpft, nur dafür verwendet, dass die KI-Reflexion funktioniert. Diese Erklärung gilt für die Pausely-App für iPhone, iPad und Android, herausgegeben von {COMPANY}, und für diese Website.</p>
+<p style="margin-top:16px">In den Worten von Apples Datenschutz-Labels: <strong>kein Tracking</strong>; <strong>Kennungen, Nutzungsdaten, Käufe, Diagnose und sonstige Daten</strong>, von Metas SDK erfasst, um unsere Anzeigen zu messen; <strong>Kennungen, Nutzungsdaten, ungefährer Standort und Käufe</strong>, von Google Analytics erfasst, um zu verstehen, wie die App genutzt wird; <strong>Käufe</strong>, von RevenueCat aufgezeichnet, um Premium zu verkaufen; und <strong>Benutzerinhalte und sonstige Daten</strong>, nicht mit dir verknüpft, nur dafür verwendet, dass die KI-Pausen funktionieren. Diese Erklärung gilt für die Pausely-App für iPhone, iPad und Android, herausgegeben von {COMPANY}, und für diese Website.</p>
 <p style="margin-top:16px"><strong>Auf Android</strong> funktioniert Pausely genauso, nur mit Googles Werkzeugen statt mit Apples: Es gibt kein SDK von Meta und kein Google Analytics, Googles ML Kit sendet Google Diagnosedaten über sich selbst, und die KI-Reflexion nutzt Gemini Nano statt Apple Intelligence und Google Play Integrity statt App Attest. <a href="{BASE}{L}/privacy/#android">Pausely auf Android</a> erklärt alles davon.</p>
 """,
 
 "p.collect.h": "Was wir erfassen",
 "p.collect.b": """
-<p>„Erfassen“ heißt in Apples Sinn und in unserem: Daten vom Gerät zu übertragen und irgendwo zu behalten, das nicht flüchtig ist. Nach diesem Maßstab erfasst Pausely die Aufzeichnung deiner Käufe, die RevenueCat aufbewahrt; was Metas SDK meldet, damit wir unsere Anzeigen messen können; was Google Analytics darüber zählt, wie die App genutzt wird; und (nur wenn du die KI-Reflexion einschaltest und OpenAI sie schreibt) die Wörter, die du in diesen einen Bildschirm tippst. Sonst nichts.</p>
+<p>„Erfassen“ heißt in Apples Sinn und in unserem: Daten vom Gerät zu übertragen und irgendwo zu behalten, das nicht flüchtig ist. Nach diesem Maßstab erfasst Pausely die Aufzeichnung deiner Käufe, die RevenueCat aufbewahrt; was Metas SDK meldet, damit wir unsere Anzeigen messen können; was Google Analytics darüber zählt, wie die App genutzt wird; und (nur wenn du die KI-Pausen einschaltest und OpenAI sie schreibt) was sie senden: die Wörter, die du in die Reflexion tippst, und die Sprache und das Land, für die die Fragenpause geschrieben wird. Sonst nichts.</p>
 <div class="table-wrap"><table>
 <tr><th>Kategorie</th><th>Erfasst?</th><th>Was das heißt</th></tr>
 <tr><td>Kontaktdaten</td><td>Nein</td><td>Es gibt nirgends in der App ein Konto, eine Anmeldung oder ein E-Mail-Feld.</td></tr>
@@ -226,9 +227,9 @@ COPY = {
 <tr><td>Nutzungsdaten</td><td><strong>Ja (Metas SDK und Google Analytics)</strong></td><td>Dass Pausely installiert wurde, sowie jedes Öffnen der App und wie lange sie offen bleibt; Google Analytics zählt außerdem, welche ihrer Bildschirme angesehen werden. Das ist alles: Pausely protokolliert kein eigenes Ereignis, und nichts, was es zählt (deine Pausen, deine Erfolge, die Minuten, die du in anderen Apps verbringst), wird je gesendet. Sie bleiben auf deinem Gerät, für deine eigenen Bildschirme.</td></tr>
 <tr><td>Käufe</td><td><strong>Ja (RevenueCat, Metas SDK und Google Analytics)</strong></td><td>RevenueCat bewahrt die Aufzeichnung jedes Kaufs auf, damit wir Premium verkaufen können: welcher Tarif, wann er gekauft wurde, sein Preis, seine Währung und ob er sich verlängert, zusammen mit einer Kennung, die es für diese Installation erzeugt. Auch Metas SDK bemerkt, wenn ein Tarif gekauft wird, eine kostenlose Testphase beginnt oder ein Abo sich verlängert, und meldet den Tarif, seinen Preis und seine Währung, und Google Analytics zählt Käufe, die es bemerkt, auf dieselbe Weise. Die Zahlung selbst ist Apples, im App-Store-Fenster; Pausely sieht nie eine Karte.</td></tr>
 <tr><td>Diagnose</td><td><strong>Ja (Metas SDK)</strong></td><td>Absturzberichte aus Metas eigenem Code. Pausely hat keinen eigenen Absturz- oder Leistungsbericht.</td></tr>
-<tr><td>Sonstige Daten</td><td><strong>Ja (Metas SDK)</strong></td><td>Technische Angaben, die mit Metas Ereignissen gesendet werden, etwa die Art des Geräts, seine iOS-Version, seine Sprache und seine Zeitzone.</td></tr>
-<tr><td>Benutzerinhalte</td><td><strong>Nur die KI-Reflexion</strong></td><td>Dein Tagebuch, deine Check-ins und deine eigenen Alternativen liegen auf dem Gerät und sonst nirgends. Wenn, und nur wenn, du die KI-Reflexion einschaltest und OpenAI sie schreibt, werden die Wörter gesendet, die du in <em>diesen einen Bildschirm</em> tippst, damit eine Frage zurückkommen kann. Nichts anderes, was du schreibst, wird je gesendet.</td></tr>
-<tr><td>Standort</td><td><strong>Ungefähr (Google Analytics)</strong></td><td>Ein allgemeiner Standort (Land, Region, Stadt), den Google aus der maskierten IP-Adresse ableitet, von der die Daten von Google Analytics kommen. Pausely fragt nie nach deinem Standort und liest ihn nie.</td></tr>
+<tr><td>Sonstige Daten</td><td><strong>Ja (Metas SDK und die Fragenpause)</strong></td><td>Technische Angaben, die mit Metas Ereignissen gesendet werden, etwa die Art des Geräts, seine iOS-Version, seine Sprache und seine Zeitzone. Wenn du die KI-Pausen einschaltest, sendet die Fragenpause die Sprache, in der Pausely läuft, einen Ländercode und die letzten paar Fragen, die sie gestellt hat, damit eine neue Frage in deiner Sprache und über dein Land zurückkommen kann.</td></tr>
+<tr><td>Benutzerinhalte</td><td><strong>Nur die KI-Reflexion</strong></td><td>Dein Tagebuch, deine Check-ins und deine eigenen Alternativen liegen auf dem Gerät und sonst nirgends. Wenn, und nur wenn, du die KI-Pausen einschaltest und OpenAI die Reflexion schreibt, werden die Wörter gesendet, die du in <em>diesen einen Bildschirm</em> tippst, damit eine Frage zurückkommen kann. Nichts anderes, was du schreibst, wird je gesendet.</td></tr>
+<tr><td>Standort</td><td><strong>Ungefähr (Google Analytics)</strong></td><td>Ein allgemeiner Standort (Land, Region, Stadt), den Google aus der maskierten IP-Adresse ableitet, von der die Daten von Google Analytics kommen. Das Land der Fragenpause stammt aus deiner Regionseinstellung, nicht von deinem Aufenthaltsort. Pausely fragt nie nach deinem Standort und liest ihn nie.</td></tr>
 <tr><td>Gesundheit, Kontakte, Surfen, Suche</td><td>Nein</td><td>Pausely fragt nicht nach deinem Standort, deinen Gesundheitsdaten oder deinen Kontakten und sieht weder dein Surfen noch deine Suchen. Während eines Spaziergangs, den du statt des Handys gewählt hast, zählt es deine Schritte mit dem Bewegungssensor des Geräts, zeigt die Zahl an und vergisst sie.</td></tr>
 </table></div>
 <p style="margin-top:14px"><strong>Tracking:</strong> keins. Pausely bittet nie um die Erlaubnis, dich zu tracken, deshalb hält iOS die Werbekennung deines Geräts von Metas SDK fern, und das SDK teilt Meta mit, dass Tracking nicht erlaubt ist. Google Analytics liest keine Werbekennung, und Google-Signale, die Datenfreigabe an Google und die Personalisierung von Anzeigen sind für Pausely ausgeschaltet. Wir verknüpfen nichts über dich mit Daten aus Apps oder Websites anderer Unternehmen und teilen nichts mit Datenhändlern.</p>
@@ -305,18 +306,26 @@ COPY = {
 <p>Google behält, was es erhält, nach <a href="https://policies.google.com/privacy">Googles Datenschutzerklärung</a>. Es gibt in der App keine Einstellung, um es auszuschalten; die App zu löschen entfernt seine Kennung, und eine neue Installation beginnt mit einer neuen.</p>
 """,
 
-"p.ai.h": "Die KI-Reflexion: nur wenn du sie einschaltest",
+"p.ai.h": "Die KI-Pausen: nur wenn du sie einschaltest",
 "p.ai.b": """
-<p class="lead">Das ist eine optionale Premium-Funktion. <strong>Sie ist aus, wenn du Pausely installierst, und bleibt aus, bis du sie einschaltest</strong>, und wenn du sie wieder ausschaltest, endet all das.</p>
-<p>Ist sie an, wird aus einer Pause ein kurzer Austausch: Du tippst, warum du die App öffnest, und es kommt eine Frage zurück statt einer Belehrung. Einmal pro Woche schreibt sie außerdem eine kurze Notiz darüber, wie deine Woche lief.</p>
-<h3>Wer sie schreibt</h3>
+<p class="lead">Das sind optionale Premium-Funktionen. <strong>Sie sind aus, wenn du Pausely installierst, und bleiben aus, bis du sie einschaltest</strong>, und wenn du sie wieder ausschaltest, endet all das.</p>
+<p>Sind sie an, kommen zwei Pausen zu den anderen dazu. In der <strong>Reflexion</strong> tippst du, warum du die App öffnest, und es kommt eine Frage zurück statt einer Belehrung; einmal pro Woche schreibt sie außerdem eine kurze Notiz darüber, wie deine Woche lief. Die <strong>Fragenpause</strong> stellt eine Multiple-Choice-Frage zu deinem Land, und du hast einen Versuch, sie richtig zu beantworten.</p>
+<h3>Wer die Reflexion schreibt</h3>
 <p>Auf einem iPhone mit <strong>Apple Intelligence</strong> kann Apples Modell die Frage und die Wochennotiz <strong>auf dem Telefon selbst</strong> schreiben. Dann verlässt nichts von dem, was unten aufgeführt ist, dein Gerät: Es wird keine Anfrage gestellt, und nichts wird behalten. So beginnt die KI-Reflexion überall dort, wo Apple Intelligence verfügbar ist. Sonst (oder wenn du es unter {K_settings} → {K_ai_reflection} → {K_written_by} wählst) schreibt <strong>OpenAI</strong> sie, und der Rest dieses Abschnitts gilt. Wenn du Apple Intelligence gewählt hast und es nicht antworten kann, stellt die Pause stattdessen ihre einfache Frage: Deine Wörter gehen nie dorthin, wohin sie nach deiner Entscheidung nicht gehen sollen.</p>
-<h3>Was gesendet wird, wenn OpenAI sie schreibt</h3>
+<h3>Was die Reflexion sendet, wenn OpenAI sie schreibt</h3>
 <ul>
   <li><strong>Drei Zahlen</strong>: wie oft du sie heute schon geöffnet hast, die Uhrzeit und wie lang deine Serie ist.</li>
   <li><strong>Die Wörter, die du in diesen Bildschirm tippst</strong>, in diesem Moment.</li>
 </ul>
 <p>Die Wochennotiz sendet weniger: Zählwerte für die Woche und sonst nichts. App-Namen kommen darin überhaupt nicht vor.</p>
+<h3>Die Fragenpause</h3>
+<p>Pausely für iPhone und iPad bietet sie an. Sie wird <strong>immer von OpenAI geschrieben</strong>, egal, was du für die Reflexion gewählt hast: Apples Modell auf dem Gerät lag bei zu vielen Antworten falsch, um bei nur einem Versuch fair zu sein. Sie sendet genau drei Dinge:</p>
+<ul>
+  <li><strong>Die Sprache</strong>, in der Pausely läuft, damit die Frage in dieser Sprache geschrieben wird.</li>
+  <li><strong>Einen Ländercode</strong>, aus der Regionseinstellung deines Telefons oder für das Land, das du unter {K_settings} → {K_ai_reflection} → {K_questions_about} gewählt hast. Er ist kein Standort: Pausely fragt nach keiner Standortberechtigung und liest nie, wo du bist.</li>
+  <li><strong>Die letzten paar Fragen</strong>, die deinem Telefon gestellt wurden, damit die nächste eine andere ist.</li>
+</ul>
+<p>Sie sendet nichts, was du getippt hast (die Pause hat kein Textfeld), nichts über die App, die du gerade öffnen wolltest, und nie die Antwort, die du gegeben hast: Ob sie richtig war, wird auf deinem Telefon ermittelt. Die Frage, die auf dich wartet, die letzten Fragen und jede Wartezeit nach einer falschen Antwort bleiben auf deinem Gerät. Sind die KI-Pausen aus, gibt es keine Verbindung oder kann unser Server nicht antworten, tritt die Pause zum Abtippen an ihre Stelle.</p>
 <h3>Was nie gesendet wird</h3>
 <ul>
   <li><strong>Dein Tagebuch.</strong> Es ist der eine Ort, an dem du für niemanden schreibst, und es verlässt das Gerät nie. Auf einem iPhone mit Apple Intelligence kann Pausely ein paar Zeilen über die Einträge deiner Woche schreiben, auf dem Telefon und nirgendwo sonst.</li>
@@ -327,9 +336,10 @@ COPY = {
   <li><strong>Irgendetwas, das dich identifiziert.</strong> Es gibt kein Konto, keine Nutzer-ID und keine Werbekennung zum Senden. Die Anfrage trägt eine Apple-App-Attest-Bestätigung, die unserem Server sagt, dass er mit einer echten Kopie von Pausely spricht. Sie gilt der App, nicht dir, und folgt dir nicht von Anfrage zu Anfrage.</li>
 </ul>
 <h3>Wohin es geht und wie lange es bleibt</h3>
-<p>Deine Wörter gehen an <strong>Pauselys eigenen Server</strong> und weiter an <strong>OpenAI</strong>, das das Modell betreibt. Pausely ruft von deinem Gerät aus nie die API eines Modellanbieters auf, und in der App steckt kein API-Schlüssel, den man herausziehen könnte.</p>
-<p><strong>Pauselys Server speichert pro Anfrage nichts</strong>: keine Eingabe, keine Antwort, keinen Kontext. Um ausufernde Nutzung zu stoppen, behält er pro Gerät und Tag eine einzige Zahl (wie viele Reflexionen dieses Gerät angefragt hat, unter einem zufälligen Geräteschlüssel) und löscht sie nach zwei Tagen. Seine Protokolle halten die Form einer Anfrage fest (einen Zeitstempel, wie lange sie dauerte, ob sie erfolgreich war) und nie ihren Inhalt. <strong>OpenAI behält Ein- und Ausgaben bis zu 30 Tage</strong> in seinen Protokollen zur Missbrauchsüberwachung und darf sie auf Missbrauch prüfen. <strong>OpenAI verwendet nichts davon, um seine Modelle zu trainieren.</strong></p>
-<p>Frühere Versionen von Pausely senden dieselben Wörter stattdessen an <strong>Google</strong>, das Ein- und Ausgaben bis zu 24 Stunden behält, Eingaben auf Missbrauch prüfen darf und nichts davon zum Trainieren seiner Modelle verwendet.</p>
+<p>Was die KI-Pausen senden, geht an <strong>Pauselys eigenen Server</strong> und weiter an <strong>OpenAI</strong>, das das Modell betreibt. Pausely ruft von deinem Gerät aus nie die API eines Modellanbieters auf, und in der App steckt kein API-Schlüssel, den man herausziehen könnte.</p>
+<p><strong>Pauselys Server speichert pro Anfrage nichts</strong>: keine Eingabe, keine Antwort, keinen Kontext. Um ausufernde Nutzung zu stoppen, behält er pro Gerät und Tag eine einzige Zahl (wie viele KI-Pausen dieses Gerät angefragt hat, unter einem zufälligen Geräteschlüssel) und löscht sie nach zwei Tagen. Seine Protokolle halten die Form einer Anfrage fest (einen Zeitstempel, wie lange sie dauerte, ob sie erfolgreich war) und nie ihren Inhalt. <strong>OpenAI behält Ein- und Ausgaben bis zu 30 Tage</strong> in seinen Protokollen zur Missbrauchsüberwachung und darf sie auf Missbrauch prüfen. <strong>OpenAI verwendet nichts davon, um seine Modelle zu trainieren.</strong></p>
+<p>Frühere Versionen von Pausely senden die Wörter der Reflexion stattdessen an <strong>Google</strong>, das Ein- und Ausgaben bis zu 24 Stunden behält, Eingaben auf Missbrauch prüfen darf und nichts davon zum Trainieren seiner Modelle verwendet.</p>
+<p><strong>Pausely aus dem App Store des chinesischen Festlands hat keine KI-Pausen.</strong> Dort ist die Reflexion die einfache Frage, warum du die App öffnest, die Fragenpause ist die Pause zum Abtippen, und keine der Anfragen aus diesem Abschnitt wird je gestellt.</p>
 <p>{K_settings} → {K_ai_reflection} → {K_what_is_sent} listet jedes Feld in der App selbst auf, mit denselben Worten wie auf dieser Seite.</p>
 """,
 
@@ -365,8 +375,8 @@ COPY = {
   <li><strong>Meta</strong> bekommt, was sein SDK meldet, damit wir unsere Anzeigen messen können, und sonst nichts.</li>
   <li><strong>Google</strong> bekommt, was Google Analytics erfasst, damit wir sehen können, wie die App genutzt wird, und sonst nichts.</li>
   <li><strong>RevenueCat</strong> bewahrt die Aufzeichnung der Käufe auf und schließt sie mit dem App Store ab, als unser Dienstleister. Es bekommt, was unter „Käufe“ aufgeführt ist, und sonst nichts.</li>
-  <li><strong>Cloudflare</strong> hostet Pauselys Server. Wenn OpenAI die KI-Reflexion schreibt, laufen deine Wörter auf dem Weg zum Modell hindurch, und Cloudflare speichert nichts davon.</li>
-  <li><strong>OpenAI</strong> betreibt das Modell hinter der KI-Reflexion, wenn es sie schreibt, und nur so lange, wie du diese Funktion eingeschaltet hast. Es bekommt, was oben aufgeführt ist, und sonst nichts, und es verwendet nichts davon, um seine Modelle zu trainieren. Frühere Versionen der App nutzen dafür stattdessen <strong>Google</strong>.</li>
+  <li><strong>Cloudflare</strong> hostet Pauselys Server. Wenn OpenAI eine KI-Pause schreibt, läuft das, was sie sendet, auf dem Weg zum Modell durch Cloudflare, und Cloudflare speichert nichts davon.</li>
+  <li><strong>OpenAI</strong> betreibt das Modell hinter den KI-Pausen, wenn es sie schreibt, und nur so lange, wie du sie eingeschaltet hast. Es bekommt, was oben aufgeführt ist, und sonst nichts, und es verwendet nichts davon, um seine Modelle zu trainieren. Frühere Versionen der App nutzen für die Reflexion stattdessen <strong>Google</strong>.</li>
 </ul>
 <p>Wir verkaufen oder vermieten personenbezogene Daten an niemanden und teilen nichts mit Datenhändlern.</p>
 """,
@@ -427,7 +437,7 @@ COPY = {
 
 "t.eyebrow": "Nutzungsbedingungen",
 "t.h1": "Die Vereinbarung, in klaren Worten.",
-"t.sub": "Was Pausely tut, was es nicht verspricht, wie Premium abgerechnet wird und worauf der strenge Modus dich festlegt.",
+"t.sub": "Was Pausely tut, was es nicht verspricht, wie Premium abgerechnet wird und worauf der strenge Modus und die Pausely-Sperre dich festlegen.",
 "t.meta": "Gültig ab {DATE} · Pausely von {COMPANY}",
 
 "t.acceptance.h": "1. Annahme der Bedingungen",
@@ -441,13 +451,14 @@ COPY = {
 "t.what.h": "3. Was Pausely ist und was nicht",
 "t.what.b": """
 <p>Pausely ist ein selbstbestimmtes Werkzeug, das eine Pause vor Apps deiner Wahl setzt, die Ergebnisse auf deinem Gerät festhält und dir deinen eigenen Fortschritt zeigt. Es ist dafür gemacht, aus einer automatischen Gewohnheit eine bewusste Entscheidung zu machen.</p>
-<p>Pausely ist <strong>kein</strong> medizinischer, psychologischer oder therapeutischer Dienst, und nichts darin (auch keine Stimmungs-Check-ins, Tagebuch-Anregungen, Auswertungen oder irgendetwas, das die KI-Reflexion zurückschreibt) ist Beratung, Diagnose oder Behandlung. Wenn du mit zwanghafter Nutzung, Angst, Depression oder irgendetwas anderem kämpfst, das dein Wohlbefinden beeinträchtigt, sprich bitte mit einer qualifizierten Fachperson. Im Notfall wähle die Notrufnummer vor Ort.</p>
-<p>Pausely ist außerdem <strong>kein Sicherheits- oder Kindersicherungs-Produkt</strong>. Es ist so gebaut, dass es genau so stark ist, wie du es verlangst: Die App kann gelöscht werden, der Bildschirmzeit-Zugriff kann in den iOS-Einstellungen widerrufen werden, und die Abschirmung besteht nur, solange die App installiert und berechtigt ist.</p>
+<p>Pausely ist <strong>kein</strong> medizinischer, psychologischer oder therapeutischer Dienst, und nichts darin (auch keine Stimmungs-Check-ins, Tagebuch-Anregungen, Auswertungen oder irgendetwas, das die KI-Pausen schreiben) ist Beratung, Diagnose oder Behandlung. Wenn du mit zwanghafter Nutzung, Angst, Depression oder irgendetwas anderem kämpfst, das dein Wohlbefinden beeinträchtigt, sprich bitte mit einer qualifizierten Fachperson. Im Notfall wähle die Notrufnummer vor Ort.</p>
+<p>Pausely ist außerdem <strong>kein Sicherheits- oder Kindersicherungs-Produkt</strong>. Es ist so gebaut, dass es genau so stark ist, wie du es verlangst. Solange die Pausely-Sperre oder der strenge Modus aktiv ist, verhindert iOS, dass Apps gelöscht werden, Pausely eingeschlossen; zu jeder anderen Zeit kann die App gelöscht werden. Der Bildschirmzeit-Zugriff kann in den iOS-Einstellungen jederzeit widerrufen werden, was jede Abschirmung und diese Löschsperre aufhebt, und die Abschirmung besteht nur, solange die App installiert und berechtigt ist.</p>
 """,
-"t.screentime.h": "4. Bildschirmzeit, strenger Modus und deine Zusagen",
+"t.screentime.h": "4. Bildschirmzeit, strenger Modus, Pausely-Sperre und deine Zusagen",
 "t.screentime.b": """
 <p>Pausely stützt sich auf Apples Bildschirmzeit-Framework. Apple setzt die Abschirmung durch; Pausely bittet darum. Ob eine Abschirmung erscheint, wie schnell und ob sie Neustarts und iOS-Updates übersteht, entscheidet letztlich iOS, und wir können es nicht in jedem Fall garantieren.</p>
-<p>Der <strong>strenge Modus</strong> ist eine Zusage, die du dir selbst gibst. Solange er läuft, für die von dir gewählte Dauer, lässt sich der Schutz nicht abschalten, lassen sich Regeln nicht löschen und Daten nicht zurücksetzen, <em>auch nicht von dir und auch nicht von uns</em>. Wir können eine Sitzung im strengen Modus auf Wunsch nicht vorzeitig beenden. Beginne keine, die du nicht durchhalten willst, und beginne keine auf einem Gerät, auf das du womöglich uneingeschränkten Zugriff brauchst. Die App zu löschen beendet jede Abschirmung, wie in Abschnitt 3 beschrieben.</p>
+<p>Der <strong>strenge Modus</strong> ist eine Zusage, die du dir selbst gibst. Solange er läuft, für die von dir gewählte Dauer, lässt sich der Schutz nicht abschalten, lassen sich Regeln nicht löschen, Daten nicht zurücksetzen und Apps nicht löschen, <em>auch nicht von dir und auch nicht von uns</em>. Wir können eine Sitzung im strengen Modus auf Wunsch nicht vorzeitig beenden. Beginne keine, die du nicht durchhalten willst, und beginne keine auf einem Gerät, auf das du womöglich uneingeschränkten Zugriff brauchst.</p>
+<p>Die <strong>Pausely-Sperre</strong> hält dasselbe fest, bis du sie ausschaltest, und jede Änderung, auch das Ausschalten, wartet zuerst so lange, wie du gewählt hast. Solange die Pausely-Sperre oder der strenge Modus aktiv ist, verhindert iOS das Löschen <em>jeder</em> App auf dem Gerät, nicht nur das von Pausely. Pauselys Bildschirmzeit-Zugriff in den iOS-Einstellungen zu widerrufen hebt beide auf, wie in Abschnitt 3 beschrieben.</p>
 <p>Eine <strong>harte Sperrregel</strong> bietet während ihrer Zeiten keinen Weg hindurch. Dieselbe Warnung gilt.</p>
 """,
 "t.data.h": "5. Deine Daten und dein Gerät",
@@ -455,11 +466,11 @@ COPY = {
 <p>Alles, was Pausely aufzeichnet, liegt auf deinem Gerät. Was es verlässt und wann, steht in der <a href="{BASE}{L}/privacy/">Datenschutzerklärung</a>. Du bist für dein Gerät verantwortlich, für seinen Code und seine Backups. Wenn du die App löschst, alle Daten zurücksetzt oder das Gerät ohne Backup verlierst, sind deine Regeln, dein Tagebuch und deine Geschichte weg, und wir haben keine Kopie zum Wiederherstellen. Dein Premium-Kauf ist davon getrennt: Er gehört zu deiner Apple-ID und lässt sich auf jedem damit angemeldeten Gerät wiederherstellen.</p>
 <p>Was du in Pausely schreibst, gehört dir. Wir erheben keinerlei Anspruch darauf und bekommen nichts davon, außer du schaltest die KI-Reflexion ein und OpenAI schreibt sie, wobei sie nur das sendet, was Abschnitt 6 und die Datenschutzerklärung beschreiben.</p>
 """,
-"t.ai.h": "6. Die KI-Reflexion",
+"t.ai.h": "6. Die KI-Pausen",
 "t.ai.b": """
-<p>Die KI-Reflexion ist eine <strong>optionale</strong> Premium-Funktion, die <strong>aus ist, bis du sie einschaltest</strong>. Ist sie an, wird sie entweder auf deinem iPhone von Apple Intelligence geschrieben, wobei nichts gesendet wird, oder von OpenAI; in diesem Fall werden die Wörter, die du in diese eine Pause tippst, an unseren Server gesendet und weiter an OpenAI, das eine Antwort erzeugt. Wo beides verfügbar ist, wählst du unter {K_settings} → {K_ai_reflection} → {K_written_by}. Was gesendet wird, was nie gesendet wird und wie lange irgendetwas bleibt, steht in der <a href="{BASE}{L}/privacy/#ai">Datenschutzerklärung</a> und in der App selbst unter {K_settings} → {K_ai_reflection} → {K_what_is_sent}.</p>
-<p>Die Antwort ist <strong>erzeugter Text</strong>. Sie kann falsch, nutzlos oder nicht das sein, was du erwartet hast, und sie ist <strong>keinerlei Beratung</strong> (siehe Abschnitt 3). Tippe nichts hinein, von dem du nicht möchtest, dass ein Dritter es verarbeitet, und verlass dich nicht darauf für eine Entscheidung, die zählt. Wir garantieren weder Verfügbarkeit noch Antwortzeit noch Fortbestand der Funktion, und wir dürfen das Modell dahinter wechseln, ihre Nutzung begrenzen oder sie zurückziehen, ohne dass das den Rest der App berührt.</p>
-<p>Du verpflichtest dich, die Funktion nicht zu nutzen, um rechtswidrige, missbräuchliche oder rechteverletzende Inhalte zu erzeugen, oder um zu versuchen, das zugrundeliegende Modell oder seine Anweisungen auszulesen. Die Funktion auszuschalten beendet all das.</p>
+<p>Die KI-Pausen sind <strong>optionale</strong> Premium-Funktionen, die <strong>aus sind, bis du sie einschaltest</strong>. Die Reflexion wird entweder auf deinem iPhone von Apple Intelligence geschrieben, wobei nichts gesendet wird, oder von OpenAI; in diesem Fall werden die Wörter, die du in diese eine Pause tippst, an unseren Server gesendet und weiter an OpenAI, das eine Antwort erzeugt. Wo beides verfügbar ist, wählst du unter {K_settings} → {K_ai_reflection} → {K_written_by}. Die Fragenpause wird immer von OpenAI geschrieben und sendet nur die Sprache, in der Pausely läuft, einen Ländercode und die letzten paar Fragen, die sie gestellt hat. Was gesendet wird, was nie gesendet wird und wie lange irgendetwas bleibt, steht in der <a href="{BASE}{L}/privacy/#ai">Datenschutzerklärung</a> und in der App selbst unter {K_settings} → {K_ai_reflection} → {K_what_is_sent}.</p>
+<p>Die Antwort ist <strong>erzeugter Text</strong>. Sie kann falsch, nutzlos oder nicht das sein, was du erwartet hast, und sie ist <strong>keinerlei Beratung</strong> (siehe Abschnitt 3). Auch die Fragen und Antworten der Fragenpause werden erzeugt: Pausely prüft sie, aber gelegentlich kann eine falsch sein, und eine falsche Antwort kostet dich immer nur eine kurze Wartezeit. Tippe nichts in die Reflexion, von dem du nicht möchtest, dass ein Dritter es verarbeitet, und verlass dich bei keiner Entscheidung, die zählt, auf eine von beiden. Wir garantieren weder Verfügbarkeit noch Antwortzeit noch Fortbestand dieser Funktionen, und wir dürfen das Modell dahinter wechseln, ihre Nutzung begrenzen oder sie zurückziehen, ohne dass das den Rest der App berührt.</p>
+<p>Du verpflichtest dich, diese Funktionen nicht zu nutzen, um rechtswidrige, missbräuchliche oder rechteverletzende Inhalte zu erzeugen, oder um zu versuchen, das zugrundeliegende Modell oder seine Anweisungen auszulesen. Sie auszuschalten beendet all das.</p>
 """,
 "t.subscriptions.h": "7. Premium, Abos und Abrechnung",
 "t.subscriptions.b": """
@@ -526,6 +537,7 @@ COPY = {
 <tr><td>Was Metas SDK gesendet hat: Installationen, Starts, Käufe, die Art des Geräts und die Kennung, die es erzeugt hat</td><td>Bei Meta, nach <a href="https://www.facebook.com/privacy/policy/">Metas Datenschutzrichtlinie</a>. Die Kennung selbst liegt im Speicher der App auf deinem Gerät</td><td>Die App zu löschen entfernt die Kennung, und eine neue Installation beginnt mit einer neuen. Für das, was Meta hat, siehe Metas Richtlinie</td></tr>
 <tr><td>Was Google Analytics erfasst hat: Sitzungen, angesehene Bildschirme, Käufe, die Art des Geräts, ein allgemeiner Standort und die Kennung, die es erzeugt hat</td><td>Bei Google, nach <a href="https://policies.google.com/privacy">Googles Datenschutzerklärung</a>. Die Kennung selbst liegt im Speicher der App auf deinem Gerät</td><td>Die App zu löschen entfernt die Kennung, und eine neue Installation beginnt mit einer neuen. Für das, was Google hat, siehe Googles Datenschutzerklärung</td></tr>
 <tr><td>Was du in eine KI-Reflexion getippt hast</td><td>Nur auf deinem Gerät, wenn Apple Intelligence die Reflexion geschrieben hat. Wenn OpenAI sie geschrieben hat: Unser Server speichert weder Eingabe noch Antwort; OpenAI behält Ein- und Ausgaben bis zu 30 Tage (Google, bei früheren Versionen: bis zu 24 Stunden)</td><td>Auf unserer Seite nichts zu löschen. Schalte die Funktion unter {K_settings} → {K_ai_reflection} aus, und es wird nie wieder etwas gesendet</td></tr>
+<tr><td>Was die Fragenpause gesendet hat: die Sprache, ein Ländercode und die letzten paar Fragen</td><td>Unser Server speichert nichts davon. OpenAI behält Ein- und Ausgaben bis zu 30 Tage. Die Fragen selbst und jede Wartezeit nach einer falschen Antwort liegen auf deinem Gerät</td><td>Auf unserer Seite nichts zu löschen. Wenn du die KI-Pausen ausschaltest, vergisst dein Gerät die Fragen, und es wird nie wieder etwas gesendet</td></tr>
 <tr><td>Ein Konto, ein Profil, irgendetwas mit deinem Namen darauf</td><td>Nirgends</td><td>Gibt es nicht. Wir hatten nie eins zum Löschen.</td></tr>
 </table></div>
 """,
