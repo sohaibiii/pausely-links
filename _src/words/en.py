@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""English — the development language, and the fallback behind all seven others.
+"""English: the development language, and the fallback behind all seven others.
 
 A key missing from another catalogue renders as the English here, never as an
 identifier. That is the same rule the app follows (CLAUDE.md, Localization).
@@ -63,48 +63,50 @@ COPY = {
 # --- support --------------------------------------------------------------
 "s.eyebrow": "Support",
 "s.h1": "Help with Pausely",
-"s.sub": "A breath before the scroll. Pausely stands in front of the apps you chose and asks for ten seconds first. This page covers how it works, what it needs, and how to reach us.",
+"s.sub": "A breath before the scroll. Pausely stands in front of the apps you chose and asks for a moment first. This page covers how it works, what it needs, and how to reach us.",
 "s.cta": "Read the FAQ",
 "s.meta": 'No account · your apps, your time and your words stay on your device · <a href="{BASE}{L}/privacy/">Privacy Policy</a>',
 
 "s.how.h": "How Pausely works",
 "s.how.b": """
 <p class="lead">Pausely puts a small speed bump between you and the apps that eat your day.</p>
-<p>You choose the apps you would rather use less. After that, tapping one of them does not open it straight away. Pausely stands in front of it first with a short pause: a breath, a sentence to type, or a question about why you are opening it. If you still want to go in, you can, for a timed window. When the window ends, the pause comes back.</p>
-<p>The point is not to lock you out. It is to turn an automatic, thumb-driven habit into a decision you actually make. Given ten seconds to think, most people close the app instead, and Pausely counts that as a win.</p>
+<p>You choose the apps you would rather use less. After that, tapping one of them does not open it straight away. Pausely's block screen comes first, showing how many times you have opened that app today, and then a short pause: a breath, a sentence to type, or picking why you are opening it. If you still want to go in, you can, for as long as you choose. When that time is up, the pause comes back.</p>
+<p>The point is not to lock you out. It is to turn an automatic, thumb-driven habit into a decision you actually make. Given a moment to think, most people close the app instead, and Pausely counts that as a win.</p>
 <ul class="rows">
-  <li><span class="tile">{shield}</span><div><b>Protection</b><span>One switch. While it is on, your chosen apps show Pausely's calm block screen instead of opening.</span></div></li>
-  <li><span class="tile">{wind}</span><div><b>Three pauses</b><span>A breathing exercise, a typing challenge, or naming your intention. Setup picks the one that fits you; you can change it any time.</span></div></li>
-  <li><span class="tile">{clock}</span><div><b>Rules</b><span>Protect certain apps at certain hours (a bedtime, a working day) with their own pause and their own window. A rule can also block completely until its hours are over.</span></div></li>
-  <li><span class="tile">{lock}</span><div><b>Strict mode</b><span>Hold yourself to it for an hour, a day, or until a time you choose. While it runs, protection cannot be switched off and rules cannot be deleted, not even by you.</span></div></li>
-  <li><span class="tile">{book}</span><div><b>Alternatives and journal</b><span>Up to three healthy alternatives appear on the pause screen as a third way out, and there is a journal for the times you would rather write than scroll.</span></div></li>
-  <li><span class="tile">{chart}</span><div><b>Progress</b><span>Pauses kept, time reclaimed, your streak and a weekly chart, plus Home Screen widgets and a Lock Screen countdown while a window is open.</span></div></li>
-  <li><span class="tile">{sparkle}</span><div><b>The AI reflection, if you want it</b><span>Off until you switch it on. It turns "why are you opening this?" into a short exchange, and writes a weekly note about your week. On an iPhone with Apple Intelligence it can be written on the phone itself; otherwise OpenAI writes it (see <a href="{BASE}{L}/privacy/#ai">Privacy</a>).</span></div></li>
+  <li><span class="tile">{shield}</span><div><b>Protection and your apps</b><span>One switch on Home turns it all on. Every app you chose has its own switch and its own pause, and the block screen shows how many times you have opened it today.</span></div></li>
+  <li><span class="tile">{wind}</span><div><b>Six pauses</b><span>A breath, a short string to type, picking why you are opening the app, or a reminder to read. Two more are written by AI if you switch it on: a short reflection, and one question about your country with one try to get it right. Choose one, or let Pausely pick a different one each time.</span></div></li>
+  <li><span class="tile">{clock}</span><div><b>Rules and daily limits</b><span>Protect certain apps at certain hours (a bedtime, a working day) with their own pause, or block them completely until the hours are over. A daily limit rests an app until tomorrow after so many minutes or so many opens.</span></div></li>
+  <li><span class="tile">{lock}</span><div><b>Block everything, Lock Pausely and strict mode</b><span>Block everything shuts every protected app for as long as you choose. Lock Pausely makes Pausely hard to undo: every change waits first, and no app can be deleted while it is on. Strict mode holds until a time you choose, and nothing can be undone before then, not even by you.</span></div></li>
+  <li><span class="tile">{chart}</span><div><b>Your time</b><span>{K_time_per_app} shows today's minutes in the apps you chose, and while you are in one, the Dynamic Island shows your time in it today. With Premium, {K_time_banners} tell you every few minutes how long you have spent in an app you picked, and Pausely estimates about how many short videos that came to.</span></div></li>
+  <li><span class="tile">{book}</span><div><b>Alternatives and journal</b><span>Things you would rather do sit on the pause screen as a third way out, with a timer when you take one, and there is a journal for the times you would rather write than scroll.</span></div></li>
+  <li><span class="tile">{widget}</span><div><b>Progress, widgets and Siri</b><span>Pauses kept, time reclaimed, your streak, a weekly chart and four weeks of patterns. With Premium, widgets for the Home Screen and Lock Screen, buttons in Control Center, and Siri and Shortcuts.</span></div></li>
+  <li><span class="tile">{sparkle}</span><div><b>The AI pauses, if you want them</b><span>Off until you switch them on. The reflection turns "why are you opening this?" into a short exchange and writes a weekly note; on an iPhone with Apple Intelligence it can be written on the phone itself. The question pause is always written by OpenAI. See <a href="{BASE}{L}/privacy/#ai">Privacy</a>.</span></div></li>
 </ul>
 """,
 
 "s.requirements.h": "Requirements",
 "s.requirements.b": """
 <div class="table-wrap"><table>
-<tr><th>Device</th><td><strong>iPhone or iPad</strong> running <strong>iOS 17 or iPadOS 17</strong> or newer. One app, one layout, both devices.</td></tr>
+<tr><th>Device</th><td><strong>iPhone or iPad</strong> running <strong>iOS 17 or iPadOS 17</strong> or newer. One app for both, with two columns on the iPad's wider screen.</td></tr>
 <tr><th>Permission</th><td><strong>Screen Time</strong> access, granted once during setup through Apple's own prompt. Pausely uses Apple's Screen Time framework (the same system behind iOS's built-in app limits), and Apple, not Pausely, is what actually blocks an app.</td></tr>
 <tr><th>Account</th><td>None. There is no sign-up, no email field and no password anywhere in the app.</td></tr>
-<tr><th>Internet</th><td>Not needed. Every pause, rule, chart and journal entry works offline. When there is a connection, three things use it: Apple's own traffic when you buy or restore Premium; Meta's SDK, which reports installs, launches and purchases so we can measure our ads; and the AI reflection when OpenAI writes it, which is off until you switch it on.</td></tr>
-<tr><th>Notifications</th><td>Optional, and made on the device. Pausely uses them to hand you from the block screen into the pause and to ask how an alternative went, and, only if you turn them on, for a reminder before your hardest hour and for {K_time_banners}. There is no push server.</td></tr>
+<tr><th>Internet</th><td>Not needed. Every rule, chart and journal entry works offline, and so does every pause except the ones OpenAI writes. When there is a connection, four things use it: buying or restoring Premium, through Apple and RevenueCat; Meta's SDK, which reports installs, launches and purchases so we can measure our ads; Google Analytics, which counts how the app is used; and the AI pauses when OpenAI writes them, which are off until you switch them on.</td></tr>
+<tr><th>Notifications</th><td>Optional, and made on the device. On iOS 26.5 and later, the block screen's button opens Pausely by itself; on earlier versions, a notification is how it hands you into the pause. Pausely also uses them to ask how an alternative went and, only if you turn them on, for a reminder before your hardest hour and for {K_time_banners}. There is no push server.</td></tr>
 <tr><th>Languages</th><td>English, German, Spanish, French, Japanese, Korean, Brazilian Portuguese and Simplified Chinese. Pausely follows your device's language, and you can pick a different one in {K_settings} → {K_language}.</td></tr>
 </table></div>
 """,
 
 "s.start.h": "Getting started",
 "s.start.b": """
-<p>Setup is seven screens and takes under three minutes. It ends with protection already on and your first rule already written.</p>
+<p>Setup takes a few minutes and ends with protection already on.</p>
 <ol class="steps">
   <li><div><b>Say how much of the day your phone gets</b>: your own guess, nothing measured.</div></li>
-  <li><div><b>Allow Screen Time access</b> when Apple asks. Pausely cannot work without it, and you can revoke it any time in {K_settings} → {K_screen_time}.</div></li>
-  <li><div><b>Pick your apps</b> in Apple's picker. Pausely never learns their names (see <a href="{BASE}{L}/privacy/">Privacy</a>).</div></li>
-  <li><div><b>Answer three questions</b> that choose the pause that fits you.</div></li>
-  <li><div><b>Add up to three alternatives</b>: a walk, a book, a glass of water, or something of your own with a link into another app.</div></li>
-  <li><div><b>Done.</b> Open one of your apps and meet the pause.</div></li>
+  <li><div><b>Choose your apps.</b> Apple asks for Screen Time access on the same screen. Pausely cannot work without it, and you can take it back any time in {K_settings} → {K_screen_time}. Pausely never learns the apps' names (see <a href="{BASE}{L}/privacy/">Privacy</a>), and the free version protects two.</div></li>
+  <li><div><b>Choose your pause</b> and try it once, so you know what is coming.</div></li>
+  <li><div><b>Add up to three things you would rather do</b>: a walk, a book, a glass of water, or something of your own with a link into another app.</div></li>
+  <li><div><b>Allow notifications</b>, after a sentence on why Pausely uses them.</div></li>
+  <li><div><b>See what Premium adds</b>, and skip it if you like.</div></li>
+  <li><div><b>Done.</b> Home says Pausely is on. Open one of your apps and meet the pause.</div></li>
 </ol>
 """,
 
@@ -112,27 +114,27 @@ COPY = {
 "s.faq.b": """
 <dl class="faq">
 <dt>Is Pausely free?</dt>
-<dd>Yes. Free is a working product, not a demo: <strong>one rule</strong>, the <strong>breathing pause</strong> and your <strong>whole progress screen</strong> (pauses, wins, time reclaimed, the streak and the chart).</dd>
+<dd>Yes. Free is a working product, not a demo: it protects <strong>two apps</strong>, with <strong>one rule</strong>, the <strong>breathing pause</strong>, your <strong>whole progress screen</strong> (pauses, wins, time reclaimed, the streak and the chart), {K_time_per_app}, and the countdown on the Lock Screen and in the Dynamic Island.</dd>
 <dt>What does Premium add?</dt>
-<dd>As many rules as you like, the other two pauses (type to proceed, set an intention), strict mode, the mood insight that compares how you feel after a session with how you feel after walking away, and the optional AI reflection with its weekly write-up. Premium is a monthly or yearly subscription (the yearly plan starts with a <strong>free trial</strong>) or a single lifetime purchase. Prices are shown in the app and in the App Store for your country, and billing is handled by Apple.</dd>
+<dd>Every app, website and whole category you choose; as many rules as you like, and daily limits; Block everything; every kind of pause, and a pause that asks a little more when you keep reaching for the same app; Lock Pausely and strict mode; {K_time_banners} and the short-video estimate; your patterns, the mood insight and your week in words; room for six alternatives; widgets, Control Center, Siri and Shortcuts; and the optional AI pauses. Premium is a monthly or yearly subscription (the yearly plan starts with a <strong>free trial</strong>) or a single lifetime purchase, and yearly and lifetime also come as family plans, shared through Family Sharing. Prices are shown in the app and in the App Store for your country, and billing is handled by Apple.</dd>
 <dt>What happens if my subscription lapses?</dt>
-<dd>Nothing you built is taken away. Every rule keeps running and stays editable, and the pause you chose keeps standing in front of your apps. Only the ability to add more closes. An app that stopped protecting your phone because a card expired would be letting you down at the exact moment you asked it not to.</dd>
+<dd>What protects you keeps protecting you. Every app you chose and every rule keeps running and stays editable, and the pause you chose keeps standing in front of your apps. Adding more closes, and so do the extras that show you things, such as widgets and {K_time_banners}. An app that stopped protecting your phone because a card expired would be letting you down at the exact moment you asked it not to.</dd>
 <dt>Can I restore a purchase on a new device?</dt>
 <dd>Yes. Open the Premium screen and tap {K_restore}. Premium belongs to your Apple ID, not to the device.</dd>
 <dt>Why can't Pausely tell me which apps I blocked?</dt>
-<dd>Because it genuinely does not know. Apple's Screen Time hands Pausely opaque tokens that are meaningless outside your device: no app names, no identifiers. Pausely can ask iOS to block them; it cannot read them.</dd>
+<dd>Because it genuinely does not know. Apple's Screen Time hands Pausely opaque tokens that are meaningless outside your device: no app names, no identifiers. iOS can draw an app's icon inside Pausely, and Pausely can ask iOS to block it, but Pausely itself cannot read which app it is.</dd>
 <dt>I can't turn protection off. Is something broken?</dt>
-<dd>Check whether <strong>strict mode</strong> is running. The home screen says so. While it runs, protection cannot be switched off and rules cannot be deleted, by design. It ends on its own at the time you chose.</dd>
+<dd>Check whether <strong>strict mode</strong> or <strong>Lock Pausely</strong> is on. Home says so. Strict mode ends on its own at the time you chose. Lock Pausely stays on until you turn it off: start the wait, and when it ends, everything opens for ten minutes.</dd>
 <dt>Does Pausely see what I do in other apps?</dt>
 <dd>No. It never sees your browsing, your messages or anything inside another app. iOS tells it how long the apps you chose have been open (for your daily goal, your limits and the time features), and Pausely keeps those minutes on your device and never sends them anywhere. Beyond that it records only its own events (that a pause was shown, and what you chose) and keeps those on your device too.</dd>
-<dt>What is the AI reflection, and is it on?</dt>
-<dd>It is off, until you switch it on. When you do, one pause becomes a short exchange: you type why you are opening the app, and a question comes back. It also writes a short note about your week. On an iPhone with Apple Intelligence, both can be written on the phone itself, and then nothing leaves it. When OpenAI writes them, those words go to Pausely's own server and on to OpenAI. Never your journal, never your check-ins, never which apps you chose. {K_settings} → {K_ai_reflection} → {K_what_is_sent} lists every field, and switching it off stops all of it.</dd>
+<dt>What are the AI pauses, and are they on?</dt>
+<dd>They are off, until you switch them on. Then two pauses join the others. The <strong>reflection</strong> asks why you are opening the app and sends a gentle question back, and it writes a short note about your week. On an iPhone with Apple Intelligence it can be written on the phone itself, and then nothing leaves it; when OpenAI writes it, your words go to Pausely's own server and on to OpenAI. The <strong>question pause</strong> is always written by OpenAI, and sends only your language, the country from your phone's Region setting and the last few questions it asked. Never your journal, never your check-ins, never which apps you chose. {K_settings} → {K_ai_reflection} → {K_what_is_sent} lists every field, and switching it off stops all of it. Pausely from the China mainland App Store has no AI features.</dd>
 <dt>Does it work on iPad? On Mac?</dt>
-<dd>iPad, yes. Pausely is one app for iPhone and iPad, with the same layout on both, and it works in Split View, Slide Over and Stage Manager. Mac, no: the Screen Time frameworks Pausely is built on are not available there.</dd>
+<dd>iPad, yes. Pausely is one app for iPhone and iPad; on the iPad its main screens spread into two columns, and it works in Split View, Slide Over and Stage Manager. Mac, no: the Screen Time frameworks Pausely is built on are not available there.</dd>
 <dt>Can I read the app in my own language?</dt>
 <dd>Pausely speaks eight languages and follows your device's setting. To read it in a different one, without changing anything else on your device, open {K_settings} → {K_language}. Shields, widgets and the Lock Screen follow the same choice.</dd>
 <dt>How do I erase everything?</dt>
-<dd>{RESET}. That empties every pause, win, rule, journal entry and check-in, takes the blocks down and starts you at the beginning. It refuses while strict mode is running. Details on the <a href="{BASE}{L}/delete-data/">Your data</a> page.</dd>
+<dd>{RESET}. That empties every pause, win, rule, journal entry and check-in, takes the blocks down and starts you at the beginning. It refuses while strict mode is running; with Lock Pausely on, start the wait first. Details on the <a href="{BASE}{L}/delete-data/">Your data</a> page.</dd>
 </dl>
 """,
 
@@ -140,18 +142,20 @@ COPY = {
 "s.trouble.b": """
 <h3>An app opens without a pause</h3>
 <ul>
-  <li>Check the <strong>Protection</strong> switch on the home screen.</li>
+  <li>Check the <strong>Protection</strong> switch on the home screen, and the app's own switch under it.</li>
   <li>Check that Screen Time access is still granted: {K_settings} → {K_screen_time} → {K_apps_with_st}. If it was revoked, Pausely shows a recovery screen with a button to ask again.</li>
   <li>If the app is only in a <strong>rule</strong>, the pause appears only during that rule's hours.</li>
   <li>An <strong>access window</strong> you opened earlier may still be running. The Lock Screen countdown shows how long is left.</li>
 </ul>
 <h3>The block screen appears but the pause never opens</h3>
 <ul>
-  <li>Tapping the block screen's button hands you to the app through a notification. If notifications are off for Pausely, iOS cannot deliver the hand-off. Turn them on in {K_settings} → {K_notifications} → <kbd>Pausely</kbd>.</li>
+  <li>On iOS 26.5 and later, the block screen's button opens Pausely itself. On earlier versions it hands you over through a notification, and if notifications are off for Pausely, iOS cannot deliver it. Turn them on in {K_settings} → {K_notifications} → <kbd>Pausely</kbd>.</li>
   <li>Opening Pausely directly also opens the waiting pause.</li>
 </ul>
+<h3>Apps can't be deleted</h3>
+<p>Lock Pausely or strict mode is on. While either holds, iOS stops apps being deleted, and it does that for every app on the phone, not only Pausely. Turn Lock Pausely off after its wait, or let strict mode end, and deleting works again.</p>
 <h3>Widgets are behind</h3>
-<p>iOS refreshes widgets on its own schedule. Opening Pausely brings them up to date immediately.</p>
+<p>iOS refreshes widgets on its own schedule. Opening Pausely brings them up to date immediately. Widgets are part of Premium: without it, a widget shows a lock and opens the Premium screen.</p>
 <h3>The app is in the wrong language</h3>
 <p>Open {K_settings} → {K_language} and pick the one you want. Everything Pausely draws follows immediately. Apple's own app picker is drawn by iOS, not by Pausely, so it changes on the next launch.</p>
 <h3>Premium isn't recognised</h3>
@@ -171,33 +175,33 @@ COPY = {
 "a.sub": "Pick the apps you'd rather use less. From then on, opening one gets you a pause first, and a choice you actually make.",
 "a.cta": "Support",
 "a.meta": "No account · iPhone and iPad · iOS 17+ · eight languages",
-"a.lead": "Pausely puts a small speed bump between you and the apps that eat your day. Not a lockout, not a guilt trip: ten seconds to decide whether you meant to open it.",
+"a.lead": "Pausely puts a small speed bump between you and the apps that eat your day. Not a lockout, not a guilt trip: a moment to decide whether you meant to open it.",
 
 "a.f1.icon": "wind",
 "a.f1.h": "A breath before the scroll.",
-"a.f1.p": "Pausely stands in front of the apps you chose and asks for ten seconds first: a breathing exercise, a sentence to type, or a moment to name your intention.",
+"a.f1.p": "Pausely stands in front of the apps you chose and asks for a moment first: a breath, a sentence to type, a reason to pick, a line to read or a question to answer.",
 "a.f2.icon": "pause",
 "a.f2.h": "Why are you opening it?",
 "a.f2.p": "Turn a reflex into a decision, and make it on purpose. Most of the time, given the chance to think, people close the app instead.",
 "a.f3.icon": "check",
 "a.f3.h": "Walking away counts.",
-"a.f3.p": "Keep the win, or go in for five minutes. No lockouts, no guilt trips. Your own alternatives sit on the pause screen as a third way out.",
+"a.f3.p": "Keep the win, or go in for as long as you choose. No lockouts, no guilt trips. Your own alternatives sit on the pause screen as a third way out.",
 "a.f4.icon": "chart",
 "a.f4.h": "See the time come back.",
-"a.f4.p": "Every pause you kept, every hour reclaimed, a streak and a weekly chart, with widgets for the Home Screen and a countdown on the Lock Screen.",
+"a.f4.p": "Every pause you kept, every hour reclaimed, a streak and a weekly chart, and today's minutes in each app you chose. With Premium, a gentle banner says how long you have been in an app, and widgets keep it on your Home Screen.",
 "a.f5.icon": "clock",
 "a.f5.h": "Your apps. Your rules.",
-"a.f5.p": "A switch and a pause for every app, with schedules for evenings and workdays. Strict mode holds you to it when you ask it to.",
+"a.f5.p": "A switch and a pause for every app, schedules for evenings and workdays, and daily limits. When you want it to hold, Lock Pausely and strict mode make it hard to undo, even for you.",
 "a.f6.icon": "eye-off",
 "a.f6.h": "Your phone keeps what it knows.",
-"a.f6.p": "No account. Your apps, your time, your pauses and your journal stay on your device. Pausely cannot even read which apps you picked; Apple keeps that. Meta's SDK tells us which of our ads brought you here, and the optional AI reflection sends what you type into it only when OpenAI writes it. <a href=\"{BASE}{L}/privacy/\">What leaves, exactly.</a>",
+"a.f6.p": "No account. Your apps, your time, your pauses and your journal stay on your device. Pausely cannot even read which apps you picked; Apple keeps that. RevenueCat keeps the record of what you buy, Meta's SDK tells us which of our ads brought you here, Google Analytics counts how the app is used, and the optional AI pauses send what they need only when OpenAI writes them. <a href=\"{BASE}{L}/privacy/\">What leaves, exactly.</a>",
 
 "a.price.h": "What it costs",
 "a.price.b": """
-<p>Free is a working product, not a demo, and nothing you set up is ever taken away, even if a subscription lapses.</p>
+<p>Free is a working product, not a demo, and what protects you is never taken away, even if a subscription lapses.</p>
 <div class="tiers" style="margin-top:16px">
-  <div class="tier"><div class="lbl">Free</div><div class="price">$0</div><ul><li>One rule</li><li>The breathing pause</li><li>The whole progress screen: wins, time reclaimed, streak and chart</li><li>Widgets and the Lock Screen countdown</li></ul></div>
-  <div class="tier premium"><div class="lbl">Premium</div><div class="price">Monthly · Yearly · Lifetime</div><ul><li>As many rules as you like</li><li>All three pauses</li><li>Strict mode</li><li>The mood insight</li><li>The optional AI reflection and its weekly note</li><li>Yearly starts with a free trial</li></ul></div>
+  <div class="tier"><div class="lbl">Free</div><div class="price">$0</div><ul><li>Two apps</li><li>One rule</li><li>The breathing pause</li><li>The whole progress screen: wins, time reclaimed, streak and chart</li><li>Time per app</li><li>The countdown on the Lock Screen and in the Dynamic Island</li></ul></div>
+  <div class="tier premium"><div class="lbl">Premium</div><div class="price">Monthly · Yearly · Lifetime</div><ul><li>Every app, website and category</li><li>As many rules as you like, and daily limits</li><li>Every kind of pause</li><li>Block everything, Lock Pausely and strict mode</li><li>Time banners and short videos</li><li>Patterns, the mood insight and your week in words</li><li>Widgets, Control Center and Siri</li><li>The optional AI pauses</li><li>Yearly starts with a free trial</li><li>Family plans through Family Sharing</li></ul></div>
 </div>
 <p class="small" style="margin-top:14px">Prices are shown in the app and on the App Store for your country. Billing is handled by Apple. <a href="{BASE}{L}/terms/#subscriptions">Subscription terms.</a></p>
 """,
@@ -206,7 +210,7 @@ COPY = {
 "a.st.b": """
 <p>Pausely uses the same framework that powers iOS's built-in app limits. Apple grants it only to apps it has reviewed for the purpose, and Apple, not Pausely, is what actually stands between you and the app. That is why Pausely can block an app without ever learning its name.</p>
 <ul class="rows" style="margin-top:16px">
-  <li><span class="tile">{tablet}</span><div><b>iPhone and iPad, one app</b><span>The same single-column layout on both, and it behaves in Split View, Slide Over and Stage Manager. iOS 17 or iPadOS 17 and newer.</span></div></li>
+  <li><span class="tile">{tablet}</span><div><b>iPhone and iPad, one app</b><span>On the iPad the main screens spread into two columns, and it behaves in Split View, Slide Over and Stage Manager. iOS 17 or iPadOS 17 and newer.</span></div></li>
   <li><span class="tile">{globe}</span><div><b>Eight languages</b><span>English, German, Spanish, French, Japanese, Korean, Brazilian Portuguese and Simplified Chinese, including the block screen and the widgets. Choose one in {K_settings} → {K_language} without changing anything else on your device.</span></div></li>
 </ul>
 """,

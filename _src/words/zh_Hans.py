@@ -51,48 +51,50 @@ COPY = {
 
 "s.eyebrow": "帮助",
 "s.h1": "Pausely 使用帮助",
-"s.sub": "滑动之前，先喘口气。Pausely 会站在你选中的 App 前面，先向你要十秒钟。本页说明它如何工作、需要什么，以及怎样联系我们。",
+"s.sub": "滑动之前，先喘口气。Pausely 会站在你选中的 App 前面，先请你停一停。本页说明它如何工作、需要什么，以及怎样联系我们。",
 "s.cta": "阅读常见问题",
 "s.meta": '没有账号 · 你的 App、你的时间和你的文字都留在你的设备上 · <a href="{BASE}{L}/privacy/">隐私政策</a>',
 
 "s.how.h": "Pausely 如何工作",
 "s.how.b": """
 <p class="lead">Pausely 在你和那些吃掉你一天的 App 之间放了一道小小的减速带。</p>
-<p>你来挑选那些希望少用一点的 App。此后，点开它们不会立刻进入。Pausely 会先站在前面，给你一次短短的暂停：一次呼吸、一句要打的话，或者一个关于“你为什么要打开它”的提问。如果你还是想进去，你可以，但只有一段限定的时间。时间结束，暂停就回来了。</p>
-<p>目的不是把你锁在门外，而是把拇指主导的自动习惯，变成一个你真正做出的决定。给上十秒去想，多数人会把 App 关掉。Pausely 会把这算作一次成功。</p>
+<p>你来挑选那些希望少用一点的 App。此后，点开它们不会立刻进入。先出现的是 Pausely 的拦截屏，上面写着你今天已经打开这个 App 多少次，接着是一次短短的暂停：一次呼吸、一句要打的话，或者选一选你为什么要打开它。如果你还是想进去，你可以，待多久由你来定。时间一到，暂停就回来了。</p>
+<p>目的不是把你锁在门外，而是把拇指主导的自动习惯，变成一个你真正做出的决定。只要给一点时间去想，多数人会把 App 关掉。Pausely 会把这算作一次成功。</p>
 <ul class="rows">
-  <li><span class="tile">{shield}</span><div><b>保护</b><span>一个开关。打开的时候，你选中的 App 不会打开，而是显示 Pausely 那块平静的拦截屏。</span></div></li>
-  <li><span class="tile">{wind}</span><div><b>三种暂停</b><span>一次呼吸练习、一道打字题，或者写下你的意图。设置过程会挑一个适合你的，你随时可以更换。</span></div></li>
-  <li><span class="tile">{clock}</span><div><b>规则</b><span>在特定时段守住特定的 App（睡前、工作日），各有各的暂停和各自的时长。规则也可以在时段结束前完全拦住。</span></div></li>
-  <li><span class="tile">{lock}</span><div><b>严格模式</b><span>让自己守住一小时、一天，或直到你选定的时刻。它运行期间，保护关不掉，规则也删不了，连你自己也不行。</span></div></li>
-  <li><span class="tile">{book}</span><div><b>替代选项与日志</b><span>最多三个健康的替代选项会出现在暂停屏上，作为第三条出路；还有一本日志，留给那些你更想写点什么、而不是划屏的时候。</span></div></li>
-  <li><span class="tile">{chart}</span><div><b>进展</b><span>守住的暂停、夺回的时间、连续记录和每周图表，还有主屏幕小组件，以及解锁时段开着时锁屏上的倒计时。</span></div></li>
-  <li><span class="tile">{sparkle}</span><div><b>AI 反思，如果你想要的话</b><span>在你打开它之前一直关着。它把“你为什么要打开它？”变成一小段对话，还会写一段关于你这一周的小结。在配备 Apple Intelligence 的 iPhone 上，它可以直接在手机上写成；否则由 OpenAI 来写（见<a href="{BASE}{L}/privacy/#ai">隐私</a>）。</span></div></li>
+  <li><span class="tile">{shield}</span><div><b>保护与你的应用</b><span>首页上的一个开关就能把一切打开。你选中的每个 App 都有自己的开关和自己的暂停，拦截屏会显示你今天打开它多少次。</span></div></li>
+  <li><span class="tile">{wind}</span><div><b>六种暂停</b><span>一次呼吸、一串要打的短字符、选一选你为什么要打开这个 App，或者读一句提醒。如果你打开 AI，还有两种由 AI 来写：一段简短的反思，以及一道关于你所在国家/地区的题，只有一次作答机会。选定一种，或者让 Pausely 每次换一种。</span></div></li>
+  <li><span class="tile">{clock}</span><div><b>规则与每日上限</b><span>在特定时段守住特定的 App（睡前、工作日），配上各自的暂停，也可以在时段结束前把它们完全拦住。每日上限会在用满若干分钟或打开若干次之后，让一个 App 歇到明天。</span></div></li>
+  <li><span class="tile">{lock}</span><div><b>全部屏蔽、Pausely 锁定与严格模式</b><span>全部屏蔽会在你选定的时长内关上每一个受保护的 App。Pausely 锁定让 Pausely 很难被撤销：每一项改动都要先等待，开启期间任何 App 都无法删除。严格模式会一直保持到你选定的时刻，在那之前什么都撤销不了，连你自己也不行。</span></div></li>
+  <li><span class="tile">{chart}</span><div><b>你的时间</b><span>{K_time_per_app}页面显示你选中的 App 今天的分钟数；当你正在用其中一个时，灵动岛会显示你今天在它上面花了多长时间。有了 Premium，{K_time_banners}会每隔几分钟告诉你，你在自己挑的某个 App 里已经花了多长时间，Pausely 还会估算这大约相当于多少条短视频。</span></div></li>
+  <li><span class="tile">{book}</span><div><b>替代选项与日志</b><span>你更想做的事会出现在暂停屏上，作为第三条出路，选了其中一件就会开始计时；还有一本日志，留给那些你更想写点什么、而不是划屏的时候。</span></div></li>
+  <li><span class="tile">{widget}</span><div><b>进展、小组件与 Siri</b><span>守住的暂停、夺回的时间、连续记录、每周图表，以及四周的规律。有了 Premium，还有主屏幕和锁屏小组件、控制中心按钮，以及 Siri 和快捷指令。</span></div></li>
+  <li><span class="tile">{sparkle}</span><div><b>AI 暂停，如果你想要的话</b><span>在你打开之前一直关着。反思会把“你为什么要打开它？”变成一小段对话，还会写一段每周小结；在配备 Apple Intelligence 的 iPhone 上，它可以直接在手机上写成。问答暂停则始终由 OpenAI 来写。见<a href="{BASE}{L}/privacy/#ai">隐私</a>。</span></div></li>
 </ul>
 """,
 
 "s.requirements.h": "运行要求",
 "s.requirements.b": """
 <div class="table-wrap"><table>
-<tr><th>设备</th><td>运行 <strong>iOS 17 或 iPadOS 17</strong> 及更新系统的 <strong>iPhone 或 iPad</strong>。一个 App、一套布局，两种设备通用。</td></tr>
+<tr><th>设备</th><td>运行 <strong>iOS 17 或 iPadOS 17</strong> 及更新系统的 <strong>iPhone 或 iPad</strong>。一个 App，两种设备通用；在 iPad 更宽的屏幕上会分成两栏。</td></tr>
 <tr><th>权限</th><td><strong>“屏幕使用时间”</strong>访问权限，在设置过程中通过 Apple 自己的弹窗授予一次。Pausely 使用 Apple 的“屏幕使用时间”框架（就是 iOS 内置 App 限额背后的那套系统），真正拦住 App 的是 Apple，不是 Pausely。</td></tr>
 <tr><th>账号</th><td>不需要。App 里没有任何注册、邮箱输入框或密码。</td></tr>
-<tr><th>网络</th><td>不需要。每一次暂停、每条规则、每张图表和每篇日志都能离线使用。有网络连接时，有三件事会用到它：你购买或恢复 Premium 时 Apple 自己的通信；Meta 的 SDK，它会上报安装、启动和购买，好让我们衡量广告效果；以及由 OpenAI 来写时的 AI 反思（它在你打开之前一直关着）。</td></tr>
-<tr><th>通知</th><td>可选，且在设备上生成。Pausely 用它把你从拦截屏交接到暂停，并问你一个替代选项进行得怎么样。此外，只有在你打开相应功能后，它才会用于在你最难熬的时段之前提醒你，以及用于{K_time_banners}。这里没有推送服务器。</td></tr>
+<tr><th>网络</th><td>不需要。每条规则、每张图表和每篇日志都能离线使用，除了由 OpenAI 来写的那几种，每种暂停也都可以。有网络连接时，有四件事会用到它：通过 Apple 和 RevenueCat 购买或恢复 Premium；Meta 的 SDK，它会上报安装、启动和购买，好让我们衡量广告效果；Google Analytics，它统计 App 的使用情况；以及由 OpenAI 来写时的 AI 暂停（它们在你打开之前一直关着）。</td></tr>
+<tr><th>通知</th><td>可选，且在设备上生成。在 iOS 26.5 及更新版本上，拦截屏上的按钮会直接打开 Pausely；在更早的版本上，要靠一条通知把你交接到暂停。Pausely 也会用它问你一个替代选项进行得怎么样；此外，只有在你打开相应功能后，它才会用于在你最难熬的时段之前提醒你，以及用于{K_time_banners}。这里没有推送服务器。</td></tr>
 <tr><th>语言</th><td>英语、德语、西班牙语、法语、日语、韩语、巴西葡萄牙语和简体中文。Pausely 跟随设备的语言，你也可以在{K_settings} → {K_language}里另选一种。</td></tr>
 </table></div>
 """,
 
 "s.start.h": "开始使用",
 "s.start.b": """
-<p>设置一共七屏，用不到三分钟。走完的时候，保护已经打开，第一条规则也已经写好。</p>
+<p>设置只需几分钟，走完的时候，保护已经打开。</p>
 <ol class="steps">
   <li><div><b>说说一天里有多少时间给了手机</b>：你自己的估计，不是测出来的数字。</div></li>
-  <li><div>Apple 询问时<b>允许访问“屏幕使用时间”</b>。没有它 Pausely 无法工作，你也可以随时在{K_settings} → {K_screen_time}中收回。</div></li>
-  <li><div>在 Apple 的选择器里<b>挑出你的 App</b>。Pausely 永远不会知道它们的名字（见<a href="{BASE}{L}/privacy/">隐私</a>）。</div></li>
-  <li><div><b>回答三个问题</b>，由它们挑出适合你的暂停。</div></li>
-  <li><div><b>添加最多三个替代选项</b>：散步、看书、一杯水，或者你自己的、能跳转到另一个 App 的选项。</div></li>
-  <li><div><b>完成。</b>打开你选中的一个 App，去见见那次暂停。</div></li>
+  <li><div><b>挑出你的 App。</b>Apple 会在同一个屏幕上请求“屏幕使用时间”的访问权限。没有它 Pausely 无法工作，你也可以随时在{K_settings} → {K_screen_time}中收回。Pausely 永远不会知道这些 App 的名字（见<a href="{BASE}{L}/privacy/">隐私</a>），免费版可以保护两个。</div></li>
+  <li><div><b>选好你的暂停</b>，并先试一次，心里有个数。</div></li>
+  <li><div><b>添加最多三件你更想做的事</b>：散步、看书、一杯水，或者你自己的、能跳转到另一个 App 的选项。</div></li>
+  <li><div><b>允许通知</b>，之前会有一句话说明 Pausely 为什么要用它。</div></li>
+  <li><div><b>看看 Premium 多了什么</b>，不想要也可以跳过。</div></li>
+  <li><div><b>完成。</b>首页会告诉你 Pausely 已开启。打开你选中的一个 App，去见见那次暂停。</div></li>
 </ol>
 """,
 
@@ -100,27 +102,27 @@ COPY = {
 "s.faq.b": """
 <dl class="faq">
 <dt>Pausely 免费吗？</dt>
-<dd>免费。免费版是一个能用的产品，不是演示：<strong>一条规则</strong>、<strong>呼吸暂停</strong>，以及<strong>完整的进展页面</strong>（暂停、成功、夺回的时间、连续记录和图表）。</dd>
+<dd>免费。免费版是一个能用的产品，不是演示：可以保护<strong>两个 App</strong>，有<strong>一条规则</strong>、<strong>呼吸暂停</strong>、<strong>完整的进展页面</strong>（暂停、成功、夺回的时间、连续记录和图表）、{K_time_per_app}，以及锁屏和灵动岛上的倒计时。</dd>
 <dt>Premium 多了什么？</dt>
-<dd>规则想建多少建多少，另外两种暂停（输入才能继续、写下你的意图），严格模式，把“用完之后的感受”和“转身离开之后的感受”放在一起看的心情分析，以及可选的 AI 反思和它的每周小结。Premium 是按月或按年的订阅（年度方案以<strong>免费试用</strong>开始），或者一次性的永久购买。价格显示在 App 内和你所在国家/地区的 App Store，账单由 Apple 处理。</dd>
+<dd>你选的每一个 App、网站和整个类别；规则想建多少建多少，还有每日上限；全部屏蔽；每一种暂停，以及当你一再伸手去拿同一个 App 时会多要求你一点的暂停；Pausely 锁定和严格模式；{K_time_banners}和短视频估算；你的规律、心情分析和用文字回顾这一周；最多六个替代选项；小组件、控制中心、Siri 和快捷指令；以及可选的 AI 暂停。Premium 是按月或按年的订阅（年度方案以<strong>免费试用</strong>开始），或者一次性的永久购买；年度和永久方案还有家庭版，通过家人共享来共用。价格显示在 App 内和你所在国家/地区的 App Store，账单由 Apple 处理。</dd>
 <dt>订阅到期了会怎样？</dt>
-<dd>你搭起来的东西一样都不会被拿走。每条规则照常运行，也仍然可以编辑，你选的那种暂停也照旧站在 App 前面。关上的只是“再添加更多”这件事。一个因为卡过期就不再守护你手机的 App，恰恰是在你请它别这么做的那一刻辜负了你。</dd>
+<dd>守护你的东西会继续守护你。你选的每个 App 和每条规则都照常运行，也仍然可以编辑，你选的那种暂停也照旧站在 App 前面。关上的是“再添加更多”，以及那些给你看东西的附加功能，比如小组件和{K_time_banners}。一个因为卡过期就不再守护你手机的 App，恰恰是在你请它别这么做的那一刻辜负了你。</dd>
 <dt>能在新设备上恢复购买吗？</dt>
 <dd>可以。打开 Premium 页面，点按{K_restore}。Premium 属于你的 Apple 账户，而不是某台设备。</dd>
 <dt>为什么 Pausely 不能告诉我拦住了哪些 App？</dt>
-<dd>因为它真的不知道。Apple 的“屏幕使用时间”交给 Pausely 的是不透明的令牌，离开你的设备就毫无意义：没有 App 名称，也没有标识符。Pausely 可以请 iOS 去拦住它们，却读不出它们是什么。</dd>
+<dd>因为它真的不知道。Apple 的“屏幕使用时间”交给 Pausely 的是不透明的令牌，离开你的设备就毫无意义：没有 App 名称，也没有标识符。iOS 可以在 Pausely 里画出一个 App 的图标，Pausely 也可以请 iOS 拦住它，但 Pausely 自己读不出那是哪个 App。</dd>
 <dt>我关不掉保护，是坏了吗？</dt>
-<dd>看看<strong>严格模式</strong>是不是正在运行，主页面会写明。它运行期间，保护关不掉、规则删不了，这是有意为之。到了你选定的时刻，它会自己结束。</dd>
+<dd>看看<strong>严格模式</strong>或<strong>Pausely 锁定</strong>是不是开着，首页会写明。严格模式到了你选定的时刻会自己结束。Pausely 锁定会一直开着，直到你把它关掉：先开始等待，等待结束后，一切会开放十分钟。</dd>
 <dt>Pausely 会看到我在别的 App 里做什么吗？</dt>
 <dd>不会。它从来看不到你的浏览、你的消息，或另一个 App 里的任何东西。iOS 会告诉它你选中的 App 打开了多久（用于你的每日目标、每日上限和各项时间功能），Pausely 把这些分钟数留在你的设备上，从不发往任何地方。除此之外，它只记录自己的事件（一次暂停被显示过，以及你选择了什么），而这些也留在你的设备上。</dd>
-<dt>AI 反思是什么？它开着吗？</dt>
-<dd>关着，直到你打开它。打开之后，其中一次暂停会变成一小段对话：你写下为什么要打开这个 App，回来的是一个问题。它还会写一段关于你这一周的短文。在配备 Apple Intelligence 的 iPhone 上，这两者都可以直接在手机上写成，这时什么都不会离开手机。由 OpenAI 来写时，这些文字会送到 Pausely 自己的服务器，再到 OpenAI。你的日志、你的心情记录、你选了哪些 App，都不会。{K_settings} → {K_ai_reflection} → {K_what_is_sent}里列出了每一个字段；把它关掉，这一切就都会停止。</dd>
+<dt>AI 暂停是什么？它们开着吗？</dt>
+<dd>关着，直到你打开它们。打开之后，会有两种暂停加入进来。<strong>反思</strong>会问你为什么要打开这个 App，再温和地回你一个问题，它还会写一段关于你这一周的短文。在配备 Apple Intelligence 的 iPhone 上，它可以直接在手机上写成，这时什么都不会离开手机；由 OpenAI 来写时，你的文字会送到 Pausely 自己的服务器，再到 OpenAI。<strong>问答暂停</strong>始终由 OpenAI 来写，只发送你的语言、你手机“地区”设置里的国家/地区，以及它最近问过的几道题。你的日志、你的心情记录、你选了哪些 App，都永远不会发送。{K_settings} → {K_ai_reflection} → {K_what_is_sent}里列出了每一个字段；把它关掉，这一切就都会停止。从中国大陆 App Store 下载的 Pausely 没有任何 AI 功能。</dd>
 <dt>iPad 上能用吗？Mac 呢？</dt>
-<dd>iPad 可以：Pausely 是一个同时面向 iPhone 和 iPad 的 App，两边布局一致，也支持分屏浏览、侧拉和台前调度。Mac 不行：Pausely 所依赖的“屏幕使用时间”框架在那里并不存在。</dd>
+<dd>iPad 可以：Pausely 是一个同时面向 iPhone 和 iPad 的 App；在 iPad 上，它的主要页面会分成两栏，也支持分屏浏览、侧拉和台前调度。Mac 不行：Pausely 所依赖的“屏幕使用时间”框架在那里并不存在。</dd>
 <dt>可以用我自己的语言阅读吗？</dt>
 <dd>Pausely 会说八种语言，并跟随设备的设置。想换一种来读，又不改动设备上的其他东西，就打开{K_settings} → {K_language}。拦截屏、小组件和锁屏也都会跟着这个选择走。</dd>
 <dt>怎样把一切都抹掉？</dt>
-<dd>{RESET}。这会清空每一次暂停、每一次成功、每条规则、每篇日志和每次心情记录，撤下拦截，把你带回起点。严格模式运行时它会拒绝执行。详情见<a href="{BASE}{L}/delete-data/">你的数据</a>页面。</dd>
+<dd>{RESET}。这会清空每一次暂停、每一次成功、每条规则、每篇日志和每次心情记录，撤下拦截，把你带回起点。严格模式运行时它会拒绝执行；Pausely 锁定开着时，要先开始等待。详情见<a href="{BASE}{L}/delete-data/">你的数据</a>页面。</dd>
 </dl>
 """,
 
@@ -128,18 +130,20 @@ COPY = {
 "s.trouble.b": """
 <h3>App 没有暂停就打开了</h3>
 <ul>
-  <li>检查主页面上的<strong>保护</strong>开关。</li>
+  <li>检查首页上的<strong>保护</strong>开关，以及它下面这个 App 自己的开关。</li>
   <li>检查“屏幕使用时间”的访问权限是否仍然有效：{K_settings} → {K_screen_time} → {K_apps_with_st}。如果被收回了，Pausely 会显示一个带按钮的恢复页面，可以再次申请。</li>
   <li>如果这个 App 只写在某条<strong>规则</strong>里，暂停只会在那条规则的时段出现。</li>
   <li>你早些时候开启的<strong>解锁时段</strong>可能还在走，锁屏上的倒计时会显示还剩多久。</li>
 </ul>
 <h3>拦截屏出现了，但暂停始终不打开</h3>
 <ul>
-  <li>点按拦截屏上的按钮，会通过一条通知把你交接过去。如果 Pausely 的通知是关的，iOS 就无法送达这次交接。请在{K_settings} → {K_notifications} → <kbd>Pausely</kbd>中打开。</li>
+  <li>在 iOS 26.5 及更新版本上，拦截屏上的按钮会直接打开 Pausely。在更早的版本上，它会通过一条通知把你交接过去；如果 Pausely 的通知是关的，iOS 就无法送达。请在{K_settings} → {K_notifications} → <kbd>Pausely</kbd>中打开。</li>
   <li>直接打开 Pausely，也会打开正在等待的那次暂停。</li>
 </ul>
+<h3>App 删不掉</h3>
+<p>Pausely 锁定或严格模式正开着。只要其中之一还在生效，iOS 就不允许删除 App，而且这适用于手机上的每一个 App，不只是 Pausely。等待结束后关掉 Pausely 锁定，或者等严格模式结束，就又能删除了。</p>
 <h3>小组件慢了半拍</h3>
-<p>iOS 按自己的节奏刷新小组件。打开 Pausely，它们会立刻更新。</p>
+<p>iOS 按自己的节奏刷新小组件。打开 Pausely，它们会立刻更新。小组件属于 Premium：没有 Premium 时，小组件会显示一把锁，点按会打开 Premium 页面。</p>
 <h3>App 显示成了别的语言</h3>
 <p>打开{K_settings} → {K_language}，选你想要的那种。Pausely 自己绘制的一切会立刻跟上。Apple 的 App 选择器由 iOS 绘制、而非 Pausely，所以要到下次启动才会改变。</p>
 <h3>Premium 没被识别</h3>
@@ -158,27 +162,27 @@ COPY = {
 "a.sub": "挑出那些你希望少用一点的 App。此后，打开其中一个，先迎来一次暂停，以及一个你真正做出的选择。",
 "a.cta": "帮助",
 "a.meta": "没有账号 · iPhone 和 iPad · iOS 17 及以上 · 八种语言",
-"a.lead": "Pausely 在你和那些吃掉你一天的 App 之间放了一道小小的减速带。不是上锁，也不是说教，只是十秒钟，让你确认自己是不是真的想打开。",
+"a.lead": "Pausely 在你和那些吃掉你一天的 App 之间放了一道小小的减速带。不是上锁，也不是说教，只是片刻停顿，让你想清楚自己是不是真的想打开它。",
 
 "a.f1.h": "滑动之前，先喘口气。",
-"a.f1.p": "Pausely 会站在你选中的 App 前面，先向你要十秒钟：一次呼吸练习、一句要打的话，或者一小会儿，用来写下你的意图。",
+"a.f1.p": "Pausely 会站在你选中的 App 前面，先请你停一停：一次呼吸、一句要打的话、选一个理由、读一句提醒，或者答一道题。",
 "a.f2.h": "你为什么要打开它？",
 "a.f2.p": "把条件反射变成决定，并且是有意做出的决定。多数时候，只要有机会想一想，人们就会把 App 关掉。",
 "a.f3.h": "转身离开也算数。",
-"a.f3.p": "把这次成功留下，或者进去五分钟。不上锁，也不说教。你自己设的替代选项就摆在暂停屏上，作为第三条出路。",
+"a.f3.p": "把这次成功留下，或者进去，待多久由你来定。不上锁，也不说教。你自己设的替代选项就摆在暂停屏上，作为第三条出路。",
 "a.f4.h": "看着时间回来。",
-"a.f4.p": "每一次守住的暂停、每一个夺回的小时、连续记录和每周图表，还有主屏幕小组件和锁屏上的倒计时。",
+"a.f4.p": "每一次守住的暂停、每一个夺回的小时、连续记录和每周图表，还有你选中的每个 App 今天的分钟数。有了 Premium，一条温和的提醒会告诉你在某个 App 里待了多久，小组件也会把这些留在你的主屏幕上。",
 "a.f5.h": "你的 App，你的规则。",
-"a.f5.p": "给每个 App 一个开关和一种暂停，还有为夜晚和工作日准备的时间表。只要你开口，严格模式会把你按在自己的承诺上。",
+"a.f5.p": "给每个 App 一个开关和一种暂停，有为夜晚和工作日准备的时间表，还有每日上限。当你想让它守得住时，Pausely 锁定和严格模式会让它很难被撤销，连你自己也不例外。",
 "a.f6.h": "它知道的，留在你的设备里。",
-"a.f6.p": '没有账号。你的 App、你的时间、你的暂停和你的日志都留在你的设备上。连你挑了哪些 App，Pausely 都读不出来；那是 Apple 保管的。Meta 的 SDK 会告诉我们，是我们的哪条广告把你带到了这里；而可选的 AI 反思只有在由 OpenAI 来写时，才会发送你在其中打下的内容。<a href="{BASE}{L}/privacy/">看看究竟什么会离开。</a>',
+"a.f6.p": '没有账号。你的 App、你的时间、你的暂停和你的日志都留在你的设备上。连你挑了哪些 App，Pausely 都读不出来；那是 Apple 保管的。RevenueCat 保管你的购买记录，Meta 的 SDK 会告诉我们是我们的哪条广告把你带到了这里，Google Analytics 统计 App 的使用情况，而可选的 AI 暂停只有在由 OpenAI 来写时，才会发送它们需要的内容。<a href="{BASE}{L}/privacy/">看看究竟什么会离开。</a>',
 
 "a.price.h": "价格",
 "a.price.b": """
-<p>免费版是一个能用的产品，不是演示；你设好的东西也永远不会被拿走，哪怕订阅到期。</p>
+<p>免费版是一个能用的产品，不是演示；守护你的东西永远不会被拿走，哪怕订阅到期。</p>
 <div class="tiers" style="margin-top:16px">
-  <div class="tier"><div class="lbl">免费</div><div class="price">￥0</div><ul><li>一条规则</li><li>呼吸暂停</li><li>完整的进展页面：成功、夺回的时间、连续记录和图表</li><li>小组件与锁屏倒计时</li></ul></div>
-  <div class="tier premium"><div class="lbl">Premium</div><div class="price">按月 · 按年 · 永久</div><ul><li>规则想建多少建多少</li><li>三种暂停全部解锁</li><li>严格模式</li><li>心情分析</li><li>可选的 AI 反思及其每周小结</li><li>年度方案以免费试用开始</li></ul></div>
+  <div class="tier"><div class="lbl">免费</div><div class="price">￥0</div><ul><li>两个 App</li><li>一条规则</li><li>呼吸暂停</li><li>完整的进展页面：成功、夺回的时间、连续记录和图表</li><li>各应用时间</li><li>锁屏和灵动岛上的倒计时</li></ul></div>
+  <div class="tier premium"><div class="lbl">Premium</div><div class="price">按月 · 按年 · 永久</div><ul><li>每一个 App、网站和类别</li><li>规则想建多少建多少，还有每日上限</li><li>每一种暂停</li><li>全部屏蔽、Pausely 锁定和严格模式</li><li>使用时间提醒和短视频估算</li><li>规律、心情分析和用文字回顾这一周</li><li>小组件、控制中心和 Siri</li><li>可选的 AI 暂停</li><li>年度方案以免费试用开始</li><li>家庭方案，通过家人共享来共用</li></ul></div>
 </div>
 <p class="small" style="margin-top:14px">价格显示在 App 内和你所在国家/地区的 App Store。账单由 Apple 处理。<a href="{BASE}{L}/terms/#subscriptions">订阅条款。</a></p>
 """,
@@ -187,7 +191,7 @@ COPY = {
 "a.st.b": """
 <p>Pausely 使用的，正是驱动 iOS 内置 App 限额的那套框架。Apple 只会把它交给为此用途审核过的 App，而真正挡在你和 App 之间的是 Apple，不是 Pausely。也正因为如此，Pausely 才能在从不知道名字的情况下拦住一个 App。</p>
 <ul class="rows" style="margin-top:16px">
-  <li><span class="tile">{tablet}</span><div><b>iPhone 和 iPad，同一个 App</b><span>两边都是同样的单列布局，在分屏浏览、侧拉和台前调度里也都规规矩矩。iOS 17 或 iPadOS 17 及以上。</span></div></li>
+  <li><span class="tile">{tablet}</span><div><b>iPhone 和 iPad，同一个 App</b><span>在 iPad 上，主要页面会分成两栏，在分屏浏览、侧拉和台前调度里也都规规矩矩。iOS 17 或 iPadOS 17 及以上。</span></div></li>
   <li><span class="tile">{globe}</span><div><b>八种语言</b><span>英语、德语、西班牙语、法语、日语、韩语、巴西葡萄牙语和简体中文，拦截屏和小组件也包括在内。在{K_settings} → {K_language}里选一种，不必改动设备上的其他设置。</span></div></li>
 </ul>
 """,

@@ -51,48 +51,50 @@ COPY = {
 
 "s.eyebrow": "Hilfe",
 "s.h1": "Hilfe zu Pausely",
-"s.sub": "Ein Atemzug vor dem Scrollen. Pausely stellt sich vor die Apps, die du ausgewählt hast, und bittet erst einmal um zehn Sekunden. Diese Seite erklärt, wie das funktioniert, was es braucht und wie du uns erreichst.",
+"s.sub": "Ein Atemzug vor dem Scrollen. Pausely stellt sich vor die Apps, die du ausgewählt hast, und bittet erst einmal um einen Moment. Diese Seite erklärt, wie das funktioniert, was es braucht und wie du uns erreichst.",
 "s.cta": "Zu den FAQ",
 "s.meta": 'Kein Konto · deine Apps, deine Zeit und deine Worte bleiben auf deinem Gerät · <a href="{BASE}{L}/privacy/">Datenschutzerklärung</a>',
 
 "s.how.h": "So funktioniert Pausely",
 "s.how.b": """
 <p class="lead">Pausely legt eine kleine Bremsschwelle zwischen dich und die Apps, die deinen Tag auffressen.</p>
-<p>Du wählst die Apps, die du lieber seltener benutzen würdest. Danach öffnet ein Tippen darauf sie nicht mehr sofort. Pausely stellt sich zuerst davor, mit einer kurzen Pause: einem Atemzug, einem Satz zum Abtippen oder der Frage, warum du sie gerade öffnest. Wenn du dann immer noch hinein willst, kannst du das, für ein Zeitfenster. Ist das Fenster vorbei, kommt die Pause zurück.</p>
-<p>Es geht nicht darum, dich auszusperren. Es geht darum, aus einer automatischen Daumenbewegung eine Entscheidung zu machen, die du wirklich triffst. Mit zehn Sekunden Bedenkzeit schließen die meisten die App wieder, und Pausely zählt das als Erfolg.</p>
+<p>Du wählst die Apps, die du lieber seltener benutzen würdest. Danach öffnet ein Tippen darauf sie nicht mehr sofort. Zuerst kommt Pauselys Blockierbildschirm, der zeigt, wie oft du diese App heute schon geöffnet hast, und dann eine kurze Pause: ein Atemzug, ein Satz zum Abtippen oder ein Tipp auf den Grund, aus dem du sie öffnest. Wenn du dann immer noch hinein willst, kannst du das, für eine Zeit, die du selbst wählst. Ist sie um, kommt die Pause zurück.</p>
+<p>Es geht nicht darum, dich auszusperren. Es geht darum, aus einer automatischen Daumenbewegung eine Entscheidung zu machen, die du wirklich triffst. Mit einem Moment zum Nachdenken schließen die meisten die App lieber wieder, und Pausely zählt das als Erfolg.</p>
 <ul class="rows">
-  <li><span class="tile">{shield}</span><div><b>Schutz</b><span>Ein Schalter. Solange er an ist, zeigen deine ausgewählten Apps Pauselys ruhigen Blockierbildschirm, statt sich zu öffnen.</span></div></li>
-  <li><span class="tile">{wind}</span><div><b>Drei Pausen</b><span>Eine Atemübung, eine Tippaufgabe oder das Benennen deiner Absicht. Die Einrichtung wählt die, die zu dir passt; ändern kannst du sie jederzeit.</span></div></li>
-  <li><span class="tile">{clock}</span><div><b>Regeln</b><span>Bestimmte Apps zu bestimmten Zeiten schützen (vor dem Schlafengehen, während der Arbeit), mit eigener Pause und eigenem Zeitfenster. Eine Regel kann auch vollständig sperren, bis ihre Zeit vorbei ist.</span></div></li>
-  <li><span class="tile">{lock}</span><div><b>Strenger Modus</b><span>Halte dich selbst daran, für eine Stunde, einen Tag oder bis zu einer Uhrzeit deiner Wahl. Solange er läuft, lässt sich der Schutz nicht abschalten und Regeln lassen sich nicht löschen, auch nicht von dir.</span></div></li>
-  <li><span class="tile">{book}</span><div><b>Alternativen und Tagebuch</b><span>Bis zu drei gesunde Alternativen erscheinen auf dem Pausenbildschirm als dritter Weg, und es gibt ein Tagebuch für die Momente, in denen du lieber schreibst als scrollst.</span></div></li>
-  <li><span class="tile">{chart}</span><div><b>Fortschritt</b><span>Eingehaltene Pausen, zurückgewonnene Zeit, deine Serie und ein Wochendiagramm, dazu Home-Bildschirm-Widgets und ein Countdown auf dem Sperrbildschirm, solange ein Fenster offen ist.</span></div></li>
-  <li><span class="tile">{sparkle}</span><div><b>Die KI-Reflexion, wenn du magst</b><span>Aus, bis du sie einschaltest. Sie macht aus „Warum öffnest du das?“ einen kurzen Austausch und schreibt eine Wochenzusammenfassung. Auf einem iPhone mit Apple Intelligence kann sie auf dem Telefon selbst geschrieben werden; sonst schreibt OpenAI sie (siehe <a href="{BASE}{L}/privacy/#ai">Datenschutz</a>).</span></div></li>
+  <li><span class="tile">{shield}</span><div><b>Schutz und deine Apps</b><span>Ein Schalter auf Start schaltet alles ein. Jede App, die du ausgewählt hast, hat ihren eigenen Schalter und ihre eigene Pause, und der Blockierbildschirm zeigt, wie oft du sie heute schon geöffnet hast.</span></div></li>
+  <li><span class="tile">{wind}</span><div><b>Sechs Pausen</b><span>Ein Atemzug, eine kurze Zeichenfolge zum Abtippen, ein Tipp auf den Grund, aus dem du die App öffnest, oder eine Erinnerung zum Lesen. Zwei weitere schreibt eine KI, wenn du sie einschaltest: eine kurze Reflexion und eine Frage über dein Land, bei der du einen einzigen Versuch hast. Wähl eine aus oder lass Pausely jedes Mal eine andere nehmen.</span></div></li>
+  <li><span class="tile">{clock}</span><div><b>Regeln und Tageslimits</b><span>Bestimmte Apps zu bestimmten Zeiten schützen (vor dem Schlafengehen, während der Arbeit), mit eigener Pause, oder sie ganz sperren, bis die Zeit vorbei ist. Ein Tageslimit legt eine App bis morgen still, wenn du sie eine bestimmte Zeit genutzt oder eine bestimmte Anzahl Male geöffnet hast.</span></div></li>
+  <li><span class="tile">{lock}</span><div><b>Alles blockieren, Pausely-Sperre und strenger Modus</b><span>„Alles blockieren“ sperrt jede geschützte App, so lange du willst. Mit der Pausely-Sperre lässt sich nichts schnell rückgängig machen: Jede Änderung wartet erst, und solange sie an ist, lässt sich keine App löschen. Der strenge Modus hält bis zu einer Uhrzeit deiner Wahl, und vorher lässt sich nichts rückgängig machen, auch nicht von dir.</span></div></li>
+  <li><span class="tile">{chart}</span><div><b>Deine Zeit</b><span>{K_time_per_app} zeigt die heutigen Minuten in den Apps, die du ausgewählt hast, und solange du in einer davon bist, zeigt die Dynamic Island deine heutige Zeit darin. Mit Premium sagen dir {K_time_banners} alle paar Minuten, wie viel Zeit du in einer App verbracht hast, die du dafür gewählt hast, und Pausely schätzt, wie vielen Kurzvideos das ungefähr entspricht.</span></div></li>
+  <li><span class="tile">{book}</span><div><b>Alternativen und Tagebuch</b><span>Dinge, die du lieber tun würdest, stehen auf dem Pausenbildschirm als dritter Ausweg, mit einem Timer, wenn du eins davon wählst, und es gibt ein Tagebuch für die Momente, in denen du lieber schreibst als scrollst.</span></div></li>
+  <li><span class="tile">{widget}</span><div><b>Fortschritt, Widgets und Siri</b><span>Eingehaltene Pausen, zurückgewonnene Zeit, deine Serie, ein Wochendiagramm und deine Muster aus vier Wochen. Mit Premium außerdem Widgets für den Home-Bildschirm und den Sperrbildschirm, Tasten im Kontrollzentrum sowie Siri und Kurzbefehle.</span></div></li>
+  <li><span class="tile">{sparkle}</span><div><b>Die KI-Pausen, wenn du magst</b><span>Aus, bis du sie einschaltest. Die Reflexion macht aus „Warum öffnest du das?“ einen kurzen Austausch und schreibt eine Wochenzusammenfassung; auf einem iPhone mit Apple Intelligence kann sie auf dem Telefon selbst geschrieben werden. Die Fragenpause wird immer von OpenAI geschrieben. Siehe <a href="{BASE}{L}/privacy/#ai">Datenschutz</a>.</span></div></li>
 </ul>
 """,
 
 "s.requirements.h": "Voraussetzungen",
 "s.requirements.b": """
 <div class="table-wrap"><table>
-<tr><th>Gerät</th><td><strong>iPhone oder iPad</strong> mit <strong>iOS 17 oder iPadOS 17</strong> oder neuer. Eine App, ein Layout, beide Geräte.</td></tr>
+<tr><th>Gerät</th><td><strong>iPhone oder iPad</strong> mit <strong>iOS 17 oder iPadOS 17</strong> oder neuer. Eine App für beide, mit zwei Spalten auf dem breiteren Bildschirm des iPad.</td></tr>
 <tr><th>Berechtigung</th><td>Zugriff auf die <strong>Bildschirmzeit</strong>, einmalig bei der Einrichtung über Apples eigene Abfrage erteilt. Pausely nutzt Apples Bildschirmzeit-Framework (dasselbe System hinter den eingebauten App-Limits von iOS), und Apple, nicht Pausely, ist das, was eine App tatsächlich blockiert.</td></tr>
 <tr><th>Konto</th><td>Keins. Es gibt nirgends in der App eine Anmeldung, kein E-Mail-Feld und kein Passwort.</td></tr>
-<tr><th>Internet</th><td>Nicht nötig. Jede Pause, jede Regel, jedes Diagramm und jeder Tagebucheintrag funktioniert offline. Wenn eine Verbindung besteht, nutzen sie drei Dinge: Apples eigener Datenverkehr, wenn du Premium kaufst oder wiederherstellst; Metas SDK, das Installationen, Starts und Käufe meldet, damit wir unsere Anzeigen messen können; und die KI-Reflexion, wenn OpenAI sie schreibt. Sie ist aus, bis du sie einschaltest.</td></tr>
-<tr><th>Mitteilungen</th><td>Optional und auf dem Gerät erzeugt. Pausely nutzt sie, um dich vom Blockierbildschirm in die Pause zu übergeben und um zu fragen, wie eine Alternative gelaufen ist, und (nur wenn du sie einschaltest) für eine Erinnerung vor deiner schwierigsten Stunde und für {K_time_banners}. Es gibt keinen Push-Server.</td></tr>
+<tr><th>Internet</th><td>Nicht nötig. Jede Regel, jedes Diagramm und jeder Tagebucheintrag funktioniert offline, und so auch jede Pause außer denen, die OpenAI schreibt. Wenn eine Verbindung besteht, nutzen sie vier Dinge: der Kauf oder die Wiederherstellung von Premium über Apple und RevenueCat; Metas SDK, das Installationen, Starts und Käufe meldet, damit wir unsere Anzeigen messen können; Google Analytics, das zählt, wie die App genutzt wird; und die KI-Pausen, wenn OpenAI sie schreibt (sie sind aus, bis du sie einschaltest).</td></tr>
+<tr><th>Mitteilungen</th><td>Optional und auf dem Gerät erzeugt. Ab iOS 26.5 öffnet die Taste des Blockierbildschirms Pausely von selbst; bei früheren Versionen bringt dich eine Mitteilung in die Pause. Pausely nutzt sie außerdem, um zu fragen, wie eine Alternative gelaufen ist, und (nur wenn du sie einschaltest) für eine Erinnerung vor deiner schwierigsten Stunde und für {K_time_banners}. Es gibt keinen Push-Server.</td></tr>
 <tr><th>Sprachen</th><td>Englisch, Deutsch, Spanisch, Französisch, Japanisch, Koreanisch, brasilianisches Portugiesisch und vereinfachtes Chinesisch. Pausely folgt der Sprache deines Geräts, und unter {K_settings} → {K_language} kannst du eine andere wählen.</td></tr>
 </table></div>
 """,
 
 "s.start.h": "Erste Schritte",
 "s.start.b": """
-<p>Die Einrichtung sind sieben Bildschirme und dauert keine drei Minuten. Am Ende ist der Schutz schon an und deine erste Regel schon geschrieben.</p>
+<p>Die Einrichtung dauert ein paar Minuten, und am Ende ist der Schutz schon an.</p>
 <ol class="steps">
-  <li><div><b>Sag, wie viel vom Tag dein Handy bekommt</b> (deine eigene Schätzung, nichts Gemessenes).</div></li>
-  <li><div><b>Erlaube den Zugriff auf die Bildschirmzeit</b>, wenn Apple fragt. Ohne ihn kann Pausely nicht arbeiten, und du kannst ihn jederzeit unter {K_settings} → {K_screen_time} widerrufen.</div></li>
-  <li><div><b>Wähle deine Apps</b> in Apples Auswahl. Pausely erfährt ihre Namen nie (siehe <a href="{BASE}{L}/privacy/">Datenschutz</a>).</div></li>
-  <li><div><b>Beantworte drei Fragen</b>, die die Pause auswählen, die zu dir passt.</div></li>
-  <li><div><b>Füge bis zu drei Alternativen hinzu</b>: ein Spaziergang, ein Buch, ein Glas Wasser oder etwas Eigenes mit einem Link in eine andere App.</div></li>
-  <li><div><b>Fertig.</b> Öffne eine deiner Apps und triff die Pause.</div></li>
+  <li><div><b>Sag, wie viel vom Tag dein Handy bekommt</b>: deine eigene Schätzung, nichts Gemessenes.</div></li>
+  <li><div><b>Wähle deine Apps.</b> Apple fragt auf demselben Bildschirm nach dem Zugriff auf die Bildschirmzeit. Ohne ihn kann Pausely nicht arbeiten, und du kannst ihn jederzeit unter {K_settings} → {K_screen_time} widerrufen. Pausely erfährt die Namen der Apps nie (siehe <a href="{BASE}{L}/privacy/">Datenschutz</a>), und die kostenlose Version schützt zwei.</div></li>
+  <li><div><b>Wähle deine Pause</b> und probier sie einmal aus, damit du weißt, was kommt.</div></li>
+  <li><div><b>Füge bis zu drei Dinge hinzu, die du lieber tun würdest</b>: ein Spaziergang, ein Buch, ein Glas Wasser oder etwas Eigenes mit einem Link in eine andere App.</div></li>
+  <li><div><b>Erlaube Mitteilungen</b>, nach einem Satz dazu, wofür Pausely sie nutzt.</div></li>
+  <li><div><b>Sieh dir an, was mit Premium dazukommt</b>, und überspring es, wenn du magst.</div></li>
+  <li><div><b>Fertig.</b> Auf Start steht, dass Pausely an ist. Öffne eine deiner Apps und lern die Pause kennen.</div></li>
 </ol>
 """,
 
@@ -100,27 +102,27 @@ COPY = {
 "s.faq.b": """
 <dl class="faq">
 <dt>Ist Pausely kostenlos?</dt>
-<dd>Ja. Kostenlos ist ein funktionierendes Produkt, keine Demo: <strong>eine Regel</strong>, die <strong>Atempause</strong> und dein <strong>vollständiger Fortschrittsbildschirm</strong> (Pausen, Erfolge, zurückgewonnene Zeit, die Serie und das Diagramm).</dd>
+<dd>Ja. Kostenlos ist ein funktionierendes Produkt, keine Demo: Es schützt <strong>zwei Apps</strong>, und dazu gehören <strong>eine Regel</strong>, die <strong>Atempause</strong>, dein <strong>vollständiger Fortschrittsbildschirm</strong> (Pausen, Erfolge, zurückgewonnene Zeit, die Serie und das Diagramm), {K_time_per_app} sowie der Countdown auf dem Sperrbildschirm und in der Dynamic Island.</dd>
 <dt>Was kommt mit Premium dazu?</dt>
-<dd>So viele Regeln, wie du willst, die beiden anderen Pausen (zum Weitermachen tippen, eine Absicht formulieren), der strenge Modus, die Stimmungs-Auswertung, die vergleicht, wie du dich nach einer Sitzung fühlst und wie nach dem Weggehen, und die optionale KI-Reflexion mit ihrer Wochenzusammenfassung. Premium ist ein Monats- oder Jahresabo (das Jahresabo beginnt mit einer <strong>kostenlosen Testphase</strong>) oder ein einmaliger Kauf für immer. Die Preise stehen in der App und im App Store deines Landes, und die Abrechnung übernimmt Apple.</dd>
+<dd>Jede App, jede Website und ganze Kategorien, die du wählst; so viele Regeln, wie du willst, und Tageslimits; „Alles blockieren“; jede Art von Pause, und eine Pause, die etwas mehr verlangt, wenn du immer wieder zur selben App greifst; die Pausely-Sperre und der strenge Modus; {K_time_banners} und die Kurzvideo-Schätzung; deine Muster, die Stimmungs-Auswertung und deine Woche in Worten; Platz für sechs Alternativen; Widgets, Kontrollzentrum, Siri und Kurzbefehle; und die optionalen KI-Pausen. Premium ist ein Monats- oder Jahresabo (das Jahresabo beginnt mit einer <strong>kostenlosen Testphase</strong>) oder ein einmaliger Kauf für immer, und Jahresabo und Einmalkauf gibt es auch für die Familie, geteilt über die Familienfreigabe. Die Preise stehen in der App und im App Store deines Landes, und die Abrechnung übernimmt Apple.</dd>
 <dt>Was passiert, wenn mein Abo ausläuft?</dt>
-<dd>Nichts von dem, was du aufgebaut hast, wird dir weggenommen. Jede Regel läuft weiter und bleibt bearbeitbar, und die Pause, die du gewählt hast, steht weiter vor deinen Apps. Nur die Möglichkeit, mehr hinzuzufügen, schließt sich. Eine App, die aufhört, dein Handy zu schützen, weil eine Karte abgelaufen ist, würde dich genau in dem Moment im Stich lassen, in dem du sie darum gebeten hast, es nicht zu tun.</dd>
+<dd>Was dich schützt, schützt dich weiter. Jede App, die du ausgewählt hast, und jede Regel laufen weiter und bleiben bearbeitbar, und die Pause, die du gewählt hast, steht weiter vor deinen Apps. Mehr hinzufügen kannst du dann nicht, und auch die Extras, die dir etwas zeigen, etwa Widgets und {K_time_banners}, schließen sich. Eine App, die aufhört, dein Handy zu schützen, weil eine Karte abgelaufen ist, würde dich genau in dem Moment im Stich lassen, in dem du sie darum gebeten hast, es nicht zu tun.</dd>
 <dt>Kann ich einen Kauf auf einem neuen Gerät wiederherstellen?</dt>
 <dd>Ja. Öffne den Premium-Bildschirm und tippe auf {K_restore}. Premium gehört zu deiner Apple-ID, nicht zum Gerät.</dd>
 <dt>Warum kann Pausely mir nicht sagen, welche Apps ich blockiert habe?</dt>
-<dd>Weil es das wirklich nicht weiß. Apples Bildschirmzeit übergibt Pausely undurchsichtige Tokens, die außerhalb deines Geräts bedeutungslos sind: keine App-Namen, keine Kennungen. Pausely kann iOS bitten, sie zu blockieren; lesen kann es sie nicht.</dd>
+<dd>Weil es das wirklich nicht weiß. Apples Bildschirmzeit übergibt Pausely undurchsichtige Tokens, die außerhalb deines Geräts bedeutungslos sind: keine App-Namen, keine Kennungen. iOS kann das Symbol einer App in Pausely zeichnen, und Pausely kann iOS bitten, sie zu blockieren, aber Pausely selbst kann nicht lesen, welche App es ist.</dd>
 <dt>Ich kann den Schutz nicht abschalten. Ist etwas kaputt?</dt>
-<dd>Prüfe, ob der <strong>strenge Modus</strong> läuft. Der Startbildschirm sagt es. Solange er läuft, lässt sich der Schutz nicht abschalten und Regeln lassen sich nicht löschen; so ist es gedacht. Er endet von selbst zu der Zeit, die du gewählt hast.</dd>
+<dd>Prüfe, ob der <strong>strenge Modus</strong> oder die <strong>Pausely-Sperre</strong> an ist. Auf Start siehst du es. Der strenge Modus endet von selbst zu der Zeit, die du gewählt hast. Die Pausely-Sperre bleibt an, bis du sie ausschaltest: Starte die Wartezeit, und wenn sie vorbei ist, ist zehn Minuten lang alles offen.</dd>
 <dt>Sieht Pausely, was ich in anderen Apps mache?</dt>
 <dd>Nein. Es sieht nie dein Surfen, deine Nachrichten oder irgendetwas in einer anderen App. iOS teilt ihm mit, wie lange die Apps, die du ausgewählt hast, geöffnet waren (für dein Tagesziel, deine Limits und die Zeitfunktionen), und Pausely behält diese Minuten auf deinem Gerät und sendet sie nie irgendwohin. Darüber hinaus hält es nur seine eigenen Ereignisse fest (dass eine Pause gezeigt wurde und wofür du dich entschieden hast) und behält auch die auf deinem Gerät.</dd>
-<dt>Was ist die KI-Reflexion, und ist sie an?</dt>
-<dd>Sie ist aus, bis du sie einschaltest. Wenn du das tust, wird aus einer Pause ein kurzer Austausch: Du tippst, warum du die App öffnest, und es kommt eine Frage zurück. Außerdem schreibt sie eine kurze Notiz über deine Woche. Auf einem iPhone mit Apple Intelligence können beide auf dem Telefon selbst geschrieben werden, und dann verlässt nichts das Telefon. Wenn OpenAI sie schreibt, gehen diese Wörter an Pauselys eigenen Server und weiter an OpenAI. Nie dein Tagebuch, nie deine Check-ins, nie welche Apps du ausgewählt hast. {K_settings} → {K_ai_reflection} → {K_what_is_sent} listet jedes einzelne Feld auf, und wenn du sie wieder ausschaltest, endet all das.</dd>
+<dt>Was sind die KI-Pausen, und sind sie an?</dt>
+<dd>Sie sind aus, bis du sie einschaltest. Dann kommen zwei Pausen zu den anderen dazu. Die <strong>Reflexion</strong> fragt, warum du die App öffnest, und schickt eine behutsame Frage zurück, und sie schreibt eine kurze Notiz über deine Woche. Auf einem iPhone mit Apple Intelligence kann sie auf dem Telefon selbst geschrieben werden, und dann verlässt nichts das Telefon; wenn OpenAI sie schreibt, gehen deine Worte an Pauselys eigenen Server und weiter an OpenAI. Die <strong>Fragenpause</strong> wird immer von OpenAI geschrieben und sendet nur deine Sprache, das Land aus der Regionseinstellung deines iPhone und die letzten paar Fragen, die sie gestellt hat. Nie dein Tagebuch, nie deine Check-ins, nie, welche Apps du ausgewählt hast. {K_settings} → {K_ai_reflection} → {K_what_is_sent} listet jedes einzelne Feld auf, und wenn du sie ausschaltest, endet all das. Im App Store des chinesischen Festlands hat Pausely keine KI-Funktionen.</dd>
 <dt>Funktioniert es auf dem iPad? Auf dem Mac?</dt>
-<dd>iPad ja: Pausely ist eine App für iPhone und iPad, mit demselben Layout auf beiden, und es funktioniert in Split View, Slide Over und Stage Manager. Mac nein: Die Bildschirmzeit-Frameworks, auf denen Pausely aufbaut, gibt es dort nicht.</dd>
+<dd>iPad ja: Pausely ist eine App für iPhone und iPad; auf dem iPad verteilen sich die Hauptbildschirme auf zwei Spalten, und es funktioniert in Split View, Slide Over und Stage Manager. Mac nein: Die Bildschirmzeit-Frameworks, auf denen Pausely aufbaut, gibt es dort nicht.</dd>
 <dt>Kann ich die App in meiner eigenen Sprache lesen?</dt>
-<dd>Pausely spricht acht Sprachen und folgt der Einstellung deines Geräts. Um es in einer anderen zu lesen, ohne sonst etwas an deinem Gerät zu ändern, öffne {K_settings} → {K_language}. Blockierbildschirme, Widgets und der Sperrbildschirm-Countdown folgen derselben Wahl.</dd>
+<dd>Pausely spricht acht Sprachen und folgt der Einstellung deines Geräts. Um es in einer anderen zu lesen, ohne sonst etwas an deinem Gerät zu ändern, öffne {K_settings} → {K_language}. Blockierbildschirme, Widgets und der Sperrbildschirm folgen derselben Wahl.</dd>
 <dt>Wie lösche ich alles?</dt>
-<dd>{RESET}. Das leert jede Pause, jeden Erfolg, jede Regel, jeden Tagebucheintrag und jeden Check-in, nimmt die Sperren herunter und setzt dich an den Anfang. Solange der strenge Modus läuft, verweigert es das. Einzelheiten auf der Seite <a href="{BASE}{L}/delete-data/">Deine Daten</a>.</dd>
+<dd>{RESET}. Das leert jede Pause, jeden Erfolg, jede Regel, jeden Tagebucheintrag und jeden Check-in, hebt die Blockierungen auf und setzt dich an den Anfang. Solange der strenge Modus läuft, verweigert es das; ist die Pausely-Sperre an, starte zuerst die Wartezeit. Einzelheiten auf der Seite <a href="{BASE}{L}/delete-data/">Deine Daten</a>.</dd>
 </dl>
 """,
 
@@ -128,18 +130,20 @@ COPY = {
 "s.trouble.b": """
 <h3>Eine App öffnet sich ohne Pause</h3>
 <ul>
-  <li>Prüfe den Schalter <strong>Schutz</strong> auf dem Startbildschirm.</li>
+  <li>Prüfe auf Start den Schalter <strong>Schutz</strong> und darunter den eigenen Schalter der App.</li>
   <li>Prüfe, ob der Zugriff auf die Bildschirmzeit noch erteilt ist: {K_settings} → {K_screen_time} → {K_apps_with_st}. Wurde er widerrufen, zeigt Pausely einen Wiederherstellungsbildschirm mit einer Taste, um erneut zu fragen.</li>
   <li>Steht die App nur in einer <strong>Regel</strong>, erscheint die Pause nur während der Zeiten dieser Regel.</li>
-  <li>Ein <strong>Zugriffsfenster</strong>, das du vorhin geöffnet hast, läuft vielleicht noch. Der Countdown auf dem Sperrbildschirm zeigt, wie lange.</li>
+  <li>Ein <strong>Zugriffsfenster</strong>, das du vorhin geöffnet hast, läuft vielleicht noch. Der Countdown auf dem Sperrbildschirm zeigt, wie viel Zeit noch bleibt.</li>
 </ul>
 <h3>Der Blockierbildschirm erscheint, aber die Pause öffnet sich nie</h3>
 <ul>
-  <li>Ein Tippen auf die Taste des Blockierbildschirms übergibt dich über eine Mitteilung an die App. Sind Mitteilungen für Pausely aus, kann iOS die Übergabe nicht zustellen. Schalte sie unter {K_settings} → {K_notifications} → <kbd>Pausely</kbd> ein.</li>
+  <li>Ab iOS 26.5 öffnet die Taste des Blockierbildschirms Pausely selbst. Bei früheren Versionen übergibt sie dich über eine Mitteilung, und sind Mitteilungen für Pausely aus, kann iOS sie nicht zustellen. Schalte sie unter {K_settings} → {K_notifications} → <kbd>Pausely</kbd> ein.</li>
   <li>Pausely direkt zu öffnen, öffnet die wartende Pause ebenfalls.</li>
 </ul>
+<h3>Apps lassen sich nicht löschen</h3>
+<p>Die Pausely-Sperre oder der strenge Modus ist an. Solange eins von beiden gilt, verhindert iOS das Löschen von Apps, und zwar bei jeder App auf dem Telefon, nicht nur bei Pausely. Schalte die Pausely-Sperre nach ihrer Wartezeit aus oder lass den strengen Modus enden, dann klappt das Löschen wieder.</p>
 <h3>Widgets hinken hinterher</h3>
-<p>iOS aktualisiert Widgets nach seinem eigenen Zeitplan. Pausely zu öffnen, bringt sie sofort auf den neuesten Stand.</p>
+<p>iOS aktualisiert Widgets nach seinem eigenen Zeitplan. Pausely zu öffnen, bringt sie sofort auf den neuesten Stand. Widgets gehören zu Premium: Ohne Premium zeigt ein Widget ein Schloss und öffnet den Premium-Bildschirm.</p>
 <h3>Die App ist in der falschen Sprache</h3>
 <p>Öffne {K_settings} → {K_language} und wähle die, die du willst. Alles, was Pausely zeichnet, folgt sofort. Apples eigene App-Auswahl wird von iOS gezeichnet, nicht von Pausely, und wechselt deshalb erst beim nächsten Start.</p>
 <h3>Premium wird nicht erkannt</h3>
@@ -158,27 +162,27 @@ COPY = {
 "a.sub": "Wähle die Apps, die du lieber seltener benutzen würdest. Von da an bekommst du beim Öffnen zuerst eine Pause. Und eine Entscheidung, die du wirklich triffst.",
 "a.cta": "Hilfe",
 "a.meta": "Kein Konto · iPhone und iPad · iOS 17+ · acht Sprachen",
-"a.lead": "Pausely legt eine kleine Bremsschwelle zwischen dich und die Apps, die deinen Tag auffressen. Keine Aussperrung, kein schlechtes Gewissen. Zehn Sekunden, um zu entscheiden, ob du das wirklich öffnen wolltest.",
+"a.lead": "Pausely legt eine kleine Bremsschwelle zwischen dich und die Apps, die deinen Tag auffressen. Keine Aussperrung, kein schlechtes Gewissen, sondern ein Moment, um zu entscheiden, ob du das wirklich öffnen wolltest.",
 
 "a.f1.h": "Ein Atemzug vor dem Scrollen.",
-"a.f1.p": "Pausely stellt sich vor die Apps, die du ausgewählt hast, und bittet erst einmal um zehn Sekunden: eine Atemübung, einen Satz zum Abtippen oder einen Moment, um deine Absicht zu benennen.",
+"a.f1.p": "Pausely stellt sich vor die Apps, die du ausgewählt hast, und bittet erst einmal um einen Moment: einen Atemzug, einen Satz zum Abtippen, einen Grund zum Antippen, eine Zeile zum Lesen oder eine Frage zum Beantworten.",
 "a.f2.h": "Warum öffnest du das?",
 "a.f2.p": "Mach aus einem Reflex eine Entscheidung und triff sie mit Absicht. Meistens schließen Leute die App wieder, wenn sie die Gelegenheit bekommen, nachzudenken.",
 "a.f3.h": "Weggehen zählt.",
-"a.f3.p": "Behalte den Erfolg, oder geh für fünf Minuten hinein. Keine Aussperrungen, kein schlechtes Gewissen. Deine eigenen Alternativen stehen als dritter Weg auf dem Pausenbildschirm.",
+"a.f3.p": "Behalte den Erfolg oder geh für eine selbst gewählte Zeit hinein. Keine Aussperrungen, kein schlechtes Gewissen. Deine eigenen Alternativen stehen als dritter Ausweg auf dem Pausenbildschirm.",
 "a.f4.h": "Sieh, wie die Zeit zurückkommt.",
-"a.f4.p": "Jede Pause, die du eingehalten hast, jede zurückgewonnene Stunde, eine Serie und ein Wochendiagramm, mit Widgets für den Home-Bildschirm und einem Countdown auf dem Sperrbildschirm.",
+"a.f4.p": "Jede Pause, die du eingehalten hast, jede zurückgewonnene Stunde, eine Serie und ein Wochendiagramm, dazu die heutigen Minuten in jeder App, die du ausgewählt hast. Mit Premium sagt dir ein sanftes Banner, wie lange du schon in einer App bist, und Widgets zeigen es auf deinem Home-Bildschirm.",
 "a.f5.h": "Deine Apps. Deine Regeln.",
-"a.f5.p": "Ein Schalter und eine Pause für jede App, mit Zeitplänen für Abende und Arbeitstage. Der strenge Modus hält dich daran fest, wenn du ihn darum bittest.",
+"a.f5.p": "Ein Schalter und eine Pause für jede App, Zeitpläne für Abende und Arbeitstage, dazu Tageslimits. Wenn es halten soll, machen die Pausely-Sperre und der strenge Modus es schwer, etwas rückgängig zu machen, auch für dich.",
 "a.f6.h": "Dein Gerät behält, was es weiß.",
-"a.f6.p": 'Kein Konto. Deine Apps, deine Zeit, deine Pausen und dein Tagebuch bleiben auf deinem Gerät. Pausely kann nicht einmal lesen, welche Apps du ausgewählt hast; das behält Apple. Metas SDK sagt uns, welche unserer Anzeigen dich hierhergebracht hat, und die optionale KI-Reflexion sendet, was du hineintippst, nur dann, wenn OpenAI sie schreibt. <a href="{BASE}{L}/privacy/">Was genau hinausgeht.</a>',
+"a.f6.p": 'Kein Konto. Deine Apps, deine Zeit, deine Pausen und dein Tagebuch bleiben auf deinem Gerät. Pausely kann nicht einmal lesen, welche Apps du ausgewählt hast; das behält Apple. RevenueCat speichert, was du kaufst, Metas SDK sagt uns, welche unserer Anzeigen dich hierhergebracht hat, Google Analytics zählt, wie die App genutzt wird, und die optionalen KI-Pausen senden das Nötige nur dann, wenn OpenAI sie schreibt. <a href="{BASE}{L}/privacy/">Was genau hinausgeht.</a>',
 
 "a.price.h": "Was es kostet",
 "a.price.b": """
-<p>Kostenlos ist ein funktionierendes Produkt, keine Demo, und nichts, was du eingerichtet hast, wird dir je weggenommen, auch nicht, wenn ein Abo ausläuft.</p>
+<p>Kostenlos ist ein funktionierendes Produkt, keine Demo, und was dich schützt, wird dir nie weggenommen, auch nicht, wenn ein Abo ausläuft.</p>
 <div class="tiers" style="margin-top:16px">
-  <div class="tier"><div class="lbl">Kostenlos</div><div class="price">0 €</div><ul><li>Eine Regel</li><li>Die Atempause</li><li>Der ganze Fortschrittsbildschirm: Erfolge, zurückgewonnene Zeit, Serie und Diagramm</li><li>Widgets und der Countdown auf dem Sperrbildschirm</li></ul></div>
-  <div class="tier premium"><div class="lbl">Premium</div><div class="price">Monatlich · Jährlich · Einmalkauf</div><ul><li>So viele Regeln, wie du willst</li><li>Alle drei Pausen</li><li>Strenger Modus</li><li>Die Stimmungs-Auswertung</li><li>Die optionale KI-Reflexion und ihre Wochenzusammenfassung</li><li>Jährlich beginnt mit einer kostenlosen Testphase</li></ul></div>
+  <div class="tier"><div class="lbl">Kostenlos</div><div class="price">0 €</div><ul><li>Zwei Apps</li><li>Eine Regel</li><li>Die Atempause</li><li>Der ganze Fortschrittsbildschirm: Erfolge, zurückgewonnene Zeit, Serie und Diagramm</li><li>Zeit pro App</li><li>Der Countdown auf dem Sperrbildschirm und in der Dynamic Island</li></ul></div>
+  <div class="tier premium"><div class="lbl">Premium</div><div class="price">Monatlich · Jährlich · Einmalkauf</div><ul><li>Jede App, Website und Kategorie</li><li>So viele Regeln, wie du willst, und Tageslimits</li><li>Jede Art von Pause</li><li>Alles blockieren, Pausely-Sperre und strenger Modus</li><li>Zeithinweise und Kurzvideos</li><li>Muster, die Stimmungs-Auswertung und deine Woche in Worten</li><li>Widgets, Kontrollzentrum und Siri</li><li>Die optionalen KI-Pausen</li><li>Jährlich beginnt mit einer kostenlosen Testphase</li><li>Für die ganze Familie über die Familienfreigabe</li></ul></div>
 </div>
 <p class="small" style="margin-top:14px">Die Preise stehen in der App und im App Store deines Landes. Die Abrechnung übernimmt Apple. <a href="{BASE}{L}/terms/#subscriptions">Abo-Bedingungen.</a></p>
 """,
@@ -187,7 +191,7 @@ COPY = {
 "a.st.b": """
 <p>Pausely nutzt dasselbe Framework, das hinter den eingebauten App-Limits von iOS steckt. Apple gibt es nur an Apps, die es für diesen Zweck geprüft hat, und Apple, nicht Pausely, ist das, was tatsächlich zwischen dir und der App steht. Deshalb kann Pausely eine App blockieren, ohne je ihren Namen zu erfahren.</p>
 <ul class="rows" style="margin-top:16px">
-  <li><span class="tile">{tablet}</span><div><b>iPhone und iPad, eine App</b><span>Dasselbe einspaltige Layout auf beiden, und es benimmt sich in Split View, Slide Over und Stage Manager. iOS 17 oder iPadOS 17 und neuer.</span></div></li>
+  <li><span class="tile">{tablet}</span><div><b>iPhone und iPad, eine App</b><span>Auf dem iPad verteilen sich die Hauptbildschirme auf zwei Spalten, und es läuft sauber in Split View, Slide Over und Stage Manager. iOS 17 oder iPadOS 17 und neuer.</span></div></li>
   <li><span class="tile">{globe}</span><div><b>Acht Sprachen</b><span>Englisch, Deutsch, Spanisch, Französisch, Japanisch, Koreanisch, brasilianisches Portugiesisch und vereinfachtes Chinesisch, einschließlich Blockierbildschirm und Widgets. Wähle eine unter {K_settings} → {K_language}, ohne sonst etwas an deinem Gerät zu ändern.</span></div></li>
 </ul>
 """,
