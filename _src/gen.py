@@ -32,7 +32,7 @@ sys.path.insert(0, HERE)
 # and a CNAME file is written for GitHub Pages. GitHub then redirects the old
 # sohaibiii.github.io/pausely-links/ addresses, so links inside shipped builds of
 # the app keep working.
-DOMAIN = None
+DOMAIN = "getpausely.app"
 BASE = "" if DOMAIN else "/pausely-links"
 SITE = f"https://{DOMAIN}" if DOMAIN else "https://sohaibiii.github.io" + BASE
 APP = "Pausely"
