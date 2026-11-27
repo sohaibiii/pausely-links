@@ -5,11 +5,41 @@ https://sohaibiii.github.io/pausely-links/
 
 | Page | URL | App Store Connect field |
 |---|---|---|
-| Support | `/` | Support URL |
-| About | `/about/` | Marketing URL |
+| Home | `/` | Marketing URL |
+| How it works | `/how-it-works/` | |
+| Pricing | `/pricing/` | |
+| Guides | `/guides/` and `/guides/<slug>/` | |
+| Support | `/support/` (English), `/<lang>/` (the seven others) | Support URL |
+| About | `/about/` | |
 | Privacy Policy | `/privacy/` | Privacy Policy URL |
 | Terms of Use (EULA) | `/terms/` | EULA / linked from the paywall |
-| Delete your data | `/delete-data/` | — (linked from Privacy) |
+| Delete your data | `/delete-data/` | (linked from Privacy) |
+
+The home page keeps an `id="faq"` section and a link to Support, so the `/` and `/#faq` links in
+shipped builds of the app still land on answers.
+
+## The marketing pages
+
+Home, How it works, Pricing and the guides are English only for now. `_src/site_pages.py` holds
+their markup and words, `_src/guides.py` the guides, `assets/site.css` their styles. `gen.py` calls
+`site_pages.build()` at the end of its run, so the two commands under Editing still rebuild
+everything.
+
+Rules these pages keep, and `site_pages.check` fails the build on the ones a machine can see:
+
+- Only features the app has, named the way its screens name them.
+- Pictures of the app are drawings in the app's own words, and example numbers say they are examples.
+- No borrowed statistics, studies, press or reviews.
+- No claim that the app sends nothing anywhere. The Privacy Policy says exactly what leaves.
+- No prices. Yearly changes on 1 December 2026, and the App Store shows the real one.
+- No long dashes in copy.
+
+Two switches:
+
+- `DOMAIN` at the top of `_src/gen.py`. Set it to the custom domain (for example
+  `"getpausely.app"`) and rebuild: every link, the sitemap and a `CNAME` file follow.
+- `PROVIDER_TOKEN` at the top of `_src/site_pages.py`. Paste the provider id from App Store
+  Connect and every App Store button reports which page sent the download (campaign links).
 
 ## Languages
 
