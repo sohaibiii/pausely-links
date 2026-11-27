@@ -26,8 +26,15 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 
-BASE = "/pausely-links"
-SITE = "https://sohaibiii.github.io" + BASE
+# Where the site lives. Until Pausely has its own domain this is the GitHub Pages
+# project address. To move to the domain, set DOMAIN (for example "getpausely.app"),
+# run this script again and commit: every link, canonical and sitemap entry follows,
+# and a CNAME file is written for GitHub Pages. GitHub then redirects the old
+# sohaibiii.github.io/pausely-links/ addresses, so links inside shipped builds of
+# the app keep working.
+DOMAIN = None
+BASE = "" if DOMAIN else "/pausely-links"
+SITE = f"https://{DOMAIN}" if DOMAIN else "https://sohaibiii.github.io" + BASE
 APP = "Pausely"
 COMPANY = "TOPSOL"
 EMAIL = "topsol.org@gmail.com"
@@ -36,7 +43,8 @@ YEAR = "2026"
 # Set this to the App Store page once App Store Connect has assigned the Apple ID,
 # e.g. "https://apps.apple.com/app/id1234567890". Until then every "App Store"
 # button renders as a quiet "coming soon" label rather than a dead link.
-APP_STORE_URL = None
+APP_STORE_ID = "6804200257"
+APP_STORE_URL = "https://apps.apple.com/app/id" + APP_STORE_ID
 
 # The eight languages Pausely ships in, in the order the app's own picker shows
 # them (Core/Localization/AppLanguage.swift). The third column is the language's
@@ -84,6 +92,21 @@ PAGE_FILE = {
     "data": "delete-data/index.html",
 }
 NAV_ORDER = ["support", "about", "privacy", "terms", "data"]
+
+
+# English's front door is the home page (`_src/site_pages.py`), so English support lives
+# one level down. The seven other languages keep support at their front door,
+# which is where shipped builds of the app send people for help.
+def path_of(code, key):
+    if code == "en" and key == "support":
+        return "/support/"
+    return PAGE_PATH.get(key, "/")
+
+
+def file_of(code, key):
+    if code == "en" and key == "support":
+        return "support/index.html"
+    return PAGE_FILE[key]
 
 # The cards each long page is made of, in order. The identifier is the anchor,
 # the table of contents, and the two copy keys (`<prefix>.<id>.h` and `.b`).
@@ -345,24 +368,23 @@ def page(code, prefix, key, title, description, hero_html, body, toc=None, canon
     fmt = lambda k: C[k].format(**context(code, prefix, C))
 
     nav = "".join(
-        f'<a href="{E(BASE + prefix + PAGE_PATH[n])}"{CUR if n == key else ""}>{fmt("nav." + n)}</a>'
+        f'<a href="{E(BASE + prefix + path_of(code, n))}"{CUR if n == key else ""}>{fmt("nav." + n)}</a>'
         for n in NAV_ORDER
     )
     footnav = " · ".join(
-        f'<a href="{E(BASE + prefix + PAGE_PATH[n])}">{fmt("nav." + n)}</a>' for n in NAV_ORDER
+        f'<a href="{E(BASE + prefix + path_of(code, n))}">{fmt("nav." + n)}</a>' for n in NAV_ORDER
     )
     # The same page in the seven other languages. 404 has no counterpart per
     # language — GitHub Pages serves one for the whole site — so its tabs point
     # at each language's front door instead.
-    here = PAGE_PATH.get(key, "/")
     langs = "".join(
-        f'<a href="{E(BASE + p + here)}" lang="{c}" hreflang="{c}"'
+        f'<a href="{E(BASE + p + path_of(c, key))}" lang="{c}" hreflang="{c}"'
         f'{CUR if c == code else ""}>{E(NATIVE_NAME[c])}</a>'
         for c, p in LANGUAGES
     )
     alternates = "".join(
-        f'<link rel="alternate" hreflang="{c}" href="{E(SITE + p + here)}">' for c, p in LANGUAGES
-    ) + f'<link rel="alternate" hreflang="x-default" href="{E(SITE + here)}">'
+        f'<link rel="alternate" hreflang="{c}" href="{E(SITE + p + path_of(c, key))}">' for c, p in LANGUAGES
+    ) + f'<link rel="alternate" hreflang="x-default" href="{E(SITE + path_of("en", key))}">'
 
     toc_html = ""
     grid_cls = "grid"
@@ -444,8 +466,8 @@ def render(code, prefix):
     out = []
 
     def mk(key, title, desc, hero_html, body, toc=None):
-        out.append((PAGE_FILE[key], page(code, prefix, key, title, desc, hero_html, body,
-                                         toc, PAGE_PATH[key])))
+        out.append((file_of(code, key), page(code, prefix, key, title, desc, hero_html, body,
+                                             toc, path_of(code, key))))
 
     # Support
     mk("support", fmt("meta.support.title"), fmt("meta.support.desc"),
@@ -469,7 +491,7 @@ def render(code, prefix):
     mk("about", fmt("meta.about.title"), fmt("meta.about.desc"),
        hero(fmt("a.eyebrow"), fmt("a.h1"), fmt("a.sub"),
             store_button(C, fmt)
-            + f'<a class="btn quiet" href="{BASE + prefix}/">{fmt("a.cta")}</a>',
+            + f'<a class="btn quiet" href="{BASE + prefix + path_of(code, "support")}">{fmt("a.cta")}</a>',
             fmt("a.meta")),
        about_body)
 
@@ -516,7 +538,7 @@ def render_404():
 # written here.
 
 
-def sitemap():
+def sitemap(extra=()):
     """Every URL, each one naming its counterparts.
 
     Without the alternates a search engine treats eight translations of the
@@ -525,13 +547,14 @@ def sitemap():
     """
     urls = []
     for key in NAV_ORDER:
-        here = PAGE_PATH[key]
         alts = "".join(
-            f'\n    <xhtml:link rel="alternate" hreflang="{c}" href="{SITE + p + here}"/>'
+            f'\n    <xhtml:link rel="alternate" hreflang="{c}" href="{SITE + p + path_of(c, key)}"/>'
             for c, p in LANGUAGES
-        ) + f'\n    <xhtml:link rel="alternate" hreflang="x-default" href="{SITE + here}"/>'
-        for _, p in LANGUAGES:
-            urls.append(f"  <url>\n    <loc>{SITE + p + here}</loc>{alts}\n  </url>")
+        ) + f'\n    <xhtml:link rel="alternate" hreflang="x-default" href="{SITE + path_of("en", key)}"/>'
+        for c, p in LANGUAGES:
+            urls.append(f"  <url>\n    <loc>{SITE + p + path_of(c, key)}</loc>{alts}\n  </url>")
+    for loc in extra:
+        urls.append(f"  <url>\n    <loc>{SITE + loc}</loc>\n  </url>")
     return (
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"'
@@ -554,5 +577,15 @@ if __name__ == "__main__":
         for rel, content in render(code, prefix):
             write(os.path.join(prefix.lstrip("/"), rel) if prefix else rel, content)
     write("404.html", render_404())
-    write("sitemap.xml", sitemap())
+    # The English home page, the guides and everything else `site_pages.py` owns.
+    import site_pages
+    extra = []
+    for rel, content, loc in site_pages.build():
+        write(rel, content)
+        if loc:
+            extra.append(loc)
+    site_pages.copy_assets(OUT)
+    write("sitemap.xml", sitemap(extra))
+    if DOMAIN:
+        write("CNAME", DOMAIN + "\n")
     write("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {SITE}/sitemap.xml\n")
