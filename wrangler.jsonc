@@ -1,0 +1,15 @@
+{
+	// Cloudflare serves the built pages in this repository as they are.
+	// There is no build step: _src/gen.py is run by hand and its output is committed.
+	"name": "pausely-site",
+	"compatibility_date": "2026-11-20",
+	// Only the demo video goes through this script (see the comment at its top).
+	"main": "_worker/index.js",
+	"assets": {
+		"directory": ".",
+		"binding": "ASSETS",
+		"html_handling": "auto-trailing-slash",
+		"not_found_handling": "404-page",
+		"run_worker_first": ["/assets/video/*"]
+	}
+}
