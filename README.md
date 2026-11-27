@@ -64,6 +64,23 @@ Wording that names a screen in the app — <kbd>Settings</kbd> → <kbd>Your dat
 (`Core/Resources/Localizable.xcstrings`), so a page never tells somebody to tap a button whose
 label is written differently on their screen.
 
+## Hosting
+
+The pages are served at https://getpausely.app by a Cloudflare Worker named `pausely-site`.
+Cloudflare is connected to this repository and publishes `main` after every push, with no build
+step: it uploads the committed files as they are. `wrangler.jsonc` names the Worker and its
+settings, and `.assetsignore` lists the files that are not part of the website (`_src`, this README
+and so on).
+
+`_worker/index.js` runs for one path only, `/assets/video/`. Cloudflare's static assets answer a
+byte-range request with the whole file, and Safari on iPhone will not play a video served that way,
+so that script returns the requested bytes of the demo video. Every other page and file is served
+without it.
+
+GitHub Pages stays switched on, and the `CNAME` file stays, for one reason: shipped builds of the
+app open `https://sohaibiii.github.io/pausely-links/...`, and GitHub forwards those addresses to
+getpausely.app only while both are in place. Do not turn Pages off or delete `CNAME`.
+
 ## Editing
 
 `_src/gen.py` owns the markup; `_src/words/<lang>.py` owns the words. English is the fallback behind
