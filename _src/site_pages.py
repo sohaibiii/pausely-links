@@ -58,12 +58,18 @@ M_SHIELD = ('<div class="mini m-shield"><div class="num">12</div><b>Opens today<
 M_BREATH = ('<div class="mini m-breath"><div class="o"></div><b>Breathe in</b>'
             '<small>Ten seconds of breathing before you continue.</small></div>')
 M_CHOICE = ('<div class="mini m-choice"><b>You paused.</b>'
-            '<div class="btns"><span>I changed my mind</span><span>Continue for 5 minutes</span>'
-            '<span>Or walk for 10 minutes</span></div></div>')
+            '<div class="btns"><span>I changed my mind</span><span>Or walk for 10 minutes</span>'
+            '<span>Continue for 5m</span></div></div>')
 A_SHIELD = "A drawing of the block screen: the number 12, Opens today. Buttons: Open Pausely, Never mind."
 A_BREATH = "A drawing of the breathing pause: a soft circle and the words Breathe in."
-A_CHOICE = ("A drawing of the choice screen: You paused. Buttons: I changed my mind, Continue for 5 minutes, "
-            "Or walk for 10 minutes.")
+A_CHOICE = ("A drawing of the choice screen: You paused. Buttons: I changed my mind, Or walk for 10 minutes, "
+            "Continue for 5 minutes.")
+
+def shot(img, alt, lazy=True):
+    load = ' loading="lazy" decoding="async"' if lazy else ""
+    return (f'<figure class="phone"><img src="{ASSETS}/img/{img}.webp" alt="{E(alt)}" width="660" height="1435"'
+            f'{load}></figure>')
+
 
 TODAY = """<div class="today" role="img" aria-label="An example of today's numbers in Pausely: 7 pauses today, 5 walked away, 38 minutes saved, a 6 day streak.">
   <div class="hd"><b>Protection</b><span class="sw"></span></div>
@@ -171,7 +177,7 @@ def layout(key, path, title, description, body, *, ct, dark=False, jsonld=(), og
     <li><a href="{BASE}/terms/">Terms of Use</a></li>
     <li><a href="{BASE}/delete-data/">Your data</a></li>
   </ul></div>
-  <p class="legal">© {YEAR} {APP} · {COMPANY}. Pictures of the app on this site are drawings, and their numbers are examples. Apple, iPhone, iPad, Safari, Screen Time and App Store are trademarks of Apple Inc. Other app names belong to their owners, and Pausely is not affiliated with them. Support in other languages: {languages}</p>
+  <p class="legal">© {YEAR} {APP} · {COMPANY}. Screens of the app show its demo data, and the simpler pictures are drawings. Apple, iPhone, iPad, Safari, Screen Time and App Store are trademarks of Apple Inc. TikTok and Instagram are trademarks of their owners. Pausely is not affiliated with, sponsored by or endorsed by them or by any other app named or shown here. Support in other languages: {languages}</p>
 </div></footer>
 </body>
 </html>
@@ -234,26 +240,19 @@ def home():
   <div class="hero-copy">
     <p class="kicker">For iPhone and iPad</p>
     <h1>Stop scrolling <em>on autopilot.</em></h1>
-    <p class="lede">Pausely puts a ten second pause in front of the apps you open without thinking. Breathe first. Then decide if you still want to go in.</p>
+    <p class="lede">Pausely puts a short pause in front of TikTok, Instagram or any app you open without thinking. Breathe first. Then decide if you still want to go in.</p>
     <div class="cta-row">
       {store("home-hero")}
       <p class="cta-note">Free to start.<br>No account.</p>
     </div>
   </div>
   <div class="hero-art">
-    <div class="phone" role="img" aria-label="A drawing of Pausely's breathing pause: a circle that grows and shrinks with the words Breathe in, Hold, Breathe out.">
-      <div class="breath">
-        <span class="cap">A breath first</span>
-        <div class="orb-box">
-          <svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="46"/><circle class="run" cx="50" cy="50" r="46"/></svg>
-          <div class="orb"></div>
-        </div>
-        <div>
-          <div class="say" aria-hidden="true"><span class="in">Breathe in</span><span class="hold">Hold</span><span class="out">Breathe out</span></div>
-          <div class="foot">Ten seconds. Then you choose.</div>
-        </div>
-      </div>
+    <div class="phone">
+      <video id="demo" autoplay muted loop playsinline preload="metadata" width="600" height="1300" poster="{ASSETS}/video/demo-poster.jpg" aria-label="A screen recording style demo: someone taps TikTok on the Home Screen. Pausely steps in and shows 12 opens today. A breathing pause follows, then a pause where you type a short code, then the choice screen: You paused.">
+        <source src="{ASSETS}/video/demo.mp4" type="video/mp4">
+      </video>
     </div>
+    <script>(function(){{var v=document.getElementById("demo");if(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches){{v.removeAttribute("autoplay");v.pause();v.controls=true}}}})();</script>
   </div>
 </div>
 </main>
@@ -289,13 +288,16 @@ def home():
 </div></section>
 
 <section class="sec"><div class="wrap">
-  <h2>Gentle by default. <em>Firm when you ask.</em></h2>
-  <p class="intro">Most days a breath is enough. For the days it isn't, you can make Pausely hold.</p>
-  <div class="two">
-    <div><h3>Pick your pause</h3>{rows(PAUSES[:4])}</div>
-    <div><h3>Make it hold</h3>{rows([HOLDS[0], HOLDS[1], HOLDS[2], HOLDS[3]])}</div>
-  </div>
-  <p><a class="more" href="{BASE}/how-it-works/">Everything Pausely does</a></p>
+  <h2>The real app, <em>on your iPhone.</em></h2>
+  <p class="intro">A breath is the pause everybody starts with. With Premium you can pick another, or let Pausely choose a different one each time.</p>
+  <ol class="strip">
+    <li>{shot("breathing", "The breathing pause in Pausely: a soft circle inside a ring, with the word Hold and a countdown.")}<h3>Breathe</h3><p>Ten seconds, with a circle to follow.</p></li>
+    <li>{shot("typing", "The typing pause: Type this to continue, with twenty characters to type and a field that says Type here.")}<h3>Or type</h3><p>Twenty characters. Hard to do on autopilot.</p></li>
+    <li>{shot("intention", "The intention pause: Why are you opening this app? Twelve tiles such as Reply to someone, Just checking, Bored and Out of habit.")}<h3>Or say why</h3><p>One tap on the reason that fits.</p></li>
+    <li>{shot("choice", "The choice screen: You paused. Buttons: I changed my mind, Or walk for 10 minutes, Or read for 10 minutes, and Continue for 1 or 5 minutes.")}<h3>Then choose</h3><p>Stop here, do something else, or go in for a minute.</p></li>
+  </ol>
+  <p class="strip-hint">Swipe to see all four.</p>
+  <p class="fine">Want it firmer? Rules, daily limits, Block everything and strict mode are there when you ask. <a href="{BASE}/how-it-works/">Everything Pausely does</a></p>
 </div></section>
 
 <section class="sec"><div class="wrap split">
@@ -309,7 +311,7 @@ def home():
     </ul>
     <p class="fine"><a href="{BASE}/privacy/">What leaves the phone, exactly</a></p>
   </div>
-  {TODAY}
+  <div class="proof">{shot("progress", "Pausely's Progress screen: 1 hour 48 minutes reclaimed this week, and a bar chart of the last seven days.")}<p class="eg">The app's demo data.</p></div>
 </div></section>
 
 <div class="light">
@@ -377,7 +379,8 @@ def how_it_works():
     def step(when, h, ps, cls, alt, pic):
         return (f'<li><div class="txt"><div class="when">{when}</div><h2>{h}</h2>'
                 + "".join(f"<p>{p}</p>" for p in ps)
-                + f'</div><div class="pic {cls}" role="img" aria-label="{alt}">{pic}</div></li>')
+                + (f'</div><div class="pic {cls}">{pic}</div></li>' if cls == "shot" else
+                   f'</div><div class="pic {cls}" role="img" aria-label="{alt}">{pic}</div></li>'))
 
     setup_pic = ('<div class="m-list"><div class="on">Protection<span>On</span></div>'
                  '<div>Your apps<span>2 chosen</span></div><div>Pause<span>Deep breath</span></div></div>')
@@ -387,19 +390,19 @@ def how_it_works():
         step("Setup, once", "Choose the apps that take your time",
              ["Pick them in Apple's own picker. Two are free, and Premium covers every app, website and whole category you choose.",
               "Pausely uses Apple's Screen Time, the same system behind iOS's built in app limits. It asks for that permission once, and you can take it back in Settings at any time."],
-             "p5", "A drawing of Pausely's Home: Protection on, two apps chosen, the pause set to Deep breath.", setup_pic),
+             "shot", "", shot("home-apps", "Pausely's Home: Protection is on, today's pauses, and a row of your apps, each with its own switch.")),
         step("When you tap one", "The block screen comes first",
              ["Instead of the app, you see a number: how many times you have opened it today. No comment, no lecture. Only the number.",
-              "Tap <kbd>Open Pausely</kbd> to take the pause, or <kbd>Never mind</kbd> to leave the app closed."],
-             "p1", A_SHIELD, M_SHIELD),
+              "Tap <kbd>Open Pausely</kbd> to take the pause, or <kbd>Never mind</kbd> to leave the app closed. iOS draws this screen, so the picture here comes from our App Store preview."],
+             "shot", "", shot("block-screen", "The block screen: the number 12, Opens today. Buttons: Open Pausely, Never mind.")),
         step("Ten seconds", "A pause before you go in",
              ["The breathing pause is the one everybody starts with: in for four seconds, hold for two, out for four.",
               "With Premium you can swap it for typing a short string, picking why you are opening the app, or reading a reminder. Or let Pausely pick a different one each time."],
-             "p2", A_BREATH, M_BREATH),
+             "shot", "", shot("breathing", "The breathing pause: a soft circle inside a ring, with the word Hold.")),
         step("Then", "You choose, on purpose",
              ["<kbd>I changed my mind</kbd> closes it there, and Pausely counts the win.",
-              "<kbd>Continue for 5 minutes</kbd> opens the app for a set time. Or take the third way out: one of the things you said you would rather do, such as a walk, a book or a glass of water, with a timer when you start it."],
-             "p3", A_CHOICE, M_CHOICE),
+              "Under <kbd>Continue for</kbd>, tap <kbd>1m</kbd> or <kbd>5m</kbd> and the app opens for that long. Or take the third way out: one of the things you said you would rather do, such as a walk, a book or a glass of water, with a timer when you start it."],
+             "shot", "", shot("choice", "The choice screen: You paused. I changed my mind, Or walk for 10 minutes, Or read for 10 minutes, Continue for 1 or 5 minutes.")),
         step("If you go in", "The time is yours, and it ends",
              ["A countdown runs on the Lock Screen and in the Dynamic Island while the app is open.",
               "When the time is up, the pause is back in front of the app. Nothing is taken from you. You are asked again."],
@@ -407,8 +410,7 @@ def how_it_works():
         step("Over time", "Watch it add up",
              ["Progress shows pauses today, the times you walked away, the time saved, your streak and a chart of the week. All of it is free.",
               "Time per app shows today's minutes in the apps you chose. With Premium, Pausely also shows your patterns over four weeks."],
-             "plain", "An example of today's numbers: 7 pauses today, 5 walked away, 38 minutes saved, a 6 day streak.",
-             TODAY.replace(' role="img"', "").split(">", 1)[0].split(" aria-label")[0] + ">" + TODAY.split(">", 1)[1]),
+             "shot", "", shot("progress", "The Progress screen: 1 hour 48 minutes reclaimed this week, and the last seven days as bars.")),
     ])
     body = f"""<main id="content">
 <div class="wrap page-head">

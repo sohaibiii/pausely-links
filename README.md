@@ -28,7 +28,8 @@ everything.
 Rules these pages keep, and `site_pages.check` fails the build on the ones a machine can see:
 
 - Only features the app has, named the way its screens name them.
-- Pictures of the app are drawings in the app's own words, and example numbers say they are examples.
+- Screens of the app are real screenshots (`assets/img/`, the app's demo data); the simpler pictures are drawings in the app's own words.
+- The demo in the hero (`assets/video/demo.mp4`) is cut from the App Store preview, with two scenes added: tapping TikTok on the Home Screen, and the typing pause. TikTok is named and shown as the app being paused, and the footer says Pausely is not affiliated with it.
 - No borrowed statistics, studies, press or reviews.
 - No claim that the app sends nothing anywhere. The Privacy Policy says exactly what leaves.
 - No prices. Yearly changes on 1 December 2026, and the App Store shows the real one.
