@@ -453,7 +453,7 @@ def home():
     <h2>How many reels <em>was that?</em></h2>
     <p class="intro">It is easy to lose count of short videos. Pausely keeps a rough count for you, and shows it while you are still scrolling.</p>
   </div>
-  <div class="reels-art">{REELS}<p class="eg">A made-up app playing stock clips from Mixkit. Example numbers.</p></div>
+  <div class="reels-art">{REELS}<p class="plat"><b>This is Android.</b> On iPhone you get a banner every few minutes instead, with about how many short videos you watched.</p><p class="eg">A made-up app playing stock clips from Mixkit. Example numbers.</p></div>
   <ul class="facts">
     <li><b>On Android</b><span>A small card floats over the apps you pick. It shows how long this visit has lasted and about how many videos went by. One tap hides it.</span></li>
     <li><b>On iPhone</b><span>iOS doesn't let one app draw over another, so Pausely sends a banner every few minutes: your time in the app today, and about how many short videos that comes to.</span></li>

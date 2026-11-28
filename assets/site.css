@@ -371,7 +371,9 @@ footer .legal{grid-column:1/-1;border-top:1px solid var(--line);padding-top:18px
 .reels-head{grid-area:head;align-self:end}
 .reels-split .facts{grid-area:facts;align-self:start}
 .reels-art{grid-area:art;width:min(100%,280px);margin:0 auto}
-.reels-art .eg{font-size:13px;color:var(--text-3);text-align:center;margin-top:14px}
+.reels-art .plat{font-size:14.5px;line-height:1.45;color:var(--text-2);text-align:center;margin-top:18px}
+.reels-art .plat b{color:var(--text);font-weight:600}
+.reels-art .eg{font-size:13px;color:var(--text-3);text-align:center;margin-top:8px}
 .phone.droid{border-radius:36px;border-width:6px}
 .reel-screen{position:relative;aspect-ratio:9/19;overflow:hidden;background:#000;font-family:var(--sans);color:#fff}
 .reel-screen::before{content:"";position:absolute;top:11px;left:50%;width:11px;height:11px;margin-left:-5.5px;border-radius:50%;background:#000;box-shadow:0 0 0 1.5px rgba(255,255,255,.1);z-index:3}
