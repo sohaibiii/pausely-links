@@ -6,20 +6,75 @@
 <title>Guides: Stop Doomscrolling and Block Apps on iPhone</title>
 <meta name="description" content="Practical guides to blocking TikTok and Instagram on iPhone, stopping doomscrolling, and making Screen Time limits hold.">
 <link rel="canonical" href="https://getpausely.app/guides/">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
 <meta name="apple-itunes-app" content="app-id=6804200257">
 <meta name="theme-color" content="#0A1216">
 <meta property="og:site_name" content="Pausely">
+<meta property="og:locale" content="en_US">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Guides: Stop Doomscrolling and Block Apps on iPhone">
 <meta property="og:description" content="Practical guides to blocking TikTok and Instagram on iPhone, stopping doomscrolling, and making Screen Time limits hold.">
 <meta property="og:url" content="https://getpausely.app/guides/">
 <meta property="og:image" content="https://getpausely.app/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Pausely: a pause before the apps you open without thinking.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/icon.png" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css">
-
+<link rel="stylesheet" href="/assets/site.css?v=06ed9c1217">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://getpausely.app/"}, {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://getpausely.app/guides/"}]}</script>
+<script>(function(){
+var id="G-G2F9HVRK0F",key='analytics-choice',choice=null,loaded=false,tz='';
+try{choice=localStorage.getItem(key)}catch(e){}
+try{tz=Intl.DateTimeFormat().resolvedOptions().timeZone||''}catch(e){}
+var asks=/^(Europe\/|Arctic\/|Atlantic\/(Azores|Canary|Faroe|Madeira|Reykjavik)|Asia\/(Nicosia|Famagusta))/.test(tz);
+if(choice===null&&navigator.globalPrivacyControl)choice='no';
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments)}
+function consent(v){return{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:v}}
+var here=consent('denied');here.region=["AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR","DE","GR","HU","IE","IT","LV","LT","LU","MT","NL","PL","PT","RO","SK","SI","ES","SE","IS","LI","NO","GB","CH","GF","GP","MQ","YT","RE","MF"];
+gtag('consent','default',consent(choice==='no'?'denied':'granted'));
+gtag('consent','default',here);
+if(choice==='yes')gtag('consent','update',{analytics_storage:'granted'});
+function load(){
+if(loaded)return;loaded=true;
+gtag('js',new Date());
+gtag('config',id,{allow_google_signals:false,allow_ad_personalization_signals:false});
+var s=document.createElement('script');s.async=true;
+s.src='https://www.googletagmanager.com/gtag/js?id='+id;document.head.appendChild(s);
+}
+function forget(){
+document.cookie.split(';').forEach(function(c){
+var n=c.split('=')[0].trim();if(n.indexOf('_ga')!==0)return;
+['',location.hostname,'.'+location.hostname].forEach(function(d){
+document.cookie=n+'=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/'+(d?';domain='+d:'');
+});
+});
+}
+function choose(v){
+choice=v;try{localStorage.setItem(key,v)}catch(e){}
+gtag('consent','update',{analytics_storage:v==='yes'?'granted':'denied'});
+if(v==='yes')load();else forget();
+}
+if(choice==='yes'||(choice===null&&!asks))load();
+document.addEventListener('DOMContentLoaded',function(){
+var bar=document.getElementById('consent');if(!bar)return;
+function open(focus){bar.hidden=false;if(focus)bar.focus()}
+bar.addEventListener('click',function(e){
+var v=e.target.getAttribute&&e.target.getAttribute('data-choice');
+if(!v)return;choose(v);bar.hidden=true;
+if(location.hash==='#cookie-choices')history.replaceState(null,'',location.pathname+location.search);
+});
+document.addEventListener('click',function(e){
+var a=e.target.closest&&e.target.closest('a[href$="#cookie-choices"]');
+if(a){e.preventDefault();open(true)}
+});
+if(location.hash==='#cookie-choices')open(true);
+else if(choice===null&&asks)open(false);
+});
+})();</script>
 </head>
 <body class="on-light">
 <a class="skip" href="#content">Skip to content</a>
@@ -58,8 +113,13 @@
     <li><a href="/privacy/">Privacy Policy</a></li>
     <li><a href="/terms/">Terms of Use</a></li>
     <li><a href="/delete-data/">Your data</a></li>
+    <li><a href="/#cookie-choices">Cookie choices</a></li>
   </ul></div>
   <p class="legal">© 2026 Pausely · TOPSOL. Screens of the app show its demo data, and the simpler pictures are drawings. Apple, iPhone, iPad, Safari, Screen Time and App Store are trademarks of Apple Inc. TikTok and Instagram are trademarks of their owners. Pausely is not affiliated with, sponsored by or endorsed by them or by any other app named or shown here. Support in other languages: <a href="/de/" lang="de" hreflang="de">Deutsch</a> · <a href="/es/" lang="es" hreflang="es">Español</a> · <a href="/fr/" lang="fr" hreflang="fr">Français</a> · <a href="/ja/" lang="ja" hreflang="ja">日本語</a> · <a href="/ko/" lang="ko" hreflang="ko">한국어</a> · <a href="/pt-BR/" lang="pt-BR" hreflang="pt-BR">Português (Brasil)</a> · <a href="/zh-Hans/" lang="zh-Hans" hreflang="zh-Hans">简体中文</a></p>
 </div></footer>
+<div class="consent" id="consent" role="region" aria-label="Cookie choices" tabindex="-1" hidden>
+  <p>This website counts visits with Google Analytics. Is a cookie for that OK with you? <a href="/privacy/#web">What it collects</a></p>
+  <div class="consent-btns"><button type="button" data-choice="no">No thanks</button><button type="button" data-choice="yes">OK</button></div>
+</div>
 </body>
 </html>

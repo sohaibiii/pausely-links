@@ -14,11 +14,13 @@ Rules these pages keep, same as the app (CLAUDE.md in the app repo):
   * drawings of the app are drawings, and example numbers say they are examples;
   * no long dashes in copy.
 """
+import hashlib
 import json
 import os
 import re
 import shutil
 
+import analytics
 import gen
 from gen import APP, APP_STORE_ID, APP_STORE_URL, BASE, COMPANY, E, EMAIL, SITE, YEAR
 
@@ -33,6 +35,23 @@ PROVIDER_TOKEN = None
 
 UPDATED = "27 November 2026"
 UPDATED_ISO = "2026-11-27"
+
+# The stylesheet is cached for a year (see `_headers`), so its address carries a
+# hash of its contents: change the file and every page asks for a new one.
+with open(os.path.join(ROOT, "assets", "site.css"), "rb") as _f:
+    CSS_VERSION = hashlib.sha256(_f.read()).hexdigest()[:10]
+
+ORG = {"@context": "https://schema.org", "@type": "Organization", "name": COMPANY, "url": SITE + "/",
+       "logo": SITE + "/apple-touch-icon.png", "email": EMAIL}
+
+
+def crumbs(*trail):
+    """A breadcrumb trail from the home page: crumbs(("Guides", "/guides/"), ...)."""
+    items = [("Home", "/")] + list(trail)
+    return {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": i, "name": name, "item": SITE + path}
+        for i, (name, path) in enumerate(items, 1)]}
+
 
 APPLE = ('<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 '
          '1.88-3.31-1.02-1.5-2.62-1.7-3.19-1.73-1.36-.14-2.65.8-3.34.8-.69 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 '
@@ -137,21 +156,26 @@ def layout(key, path, title, description, body, *, ct, dark=False, jsonld=(), og
 <title>{E(title)}</title>
 <meta name="description" content="{E(description)}">
 <link rel="canonical" href="{E(url)}">
+<meta name="robots" content="{gen.ROBOTS}">
 <meta name="apple-itunes-app" content="app-id={APP_STORE_ID}">
 <meta name="theme-color" content="{'#183139' if dark else '#0A1216'}">
 <meta property="og:site_name" content="{APP}">
+<meta property="og:locale" content="en_US">
 <meta property="og:type" content="{og_type}">
 <meta property="og:title" content="{E(title)}">
 <meta property="og:description" content="{E(description)}">
 <meta property="og:url" content="{E(url)}">
 <meta property="og:image" content="{SITE}/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{APP}: a pause before the apps you open without thinking.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="{BASE}/icon.png" type="image/png">
 <link rel="apple-touch-icon" href="{BASE}/apple-touch-icon.png">
 <link rel="preload" href="{ASSETS}/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="{ASSETS}/site.css">
+<link rel="stylesheet" href="{ASSETS}/site.css?v={CSS_VERSION}">
 {ld}
-</head>
+{analytics.head()}</head>
 <body class="{'' if dark else 'on-light'}">
 <a class="skip" href="#content">Skip to content</a>
 {'' if dark else top}
@@ -175,11 +199,11 @@ def layout(key, path, title, description, body, *, ct, dark=False, jsonld=(), og
     <li><a href="{BASE}/support/">Support</a></li>
     <li><a href="{BASE}/privacy/">Privacy Policy</a></li>
     <li><a href="{BASE}/terms/">Terms of Use</a></li>
-    <li><a href="{BASE}/delete-data/">Your data</a></li>
+    <li><a href="{BASE}/delete-data/">Your data</a></li>{analytics.footer_link(BASE)}
   </ul></div>
   <p class="legal">© {YEAR} {APP} · {COMPANY}. Screens of the app show its demo data, and the simpler pictures are drawings. Apple, iPhone, iPad, Safari, Screen Time and App Store are trademarks of Apple Inc. TikTok and Instagram are trademarks of their owners. Pausely is not affiliated with, sponsored by or endorsed by them or by any other app named or shown here. Support in other languages: {languages}</p>
 </div></footer>
-</body>
+{analytics.banner(BASE)}</body>
 </html>
 """
     return html
@@ -354,18 +378,22 @@ def home():
   </div>
 </div></section>"""
     ld = [
+        {"@context": "https://schema.org", "@type": "WebSite", "name": APP, "alternateName": "Pausely app",
+         "url": SITE + "/"},
+        ORG,
         {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Pausely",
-         "operatingSystem": "iOS 17 or later", "applicationCategory": "LifestyleApplication",
+         "operatingSystem": "iOS", "applicationCategory": "LifestyleApplication",
+         "image": SITE + "/apple-touch-icon.png",
          "description": "An app for iPhone and iPad that puts a short pause in front of the apps you choose, "
                         "so opening them becomes a decision.",
          "url": SITE + "/", "downloadUrl": APP_STORE_URL,
          "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
-         "publisher": {"@type": "Organization", "name": COMPANY}},
+         "publisher": ORG},
         {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": strip_tags(a)}}
             for q, a in faq]},
     ]
-    return layout("home", "/", "Pausely: Stop Scrolling on Autopilot. A Pause Before Your Apps.",
+    return layout("home", "/", "Pausely: Stop Scrolling on Autopilot, Pause Before You Open",
                   "Pausely puts a ten second pause in front of the apps you open without thinking, on iPhone and "
                   "iPad. Breathe first, then decide. Free to start, no account.",
                   body, ct="home", dark=True, jsonld=ld)
@@ -455,7 +483,8 @@ def how_it_works():
 </main>"""
     return layout("how-it-works", "/how-it-works/", "How Pausely Works: A Pause Before the Apps You Overuse",
                   "Step by step: choose your apps, meet the block screen, take a ten second breath, then decide "
-                  "whether to go in. Plus rules, daily limits and strict mode.", body, ct="how-it-works")
+                  "whether to go in. Plus rules, daily limits and strict mode.", body, ct="how-it-works",
+                  jsonld=[crumbs(("How it works", "/how-it-works/"))])
 
 
 # ---------------------------------------------------------------------------
@@ -518,7 +547,8 @@ def pricing():
 </main>"""
     return layout("pricing", "/pricing/", "Pausely Pricing: Free Plan and Premium",
                   "Pausely is free for two apps, with the breathing pause and your progress screen. Premium adds "
-                  "every app and website, every pause, daily limits and strict mode.", body, ct="pricing")
+                  "every app and website, every pause, daily limits and strict mode.", body, ct="pricing",
+                  jsonld=[crumbs(("Pricing", "/pricing/"))])
 
 
 # ---------------------------------------------------------------------------
@@ -543,7 +573,8 @@ def guides_index():
 </main>"""
     return layout("guides", "/guides/", "Guides: Stop Doomscrolling and Block Apps on iPhone",
                   "Practical guides to blocking TikTok and Instagram on iPhone, stopping doomscrolling, and "
-                  "making Screen Time limits hold.", body, ct="guides")
+                  "making Screen Time limits hold.", body, ct="guides",
+                  jsonld=[crumbs(("Guides", "/guides/"))])
 
 
 def guide_page(g):
@@ -577,8 +608,9 @@ def guide_page(g):
     ld = [{"@context": "https://schema.org", "@type": "Article", "headline": g["title"],
            "description": g["description"], "dateModified": UPDATED_ISO, "datePublished": UPDATED_ISO,
            "author": {"@type": "Organization", "name": "Pausely"},
-           "publisher": {"@type": "Organization", "name": COMPANY},
-           "mainEntityOfPage": SITE + f'/guides/{g["slug"]}/'}]
+           "publisher": ORG, "image": SITE + "/assets/og.png",
+           "mainEntityOfPage": SITE + f'/guides/{g["slug"]}/'},
+          crumbs(("Guides", "/guides/"), (g["title"], f'/guides/{g["slug"]}/'))]
     return layout("guides", f'/guides/{g["slug"]}/', g["seo_title"], g["description"], body, ct=ct,
                   jsonld=ld, og_type="article")
 

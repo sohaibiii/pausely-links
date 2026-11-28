@@ -18,7 +18,9 @@ COPY = {
 "ui.store_soon": "App Store에 곧 출시",
 "ui.store_get": "App Store에서 다운로드",
 "ui.date": "2026년 11월 20일",
+"ui.date.privacy": "2026년 11월 28일",
 "ui.last_updated": "마지막 업데이트: {DATE}",
+"p.stamp": "마지막 업데이트: {PDATE}",
 
 "k.settings": "설정",
 "k.your_data": "내 데이터",
@@ -200,7 +202,7 @@ COPY = {
 "p.eyebrow": "개인정보 처리방침",
 "p.h1": "알게 된 것은 당신의 기기가 갖습니다.",
 "p.sub": "Pausely에는 계정이 없고, 당신에 대해 기록하는 것은 모두 기기에 남습니다. 기기를 떠나는 것은 네 가지입니다. RevenueCat이 보관하는 당신의 구매 기록, 저희가 광고 성과를 측정할 수 있도록 Meta의 SDK가 알리는 것, 앱이 어떻게 쓰이는지에 대해 Google Analytics가 세는 것, 그리고 당신이 켜는 경우에만, OpenAI가 작성할 때 AI 멈춤이 보내는 것입니다. 이 페이지는 그 경계들이 정확히 어디인지에 대한 것입니다.",
-"p.meta": "{DATE}부터 유효 · iPhone, iPad 및 Android용 Pausely 앱과 이 사이트에 적용됩니다",
+"p.meta": "{PDATE}부터 유효 · iPhone, iPad 및 Android용 Pausely 앱과 이 사이트에 적용됩니다",
 
 "p.summary.h": "짧은 요약",
 "p.summary.b": """
@@ -213,7 +215,7 @@ COPY = {
   <li><strong>AI 멈춤</strong>. 당신이 켜기 전까지 꺼져 있습니다. 되돌아보기는 Apple Intelligence가 있는 iPhone에서 작성될 수 있고, 그때는 아무것도 떠나지 않습니다. OpenAI가 작성할 때는 그 하나의 멈춤에 입력한 말이 그 순간에 대한 네 가지 작은 사실과 함께 Pausely의 서버로, 그리고 OpenAI로 갑니다. 질문 멈춤은 언제나 OpenAI가 작성하며, 보내는 것은 Pausely의 표시 언어, 당신의 지역 설정에서 가져온 국가 코드, 그리고 이 멈춤이 최근에 낸 몇 개의 질문뿐입니다. <a href="{BASE}{L}/privacy/#ai">자세히.</a></li>
 </ul>
 <div class="callout"><span class="tile">{eye-off}</span><div>일지는 결코 기기를 떠나지 않습니다. 기분 기록도 결코 떠나지 않습니다. 다른 앱에서 보내는 시간도 결코 떠나지 않습니다. 어떤 앱을 골랐는지도 떠나지 않습니다. 그것은 당신의 기기 안에서조차 Pausely가 읽을 수 없기 때문입니다.</div></div>
-<p style="margin-top:16px">Apple의 개인정보 라벨 용어로는 <strong>추적 없음</strong>, 저희 광고 성과를 측정하기 위해 Meta의 SDK가 수집하는 <strong>식별자, 사용 데이터, 구매, 진단, 기타 데이터</strong>, 앱이 어떻게 쓰이는지 이해하기 위해 Google Analytics가 수집하는 <strong>식별자, 사용 데이터, 대략적인 위치, 구매</strong>, Premium을 판매하기 위해 RevenueCat이 기록하는 <strong>구매</strong>, 그리고 당신과 연결되지 않고 AI 멈춤이 작동하도록 하는 데에만 쓰이는 <strong>사용자 콘텐츠와 기타 데이터</strong>입니다. 이 방침은 {COMPANY}가 발행하는 iPhone, iPad 및 Android용 Pausely 앱과 이 웹사이트에 적용됩니다.</p>
+<p style="margin-top:16px">Apple의 개인정보 라벨 용어로는 <strong>추적 없음</strong>, 저희 광고 성과를 측정하기 위해 Meta의 SDK가 수집하는 <strong>식별자, 사용 데이터, 구매, 진단, 기타 데이터</strong>, 앱이 어떻게 쓰이는지 이해하기 위해 Google Analytics가 수집하는 <strong>식별자, 사용 데이터, 대략적인 위치, 구매</strong>, Premium을 판매하기 위해 RevenueCat이 기록하는 <strong>구매</strong>, 그리고 당신과 연결되지 않고 AI 멈춤이 작동하도록 하는 데에만 쓰이는 <strong>사용자 콘텐츠와 기타 데이터</strong>입니다. 이 방침은 {COMPANY}가 발행하는 iPhone, iPad 및 Android용 Pausely 앱과 이 웹사이트에 적용됩니다. 웹사이트 자체가 수집하는 것은 <a href="#web">이 웹사이트</a>에 적혀 있습니다.</p>
 <p style="margin-top:16px"><strong>Android에서</strong> Pausely는 똑같이 작동하지만 Apple이 아닌 Google의 도구를 씁니다. Meta의 SDK도 Google Analytics도 없고, Google의 ML Kit가 자신에 대한 진단 정보를 Google에 보내며, AI 되돌아보기는 Apple Intelligence 대신 Gemini Nano를, App Attest 대신 Google Play Integrity를 씁니다. 자세한 내용은 <a href="{BASE}{L}/privacy/#android">Android의 Pausely</a>에 있습니다.</p>
 """,
 
@@ -367,6 +369,14 @@ COPY = {
 <p><strong>위젯과 라이브 액티비티</strong>가 보여 주는 것은 숫자, 분 단위 시간, 날짜입니다. 오늘의 성과, 연속 기록, 되찾은 시간, 오늘의 사용 시간, 짧은 영상 추정치, 접근 시간의 남은 길이. 이들은 일부러 스크린 타임 접근 권한을 갖지 않으며, 어떤 앱을 막았는지 결코 보지 않습니다. 잠금 화면의 카운트다운이 부르는 것은 당신이 쓴 <em>규칙</em>의 이름(“잠들기 전”)이지 앱 이름이 아닙니다. 잠금 화면은 기기를 든 사람이면 누구나 읽을 수 있으니까요. 접근 시간이 열려 있는 동안에는 Dynamic Island가 오늘 Pausely를 거쳐 그 앱에서 보낸 시간도 셉니다. 잠금 화면에는 그것이 표시되지 않습니다.</p>
 """,
 
+"p.web.h": "이 웹사이트",
+"p.web.b": """
+<p>앱과 이 웹사이트는 서로 별개입니다. 앱 안의 어떤 것도 아래 내용과 연결되어 있지 않으며, 아래 내용이 앱의 동작을 바꾸지도 않습니다. 웹사이트의 Google Analytics는 앱 안의 것과 별개이며, 둘은 서로 연결되지 않습니다.</p>
+<p>이 웹사이트의 공개 페이지(홈, ‘How it works’, ‘Pricing’, 가이드. 모두 영어)는 방문 수를 세기 위해 <strong>Google Analytics</strong>를 사용합니다. 어떤 페이지가 읽히는지, 방문자가 대략 세계 어느 지역에 있는지, 어떤 종류의 기기와 브라우저를 쓰는지, 어느 사이트에서 왔는지, App Store 버튼을 눌렀는지를 셉니다. Google은 이 정보를 당신의 IP 주소(Google에 따르면 Analytics는 이를 기록하거나 저장하지 않습니다), 그리고 쿠키에 저장되는 무작위 식별자와 함께 받습니다. 저희는 어떤 페이지가 도움이 되는지 보는 데에만 이를 사용합니다. 광고 기능, Google 신호, 광고 개인 최적화는 꺼져 있으며, 당신의 이름이나 이메일 주소, 앱 안의 어떤 정보도 Google에 보내지 않습니다.</p>
+<p>기기의 시계가 유럽 시간대로 설정되어 있으면 먼저 여쭙고, <strong>OK</strong>를 선택하지 않는 한 Google Analytics를 불러오지 않습니다. Google이 유럽경제지역, 영국 또는 스위스에서 온 방문으로 판단하는 경우에도 그 OK 없이는 분석 쿠키가 저장되지 않습니다. Global Privacy Control 신호를 보내는 브라우저는 '아니요'로 처리합니다. 어디에 계시든 <a href="{BASE}/#cookie-choices">Cookie choices</a>에서 언제든 선택을 바꿀 수 있고, '아니요'를 선택하면 쿠키도 삭제됩니다. 그 밖의 페이지(지원, 소개, 개인정보, 이용약관, 내 데이터)는 어떤 언어에서도 Google Analytics를 불러오지 않습니다.</p>
+<p>이 웹사이트는 Cloudflare가 전송합니다. Cloudflare는 어떤 웹 서버든 페이지를 보내는 데 필요한 기술 정보(예: IP 주소)를 처리합니다.</p>
+""",
+
 "p.third.h": "제3자",
 "p.third.b": """
 <p>Pausely에 들어 있는 <strong>제3자 코드는 세 가지, Premium을 판매하는 RevenueCat의 SDK</strong>(<a href="{BASE}{L}/privacy/#purchases">구매</a> 참고)<strong>, Meta의 SDK</strong>, <strong>그리고 Firebase용 Google Analytics</strong>이며, Meta의 SDK는 <a href="{BASE}{L}/privacy/#ads">위에서</a>, Google Analytics는 <a href="{BASE}{L}/privacy/#analytics">위에서</a> 설명했습니다. 그 밖의 분석, 광고, 충돌 보고 코드는 앱에 없습니다. 관여하는 당사자는 다음과 같으며, 이들이 전부입니다.</p>
@@ -374,6 +384,7 @@ COPY = {
   <li><strong>Apple</strong>은 App Store를 운영하고, 구매를 처리하고, 스크린 타임의 가림을 집행하고, AI 되돌아보기가 Apple Intelligence를 쓴다면 당신의 iPhone에서 그것을 실행하며, 당신이 개발자와의 공유에 동의했다면 자체 방침에 따라 충돌 로그를 저희와 공유할 수 있습니다.</li>
   <li><strong>Meta</strong>는 저희가 광고 성과를 측정할 수 있도록 자사 SDK가 알리는 것을 받으며, 그 밖에는 아무것도 받지 않습니다.</li>
   <li><strong>Google</strong>은 저희가 앱이 어떻게 쓰이는지 볼 수 있도록 Google Analytics가 수집하는 것을 받으며, 그 밖에는 아무것도 받지 않습니다.</li>
+  <li><strong>Google</strong>은 <a href="#web">이 웹사이트</a>에서 설명한 대로 이 웹사이트의 공개 페이지에서 Google Analytics가 세는 것도 앱과는 별도로 받습니다.</li>
   <li><strong>RevenueCat</strong>은 저희의 서비스 제공업체로서 구매 기록을 보관하고, App Store와 함께 구매를 완료합니다. 구매 섹션에 나열된 것을 받으며, 그 밖에는 아무것도 받지 않습니다.</li>
   <li><strong>Cloudflare</strong>는 Pausely의 서버를 호스팅합니다. OpenAI가 AI 멈춤을 작성할 때 그 멈춤이 보내는 것은 모델로 가는 길에 Cloudflare를 지나가지만, Cloudflare는 그 어느 것도 저장하지 않습니다.</li>
   <li><strong>OpenAI</strong>는 AI 멈춤을 작성할 때 그 뒤의 모델을 돌립니다. 당신이 AI 멈춤을 켜 둔 동안에만요. 위에 적힌 것만 받고 그 밖에는 받지 않으며, 그것을 모델 학습에 쓰지 않습니다. 이전 버전의 앱에서는 되돌아보기를 <strong>Google</strong>이 맡습니다.</li>
@@ -427,7 +438,7 @@ COPY = {
 
 "p.changes.h": "이 방침의 변경",
 "p.changes.b": """
-<p>앱이 달라짐에 따라 이 방침을 갱신할 수 있습니다. 그럴 때는 맨 위의 날짜가 함께 바뀌고, 중요한 변경은 앱의 출시 노트에 적습니다. 가장 최근의 변경은 {DATE}에 Firebase용 Google Analytics를 추가한 것입니다. Google Analytics는 앱이 어떻게 쓰이는지 셉니다(<a href="{BASE}{L}/privacy/#analytics">Google Analytics</a> 참고). 같은 날, 이제 Premium을 판매하고 구매 기록을 보관하는 RevenueCat을 추가했고(<a href="{BASE}{L}/privacy/#purchases">구매</a> 참고), iPhone의 AI 되돌아보기가 보내는 것에서 지금 여는 앱의 이름을 뺐습니다. iPhone에서는 Pausely가 앱 이름을 읽을 수 없어서, 되돌아보기는 그 앱을 “어떤 앱”이라고 부릅니다. 그 전에는 Android용 Pausely가 추가되었습니다(<a href="{BASE}{L}/privacy/#android">Android의 Pausely</a> 참고). 그 전의 변경은 Pausely 1.3에서 이루어졌습니다. 저희 광고 성과를 측정하는 Meta의 SDK, 그리고 새로운 시간 기능인 {K_time_per_app}, {K_time_banners}, 짧은 영상 추정치입니다. 이 시간 기능들은 하루 목표와 마찬가지로, 당신이 고른 앱에서 얼마나 시간을 보내는지 기기 안에서 셉니다. 그 전에는 AI 되돌아보기가 Google에서 OpenAI로 옮겨 갔고, 당신의 iPhone에서 Apple Intelligence를 고를 수 있게 되었습니다. 변경 이후에도 Pausely를 계속 쓰시는 것은 개정된 방침에 동의하시는 것으로 봅니다.</p>
+<p>앱이 달라짐에 따라 이 방침을 갱신할 수 있습니다. 그럴 때는 맨 위의 날짜가 함께 바뀌고, 중요한 변경은 앱의 출시 노트에 적습니다. 가장 최근의 변경은 {PDATE}에 이 웹사이트가 방문 수를 세는 방법을 설명한 것입니다(<a href="{BASE}{L}/privacy/#web">이 웹사이트</a> 참고). 그 전의 변경은 {DATE}에 Firebase용 Google Analytics를 추가한 것입니다. Google Analytics는 앱이 어떻게 쓰이는지 셉니다(<a href="{BASE}{L}/privacy/#analytics">Google Analytics</a> 참고). 같은 날, 이제 Premium을 판매하고 구매 기록을 보관하는 RevenueCat을 추가했고(<a href="{BASE}{L}/privacy/#purchases">구매</a> 참고), iPhone의 AI 되돌아보기가 보내는 것에서 지금 여는 앱의 이름을 뺐습니다. iPhone에서는 Pausely가 앱 이름을 읽을 수 없어서, 되돌아보기는 그 앱을 “어떤 앱”이라고 부릅니다. 그 전에는 Android용 Pausely가 추가되었습니다(<a href="{BASE}{L}/privacy/#android">Android의 Pausely</a> 참고). 그 전의 변경은 Pausely 1.3에서 이루어졌습니다. 저희 광고 성과를 측정하는 Meta의 SDK, 그리고 새로운 시간 기능인 {K_time_per_app}, {K_time_banners}, 짧은 영상 추정치입니다. 이 시간 기능들은 하루 목표와 마찬가지로, 당신이 고른 앱에서 얼마나 시간을 보내는지 기기 안에서 셉니다. 그 전에는 AI 되돌아보기가 Google에서 OpenAI로 옮겨 갔고, 당신의 iPhone에서 Apple Intelligence를 고를 수 있게 되었습니다. 변경 이후에도 Pausely를 계속 쓰시는 것은 개정된 방침에 동의하시는 것으로 봅니다.</p>
 """,
 
 "p.contact.h": "문의",

@@ -17,10 +17,12 @@ Run `python3 _src/check.py` after touching a words file: it holds the eight
 catalogues to the same key set and the same links, which is the half of a
 translation that no reader of that language will ever check for us.
 """
+import datetime
+import html
 import importlib
 import os
+import subprocess
 import sys
-import html
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.dirname(HERE)
@@ -45,6 +47,10 @@ YEAR = "2026"
 # button renders as a quiet "coming soon" label rather than a dead link.
 APP_STORE_ID = "6804200257"
 APP_STORE_URL = "https://apps.apple.com/app/id" + APP_STORE_ID
+
+# What every indexable page tells a search engine: index it, and feel free to
+# show a large image and a full snippet. The 404 page says noindex instead.
+ROBOTS = "index,follow,max-image-preview:large,max-snippet:-1"
 
 # The eight languages Pausely ships in, in the order the app's own picker shows
 # them (Core/Localization/AppLanguage.swift). The third column is the language's
@@ -113,7 +119,7 @@ def file_of(code, key):
 SUPPORT_CARDS = ["how", "requirements", "start", "faq", "trouble", "contact"]
 PRIVACY_CARDS = [
     "summary", "collect", "device", "screentime", "ads", "analytics", "ai", "purchases",
-    "notifications", "third", "android", "delete", "rights", "children", "changes", "contact",
+    "notifications", "web", "third", "android", "delete", "rights", "children", "changes", "contact",
 ]
 TERMS_CARDS = [
     "acceptance", "who", "what", "screentime", "data", "ai", "subscriptions",
@@ -333,6 +339,7 @@ def context(code, prefix, C):
     ctx.update(
         BASE=BASE, L=prefix, APP=APP, COMPANY=COMPANY, EMAIL=EMAIL, MAIL=mail, YEAR=YEAR,
         DATE=C["ui.date"],
+        PDATE=C["ui.date.privacy"],
     )
     # The app's own words for the places this site sends people. Assembled here
     # rather than written into each paragraph so a rename lands everywhere.
@@ -362,7 +369,7 @@ def hero(eyebrow, h1, sub, ctas="", meta=""):
     )
 
 
-def page(code, prefix, key, title, description, hero_html, body, toc=None, canonical=""):
+def page(code, prefix, key, title, description, hero_html, body, toc=None, canonical="", robots=ROBOTS):
     """One rendered page, in one language."""
     C = copy_for(code)
     fmt = lambda k: C[k].format(**context(code, prefix, C))
@@ -402,7 +409,8 @@ def page(code, prefix, key, title, description, hero_html, body, toc=None, canon
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{E(description)}">
-<meta name="robots" content="index,follow">
+<meta name="robots" content="{robots}">
+<meta name="apple-itunes-app" content="app-id={APP_STORE_ID}">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F4F6F9">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0E1116">
@@ -411,14 +419,16 @@ def page(code, prefix, key, title, description, hero_html, body, toc=None, canon
 <meta property="og:type" content="website">
 <meta property="og:locale" content="{HTML_LANG[code].replace('-', '_')}">
 <meta property="og:url" content="{E(SITE + prefix + canonical)}">
+<meta property="og:site_name" content="{APP}">
+<meta property="og:image" content="{SITE}/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="{E(SITE + prefix + canonical)}">
 {alternates}
 <link rel="icon" href="{BASE}/icon.png" type="image/png" sizes="128x128">
 <link rel="apple-touch-icon" href="{BASE}/apple-touch-icon.png">
 <title>{E(title)}</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
 <style>{CSS}</style>
 </head>
 <body>
@@ -498,7 +508,7 @@ def render(code, prefix):
     # Privacy
     mk("privacy", fmt("meta.privacy.title"), fmt("meta.privacy.desc"),
        hero(fmt("p.eyebrow"), fmt("p.h1"), fmt("p.sub"), "", fmt("p.meta")),
-       f'<p class="stamp">{fmt("ui.last_updated")}</p>' + cards(fmt, "p", PRIVACY_CARDS),
+       f'<p class="stamp">{fmt("p.stamp")}</p>' + cards(fmt, "p", PRIVACY_CARDS),
        toc_of(fmt, "p", PRIVACY_CARDS))
 
     # Terms
@@ -527,7 +537,7 @@ def render_404():
     hero_html = hero(fmt("nf.eyebrow"), fmt("nf.h1"), fmt("nf.sub"),
                      f'<a class="btn primary" href="{BASE}/">{fmt("nf.cta")}</a>')
     return page("en", "", "404", fmt("meta.nf.title"), fmt("meta.nf.desc"),
-                hero_html, body, None, "/404.html")
+                hero_html, body, None, "/404.html", robots="noindex,follow")
 
 
 # The site's icons, `icon.png` (the header's mark and the browser tab's, with
@@ -538,6 +548,19 @@ def render_404():
 # written here.
 
 
+def lastmod(loc):
+    """The day a page last really changed: its last commit, or today if it differs from that.
+
+    A sitemap date that moves on every build teaches a search engine to ignore
+    it, so this asks git instead of the clock.
+    """
+    rel = loc.lstrip("/") + ("index.html" if loc.endswith("/") else "")
+    git = lambda *a: subprocess.run(["git", "-C", OUT, *a], capture_output=True, text=True)
+    changed = git("status", "--porcelain", "--", rel).stdout.strip()
+    day = "" if changed else git("log", "-1", "--format=%cs", "--", rel).stdout.strip()
+    return day or datetime.date.today().isoformat()
+
+
 def sitemap(extra=()):
     """Every URL, each one naming its counterparts.
 
@@ -545,6 +568,9 @@ def sitemap(extra=()):
     privacy policy as eight competing pages rather than one page in eight
     languages, and picks a winner on its own.
     """
+    def entry(loc, alts=""):
+        return f"  <url>\n    <loc>{SITE + loc}</loc>\n    <lastmod>{lastmod(loc)}</lastmod>{alts}\n  </url>"
+
     urls = []
     for key in NAV_ORDER:
         alts = "".join(
@@ -552,9 +578,9 @@ def sitemap(extra=()):
             for c, p in LANGUAGES
         ) + f'\n    <xhtml:link rel="alternate" hreflang="x-default" href="{SITE + path_of("en", key)}"/>'
         for c, p in LANGUAGES:
-            urls.append(f"  <url>\n    <loc>{SITE + p + path_of(c, key)}</loc>{alts}\n  </url>")
+            urls.append(entry(p + path_of(c, key), alts))
     for loc in extra:
-        urls.append(f"  <url>\n    <loc>{SITE + loc}</loc>\n  </url>")
+        urls.append(entry(loc))
     return (
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"'
@@ -562,6 +588,28 @@ def sitemap(extra=()):
         + "\n".join(urls)
         + "\n</urlset>\n"
     )
+
+
+# Cloudflare reads this file; it is not served. Fonts never change under the
+# same name and the stylesheet's address carries a hash of its contents, so both
+# can be kept for a year. The last rule keeps the *.workers.dev copies of the
+# site (the test address and every branch preview) out of search results.
+# The demo video is answered by _worker/index.js, which these rules do not reach.
+HEADERS = """/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/site.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/img/*
+  Cache-Control: public, max-age=2592000
+
+/assets/og.png
+  Cache-Control: public, max-age=604800
+
+https://:version.:subdomain.workers.dev/*
+  X-Robots-Tag: noindex
+"""
 
 
 def write(rel, content):
@@ -589,3 +637,4 @@ if __name__ == "__main__":
     if DOMAIN:
         write("CNAME", DOMAIN + "\n")
     write("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {SITE}/sitemap.xml\n")
+    write("_headers", HEADERS)

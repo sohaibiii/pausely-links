@@ -349,3 +349,13 @@ footer .legal{grid-column:1/-1;border-top:1px solid var(--line);padding-top:18px
 .proof .eg{font-size:13px;color:var(--text-3);text-align:center;margin-top:14px}
 .steps .pic.shot{aspect-ratio:auto;padding:0;max-width:250px;display:block}
 .steps .pic.shot .phone{box-shadow:0 24px 50px rgba(15,27,33,.28)}
+
+/* the question about the visit counter (see _src/analytics.py) */
+.consent{position:fixed;left:50%;bottom:max(14px,env(safe-area-inset-bottom));transform:translateX(-50%);z-index:40;width:min(680px,calc(100% - 28px));display:flex;align-items:center;gap:14px 20px;flex-wrap:wrap;background:var(--card);color:var(--ink);border:1px solid var(--line-d);border-radius:18px;padding:14px 16px 14px 20px;box-shadow:0 18px 50px -18px rgba(4,10,13,.6);font-size:15px;line-height:1.45}
+.consent[hidden]{display:none}
+.consent p{margin:0;flex:1 1 300px}
+.consent a{color:var(--teal-dark)}
+.consent-btns{display:flex;gap:8px;flex:0 0 auto}
+.consent button{font:600 15px/1 var(--sans);color:var(--ink);background:var(--mist-2);border:1px solid var(--line-d);border-radius:999px;padding:11px 18px;min-width:104px;cursor:pointer}
+.consent button:hover{background:var(--mist);border-color:var(--ink-3)}
+@media (max-width:520px){.consent-btns{flex:1 1 100%}.consent button{flex:1}}
