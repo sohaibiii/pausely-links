@@ -10,3 +10,6 @@ CNAME
 README.md
 _src
 _worker
+
+# claude-seo skills: tooling for Claude, never part of the website
+.claude
