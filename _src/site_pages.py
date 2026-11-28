@@ -119,7 +119,7 @@ A_CHOICE = ("A drawing of the choice screen: You paused. Buttons: I changed my m
 # corner it starts in. The player behind it is a made-up app (called Clips, the
 # name the app's own examples use): its layout is the one every short-video app
 # shares, with no real app's name or logo. The clips are stock footage whose
-# licence allows this use (assets/video/reels/SOURCES.md), never somebody's
+# licence allows this use (see REEL_CLIPS), never somebody's
 # real post, and the names and numbers on them are invented.
 _ICON = {
     "up": '<path d="M2 10h4v11H2zM8 21h9.3a2 2 0 0 0 1.9-1.4l2.6-7.8A2 2 0 0 0 19.9 9H14l.8-4.2a1.9 1.9 0 0 0-3.4-1.4L8 9.5z"/>',
@@ -138,20 +138,24 @@ def _ic(name):
     return f'<svg viewBox="0 0 24 24" aria-hidden="true">{_ICON[name]}</svg>'
 
 
-# file, who posted it, the line under the name, likes, comments. All invented.
+# Where the clip plays from, who posted it, the line under the name, likes,
+# comments. The clips are Mixkit's (Stock Video Free License: commercial use,
+# no credit needed) and play straight from Mixkit's own address. The names,
+# lines and numbers are invented.
+_MIXKIT = "https://assets.mixkit.co"
 REEL_CLIPS = [
-    ("1", "Kitchen diaries", "The easiest weeknight dinner", "24K", "312"),
-    ("2", "Dog days", "He heard the word walk", "108K", "1.2K"),
-    ("3", "Somewhere south", "Found this beach by accident", "9.4K", "87"),
-    ("4", "Sweet shift", "Sprinkles, in slow motion", "61K", "540"),
-    ("5", "Studio hours", "Day 12 of painting every day", "15K", "203"),
+    (_MIXKIT + "/videos/12171/12171-720.mp4", "Kitchen diaries", "The easiest weeknight dinner", "24K", "312"),
+    (_MIXKIT + "/videos/1548/1548-720.mp4", "Dog days", "He heard the word walk", "108K", "1.2K"),
+    (_MIXKIT + "/videos/51500/51500-720.mp4", "Somewhere south", "Found this beach by accident", "9.4K", "87"),
+    (_MIXKIT + "/active_storage/video_items/100357/1723573133/100357-video-720.mp4", "Sweet shift", "Sprinkles, in slow motion", "61K", "540"),
+    (_MIXKIT + "/active_storage/video_items/100490/1724285970/100490-video-720.mp4", "Studio hours", "Day 12 of painting every day", "15K", "203"),
 ]
 
 
 def _reel(clip, n):
     f, who, line, likes, says = clip
     return (f'<div class="rv rv{n}">'
-            f'<video muted loop playsinline preload="none" poster="{ASSETS}/video/reels/{f}.jpg" src="{ASSETS}/video/reels/{f}.mp4"></video>'
+            f'<video muted loop playsinline preload="none" src="{E(f)}"></video>'
             f'<span class="rail"><span>{_ic("up")}<b>{likes}</b></span><span>{_ic("down")}<b>Dislike</b></span>'
             f'<span>{_ic("say")}<b>{says}</b></span><span>{_ic("send")}<b>Share</b></span></span>'
             f'<span class="cap"><span class="who"><i>{E(who[0])}</i><b>{E(who)}</b><em>Follow</em></span>'
@@ -168,10 +172,13 @@ REELS = f"""<div class="phone droid" id="reels" role="img" data-nosnippet aria-l
   </div>
 </div>"""
 REELS_JS = ('<script>(function(){var r=document.getElementById("reels");'
-            'if(!r||!window.IntersectionObserver||(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches))return;'
+            'if(!r||!window.IntersectionObserver)return;'
             'var t=r.querySelector(".rb-time"),c=r.querySelector(".rb-count"),f=r.querySelector(".rf"),b=r.querySelector(".rbadge"),'
             'v=r.querySelectorAll(".rv"),N=v.length,s=42,n=12,i=0,on=false;'
             'function vid(k){return v[k].querySelector("video")}'
+            # nothing is fetched until the phone is nearly in view; then the first picture
+            'new IntersectionObserver(function(e,o){if(e[0].isIntersecting){o.disconnect();var m=vid(0);m.preload="metadata";m.load()}},{rootMargin:"500px"}).observe(r);'
+            'if(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches)return;'
             'function two(x){return(x<10?"0":"")+x}'
             # play the clip in view from its start, stop the rest, and fetch the next one early
             'function show(k,keep){for(var j=0;j<N;j++){var m=vid(j);if(j===k){v[j].classList.add("on");'
@@ -446,7 +453,7 @@ def home():
     <h2>How many reels <em>was that?</em></h2>
     <p class="intro">It is easy to lose count of short videos. Pausely keeps a rough count for you, and shows it while you are still scrolling.</p>
   </div>
-  <div class="reels-art">{REELS}<p class="eg">A made-up app playing stock clips. Example numbers.</p></div>
+  <div class="reels-art">{REELS}<p class="eg">A made-up app playing stock clips from Mixkit. Example numbers.</p></div>
   <ul class="facts">
     <li><b>On Android</b><span>A small card floats over the apps you pick. It shows how long this visit has lasted and about how many videos went by. One tap hides it.</span></li>
     <li><b>On iPhone</b><span>iOS doesn't let one app draw over another, so Pausely sends a banner every few minutes: your time in the app today, and about how many short videos that comes to.</span></li>
