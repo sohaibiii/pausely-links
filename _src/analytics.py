@@ -25,6 +25,8 @@ Set GA_ID to "" and every trace of this leaves the built pages.
 """
 import json
 
+from i18n import t
+
 GA_ID = "G-G2F9HVRK0F"
 
 # Where consent mode denies the analytics cookie until the visitor says yes:
@@ -93,13 +95,13 @@ def head():
     return f"<script>{script}</script>\n"
 
 
-def banner(base):
+def banner(base, prefix=""):
     """The bar that asks. Hidden until the script decides it is needed."""
     if not GA_ID:
         return ""
-    return f"""<div class="consent" id="consent" role="region" aria-label="Cookie choices" tabindex="-1" hidden>
-  <p>This website counts visits with Google Analytics. Is a cookie for that OK with you? <a href="{base}/privacy/#web">What it collects</a></p>
-  <div class="consent-btns"><button type="button" data-choice="no">No thanks</button><button type="button" data-choice="yes">OK</button></div>
+    return f"""<div class="consent" id="consent" role="region" aria-label="{t("Cookie choices")}" tabindex="-1" hidden>
+  <p>{t("This website counts visits with Google Analytics. Is a cookie for that OK with you?")} <a href="{base}{prefix}/privacy/#web">{t("What it collects")}</a></p>
+  <div class="consent-btns"><button type="button" data-choice="no">{t("No thanks")}</button><button type="button" data-choice="yes">{t("OK")}</button></div>
 </div>
 """
 
@@ -108,4 +110,4 @@ def footer_link(base):
     """The way back to the choice, for the footer's list of legal links."""
     if not GA_ID:
         return ""
-    return f'\n    <li><a href="{base}/#cookie-choices">Cookie choices</a></li>'
+    return f'\n    <li><a href="{base}/#cookie-choices">{t("Cookie choices")}</a></li>'

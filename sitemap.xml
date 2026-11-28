@@ -523,6 +523,11 @@
   <url>
     <loc>https://getpausely.app/</loc>
     <lastmod>2026-11-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getpausely.app/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://getpausely.app/de/home/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getpausely.app/es/home/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://getpausely.app/ja/home/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpausely.app/"/>
   </url>
   <url>
     <loc>https://getpausely.app/how-it-works/</loc>
@@ -567,5 +572,32 @@
   <url>
     <loc>https://getpausely.app/guides/what-to-do-instead-of-doomscrolling/</loc>
     <lastmod>2026-11-28</lastmod>
+  </url>
+  <url>
+    <loc>https://getpausely.app/de/home/</loc>
+    <lastmod>2026-11-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getpausely.app/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://getpausely.app/de/home/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getpausely.app/es/home/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://getpausely.app/ja/home/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpausely.app/"/>
+  </url>
+  <url>
+    <loc>https://getpausely.app/es/home/</loc>
+    <lastmod>2026-11-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getpausely.app/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://getpausely.app/de/home/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getpausely.app/es/home/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://getpausely.app/ja/home/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpausely.app/"/>
+  </url>
+  <url>
+    <loc>https://getpausely.app/ja/home/</loc>
+    <lastmod>2026-11-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getpausely.app/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://getpausely.app/de/home/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getpausely.app/es/home/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://getpausely.app/ja/home/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getpausely.app/"/>
   </url>
 </urlset>

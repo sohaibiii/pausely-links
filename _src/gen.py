@@ -579,8 +579,13 @@ def sitemap(extra=()):
         ) + f'\n    <xhtml:link rel="alternate" hreflang="x-default" href="{SITE + path_of("en", key)}"/>'
         for c, p in LANGUAGES:
             urls.append(entry(p + path_of(c, key), alts))
+    import site_pages
     for loc in extra:
-        urls.append(entry(loc))
+        group = site_pages.ALTERNATES.get(loc)
+        alts = "".join(
+            f'\n    <xhtml:link rel="alternate" hreflang="{c}" href="{SITE + p}"/>' for c, p in group
+        ) + f'\n    <xhtml:link rel="alternate" hreflang="x-default" href="{SITE + dict(group)["en"]}"/>' if group else ""
+        urls.append(entry(loc, alts))
     return (
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"'

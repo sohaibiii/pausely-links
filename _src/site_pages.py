@@ -29,6 +29,8 @@ import urllib.parse
 
 import analytics
 import gen
+import i18n
+from i18n import t
 from gen import APP, APP_STORE_ID, APP_STORE_URL, BASE, COMPANY, E, EMAIL, SITE, YEAR
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -93,9 +95,9 @@ def play_url(ct):
 def store(ct):
     """Both shops, side by side. On an Android phone the page puts Google Play first."""
     return (f'<span class="stores"><a class="store" href="{E(store_url(ct))}">{APPLE}'
-            f'<span><small>Download on the</small><b>App Store</b></span></a>'
+            f'<span><small>{t("Download on the")}</small><b>App Store</b></span></a>'
             f'<a class="store play" href="{E(play_url(ct))}">{PLAY}'
-            f'<span><small>Get it on</small><b>Google Play</b></span></a></span>')
+            f'<span><small>{t("Get it on")}</small><b>Google Play</b></span></a></span>')
 
 
 # On an Android phone, "Get the app" goes to Google Play and its button comes first.
@@ -105,18 +107,22 @@ ANDROID_JS = ('<script>(function(){if(!/Android/i.test(navigator.userAgent))retu
               'for(var i=0;i<a.length;i++)a[i].href=a[i].getAttribute("data-play")})();</script>')
 
 
-# Drawings of the app's screens, in the app's own words.
-M_SHIELD = ('<div class="mini m-shield"><div class="num">12</div><b>Opens today</b>'
-            '<div class="btns"><span>Open Pausely</span><span>Never mind</span></div></div>')
-M_BREATH = ('<div class="mini m-breath"><div class="o"></div><b>Breathe in</b>'
-            '<small>Ten seconds of breathing before you continue.</small></div>')
-M_CHOICE = ('<div class="mini m-choice"><b>You paused.</b>'
-            '<div class="btns"><span>I changed my mind</span><span>Or walk for 10 minutes</span>'
-            '<span>Continue for 5m</span></div></div>')
-A_SHIELD = "A drawing of the block screen: the number 12, Opens today. Buttons: Open Pausely, Never mind."
-A_BREATH = "A drawing of the breathing pause: a soft circle and the words Breathe in."
-A_CHOICE = ("A drawing of the choice screen: You paused. Buttons: I changed my mind, Or walk for 10 minutes, "
-            "Continue for 5 minutes.")
+# Drawings of the app's screens, in the app's own words (its Localizable strings
+# when the page is translated).
+def drawings():
+    m_shield = (f'<div class="mini m-shield"><div class="num">12</div><b>{t("Opens today")}</b>'
+                f'<div class="btns"><span>{t("Open Pausely")}</span><span>{t("Never mind")}</span></div></div>')
+    m_breath = (f'<div class="mini m-breath"><div class="o"></div><b>{t("Breathe in")}</b>'
+                f'<small>{t("Ten seconds of breathing before you continue.")}</small></div>')
+    m_choice = (f'<div class="mini m-choice"><b>{t("You paused.")}</b>'
+                f'<div class="btns"><span>{t("I changed my mind")}</span><span>{t("Or walk for 10 minutes")}</span>'
+                f'<span>{t("Continue for 5m")}</span></div></div>')
+    a_shield = t("A drawing of the block screen: the number 12, Opens today. Buttons: Open Pausely, Never mind.")
+    a_breath = t("A drawing of the breathing pause: a soft circle and the words Breathe in.")
+    a_choice = t("A drawing of the choice screen: You paused. Buttons: I changed my mind, Or walk for 10 minutes, "
+                 "Continue for 5 minutes.")
+    return m_shield, m_breath, m_choice, a_shield, a_breath, a_choice
+
 
 # The Android app's floating card ("Reels & time"), in its own words and in the
 # corner it starts in. The player behind it is a made-up app (called Clips, the
@@ -159,19 +165,21 @@ def _reel(clip, n):
     f, who, line, likes, says = clip
     return (f'<div class="rv rv{n}">'
             f'<video muted loop playsinline preload="none" src="{E(f)}"></video>'
-            f'<span class="rail"><span>{_ic("up")}<b>{likes}</b></span><span>{_ic("down")}<b>Dislike</b></span>'
-            f'<span>{_ic("say")}<b>{says}</b></span><span>{_ic("send")}<b>Share</b></span></span>'
-            f'<span class="cap"><span class="who"><i>{E(who[0])}</i><b>{E(who)}</b><em>Follow</em></span>'
-            f'<span class="line">{E(line)}</span><span class="snd">♪ Original sound</span></span>'
+            f'<span class="rail"><span>{_ic("up")}<b>{likes}</b></span><span>{_ic("down")}<b>{t("Dislike")}</b></span>'
+            f'<span>{_ic("say")}<b>{says}</b></span><span>{_ic("send")}<b>{t("Share")}</b></span></span>'
+            f'<span class="cap"><span class="who"><i>{E(who[0])}</i><b>{E(who)}</b><em>{t("Follow")}</em></span>'
+            f'<span class="line">{E(t(line))}</span><span class="snd">♪ {t("Original sound")}</span></span>'
             f'<i class="prog"></i></div>')
 
 
 _REEL_TRACK = REEL_CLIPS + REEL_CLIPS[:1]   # the first again, so the feed can loop
-REELS = f"""<div class="phone droid" id="reels" role="img" data-nosnippet aria-label="An Android phone playing short videos in a made-up app. In the top right corner Pausely's floating card reads 00:42, 12 reels, this visit, estimated. Example numbers.">
+def reels():
+    """The phone in the reels section, in the page's language."""
+    return f"""<div class="phone droid" id="reels" role="img" data-nosnippet aria-label="{E(t("An Android phone playing short videos in a made-up app. In the top right corner Pausely's floating card reads 00:42, 12 reels, this visit, estimated. Example numbers."))}">
   <div class="reel-screen">
     <div class="rview"><div class="rf" style="height:{len(_REEL_TRACK) * 100}%">{"".join(_reel(c, n) for n, c in enumerate(_REEL_TRACK))}</div></div>
-    <div class="rnav"><span>{_ic("home")}<b>Home</b></span><span class="on">{_ic("clips")}<b>Clips</b></span><span class="add">{_ic("plus")}</span><span>{_ic("subs")}<b>Following</b></span><span>{_ic("you")}<b>You</b></span></div>
-    <div class="rbadge"><span><b><span class="rb-time">00:42</span> · <span class="rb-count">12</span> reels</b><small>This visit · estimated</small></span><i class="x"></i></div>
+    <div class="rnav"><span>{_ic("home")}<b>{t("Home")}</b></span><span class="on">{_ic("clips")}<b>{t("Clips")}</b></span><span class="add">{_ic("plus")}</span><span>{_ic("subs")}<b>{t("Following")}</b></span><span>{_ic("you")}<b>{t("You")}</b></span></div>
+    <div class="rbadge"><span><b><span class="rb-time">00:42</span> · <span class="rb-count">12</span> {t("reels")}</b><small>{t("This visit · estimated")}</small></span><i class="x"></i></div>
   </div>
 </div>"""
 REELS_JS = ('<script>(function(){var r=document.getElementById("reels");'
@@ -245,39 +253,104 @@ NAV = [("how-it-works", "How it works", "/how-it-works/"), ("pricing", "Pricing"
        ("guides", "Guides", "/guides/"), ("support", "Support", "/support/")]
 
 
-def layout(key, path, title, description, body, *, ct, dark=False, jsonld=(), og_type="website"):
-    """One page. `path` is its address under the site root, `ct` its campaign name."""
+def layout(key, path, title, description, body, *, ct, dark=False, jsonld=(), og_type="website", alternates=(),
+           head=""):
+    """One page. `path` is its address under the site root, `ct` its campaign name.
+
+    `alternates` are (language, path) pairs for a page that exists in more than one
+    language (only the home page so far). While `i18n.use()` has picked a language
+    other than English, the page is built in that language with a slimmer header and
+    footer, because the other English-only pages have no translation to link to.
+    """
+    lang = i18n.current()
+    prefix, home_path = i18n.HOMES[lang][0], i18n.HOMES[lang][1]
+    W = gen.copy_for(lang) if lang != "en" else None
     url = SITE + path
     current = ' aria-current="page"'
-    nav = "".join(
-        f'<a href="{BASE}{p}"{current if k == key else ""}>{label}</a>' for k, label, p in NAV
-    )
+    if lang == "en":
+        nav = "".join(
+            f'<a href="{BASE}{p}"{current if k == key else ""}>{label}</a>' for k, label, p in NAV
+        )
+    else:
+        nav = f'<a href="{BASE}{prefix}/">{W["nav.support"]}</a>'
     play = E(play_url(ct + "-nav"))
-    get = f'<a class="get" href="{E(store_url(ct + "-nav"))}" data-play="{play}">Get the app</a>'
+    get = f'<a class="get" href="{E(store_url(ct + "-nav"))}" data-play="{play}">{t("Get the app")}</a>'
     ld = "".join(f'<script type="application/ld+json">{json.dumps(d, ensure_ascii=False)}</script>' for d in jsonld)
-    brand = f'<a class="brand" href="{BASE}/"><img src="{BASE}/icon.png" alt="" width="32" height="32">{APP}</a>'
+    brand = f'<a class="brand" href="{BASE}{home_path}"><img src="{BASE}/icon.png" alt="" width="32" height="32">{APP}</a>'
     top = f"""<header class="top"><div class="wrap">
   {brand}
-  <a class="get get-m" href="{E(store_url(ct + "-nav"))}" data-play="{play}">Get the app</a>
-  <nav aria-label="Pages">{nav}{get}</nav>
+  <a class="get get-m" href="{E(store_url(ct + "-nav"))}" data-play="{play}">{t("Get the app")}</a>
+  <nav aria-label="{t("Pages")}">{nav}{get}</nav>
 </div></header>"""
     languages = " · ".join(
-        f'<a href="{BASE}{p}/" lang="{c}" hreflang="{c}">{E(gen.NATIVE_NAME[c])}</a>'
-        for c, p in gen.LANGUAGES if c != "en"
+        f'<a href="{BASE}{p}{gen.path_of(c, "support")}" lang="{c}" hreflang="{c}">{E(gen.NATIVE_NAME[c])}</a>'
+        for c, p in gen.LANGUAGES if c != lang
     )
+    this_page = ""
+    if alternates:
+        this_page = t("This page in:") + " " + " · ".join(
+            f'<a href="{BASE}{p}" lang="{c}" hreflang="{c}">{E(gen.NATIVE_NAME[c])}</a>'
+            for c, p in alternates if c != lang
+        ) + ". "
+    hreflang = "".join(
+        f'<link rel="alternate" hreflang="{c}" href="{E(SITE + p)}">\n' for c, p in alternates
+    ) + (f'<link rel="alternate" hreflang="x-default" href="{E(SITE + dict(alternates)["en"])}">\n' if alternates else "")
+    if lang == "en":
+        footer = f"""<footer><div class="wrap">
+  <div class="who">
+    {brand}
+    <p>A breath before the scroll. Made by {COMPANY}. Write to <a href="mailto:{EMAIL}">{EMAIL}</a> and a person will reply.</p>
+  </div>
+  <div><p class="fh">The app</p><ul>
+    <li><a href="{BASE}/how-it-works/">How it works</a></li>
+    <li><a href="{BASE}/pricing/">Pricing</a></li>
+    <li><a href="{E(store_url(ct + "-footer"))}">Download on the App Store</a></li>
+    <li><a href="{E(play_url(ct + "-footer"))}">Get it on Google Play</a></li>
+  </ul></div>
+  <div><p class="fh">Read</p><ul>
+    <li><a href="{BASE}/guides/">All guides</a></li>
+    <li><a href="{BASE}/guides/how-to-stop-doomscrolling/">Stop doomscrolling</a></li>
+    <li><a href="{BASE}/guides/how-to-block-tiktok-on-iphone/">Block TikTok on iPhone</a></li>
+  </ul></div>
+  <div><p class="fh">Help and legal</p><ul>
+    <li><a href="{BASE}/support/">Support</a></li>
+    <li><a href="{BASE}/privacy/">Privacy Policy</a></li>
+    <li><a href="{BASE}/terms/">Terms of Use</a></li>
+    <li><a href="{BASE}/delete-data/">Your data</a></li>{analytics.footer_link(BASE)}
+  </ul></div>
+  <p class="legal">© {YEAR} {APP} · {COMPANY}. Screens of the app show its demo data, and the simpler pictures are drawings. Apple, iPhone, iPad, Safari, Screen Time and App Store are trademarks of Apple Inc. Android and Google Play are trademarks of Google LLC. TikTok and Instagram are trademarks of their owners. Pausely is not affiliated with, sponsored by or endorsed by them or by any other app named or shown here. {this_page}Support in other languages: {languages}</p>
+</div></footer>"""
+    else:
+        footer = f"""<footer><div class="wrap">
+  <div class="who">
+    {brand}
+    <p>{t("A breath before the scroll. Made by {company}. Write to {email} and a person will reply.").format(company=COMPANY, email=f'<a href="mailto:{EMAIL}">{EMAIL}</a>')}</p>
+  </div>
+  <div><p class="fh">{t("The app")}</p><ul>
+    <li><a href="{E(store_url(ct + "-footer"))}">{t("Download on the App Store")}</a></li>
+    <li><a href="{E(play_url(ct + "-footer"))}">{t("Get it on Google Play")}</a></li>
+  </ul></div>
+  <div><p class="fh">{t("Help and legal")}</p><ul>
+    <li><a href="{BASE}{prefix}/">{W["nav.support"]}</a></li>
+    <li><a href="{BASE}{prefix}/privacy/">{W["nav.privacy"]}</a></li>
+    <li><a href="{BASE}{prefix}/terms/">{W["nav.terms"]}</a></li>
+    <li><a href="{BASE}{prefix}/delete-data/">{W["nav.data"]}</a></li>{analytics.footer_link(BASE)}
+  </ul></div>
+  <p class="legal">© {YEAR} {APP} · {COMPANY}. {t("Screens of the app show its demo data, and the simpler pictures are drawings. Apple, iPhone, iPad, Safari, Screen Time and App Store are trademarks of Apple Inc. Android and Google Play are trademarks of Google LLC. TikTok and Instagram are trademarks of their owners. Pausely is not affiliated with, sponsored by or endorsed by them or by any other app named or shown here.")} {this_page}{t("Support in other languages:")} {languages}</p>
+</div></footer>"""
     html = f"""<!DOCTYPE html>
-<html lang="en">
+<html lang="{lang}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{E(title)}</title>
 <meta name="description" content="{E(description)}">
 <link rel="canonical" href="{E(url)}">
-<meta name="robots" content="{gen.ROBOTS}">
+{hreflang}<meta name="robots" content="{gen.ROBOTS}">
 <meta name="apple-itunes-app" content="app-id={APP_STORE_ID}">
 <meta name="theme-color" content="{'#183139' if dark else '#0A1216'}">
 <meta property="og:site_name" content="{APP}">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="{i18n.HOMES[lang][2]}">
 <meta property="og:type" content="{og_type}">
 <meta property="og:title" content="{E(title)}">
 <meta property="og:description" content="{E(description)}">
@@ -285,43 +358,20 @@ def layout(key, path, title, description, body, *, ct, dark=False, jsonld=(), og
 <meta property="og:image" content="{SITE}/assets/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="{APP}: a pause before the apps you open without thinking.">
+<meta property="og:image:alt" content="{E(t("Pausely: a pause before the apps you open without thinking."))}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="{BASE}/icon.png" type="image/png">
 <link rel="apple-touch-icon" href="{BASE}/apple-touch-icon.png">
 <link rel="preload" href="{ASSETS}/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{ASSETS}/site.css?v={CSS_VERSION}">
-{ld}
+{head}{ld}
 {analytics.head()}</head>
 <body class="{'' if dark else 'on-light'}">
-<a class="skip" href="#content">Skip to content</a>
+<a class="skip" href="#content">{t("Skip to content")}</a>
 {'' if dark else top}
 {body.replace('<!--TOP-->', top) if dark else body}
-<footer><div class="wrap">
-  <div class="who">
-    {brand}
-    <p>A breath before the scroll. Made by {COMPANY}. Write to <a href="mailto:{EMAIL}">{EMAIL}</a> and a person will reply.</p>
-  </div>
-  <div><h4>The app</h4><ul>
-    <li><a href="{BASE}/how-it-works/">How it works</a></li>
-    <li><a href="{BASE}/pricing/">Pricing</a></li>
-    <li><a href="{E(store_url(ct + "-footer"))}">Download on the App Store</a></li>
-    <li><a href="{E(play_url(ct + "-footer"))}">Get it on Google Play</a></li>
-  </ul></div>
-  <div><h4>Read</h4><ul>
-    <li><a href="{BASE}/guides/">All guides</a></li>
-    <li><a href="{BASE}/guides/how-to-stop-doomscrolling/">Stop doomscrolling</a></li>
-    <li><a href="{BASE}/guides/how-to-block-tiktok-on-iphone/">Block TikTok on iPhone</a></li>
-  </ul></div>
-  <div><h4>Help and legal</h4><ul>
-    <li><a href="{BASE}/support/">Support</a></li>
-    <li><a href="{BASE}/privacy/">Privacy Policy</a></li>
-    <li><a href="{BASE}/terms/">Terms of Use</a></li>
-    <li><a href="{BASE}/delete-data/">Your data</a></li>{analytics.footer_link(BASE)}
-  </ul></div>
-  <p class="legal">© {YEAR} {APP} · {COMPANY}. Screens of the app show its demo data, and the simpler pictures are drawings. Apple, iPhone, iPad, Safari, Screen Time and App Store are trademarks of Apple Inc. Android and Google Play are trademarks of Google LLC. TikTok and Instagram are trademarks of their owners. Pausely is not affiliated with, sponsored by or endorsed by them or by any other app named or shown here. Support in other languages: {languages}</p>
-</div></footer>
-{analytics.banner(BASE)}{ANDROID_JS}</body>
+{footer}
+{analytics.banner(BASE, prefix)}{ANDROID_JS}</body>
 </html>
 """
     return html
@@ -375,28 +425,48 @@ def strip_tags(s):
 
 def home():
     from guides import GUIDES
-    faq = [(q, a) for q, a in FAQ if not q.startswith("What does Premium add")]
+    lang = i18n.current()
+    prefix, home_path = i18n.HOMES[lang][0], i18n.HOMES[lang][1]
+    support = BASE + prefix + gen.path_of(lang, "support")
+    M_SHIELD, M_BREATH, M_CHOICE, A_SHIELD, A_BREATH, A_CHOICE = drawings()
+    if lang == "en":
+        faq = [(q, a) for q, a in FAQ if not q.startswith("What does Premium add")]
+    else:
+        faq = i18n.faq()
     faq_html = "".join(f"<details><summary>{q}</summary><div><p>{a}</p></div></details>" for q, a in faq)
     guide_rows = "".join(
         f'<li><a href="{BASE}/guides/{g["slug"]}/"><b>{g["title"]}</b><i>{g["minutes"]} min read</i>'
         f'<span>{g["blurb"]}</span></a></li>' for g in GUIDES[:3]
     )
+    guides = f"""
+<section class="sec"><div class="wrap">
+  <h2>Guides, <em>with or without the app.</em></h2>
+  <p class="intro">Plain instructions for the settings your iPhone already has, and honest notes on where they stop working.</p>
+  <ul class="toc-list">{guide_rows}</ul>
+  <p><a class="more" href="{BASE}/guides/">All guides</a></p>
+</div></section>""" if lang == "en" else ""
+    # Links to pages that exist only in English stay on the English home page.
+    def en_link(href, text):
+        return f' <a href="{BASE}{href}">{text}</a>' if lang == "en" else ""
+    # The recording and the screenshots are of the English app. A translated page says so.
+    shots_note = (t("Screens from the iPhone app, showing its demo data.") if lang == "en" else
+                  t("Screens from the English iPhone app, showing its demo data. The app itself is in your language."))
     body = f"""<div class="hero">
 <!--TOP-->
 <main id="content">
 <div class="wrap hero-grid">
   <div class="hero-copy">
-    <p class="kicker">For iPhone, iPad and Android</p>
-    <h1>Stop scrolling <em>on autopilot.</em></h1>
-    <p class="lede">Pausely puts a short pause in front of TikTok, Instagram or any app you open without thinking. Breathe first. Then decide if you still want to go in.</p>
+    <p class="kicker">{t("For iPhone, iPad and Android")}</p>
+    <h1>{t("Stop scrolling <em>on autopilot.</em>")}</h1>
+    <p class="lede">{t("Pausely puts a short pause in front of TikTok, Instagram or any app you open without thinking. Breathe first. Then decide if you still want to go in.")}</p>
     <div class="cta-row">
       {store("home-hero")}
-      <p class="cta-note">Free to start.<br>No account.</p>
+      <p class="cta-note">{t("Free to start.<br>No account.")}</p>
     </div>
   </div>
   <div class="hero-art">
     <div class="phone">
-      <video id="demo" autoplay muted loop playsinline preload="metadata" width="600" height="1300" poster="{ASSETS}/video/demo-poster.jpg" aria-label="A screen recording style demo: someone taps TikTok on the Home Screen. Pausely steps in and shows 12 opens today. A breathing pause follows, then a pause where you type a short code, then the choice screen: You paused.">
+      <video id="demo" autoplay muted loop playsinline preload="metadata" width="600" height="1300" poster="{ASSETS}/video/demo-poster.jpg" aria-label="{E(t("A screen recording style demo: someone taps TikTok on the Home Screen. Pausely steps in and shows 12 opens today. A breathing pause follows, then a pause where you type a short code, then the choice screen: You paused."))}">
         <source src="{ASSETS}/video/demo.mp4" type="video/mp4">
       </video>
     </div>
@@ -407,150 +477,147 @@ def home():
 </div>
 
 <section class="sec" id="how"><div class="wrap">
-  <h2>One pause. <em>Then you choose.</em></h2>
+  <h2>{t("One pause. <em>Then you choose.</em>")}</h2>
   <ol class="how3">
     <li>
-      <div class="n"><span>1 · You tap an app</span><i></i></div>
-      <div class="pic p1" role="img" aria-label="{A_SHIELD}">{M_SHIELD}</div>
-      <h3>Pausely steps in first</h3>
-      <p>The app doesn't open straight away. You see how many times you have opened it today.</p>
+      <div class="n"><span>{t("1 · You tap an app")}</span><i></i></div>
+      <div class="pic p1" role="img" aria-label="{E(A_SHIELD)}">{M_SHIELD}</div>
+      <h3>{t("Pausely steps in first")}</h3>
+      <p>{t("The app doesn't open straight away. You see how many times you have opened it today.")}</p>
     </li>
     <li>
-      <div class="n"><span>2 · Ten seconds</span><i></i></div>
-      <div class="pic p2" role="img" aria-label="{A_BREATH}">{M_BREATH}</div>
-      <h3>You take a breath</h3>
-      <p>In for four, hold for two, out for four. Long enough for the urge to pass.</p>
+      <div class="n"><span>{t("2 · Ten seconds")}</span><i></i></div>
+      <div class="pic p2" role="img" aria-label="{E(A_BREATH)}">{M_BREATH}</div>
+      <h3>{t("You take a breath")}</h3>
+      <p>{t("In for four, hold for two, out for four. Long enough for the urge to pass.")}</p>
     </li>
     <li>
-      <div class="n"><span>3 · Your call</span><i></i></div>
-      <div class="pic p3" role="img" aria-label="{A_CHOICE}">{M_CHOICE}</div>
-      <h3>You decide</h3>
-      <p>Walk away and it counts as a win. Or go in for a few minutes, and the pause comes back after.</p>
+      <div class="n"><span>{t("3 · Your call")}</span><i></i></div>
+      <div class="pic p3" role="img" aria-label="{E(A_CHOICE)}">{M_CHOICE}</div>
+      <h3>{t("You decide")}</h3>
+      <p>{t("Walk away and it counts as a win. Or go in for a few minutes, and the pause comes back after.")}</p>
     </li>
   </ol>
   <div class="trio">
-    <div><b>10</b><span>seconds of breathing before a protected app opens.</span></div>
-    <div><b>6</b><span>kinds of pause, from a breath to a question to answer.</span></div>
-    <div><b>0</b><span>accounts. No sign up, no email, no password.</span></div>
+    <div><b>10</b><span>{t("seconds of breathing before a protected app opens.")}</span></div>
+    <div><b>6</b><span>{t("kinds of pause, from a breath to a question to answer.")}</span></div>
+    <div><b>0</b><span>{t("accounts. No sign up, no email, no password.")}</span></div>
   </div>
 </div></section>
 
 <section class="sec" id="research"><div class="wrap">
-  <h2>Does a pause work? <em>It has been tested.</em></h2>
-  <p class="intro">In 2023, researchers published a six week study of 280 people using an app that works this way: a short wait before the app opens, then a way to change your mind.</p>
+  <h2>{t("Does a pause work? <em>It has been tested.</em>")}</h2>
+  <p class="intro">{t("In 2023, researchers published a six week study of 280 people using an app that works this way: a short wait before the app opens, then a way to change your mind.")}</p>
   <div class="trio">
-    <div><b>36%</b><span>of the time, people closed the app again after the pause.</span></div>
-    <div><b>37%</b><span>fewer attempts to open those apps by week six than in week one.</span></div>
-    <div><b>57%</b><span>fewer times those apps were actually opened after six weeks.</span></div>
+    <div><b>36%</b><span>{t("of the time, people closed the app again after the pause.")}</span></div>
+    <div><b>37%</b><span>{t("fewer attempts to open those apps by week six than in week one.")}</span></div>
+    <div><b>57%</b><span>{t("fewer times those apps were actually opened after six weeks.")}</span></div>
   </div>
-  <p class="fine">A second experiment with 500 people looked at which part did the work. The way to back out helped most, and the wait helped too. Pausely gives you both: the pause, then "I changed my mind".</p>
-  <p class="fine">The study tested another app that pauses you the same way, not Pausely, and one of its three authors makes that app. Pausely has not been in a study of its own, so read these as what the method did there, not as a promise. Source: Grüning, Riedel and Lorenz-Spreen, <a href="https://doi.org/10.1073/pnas.2213114120" rel="noopener">Directing smartphone use through the self-nudge app one sec</a>, PNAS, 2023.</p>
+  <p class="fine">{t('A second experiment with 500 people looked at which part did the work. The way to back out helped most, and the wait helped too. Pausely gives you both: the pause, then "I changed my mind".')}</p>
+  <p class="fine">{t("The study tested another app that pauses you the same way, not Pausely, and one of its three authors makes that app. Pausely has not been in a study of its own, so read these as what the method did there, not as a promise. Source: Grüning, Riedel and Lorenz-Spreen, {paper}, PNAS, 2023.").format(paper='<a href="https://doi.org/10.1073/pnas.2213114120" rel="noopener">Directing smartphone use through the self-nudge app one sec</a>')}</p>
 </div></section>
 
 <section class="sec" id="pauses"><div class="wrap">
-  <h2>Six kinds of pause. <em>Pick yours.</em></h2>
-  <p class="intro">A breath is the pause everybody starts with, and it is free. With Premium you can pick another, or let Pausely choose a different one each time.</p>
+  <h2>{t("Six kinds of pause. <em>Pick yours.</em>")}</h2>
+  <p class="intro">{t("A breath is the pause everybody starts with, and it is free. With Premium you can pick another, or let Pausely choose a different one each time.")}</p>
   <ol class="strip six">
-    <li>{shot("breathing", "The breathing pause in Pausely: a soft circle inside a ring, with the word Hold and a countdown.")}<h3>Breathe <i class="tag free">Free</i></h3><p>Ten seconds, with a circle to follow.</p></li>
-    <li>{shot("typing", "The typing pause: Type this to continue, with twenty characters to type and a field that says Type here.")}<h3>Type <i class="tag">Premium</i></h3><p>Twenty characters. Hard to do on autopilot.</p></li>
-    <li>{shot("intention", "The intention pause: Why are you opening this app? Twelve tiles such as Reply to someone, Just checking, Bored and Out of habit.")}<h3>Say why <i class="tag">Premium</i></h3><p>One tap on the reason that fits.</p></li>
-    <li>{shot("reminder", "The reminder pause: a short line to read under the label On being here, with a bar that fills while you read, and Show me another.")}<h3>Read a line <i class="tag">Premium</i></h3><p>A reminder from Pausely, or one you wrote yourself.</p></li>
-    <li>{shot("question", "The question pause: One question. One try. Which of these rivers runs through the middle of the capital city? Four answers and an Answer button.")}<h3>Answer a question <i class="tag">Premium</i></h3><p>One question about where you live. One try.</p></li>
-    <li>{shot("reflect", "The reflection pause: you said Just checking, and Pausely asks What would make the next hour feel like it went well?")}<h3>Reflect <i class="tag">Premium</i></h3><p>Say why you are here. Get one gentle question back.</p></li>
+    <li>{shot("breathing", t("The breathing pause in Pausely: a soft circle inside a ring, with the word Hold and a countdown."))}<h3>{t("Breathe")} <i class="tag free">{t("Free")}</i></h3><p>{t("Ten seconds, with a circle to follow.")}</p></li>
+    <li>{shot("typing", t("The typing pause: Type this to continue, with twenty characters to type and a field that says Type here."))}<h3>{t("Type")} <i class="tag">Premium</i></h3><p>{t("Twenty characters. Hard to do on autopilot.")}</p></li>
+    <li>{shot("intention", t("The intention pause: Why are you opening this app? Twelve tiles such as Reply to someone, Just checking, Bored and Out of habit."))}<h3>{t("Say why")} <i class="tag">Premium</i></h3><p>{t("One tap on the reason that fits.")}</p></li>
+    <li>{shot("reminder", t("The reminder pause: a short line to read under the label On being here, with a bar that fills while you read, and Show me another."))}<h3>{t("Read a line")} <i class="tag">Premium</i></h3><p>{t("A reminder from Pausely, or one you wrote yourself.")}</p></li>
+    <li>{shot("question", t("The question pause: One question. One try. Which of these rivers runs through the middle of the capital city? Four answers and an Answer button."))}<h3>{t("Answer a question")} <i class="tag">Premium</i></h3><p>{t("One question about where you live. One try.")}</p></li>
+    <li>{shot("reflect", t("The reflection pause: you said Just checking, and Pausely asks What would make the next hour feel like it went well?"))}<h3>{t("Reflect")} <i class="tag">Premium</i></h3><p>{t("Say why you are here. Get one gentle question back.")}</p></li>
   </ol>
-  <p class="strip-hint">Swipe to see all six.</p>
-  <p class="fine">Screens from the iPhone app, showing its demo data. The Android app has the same pauses, though a new one can reach it a little later. The last two are written by AI and stay off until you turn AI pauses on. <a href="{BASE}/privacy/#ai">What they send</a></p>
-  <p class="fine">After any pause you choose: stop there, do something else, or go in for a few minutes. Want it firmer? Rules, daily limits, Block everything and strict mode are there when you ask. <a href="{BASE}/how-it-works/">Everything Pausely does</a></p>
+  <p class="strip-hint">{t("Swipe to see all six.")}</p>
+  <p class="fine">{shots_note} {t("The Android app has the same pauses, though a new one can reach it a little later. The last two are written by AI and stay off until you turn AI pauses on.")} <a href="{BASE}{prefix}/privacy/#ai">{t("What they send")}</a></p>
+  <p class="fine">{t("After any pause you choose: stop there, do something else, or go in for a few minutes. Want it firmer? Rules, daily limits, Block everything and strict mode are there when you ask.")}{en_link("/how-it-works/", "Everything Pausely does")}</p>
 </div></section>
 
 <section class="sec" id="reels-count"><div class="wrap reels-split">
   <div class="reels-head">
-    <h2>How many reels <em>was that?</em></h2>
-    <p class="intro">It is easy to lose count of short videos. Pausely keeps a rough count for you, and shows it while you are still scrolling.</p>
+    <h2>{t("How many reels <em>was that?</em>")}</h2>
+    <p class="intro">{t("It is easy to lose count of short videos. Pausely keeps a rough count for you, and shows it while you are still scrolling.")}</p>
   </div>
-  <div class="reels-art">{REELS}<p class="plat"><b>This is Android.</b> On iPhone you get a banner every few minutes instead, with about how many short videos you watched.</p><p class="eg">A made-up app playing stock clips from Mixkit. Example numbers.</p></div>
+  <div class="reels-art">{reels()}<p class="plat">{t("<b>This is Android.</b> On iPhone you get a banner every few minutes instead, with about how many short videos you watched.")}</p><p class="eg">{t("A made-up app playing stock clips from Mixkit. Example numbers.")}</p></div>
   <ul class="facts">
-    <li><b>On Android</b><span>A small card floats over the apps you pick. It shows how long this visit has lasted and about how many videos went by. One tap hides it.</span></li>
-    <li><b>On iPhone</b><span>iOS doesn't let one app draw over another, so Pausely sends a banner every few minutes: your time in the app today, and about how many short videos that comes to.</span></li>
-    <li><b>An estimate</b><span>Some videos can be missed, and not every feed can be counted. The timer keeps going either way.</span></li>
-    <li><b>Yours to turn on</b><span>Part of Premium, and off until you switch it on. The totals stay on your phone.</span></li>
+    <li><b>{t("On Android")}</b><span>{t("A small card floats over the apps you pick. It shows how long this visit has lasted and about how many videos went by. One tap hides it.")}</span></li>
+    <li><b>{t("On iPhone")}</b><span>{t("iOS doesn't let one app draw over another, so Pausely sends a banner every few minutes: your time in the app today, and about how many short videos that comes to.")}</span></li>
+    <li><b>{t("An estimate")}</b><span>{t("Some videos can be missed, and not every feed can be counted. The timer keeps going either way.")}</span></li>
+    <li><b>{t("Yours to turn on")}</b><span>{t("Part of Premium, and off until you switch it on. The totals stay on your phone.")}</span></li>
   </ul>
 </div></section>
 {REELS_JS}
 
 <section class="sec"><div class="wrap split">
   <div>
-    <h2>See the time <em>come back.</em></h2>
-    <p class="intro">Every time you walk away, Pausely counts it. The progress screen is free, and your numbers stay on your phone.</p>
+    <h2>{t("See the time <em>come back.</em>")}</h2>
+    <p class="intro">{t("Every time you walk away, Pausely counts it. The progress screen is free, and your numbers stay on your phone.")}</p>
     <ul class="facts">
-      <li><b>No account</b><span>Nothing to sign up for.</span></li>
-      <li><b>Your apps stay private</b><span>On iPhone, Pausely can't even read which apps you picked. Apple keeps that.</span></li>
-      <li><b>On your device</b><span>Your time, your pauses and your journal stay on your phone.</span></li>
+      <li><b>{t("No account")}</b><span>{t("Nothing to sign up for.")}</span></li>
+      <li><b>{t("Your apps stay private")}</b><span>{t("On iPhone, Pausely can't even read which apps you picked. Apple keeps that.")}</span></li>
+      <li><b>{t("On your device")}</b><span>{t("Your time, your pauses and your journal stay on your phone.")}</span></li>
     </ul>
-    <p class="fine"><a href="{BASE}/privacy/">What leaves the phone, exactly</a></p>
+    <p class="fine"><a href="{BASE}{prefix}/privacy/">{t("What leaves the phone, exactly")}</a></p>
   </div>
-  <div class="proof">{shot("progress", "Pausely's Progress screen: 1 hour 48 minutes reclaimed this week, and a bar chart of the last seven days.")}<p class="eg">The app's demo data.</p></div>
+  <div class="proof">{shot("progress", t("Pausely's Progress screen: 1 hour 48 minutes reclaimed this week, and a bar chart of the last seven days."))}<p class="eg">{t("The app's demo data.")}</p></div>
 </div></section>
 
 <div class="light">
 <section class="sec" id="pricing"><div class="wrap">
-  <h2>Free to start. <em>Premium if you want more.</em></h2>
+  <h2>{t("Free to start. <em>Premium if you want more.</em>")}</h2>
   <div class="plans">
-    <div><h3>Free</h3><p class="price">No charge, no trial clock</p><ul>
-      <li>Two apps protected</li>
-      <li>The breathing pause and one rule</li>
-      <li>Your whole progress screen</li>
+    <div><h3>{t("Free")}</h3><p class="price">{t("No charge, no trial clock")}</p><ul>
+      <li>{t("Two apps protected")}</li>
+      <li>{t("The breathing pause and one rule")}</li>
+      <li>{t("Your whole progress screen")}</li>
     </ul></div>
-    <div><h3>Premium</h3><p class="price">Monthly · Yearly · Lifetime · Family</p><ul>
-      <li>Every app, website and category</li>
-      <li>Every kind of pause, and daily limits</li>
-      <li>Block everything, strict mode and Lock Pausely</li>
+    <div><h3>Premium</h3><p class="price">{t("Monthly · Yearly · Lifetime · Family")}</p><ul>
+      <li>{t("Every app, website and category")}</li>
+      <li>{t("Every kind of pause, and daily limits")}</li>
+      <li>{t("Block everything, strict mode and Lock Pausely")}</li>
     </ul></div>
   </div>
-  <p class="fine">What protects you keeps protecting you if a subscription ends. <a href="{BASE}/pricing/">Plans in full</a></p>
+  <p class="fine">{t("What protects you keeps protecting you if a subscription ends.")}{en_link("/pricing/", "Plans in full")}</p>
 </div></section>
 
 <section class="sec" id="faq"><div class="wrap">
-  <h2>Questions people ask first</h2>
+  <h2>{t("Questions people ask first")}</h2>
   <div class="faq">{faq_html}</div>
-  <p class="fine">Something else? <a href="{BASE}/support/#faq">The full support page</a> covers setup, troubleshooting and how to reach us.</p>
-</div></section>
-
-<section class="sec"><div class="wrap">
-  <h2>Guides, <em>with or without the app.</em></h2>
-  <p class="intro">Plain instructions for the settings your iPhone already has, and honest notes on where they stop working.</p>
-  <ul class="toc-list">{guide_rows}</ul>
-  <p><a class="more" href="{BASE}/guides/">All guides</a></p>
-</div></section>
+  <p class="fine">{t('Something else? <a href="{support}">The full support page</a> covers setup, troubleshooting and how to reach us.').format(support=support + "#faq")}</p>
+</div></section>{guides}
 </div>
 
 <section class="closing"><div class="wrap">
-  <h2>Take a breath <em>before the scroll.</em></h2>
+  <h2>{t("Take a breath <em>before the scroll.</em>")}</h2>
   <div class="cta-row">
     {store("home-closing")}
-    <p class="cta-note">iPhone, iPad and Android.<br>English and seven other languages.</p>
+    <p class="cta-note">{t("iPhone, iPad and Android.<br>English and seven other languages.")}</p>
   </div>
 </div></section>"""
     ld = [
-        {"@context": "https://schema.org", "@type": "WebSite", "name": APP, "alternateName": "Pausely app",
-         "url": SITE + "/"},
         ORG,
         {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Pausely",
          "operatingSystem": "iOS, Android", "applicationCategory": "LifestyleApplication",
          "image": SITE + "/apple-touch-icon.png",
-         "description": "An app for iPhone, iPad and Android that puts a short pause in front of the apps you "
-                        "choose, so opening them becomes a decision.",
-         "url": SITE + "/", "downloadUrl": [APP_STORE_URL, PLAY_URL],
+         "description": t("An app for iPhone, iPad and Android that puts a short pause in front of the apps you "
+                          "choose, so opening them becomes a decision."),
+         "inLanguage": lang,
+         "url": SITE + home_path, "downloadUrl": [APP_STORE_URL, PLAY_URL],
          "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
          "publisher": ORG},
         {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": strip_tags(a)}}
             for q, a in faq]},
     ]
-    return layout("home", "/", "Pausely: Stop Scrolling on Autopilot, Pause Before You Open",
-                  "Pausely puts a ten second pause in front of the apps you open without thinking, on iPhone, iPad "
-                  "and Android. Breathe first, then decide. Free to start.",
-                  body, ct="home", dark=True, jsonld=ld)
+    if lang == "en":
+        ld.insert(0, {"@context": "https://schema.org", "@type": "WebSite", "name": APP, "alternateName": "Pausely app",
+                      "url": SITE + "/"})
+    alternates = [(c, i18n.HOMES[c][1]) for c in ["en"] + i18n.LANGS]
+    return layout("home", home_path, t("Pausely: Stop Scrolling on Autopilot, Pause Before You Open"),
+                  t("Pausely puts a ten second pause in front of the apps you open without thinking, on iPhone, iPad "
+                    "and Android. Breathe first, then decide. Free to start."),
+                  body, ct="home" if lang == "en" else "home-" + lang, dark=True, jsonld=ld, alternates=alternates,
+                  head=i18n.HEAD_CSS.get(lang, ""))
 
 
 # ---------------------------------------------------------------------------
@@ -785,6 +852,10 @@ def check(rel, html):
             raise SystemExit(f"{rel}: a claim the app cannot make: {claim!r}")
 
 
+# Pages that exist in more than one language, for the sitemap's alternates.
+ALTERNATES = {i18n.HOMES[c][1]: [(x, i18n.HOMES[x][1]) for x in ["en"] + i18n.LANGS] for c in ["en"] + i18n.LANGS}
+
+
 def build():
     """[(file, html, sitemap path or None)]"""
     from guides import GUIDES
@@ -796,6 +867,13 @@ def build():
     ]
     for g in GUIDES:
         out.append((f'guides/{g["slug"]}/index.html', guide_page(g), f'/guides/{g["slug"]}/'))
+    for lang in i18n.LANGS:
+        i18n.use(lang)
+        try:
+            path = i18n.HOMES[lang][1]
+            out.append((path.lstrip("/") + "index.html", home(), path))
+        finally:
+            i18n.use("en")
     for rel, html, _ in out:
         check(rel, html)
     return out
