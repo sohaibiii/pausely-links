@@ -18,7 +18,9 @@ COPY = {
 "ui.store_soon": "App Storeに近日登場",
 "ui.store_get": "App Storeでダウンロード",
 "ui.date": "2026年11月20日",
+"ui.date.privacy": "2026年11月28日",
 "ui.last_updated": "最終更新：{DATE}",
+"p.stamp": "最終更新：{PDATE}",
 
 "k.settings": "設定",
 "k.your_data": "あなたのデータ",
@@ -200,7 +202,7 @@ COPY = {
 "p.eyebrow": "プライバシーポリシー",
 "p.h1": "知ったことは、あなたの端末が持っています。",
 "p.sub": "Pauselyにはアカウントがなく、あなたについて記録するものはすべて端末に残ります。端末から出ていくのは4つ。RevenueCatが保持する、あなたが購入したものの記録、私たちが広告の効果を測るためにMetaのSDKが報告するもの、アプリがどう使われているかについてGoogle Analyticsが数えるもの、そしてOpenAIが書くときにAIの一呼吸が送るもの。4つ目は、あなたがオンにした場合に限ります。このページは、その境界がどこにあるかについてのものです。",
-"p.meta": "{DATE}から有効 · iPhone、iPad、Android向けPauselyアプリと、このサイトに適用されます",
+"p.meta": "{PDATE}から有効 · iPhone、iPad、Android向けPauselyアプリと、このサイトに適用されます",
 
 "p.summary.h": "短い版",
 "p.summary.b": """
@@ -213,7 +215,7 @@ COPY = {
   <li><strong>AIの一呼吸</strong>。あなたがオンにするまではオフです。リフレクションはApple Intelligenceを搭載したiPhoneで書くこともでき、その場合は何も出ていきません。OpenAIが書く場合は、その一呼吸に入力した言葉が、その瞬間についての4つの小さな事実とともに、Pauselyのサーバーへ、そしてOpenAIへ送られます。質問の一呼吸はつねにOpenAIが書き、送るのは、Pauselyの表示言語、あなたの地域設定から得た国コード、そして直前に出したいくつかの質問だけです。<a href="{BASE}{L}/privacy/#ai">詳細。</a></li>
 </ul>
 <div class="callout"><span class="tile">{eye-off}</span><div>日記が端末から出ていくことはありません。気分の記録が出ていくこともありません。ほかのAppで過ごした時間も出ていきません。どのAppを選んだかも出ていきません。それはあなた自身の端末の上でさえ、Pauselyには読めないからです。</div></div>
-<p style="margin-top:16px">Appleのプライバシーラベルの言葉でいえば、<strong>トラッキングはありません</strong>。<strong>識別子、使用状況データ、購入、診断、その他のデータ</strong>は、私たちが広告の効果を測るためにMetaのSDKが収集します。<strong>識別子、使用状況データ、おおよその位置情報、購入</strong>は、アプリがどう使われているかを私たちが知るためにGoogle Analyticsが収集します。<strong>購入</strong>は、Premiumを販売するためにRevenueCatが記録します。<strong>ユーザーコンテンツとその他のデータ</strong>は、あなたとは結び付けられず、AIの一呼吸の機能のためだけに使われます。このポリシーは、{COMPANY}が公開するiPhone、iPad、Android向けPauselyアプリと、このウェブサイトに適用されます。</p>
+<p style="margin-top:16px">Appleのプライバシーラベルの言葉でいえば、<strong>トラッキングはありません</strong>。<strong>識別子、使用状況データ、購入、診断、その他のデータ</strong>は、私たちが広告の効果を測るためにMetaのSDKが収集します。<strong>識別子、使用状況データ、おおよその位置情報、購入</strong>は、アプリがどう使われているかを私たちが知るためにGoogle Analyticsが収集します。<strong>購入</strong>は、Premiumを販売するためにRevenueCatが記録します。<strong>ユーザーコンテンツとその他のデータ</strong>は、あなたとは結び付けられず、AIの一呼吸の機能のためだけに使われます。このポリシーは、{COMPANY}が公開するiPhone、iPad、Android向けPauselyアプリと、このウェブサイトに適用されます。ウェブサイト自体が収集するものは<a href="#web">このウェブサイトについて</a>に記載しています。</p>
 <p style="margin-top:16px"><strong>Androidでは</strong>、Pauselyは同じように動きますが、AppleではなくGoogleの仕組みを使います。MetaのSDKもGoogle Analyticsもなく、GoogleのML KitがML Kit自身についての診断情報をGoogleに送り、AIリフレクションはApple Intelligenceの代わりにGemini Nanoを、App Attestの代わりにGoogle Play Integrityを使います。詳しくは<a href="{BASE}{L}/privacy/#android">Android版Pausely</a>をご覧ください。</p>
 """,
 
@@ -367,6 +369,14 @@ COPY = {
 <p><strong>ウィジェットとライブアクティビティ</strong>が表示するのは数、時間、日付です（今日の成果、連続記録、取り戻した時間、今日の時間、ショート動画の本数の推定、アクセス時間の残り）。これらはあえてスクリーンタイムへのアクセスを持たず、どのAppをブロックしたかをけっして見ません。ロック画面のカウントダウンが名指すのは、あなたが書いた<em>ルール</em>の名前（「就寝前」）であって、Appではありません。ロック画面は、端末を手にした人なら誰でも読めるからです。アクセス時間が開いているあいだは、Dynamic Islandが、今日Pauselyを通してそのAppで過ごした時間も数えます。ロック画面にはそれは表示されません。</p>
 """,
 
+"p.web.h": "このウェブサイトについて",
+"p.web.b": """
+<p>アプリとこのウェブサイトは別のものです。アプリの中のものは以下の内容と一切つながっておらず、以下の内容がアプリの動作を変えることもありません。ウェブサイトのGoogle Analyticsはアプリ内のものとは別で、両者が結び付けられることはありません。</p>
+<p>このウェブサイトの公開ページ（トップページ、「How it works」、「Pricing」、ガイド。いずれも英語）では、訪問数を数えるために<strong>Google Analytics</strong>を使っています。数えるのは、どのページが読まれたか、訪問者がおおよそ世界のどの地域にいるか、どんな種類のデバイスとブラウザを使っているか、どのサイトから来たか、App Storeのボタンをタップしたかどうかです。Googleはこれらを、あなたのIPアドレス（Googleによれば、Analyticsは記録も保存もしません）と、Cookieに保存されるランダムな識別子とともに受け取ります。私たちはこれを、どのページが役に立っているかを知るためだけに使います。広告機能、Googleシグナル、広告のパーソナライズはオフにしてあり、あなたの名前やメールアドレス、アプリの中の情報をGoogleに送ることは決してありません。</p>
+<p>デバイスの時計がヨーロッパのタイムゾーンに設定されている場合は、先におたずねし、<strong>OK</strong>を選ばないかぎりGoogle Analyticsは読み込まれません。Googleが欧州経済領域、英国、スイスからの訪問と判断した場合も、そのOKがなければ解析用のCookieは保存されません。Global Privacy Controlの信号を送るブラウザは「いいえ」として扱います。どこにいても、<a href="{BASE}/#cookie-choices">Cookie choices</a>からいつでも選択を変えられ、「いいえ」を選ぶとCookieも削除されます。そのほかのページ（サポート、概要、プライバシー、利用規約、あなたのデータ）は、どの言語でもGoogle Analyticsを読み込みません。</p>
+<p>このウェブサイトはCloudflareが配信しています。Cloudflareは、ページを届けるためにどのウェブサーバーにも必要な技術的な情報（IPアドレスなど）を扱います。</p>
+""",
+
 "p.third.h": "第三者",
 "p.third.b": """
 <p>Pauselyに含まれる<strong>第三者のコードは3つ、RevenueCatのSDK</strong>、<strong>MetaのSDK</strong>、<strong>Google Analytics for Firebase</strong>です。RevenueCatのSDKはPremiumを販売するためのもので（<a href="{BASE}{L}/privacy/#purchases">購入</a>をご覧ください）、MetaのSDKについては<a href="{BASE}{L}/privacy/#ads">上記</a>で、Google Analytics for Firebaseについては<a href="{BASE}{L}/privacy/#analytics">上記</a>で説明しています。アプリにはほかに、解析、広告、クラッシュ報告のためのコードはありません。関わる相手は次のとおりで、それ以外はありません。</p>
@@ -374,6 +384,7 @@ COPY = {
   <li><strong>Apple</strong>はApp Storeを運営し、購入を処理し、スクリーンタイムの遮蔽を実行し、AIリフレクションがApple Intelligenceを使う場合はあなたのiPhoneでそれを動かします。また、あなたが開発者との共有に同意している場合、Apple自身のポリシーのもとでクラッシュログを私たちに共有することがあります。</li>
   <li><strong>Meta</strong>は、私たちが広告の効果を測れるようSDKが報告するものを受け取り、それ以外は何も受け取りません。</li>
   <li><strong>Google</strong>は、アプリがどう使われているかを私たちが知れるよう、Google Analyticsが収集するものを受け取り、それ以外は何も受け取りません。</li>
+  <li><strong>Google</strong>は、<a href="#web">このウェブサイトについて</a>で説明したとおり、このウェブサイトの公開ページでGoogle Analyticsが数えるものも、アプリとは別に受け取ります。</li>
   <li><strong>RevenueCat</strong>は、私たちのサービスプロバイダーとして、購入の記録を保持し、App Storeとのあいだで購入を完了させます。「購入」の節に挙げたものを受け取り、それ以外は何も受け取りません。</li>
   <li><strong>Cloudflare</strong>はPauselyのサーバーをホストしています。OpenAIがAIの一呼吸を書くとき、それが送るものはモデルへ向かう途中でCloudflareを通りますが、Cloudflareは何も保存しません。</li>
   <li><strong>OpenAI</strong>は、AIの一呼吸を書くとき、その背後でモデルを動かします。あなたがそれらをオンにしているあいだだけです。上に挙げたものだけを受け取り、それ以外は受け取らず、モデルの学習には使いません。以前のバージョンのアプリでは、リフレクションについてはこの役割を<strong>Google</strong>が担います。</li>
@@ -427,7 +438,7 @@ COPY = {
 
 "p.changes.h": "このポリシーの変更",
 "p.changes.b": """
-<p>アプリの変化に合わせて、このポリシーを更新することがあります。そのときは上部の日付が変わり、重要な変更はアプリのリリースノートに記載します。直近の変更は{DATE}のもので、アプリがどう使われているかを数えるGoogle Analytics for Firebaseを加えました（<a href="{BASE}{L}/privacy/#analytics">Google Analytics</a>をご覧ください）。同じ日に、Premiumを販売し、購入の記録を保持するようになったRevenueCatを加え（<a href="{BASE}{L}/privacy/#purchases">購入</a>をご覧ください）、iPhoneのAIリフレクションが送るものから、開こうとしているAppの名前を外しました。iPhoneではPauselyがAppの名前を読めないため、リフレクションはそのAppを「あるApp」と呼びます。その前の変更では、Android版Pauselyを加えました（<a href="{BASE}{L}/privacy/#android">Android版Pausely</a>をご覧ください）。その前の変更は、Pausely 1.3とともに行われました。私たちの広告の効果を測るMetaのSDKと、新しい時間に関する機能（{K_time_per_app}、{K_time_banners}、ショート動画の本数の推定）です。これらの機能は、1日の目標と同じように、あなたが選んだAppで過ごす時間を端末の上で数えます。その前には、AIリフレクションがGoogleからOpenAIに移り、あなたのiPhoneでApple Intelligenceを選べるようになりました。変更後もPauselyを使い続けることは、改訂後のポリシーに同意したことを意味します。</p>
+<p>アプリの変化に合わせて、このポリシーを更新することがあります。そのときは上部の日付が変わり、重要な変更はアプリのリリースノートに記載します。直近の変更は{PDATE}のもので、このウェブサイトが訪問数を数える方法を説明しています（<a href="{BASE}{L}/privacy/#web">このウェブサイトについて</a>をご覧ください）。その前の変更は{DATE}のもので、アプリがどう使われているかを数えるGoogle Analytics for Firebaseを加えました（<a href="{BASE}{L}/privacy/#analytics">Google Analytics</a>をご覧ください）。同じ日に、Premiumを販売し、購入の記録を保持するようになったRevenueCatを加え（<a href="{BASE}{L}/privacy/#purchases">購入</a>をご覧ください）、iPhoneのAIリフレクションが送るものから、開こうとしているAppの名前を外しました。iPhoneではPauselyがAppの名前を読めないため、リフレクションはそのAppを「あるApp」と呼びます。その前の変更では、Android版Pauselyを加えました（<a href="{BASE}{L}/privacy/#android">Android版Pausely</a>をご覧ください）。その前の変更は、Pausely 1.3とともに行われました。私たちの広告の効果を測るMetaのSDKと、新しい時間に関する機能（{K_time_per_app}、{K_time_banners}、ショート動画の本数の推定）です。これらの機能は、1日の目標と同じように、あなたが選んだAppで過ごす時間を端末の上で数えます。その前には、AIリフレクションがGoogleからOpenAIに移り、あなたのiPhoneでApple Intelligenceを選べるようになりました。変更後もPauselyを使い続けることは、改訂後のポリシーに同意したことを意味します。</p>
 """,
 
 "p.contact.h": "お問い合わせ",

@@ -20,6 +20,7 @@ import os
 import re
 import shutil
 
+import analytics
 import gen
 from gen import APP, APP_STORE_ID, APP_STORE_URL, BASE, COMPANY, E, EMAIL, SITE, YEAR
 
@@ -174,7 +175,7 @@ def layout(key, path, title, description, body, *, ct, dark=False, jsonld=(), og
 <link rel="preload" href="{ASSETS}/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{ASSETS}/site.css?v={CSS_VERSION}">
 {ld}
-</head>
+{analytics.head()}</head>
 <body class="{'' if dark else 'on-light'}">
 <a class="skip" href="#content">Skip to content</a>
 {'' if dark else top}
@@ -198,11 +199,11 @@ def layout(key, path, title, description, body, *, ct, dark=False, jsonld=(), og
     <li><a href="{BASE}/support/">Support</a></li>
     <li><a href="{BASE}/privacy/">Privacy Policy</a></li>
     <li><a href="{BASE}/terms/">Terms of Use</a></li>
-    <li><a href="{BASE}/delete-data/">Your data</a></li>
+    <li><a href="{BASE}/delete-data/">Your data</a></li>{analytics.footer_link(BASE)}
   </ul></div>
   <p class="legal">© {YEAR} {APP} · {COMPANY}. Screens of the app show its demo data, and the simpler pictures are drawings. Apple, iPhone, iPad, Safari, Screen Time and App Store are trademarks of Apple Inc. TikTok and Instagram are trademarks of their owners. Pausely is not affiliated with, sponsored by or endorsed by them or by any other app named or shown here. Support in other languages: {languages}</p>
 </div></footer>
-</body>
+{analytics.banner(BASE)}</body>
 </html>
 """
     return html

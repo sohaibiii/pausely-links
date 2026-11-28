@@ -119,7 +119,7 @@ def file_of(code, key):
 SUPPORT_CARDS = ["how", "requirements", "start", "faq", "trouble", "contact"]
 PRIVACY_CARDS = [
     "summary", "collect", "device", "screentime", "ads", "analytics", "ai", "purchases",
-    "notifications", "third", "android", "delete", "rights", "children", "changes", "contact",
+    "notifications", "web", "third", "android", "delete", "rights", "children", "changes", "contact",
 ]
 TERMS_CARDS = [
     "acceptance", "who", "what", "screentime", "data", "ai", "subscriptions",
@@ -339,6 +339,7 @@ def context(code, prefix, C):
     ctx.update(
         BASE=BASE, L=prefix, APP=APP, COMPANY=COMPANY, EMAIL=EMAIL, MAIL=mail, YEAR=YEAR,
         DATE=C["ui.date"],
+        PDATE=C["ui.date.privacy"],
     )
     # The app's own words for the places this site sends people. Assembled here
     # rather than written into each paragraph so a rename lands everywhere.
@@ -507,7 +508,7 @@ def render(code, prefix):
     # Privacy
     mk("privacy", fmt("meta.privacy.title"), fmt("meta.privacy.desc"),
        hero(fmt("p.eyebrow"), fmt("p.h1"), fmt("p.sub"), "", fmt("p.meta")),
-       f'<p class="stamp">{fmt("ui.last_updated")}</p>' + cards(fmt, "p", PRIVACY_CARDS),
+       f'<p class="stamp">{fmt("p.stamp")}</p>' + cards(fmt, "p", PRIVACY_CARDS),
        toc_of(fmt, "p", PRIVACY_CARDS))
 
     # Terms

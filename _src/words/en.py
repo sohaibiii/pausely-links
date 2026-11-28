@@ -28,7 +28,9 @@ COPY = {
 "ui.store_soon": "Coming soon to the App Store",
 "ui.store_get": "Download on the App Store",
 "ui.date": "20 November 2026",
+"ui.date.privacy": "28 November 2026",
 "ui.last_updated": "Last updated: {DATE}",
+"p.stamp": "Last updated: {PDATE}",
 
 # The app's own words, so this site names a screen the way the screen does.
 "k.settings": "Settings",
@@ -220,7 +222,7 @@ COPY = {
 "p.eyebrow": "Privacy Policy",
 "p.h1": "Your phone keeps what it knows.",
 "p.sub": "Pausely has no account, and everything it records about you stays on your device. Four things leave it: the record of what you buy, kept by RevenueCat; what Meta's SDK reports so we can measure our ads; what Google Analytics counts about how the app is used; and, only if you switch them on, what the AI pauses send when OpenAI writes them. This page is about exactly where those lines are.",
-"p.meta": "Effective {DATE} · applies to the Pausely app for iPhone, iPad and Android, and to this site",
+"p.meta": "Effective {PDATE} · applies to the Pausely app for iPhone, iPad and Android, and to this site",
 
 "p.summary.h": "The short version",
 "p.summary.b": """
@@ -233,7 +235,7 @@ COPY = {
   <li><strong>The AI pauses</strong>, which are off until you switch them on. The reflection can be written on an iPhone with Apple Intelligence, and then nothing leaves; when OpenAI writes it, the words you type into that one pause go to Pausely's server and on to OpenAI, with four small facts about the moment. The question pause is always written by OpenAI, and sends only the language Pausely is in, a country code from your Region setting and the last few questions it asked. <a href="{BASE}{L}/privacy/#ai">Details.</a></li>
 </ul>
 <div class="callout"><span class="tile">{eye-off}</span><div>Your journal never leaves your device. Your check-ins never leave. The minutes you spend in other apps never leave. Which apps you chose never leaves. Pausely cannot read that even on your own device.</div></div>
-<p style="margin-top:16px">In the terms of Apple's privacy labels: <strong>no tracking</strong>; <strong>identifiers, usage data, purchases, diagnostics and other data</strong>, collected by Meta's SDK to measure our ads; <strong>identifiers, usage data, coarse location and purchases</strong>, collected by Google Analytics to understand how the app is used; <strong>purchases</strong>, recorded by RevenueCat to sell Premium; and <strong>user content and other data</strong>, not linked to you, used only to make the AI pauses work. This policy applies to the Pausely app for iPhone, iPad and Android, published by {COMPANY}, and to this website.</p>
+<p style="margin-top:16px">In the terms of Apple's privacy labels: <strong>no tracking</strong>; <strong>identifiers, usage data, purchases, diagnostics and other data</strong>, collected by Meta's SDK to measure our ads; <strong>identifiers, usage data, coarse location and purchases</strong>, collected by Google Analytics to understand how the app is used; <strong>purchases</strong>, recorded by RevenueCat to sell Premium; and <strong>user content and other data</strong>, not linked to you, used only to make the AI pauses work. This policy applies to the Pausely app for iPhone, iPad and Android, published by {COMPANY}, and to this website. What the website itself collects is under <a href="#web">This website</a>.</p>
 <p style="margin-top:16px"><strong>On Android</strong>, Pausely works the same way on Google's tools instead of Apple's: there is no Meta SDK and no Google Analytics, Google's ML Kit sends Google diagnostics about itself, and the AI reflection uses Gemini Nano in place of Apple Intelligence and Google Play Integrity in place of App Attest. <a href="{BASE}{L}/privacy/#android">Pausely on Android</a> sets out all of it.</p>
 """,
 
@@ -387,6 +389,14 @@ COPY = {
 <p><strong>Widgets and Live Activities</strong> show counts, minutes and dates: today's wins, your streak, time reclaimed, your time today, the short-video estimate, and how long an access window has left. They deliberately do not have Screen Time access and never see which apps you blocked. A Lock Screen countdown names the <em>rule</em> you wrote ("Bedtime"), never the app, because a Lock Screen is readable by anyone holding the device. While an access window is open, the Dynamic Island also counts how long you have spent in that app through Pausely today; the Lock Screen does not show it.</p>
 """,
 
+"p.web.h": "This website",
+"p.web.b": """
+<p>The app and this website are separate. Nothing in the app is connected to what follows, and nothing below changes what the app does. The website's Google Analytics is separate from the one inside the app, and the two are not joined.</p>
+<p>The public pages of this website (the home page, How it works, Pricing and the guides) use <strong>Google Analytics</strong> to count visits: which pages are read, roughly where in the world visitors are, what kind of device and browser they use, which site sent them, and whether they tapped the App Store button. Google receives this with your IP address, which Google says Analytics does not log or store, and with a random identifier kept in a cookie. We use it only to see which pages are useful. Advertising features, Google signals and ad personalisation are switched off, and we never send Google your name, your email address or anything from the app.</p>
+<p>If your device's clock is set to a European time zone, we ask first, and Google Analytics is not loaded unless you choose <strong>OK</strong>. For visitors Google places in the European Economic Area, the United Kingdom or Switzerland, no analytics cookie is set without that OK either. A browser that sends the Global Privacy Control signal is treated as a no. Wherever you are, you can change your choice at any time with <a href="{BASE}/#cookie-choices">Cookie choices</a>, and a no also removes the cookie. The other pages (Support, About, Privacy, Terms and Your data) do not load Google Analytics in any language.</p>
+<p>The website is delivered by Cloudflare, which handles the technical details any web server needs to send you a page, such as your IP address.</p>
+""",
+
 "p.third.h": "Third parties",
 "p.third.b": """
 <p>Pausely contains <strong>three pieces of third-party code: RevenueCat's SDK</strong>, which sells Premium (see <a href="{BASE}{L}/privacy/#purchases">Purchases</a>), <strong>Meta's SDK</strong>, described <a href="{BASE}{L}/privacy/#ads">above</a>, <strong>and Google Analytics for Firebase</strong>, described <a href="{BASE}{L}/privacy/#analytics">above</a>. There is no other analytics, advertising or crash-reporting code in the app. These parties are involved, and only these:</p>
@@ -394,6 +404,7 @@ COPY = {
   <li><strong>Apple</strong> operates the App Store, processes purchases, enforces the Screen Time shield, runs Apple Intelligence on your iPhone if the AI reflection uses it, and, if you have opted in to sharing with developers, may share crash logs with us under its own policy.</li>
   <li><strong>Meta</strong> receives what its SDK reports so we can measure our ads, and nothing else.</li>
   <li><strong>Google</strong> receives what Google Analytics collects, so we can see how the app is used, and nothing else.</li>
+  <li><strong>Google</strong> also receives what Google Analytics counts on this website's public pages, as described under <a href="#web">This website</a>, separately from the app.</li>
   <li><strong>RevenueCat</strong> keeps the record of purchases and completes them with the App Store, as our service provider. It receives what is listed under Purchases, and nothing else.</li>
   <li><strong>Cloudflare</strong> hosts Pausely's server. When OpenAI writes an AI pause, what it sends passes through Cloudflare on its way to the model, and Cloudflare stores none of it.</li>
   <li><strong>OpenAI</strong> runs the model behind the AI pauses when it writes them, and only for as long as you have them switched on. It receives what is listed above and nothing else, and it does not use it to train its models. Earlier versions of the app use <strong>Google</strong> for the reflection instead.</li>
@@ -447,7 +458,7 @@ COPY = {
 
 "p.changes.h": "Changes to this policy",
 "p.changes.b": """
-<p>We may update this policy as the app changes. The date at the top moves when we do, and material changes will be noted in the app's release notes. The most recent change, on {DATE}, adds Google Analytics for Firebase, which counts how the app is used (see <a href="{BASE}{L}/privacy/#analytics">Google Analytics</a>). The same day, we added RevenueCat, which now sells Premium and keeps the record of purchases (see <a href="{BASE}{L}/privacy/#purchases">Purchases</a>), and took the name of the app you are opening out of what the AI reflection sends on an iPhone: Pausely cannot read an app's name there, so the reflection calls it "an app". Before that came Pausely for Android (see <a href="{BASE}{L}/privacy/#android">Pausely on Android</a>). Before that came Pausely 1.3: Meta's SDK, which measures our ads, and new time features ({K_time_per_app}, {K_time_banners} and the short-video estimate), which, like the daily goal, count on your device how long you spend in the apps you choose. Before that, the AI reflection moved from Google to OpenAI, and gained the choice of Apple Intelligence on your iPhone. Continued use of Pausely after a change means you accept the revised policy.</p>
+<p>We may update this policy as the app changes. The date at the top moves when we do, and material changes will be noted in the app's release notes. The most recent change, on {PDATE}, describes how this website counts visits (see <a href="{BASE}{L}/privacy/#web">This website</a>). The one before, on {DATE}, added Google Analytics for Firebase, which counts how the app is used (see <a href="{BASE}{L}/privacy/#analytics">Google Analytics</a>). The same day, we added RevenueCat, which now sells Premium and keeps the record of purchases (see <a href="{BASE}{L}/privacy/#purchases">Purchases</a>), and took the name of the app you are opening out of what the AI reflection sends on an iPhone: Pausely cannot read an app's name there, so the reflection calls it "an app". Before that came Pausely for Android (see <a href="{BASE}{L}/privacy/#android">Pausely on Android</a>). Before that came Pausely 1.3: Meta's SDK, which measures our ads, and new time features ({K_time_per_app}, {K_time_banners} and the short-video estimate), which, like the daily goal, count on your device how long you spend in the apps you choose. Before that, the AI reflection moved from Google to OpenAI, and gained the choice of Apple Intelligence on your iPhone. Continued use of Pausely after a change means you accept the revised policy.</p>
 """,
 
 "p.contact.h": "Contact",

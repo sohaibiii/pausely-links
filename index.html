@@ -23,8 +23,58 @@
 <link rel="icon" href="/icon.png" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=358f3f69eb">
+<link rel="stylesheet" href="/assets/site.css?v=06ed9c1217">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Pausely", "alternateName": "Pausely app", "url": "https://getpausely.app/"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "TOPSOL", "url": "https://getpausely.app/", "logo": "https://getpausely.app/apple-touch-icon.png", "email": "topsol.org@gmail.com"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Pausely", "operatingSystem": "iOS", "applicationCategory": "LifestyleApplication", "image": "https://getpausely.app/apple-touch-icon.png", "description": "An app for iPhone and iPad that puts a short pause in front of the apps you choose, so opening them becomes a decision.", "url": "https://getpausely.app/", "downloadUrl": "https://apps.apple.com/app/id6804200257", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@context": "https://schema.org", "@type": "Organization", "name": "TOPSOL", "url": "https://getpausely.app/", "logo": "https://getpausely.app/apple-touch-icon.png", "email": "topsol.org@gmail.com"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Will Pausely lock me out of my apps?", "acceptedAnswer": {"@type": "Answer", "text": "No. An ordinary pause is a moment, not a wall. After it you choose: I changed my mind, or continue into the app for a few minutes. The only things with no way through are ones you set up yourself, such as a daily limit you have used, a block you started, or a rule that blocks an app during certain hours. Each of those ends on its own."}}, {"@type": "Question", "name": "How is this different from Screen Time limits?", "acceptedAnswer": {"@type": "Answer", "text": "A Screen Time limit waits until your time is used up and then offers Ignore Limit. Pausely steps in every time you open the app, before the scrolling starts, and asks for a breath first. The longer comparison."}}, {"@type": "Question", "name": "Which apps does it work with?", "acceptedAnswer": {"@type": "Answer", "text": "Any app on your iPhone or iPad. You pick them in Apple's own Screen Time picker, so it works with whichever ones take your time. Pausely never learns their names. Apple hands it private codes instead."}}, {"@type": "Question", "name": "Does Pausely see what I do in other apps?", "acceptedAnswer": {"@type": "Answer", "text": "No. It never sees your browsing, your messages or anything inside another app. iOS tells it how long the apps you chose have been open, and Pausely keeps those minutes on your device."}}, {"@type": "Question", "name": "Is Pausely free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, and free is a working product, not a demo: two apps protected, one rule, the breathing pause, your whole progress screen, today's time in each app you chose, and the countdown on the Lock Screen and in the Dynamic Island."}}, {"@type": "Question", "name": "Do I need an account?", "acceptedAnswer": {"@type": "Answer", "text": "No. There is no sign up, no email field and no password anywhere in the app."}}, {"@type": "Question", "name": "Which devices does it need?", "acceptedAnswer": {"@type": "Answer", "text": "An iPhone or iPad running iOS 17 or iPadOS 17, or newer. There is no Mac version, because the Screen Time frameworks Pausely is built on are not available there."}}]}</script>
+<script>(function(){
+var id="G-G2F9HVRK0F",key='analytics-choice',choice=null,loaded=false,tz='';
+try{choice=localStorage.getItem(key)}catch(e){}
+try{tz=Intl.DateTimeFormat().resolvedOptions().timeZone||''}catch(e){}
+var asks=/^(Europe\/|Arctic\/|Atlantic\/(Azores|Canary|Faroe|Madeira|Reykjavik)|Asia\/(Nicosia|Famagusta))/.test(tz);
+if(choice===null&&navigator.globalPrivacyControl)choice='no';
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments)}
+function consent(v){return{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:v}}
+var here=consent('denied');here.region=["AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR","DE","GR","HU","IE","IT","LV","LT","LU","MT","NL","PL","PT","RO","SK","SI","ES","SE","IS","LI","NO","GB","CH","GF","GP","MQ","YT","RE","MF"];
+gtag('consent','default',consent(choice==='no'?'denied':'granted'));
+gtag('consent','default',here);
+if(choice==='yes')gtag('consent','update',{analytics_storage:'granted'});
+function load(){
+if(loaded)return;loaded=true;
+gtag('js',new Date());
+gtag('config',id,{allow_google_signals:false,allow_ad_personalization_signals:false});
+var s=document.createElement('script');s.async=true;
+s.src='https://www.googletagmanager.com/gtag/js?id='+id;document.head.appendChild(s);
+}
+function forget(){
+document.cookie.split(';').forEach(function(c){
+var n=c.split('=')[0].trim();if(n.indexOf('_ga')!==0)return;
+['',location.hostname,'.'+location.hostname].forEach(function(d){
+document.cookie=n+'=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/'+(d?';domain='+d:'');
+});
+});
+}
+function choose(v){
+choice=v;try{localStorage.setItem(key,v)}catch(e){}
+gtag('consent','update',{analytics_storage:v==='yes'?'granted':'denied'});
+if(v==='yes')load();else forget();
+}
+if(choice==='yes'||(choice===null&&!asks))load();
+document.addEventListener('DOMContentLoaded',function(){
+var bar=document.getElementById('consent');if(!bar)return;
+function open(focus){bar.hidden=false;if(focus)bar.focus()}
+bar.addEventListener('click',function(e){
+var v=e.target.getAttribute&&e.target.getAttribute('data-choice');
+if(!v)return;choose(v);bar.hidden=true;
+if(location.hash==='#cookie-choices')history.replaceState(null,'',location.pathname+location.search);
+});
+document.addEventListener('click',function(e){
+var a=e.target.closest&&e.target.closest('a[href$="#cookie-choices"]');
+if(a){e.preventDefault();open(true)}
+});
+if(location.hash==='#cookie-choices')open(true);
+else if(choice===null&&asks)open(false);
+});
+})();</script>
 </head>
 <body class="">
 <a class="skip" href="#content">Skip to content</a>
@@ -173,8 +223,13 @@
     <li><a href="/privacy/">Privacy Policy</a></li>
     <li><a href="/terms/">Terms of Use</a></li>
     <li><a href="/delete-data/">Your data</a></li>
+    <li><a href="/#cookie-choices">Cookie choices</a></li>
   </ul></div>
   <p class="legal">© 2026 Pausely · TOPSOL. Screens of the app show its demo data, and the simpler pictures are drawings. Apple, iPhone, iPad, Safari, Screen Time and App Store are trademarks of Apple Inc. TikTok and Instagram are trademarks of their owners. Pausely is not affiliated with, sponsored by or endorsed by them or by any other app named or shown here. Support in other languages: <a href="/de/" lang="de" hreflang="de">Deutsch</a> · <a href="/es/" lang="es" hreflang="es">Español</a> · <a href="/fr/" lang="fr" hreflang="fr">Français</a> · <a href="/ja/" lang="ja" hreflang="ja">日本語</a> · <a href="/ko/" lang="ko" hreflang="ko">한국어</a> · <a href="/pt-BR/" lang="pt-BR" hreflang="pt-BR">Português (Brasil)</a> · <a href="/zh-Hans/" lang="zh-Hans" hreflang="zh-Hans">简体中文</a></p>
 </div></footer>
+<div class="consent" id="consent" role="region" aria-label="Cookie choices" tabindex="-1" hidden>
+  <p>This website counts visits with Google Analytics. Is a cookie for that OK with you? <a href="/privacy/#web">What it collects</a></p>
+  <div class="consent-btns"><button type="button" data-choice="no">No thanks</button><button type="button" data-choice="yes">OK</button></div>
+</div>
 </body>
 </html>
