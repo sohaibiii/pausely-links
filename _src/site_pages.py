@@ -585,6 +585,7 @@ def guide_page(g):
         for o in others
     )
     ct = "guide-" + g["ct"]
+    g_updated, g_updated_iso = g.get("updated", (UPDATED, UPDATED_ISO))
     appbox = f"""<aside class="appbox">
   <img src="{BASE}/apple-touch-icon.png" alt="" width="64" height="64">
   <div><b>{g["box_title"]}</b><p>{g["box_text"]}</p>{store(ct)}</div>
@@ -596,7 +597,7 @@ def guide_page(g):
     <p class="crumbs"><a href="{BASE}/guides/">Guides</a> / {g["topic"]}</p>
     <h1>{g["title"]}</h1>
     <p class="standfirst">{g["standfirst"]}</p>
-    <p class="byline">By the Pausely team · Updated {UPDATED} · {g["minutes"]} min read</p>
+    <p class="byline">By the Pausely team · Updated {g_updated} · {g["minutes"]} min read</p>
   </header>
   <div class="prose">
 {content}
@@ -606,7 +607,7 @@ def guide_page(g):
 <div class="related"><h2>Keep reading</h2><ul class="toc-list">{rel}</ul></div>
 </main>"""
     ld = [{"@context": "https://schema.org", "@type": "Article", "headline": g["title"],
-           "description": g["description"], "dateModified": UPDATED_ISO, "datePublished": UPDATED_ISO,
+           "description": g["description"], "dateModified": g_updated_iso, "datePublished": g_updated_iso,
            "author": {"@type": "Organization", "name": "Pausely"},
            "publisher": ORG, "image": SITE + "/assets/og.png",
            "mainEntityOfPage": SITE + f'/guides/{g["slug"]}/'},
