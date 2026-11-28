@@ -306,4 +306,212 @@ GUIDES = [
 <p>One rule is free. If you want the night to be something you can't talk yourself out of, Premium has strict mode, which holds until a time you pick and can't be undone before then, not even by you.</p>
 """,
     },
+    {
+        "slug": "how-to-block-apps-on-iphone",
+        "ct": "block-apps",
+        "topic": "Blocking apps",
+        "minutes": 7,
+        "updated": ("28 November 2026", "2026-11-28"),
+        "title": "How to block apps on iPhone: 5 ways, from a nudge to a full block",
+        "seo_title": "How to Block Apps on iPhone: 5 Ways, Step by Step",
+        "description": "How to block apps on an iPhone with Screen Time: a daily limit, a schedule, hiding apps completely, Face ID locks, and a pause before an app opens.",
+        "blurb": "A daily limit, a bedtime schedule, hiding an app completely, and where each one gives way.",
+        "standfirst": "Your iPhone can already block apps. It has four different ways to do it, hidden in "
+                      "Screen Time and on the Home Screen, and each one blocks something slightly different. Here "
+                      "they are, lightest first, with the steps and the point where each one stops holding.",
+        "box_title": "Block the reflex, not the app",
+        "box_text": "Pausely puts a ten second pause in front of the apps you choose. Then you decide whether to "
+                    "go in. Two apps are free.",
+        "body": """
+<div class="note"><b>The short answer.</b> Open <kbd>Settings</kbd>, tap <kbd>Screen Time</kbd>, then <kbd>App Limits</kbd> and <kbd>Add Limit</kbd>. Tick the app, set 1 minute, and tap <kbd>Add</kbd>. To stop yourself switching it off, set a Screen Time passcode and turn on <kbd>Block at End of Limit</kbd>. The rest of this page explains the other ways, and which one fits.</div>
+
+<h2>Before you start: turn on Screen Time</h2>
+<p>Every built-in block lives in Screen Time. Open <kbd>Settings</kbd> and tap <kbd>Screen Time</kbd>. If it has never been set up, turn on <kbd>App &amp; Website Activity</kbd>. It takes a few seconds and changes nothing else.</p>
+
+<h2>Option 1: A daily limit (App Limits)</h2>
+<p>Best when you want to keep using an app, just less.</p>
+<ol>
+  <li>In <kbd>Screen Time</kbd>, tap <kbd>App Limits</kbd>, then <kbd>Add Limit</kbd>.</li>
+  <li>Open a category, for example <kbd>Social</kbd> or <kbd>Entertainment</kbd>, and tick the apps. Ticking the category itself covers every app in it, including ones you install later.</li>
+  <li>To cover the website version too, scroll to the bottom, open <kbd>Websites</kbd>, tap <kbd>Add Website</kbd> and type its address.</li>
+  <li>Tap <kbd>Next</kbd>, set the time (the smallest is 1 minute a day) and tap <kbd>Add</kbd>.</li>
+</ol>
+<p><strong>Where it stops working.</strong> When the time is used, iOS covers the app with a screen that offers one more minute, a reminder in 15 minutes, or <kbd>Ignore Limit For Today</kbd>. One tap and the limit is gone for the day. <a href="{BASE}/guides/why-screen-time-limits-dont-work/">How to make a limit hold</a> shows how to remove that button.</p>
+
+<h2>Option 2: A schedule (Downtime)</h2>
+<p>Best when the problem has a time of day, usually late evening.</p>
+<ol>
+  <li>In <kbd>Screen Time</kbd>, tap <kbd>Downtime</kbd> and turn on <kbd>Scheduled</kbd>.</li>
+  <li>Choose the days and set <kbd>From</kbd> and <kbd>To</kbd>.</li>
+  <li>Go back and open <kbd>Always Allowed</kbd> to choose what stays open, such as Messages, Maps and Clock for your alarm.</li>
+</ol>
+<p>During those hours every app outside the allowed list is covered. <strong>Where it stops working:</strong> the same <kbd>Ignore Limit</kbd> button appears, and Downtime covers everything at once, so one urgent app at 11 p.m. tempts you to turn the whole thing off. The full set-up is in <a href="{BASE}/guides/block-apps-at-night-on-iphone/">How to block apps at night</a>.</p>
+
+<h2>Option 3: Hide apps completely (Content &amp; Privacy Restrictions)</h2>
+<p>Best when you want an app gone, with no button to bring it back. This is the strongest block iOS has, and the bluntest.</p>
+<p><strong>For Apple's own apps</strong>, such as Safari, Camera or FaceTime:</p>
+<ol>
+  <li>In <kbd>Screen Time</kbd>, tap <kbd>Content &amp; Privacy Restrictions</kbd> and turn the switch on.</li>
+  <li>Tap <kbd>Allowed Apps</kbd> (on newer versions of iOS it is <kbd>Allowed Apps &amp; Features</kbd>) and turn off the ones you want hidden.</li>
+</ol>
+<p>They vanish from the Home Screen and the App Library until you turn them back on.</p>
+<p><strong>For apps from the App Store</strong>, iOS can only hide them all together. In <kbd>Content &amp; Privacy Restrictions</kbd>, tap <kbd>Content Restrictions</kbd> (newer versions call it <kbd>App Store, Media, Web &amp; Games</kbd>), then <kbd>Apps</kbd>, and choose <kbd>Don't Allow Apps</kbd>. Every app you installed disappears, which is rarely what an adult wants. To remove one app and keep it away, delete it and turn off installing instead: in <kbd>Content &amp; Privacy Restrictions</kbd>, tap <kbd>iTunes &amp; App Store Purchases</kbd>, then <kbd>Installing Apps</kbd>, and choose <kbd>Don't Allow</kbd>.</p>
+<p><strong>Where it stops working.</strong> Anyone who knows the Screen Time passcode can undo it in seconds, and with installing switched off you will be switching it back on every time you need a new app. That moment is when the old app tends to come back.</p>
+
+<h2>Option 4: Lock an app with Face ID</h2>
+<p>On iOS 18 and later, press and hold an app's icon and tap <kbd>Require Face ID</kbd>. You can also choose <kbd>Hide and Require Face ID</kbd>, which moves it into a hidden folder at the bottom of the App Library.</p>
+<p>This is a privacy feature, not a block. It stops other people opening the app. It doesn't stop you, because your face opens it in under a second. Hiding the icon helps a little, for the same reason moving an icon off your first Home Screen helps: your thumb has further to go.</p>
+
+<h2>Option 5: A pause before the app opens</h2>
+<p>Options 1 to 3 either cut you off after the time is spent or remove the app altogether. Most of the time neither is what you want. You want to keep the app for the things it is good for, and stop opening it on autopilot.</p>
+<p>That is the moment Pausely works on. You choose the apps. Tap one and it doesn't open straight away: you see how many times you have opened it today, you breathe for ten seconds, and then you choose. <kbd>I changed my mind</kbd> closes it. Continuing gives you a few minutes, and when they are up the pause comes back.</p>
+<p>If you want something firmer, a rule in Pausely can block chosen apps during the hours you set, and Premium adds a daily limit that rests an app until tomorrow and a strict mode that can't be switched off early, not even by you.</p>
+
+<h2>Which one should you pick?</h2>
+<table>
+  <thead><tr><th>You want</th><th>Use</th></tr></thead>
+  <tbody>
+    <tr><td>Less time in an app, not none</td><td>Option 1, a daily limit</td></tr>
+    <tr><td>No apps after a certain time</td><td>Option 2, Downtime</td></tr>
+    <tr><td>An app gone from the phone</td><td>Option 3, with a passcode someone else keeps</td></tr>
+    <tr><td>Other people kept out of an app</td><td>Option 4, Face ID</td></tr>
+    <tr><td>To open an app on purpose, not by reflex</td><td>Option 5, a pause</td></tr>
+  </tbody>
+</table>
+<p>They also combine. A lot of people use Downtime for the night and a pause for the day.</p>
+""",
+    },
+    {
+        "slug": "how-to-block-youtube-on-iphone",
+        "ct": "block-youtube",
+        "topic": "Blocking apps",
+        "minutes": 6,
+        "updated": ("28 November 2026", "2026-11-28"),
+        "title": "How to block YouTube on iPhone: the app, the website and Shorts",
+        "seo_title": "How to Block YouTube on iPhone: App, Website and Shorts",
+        "description": "Four ways to block or limit YouTube on an iPhone: YouTube's own reminders, a Screen Time limit on the app and youtube.com, a full block, and a pause first.",
+        "blurb": "YouTube's own reminders, a limit that covers the app and the website, a full block, and what to do about Shorts.",
+        "standfirst": "YouTube is harder to block than most apps, because it lives in three places: the app, "
+                      "youtube.com in Safari, and videos that play inside other apps. Here are four ways to deal "
+                      "with it, from a gentle reminder to a block with no way round.",
+        "box_title": "Watch the video you came for",
+        "box_text": "Pausely asks for a ten second breath every time you open YouTube, then lets you choose. "
+                    "Two apps are free.",
+        "body": """
+<p>First decide what you want. If YouTube is useful to you (recipes, lessons, a band you love) and the trouble is the hour that follows, options 1, 2 and 4 fit better than a full block.</p>
+
+<h2>Option 1: YouTube's own reminders</h2>
+<p>The YouTube app can remind you to stop. Tap your profile picture, then the settings gear, then <kbd>General</kbd>. Look for <kbd>Remind me to take a break</kbd> and <kbd>Remind me when it's bedtime</kbd> (YouTube moves these menus from time to time). Choose how often, or what time.</p>
+<p><strong>Where it stops working.</strong> The reminder pauses the video and shows a message. One tap and you are back. It is a clock on the wall, not a door.</p>
+
+<h2>Option 2: A Screen Time limit on the app and the website</h2>
+<ol>
+  <li>Open <kbd>Settings</kbd> and tap <kbd>Screen Time</kbd>. If it has never been set up, turn on <kbd>App &amp; Website Activity</kbd> first.</li>
+  <li>Tap <kbd>App Limits</kbd>, then <kbd>Add Limit</kbd>.</li>
+  <li>Find YouTube, usually under <kbd>Entertainment</kbd>, and tick it.</li>
+  <li>Scroll to the bottom, open <kbd>Websites</kbd>, tap <kbd>Add Website</kbd> and type <kbd>youtube.com</kbd>. Add <kbd>m.youtube.com</kbd> as well. Now one limit covers the app and the site.</li>
+  <li>Tap <kbd>Next</kbd>, set the time and tap <kbd>Add</kbd>.</li>
+</ol>
+<p><strong>Where it stops working.</strong> When the time runs out, the cover offers <kbd>Ignore Limit For Today</kbd>, which is one tap. Setting a Screen Time passcode and turning on <kbd>Block at End of Limit</kbd> removes it. It holds best if someone else chooses the passcode.</p>
+
+<h2>Option 3: Block YouTube completely</h2>
+<p>Three steps: delete the app, stop it coming back, and block the website.</p>
+<ol>
+  <li>Press and hold the YouTube icon, tap <kbd>Remove App</kbd>, then <kbd>Delete App</kbd>. Your account, playlists and subscriptions stay on YouTube's side.</li>
+  <li>In <kbd>Settings</kbd>, go to <kbd>Screen Time</kbd>, then <kbd>Content &amp; Privacy Restrictions</kbd>, and turn the switch on. Tap <kbd>iTunes &amp; App Store Purchases</kbd>, then <kbd>Installing Apps</kbd>, and choose <kbd>Don't Allow</kbd>.</li>
+  <li>Still in <kbd>Content &amp; Privacy Restrictions</kbd>, tap <kbd>Content Restrictions</kbd> (on newer versions of iOS this row is called <kbd>App Store, Media, Web &amp; Games</kbd>), then <kbd>Web Content</kbd>, and choose <kbd>Limit Adult Websites</kbd>. Under <kbd>Never Allow</kbd>, tap <kbd>Add Website</kbd> and enter <kbd>youtube.com</kbd>, then <kbd>m.youtube.com</kbd>.</li>
+</ol>
+<p><strong>Side effects to know about.</strong> <kbd>Limit Adult Websites</kbd> also turns on Apple's adult content filter and removes Private Browsing from Safari. With <kbd>Installing Apps</kbd> off you can't install anything else either. And videos embedded in other apps or websites may still play, because they are not opened from youtube.com in Safari.</p>
+
+<h2>What about Shorts?</h2>
+<p>Many people are happy with long videos and lose their evenings to Shorts. Screen Time can't tell the two apart: to iOS it is all one app. There is no setting on an iPhone that blocks Shorts and keeps the rest.</p>
+<p>What helps is changing where you start. Open YouTube from a link, a playlist or the <kbd>Subscriptions</kbd> tab rather than the home feed, and turn off autoplay in the app's settings, so one video doesn't roll into the next. If Shorts are the main problem, a pause on the whole app (option 4) catches the moment you open it for no reason, which is usually how Shorts begin.</p>
+
+<h2>Option 4: Keep YouTube, with a pause in front</h2>
+<p>With Pausely, tapping YouTube shows you how many times you have opened it today, then asks for a ten second breath. After it you choose: <kbd>I changed my mind</kbd>, or continue for a few minutes. When the time is up, the pause comes back, which is often the moment you notice you had drifted from the video you came for.</p>
+<p>If you want it firmer, Premium adds a daily limit that rests the app until tomorrow, and rules that block it during the hours you choose.</p>
+
+<h2>Which one should you pick?</h2>
+<table>
+  <thead><tr><th>You want</th><th>Use</th></tr></thead>
+  <tbody>
+    <tr><td>A reminder to stop</td><td>Option 1</td></tr>
+    <tr><td>A daily allowance, app and website together</td><td>Option 2 with a passcode</td></tr>
+    <tr><td>YouTube gone from this phone</td><td>Option 3</td></tr>
+    <tr><td>To keep it for what it is good at</td><td>Option 4</td></tr>
+  </tbody>
+</table>
+""",
+    },
+    {
+        "slug": "what-to-do-instead-of-doomscrolling",
+        "ct": "instead-of-doomscrolling",
+        "topic": "Habits",
+        "minutes": 6,
+        "updated": ("28 November 2026", "2026-11-28"),
+        "title": "What to do instead of doomscrolling: 21 ideas, sorted by how long you have",
+        "seo_title": "What to Do Instead of Doomscrolling: 21 Real Ideas",
+        "description": "21 things to do instead of doomscrolling, sorted by whether you have one minute, ten minutes or a whole evening, and how to make the swap actually happen.",
+        "blurb": "Twenty-one swaps, sorted by the time you have, and the small trick that makes one of them happen.",
+        "standfirst": "Closing the app is the easy half. The hard half is the empty minute after it, which the next "
+                      "app fills unless something else is already waiting. Here are 21 things to put in that "
+                      "minute, sorted by how much time you actually have.",
+        "box_title": "A pause that offers something else",
+        "box_text": "When you open an app you chose, Pausely asks for a ten second breath and can suggest "
+                    "something else instead. Two apps are free.",
+        "body": """
+<h2>Why \"just stop\" doesn't work</h2>
+<p>Scrolling usually fills a gap: waiting, boredom, tiredness, putting off something harder. If you take the phone away and leave the gap, the gap wins. So the trick is not more willpower. It is having the next thing decided before the gap arrives.</p>
+<p>Pick two or three ideas from the lists below, one for each kind of moment you scroll in. You don't need all 21.</p>
+
+<h2>If you have one minute</h2>
+<p>For queues, lifts, the kettle, the gap between meetings.</p>
+<ol>
+  <li><strong>Breathe slowly five times.</strong> In through the nose, longer out. It is the quickest reset there is.</li>
+  <li><strong>Look at something far away.</strong> Out of a window, down the street. Your eyes have been at arm's length all day.</li>
+  <li><strong>Stand up and stretch.</strong> Neck, shoulders, the back you have been curling over the phone.</li>
+  <li><strong>Drink a glass of water.</strong> Half of the restless feeling is sometimes just thirst.</li>
+  <li><strong>Send one real message.</strong> Not a reaction. A sentence to someone you like.</li>
+  <li><strong>Write down the thing on your mind.</strong> One line on paper or in a notes app, so it stops circling.</li>
+</ol>
+
+<h2>If you have ten minutes</h2>
+<p>For breaks, the bus, the time before you start something.</p>
+<ol start="7">
+  <li><strong>Walk round the block.</strong> No podcast needed. This is the single best swap on the list.</li>
+  <li><strong>Read a few pages of a book.</strong> Keep one where the phone usually sits.</li>
+  <li><strong>Tidy one small thing.</strong> A drawer, the sink, your desk. It ends with something visibly better.</li>
+  <li><strong>Listen to one album track, properly.</strong> Eyes closed, nothing else.</li>
+  <li><strong>Do a short practice.</strong> Ten minutes of a language, an instrument, a sketch.</li>
+  <li><strong>Call someone instead of watching them.</strong> Their stories, live, are better than their posts.</li>
+  <li><strong>Start the task you were avoiding, for two minutes.</strong> Often the scrolling was putting this off. Two minutes is usually enough to get past the start.</li>
+</ol>
+
+<h2>If it is the evening</h2>
+<p>For the long scroll on the sofa or in bed, which is the one that costs the most.</p>
+<ol start="14">
+  <li><strong>Put the phone on charge in another room</strong> and come back without it.</li>
+  <li><strong>Watch one thing on purpose.</strong> A film or an episode you chose, on the big screen, then stop. Choosing is the difference.</li>
+  <li><strong>Cook something slightly more than you need to.</strong></li>
+  <li><strong>Have a bath or a long shower.</strong> No phone in the bathroom.</li>
+  <li><strong>Play a game with real pieces.</strong> Cards, a puzzle, a board game, even alone.</li>
+  <li><strong>Write tomorrow's three things.</strong> It quietens the urge to check everything now.</li>
+  <li><strong>Stretch on the floor for ten minutes.</strong> It is hard to scroll lying on your back with your arms out.</li>
+  <li><strong>Go to bed early with a book.</strong> If you are scrolling because you are tired, the answer is sleep, not a better feed.</li>
+</ol>
+
+<h2>How to make the swap actually happen</h2>
+<p>Ideas on a list don't help at 11 p.m. Three small things do.</p>
+<ul>
+  <li><strong>Decide in advance, with a when.</strong> \"When I sit on the sofa after dinner, I pick up the book\" works better than \"I'll read more\". The moment triggers the plan.</li>
+  <li><strong>Put the alternative where the phone was.</strong> Book on the pillow, shoes by the door, water on the desk. Make the new thing the easy thing.</li>
+  <li><strong>Add friction to the old thing.</strong> Move the app off your first Home Screen, or set a limit. Our guide on <a href="{BASE}/guides/how-to-stop-doomscrolling/">how to stop doomscrolling</a> has seven ways, and <a href="{BASE}/guides/how-to-block-apps-on-iphone/">how to block apps on iPhone</a> covers the built-in blocks.</li>
+</ul>
+<p>And be kind about slips. Missing one evening doesn't undo a week. Pick it up the next day.</p>
+
+<h2>Let the phone remind you</h2>
+<p>The hardest moment to change is the one you don't notice: the thumb opening the app before you have decided anything. Pausely puts a pause there. Tap an app you chose and you see how many times you have opened it today, then breathe for ten seconds. Instead of going in, the pause can offer something else, like <kbd>Or walk for 10 minutes</kbd>. Some days you go in anyway, for a few minutes. Plenty of days you don't.</p>
+<div class="note"><b>If you only try one thing:</b> number 7. Next time you reach for the phone with nothing to do, walk round the block instead, and see how you feel when you get back.</div>
+""",
+    },
 ]

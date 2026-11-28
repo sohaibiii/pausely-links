@@ -69,6 +69,8 @@ kbd{font:inherit;font-weight:600;background:rgba(238,244,243,.1);border-radius:6
 .store:hover{background:#DDF6F2}
 .light .store{background:#0b0d18;color:#fff}
 .light .store:hover{background:#183139}
+.stores{display:inline-flex;flex-wrap:wrap;gap:10px}
+.android .stores .play{order:-1}
 .cta-note{font-size:14.5px;color:var(--text-2);margin:0}
 .light .cta-note{color:var(--ink-2)}
 
@@ -327,6 +329,7 @@ footer .legal{grid-column:1/-1;border-top:1px solid var(--line);padding-top:18px
 .appbox .store{background:#fff;color:#0b0d18;padding:8px 14px 8px 11px}
 .appbox .store b{font:600 16px/1.1 var(--sans);margin:0}
 .appbox .store svg{width:22px;height:22px}
+.appbox .stores{gap:8px}
 @media (max-width:480px){.appbox{grid-template-columns:1fr}}
 .related{max-width:720px;margin:0 auto;padding:0 var(--gutter) clamp(56px,8vw,100px)}
 .related h2{font-size:26px}
@@ -345,6 +348,74 @@ footer .legal{grid-column:1/-1;border-top:1px solid var(--line);padding-top:18px
   .strip li{scroll-snap-align:start}
   .strip-hint{display:block}
 }
+/* six pauses: one row on a wide screen, two rows of three below that, a swipe on a phone */
+.strip.six{grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(12px,1.6vw,22px)}
+.strip.six .phone{border-radius:26px;border-width:4px}
+.strip.six h3{font-size:18px;margin:16px 0 4px}
+.strip.six h3 .tag{display:table;margin:9px 0 0}
+.strip.six p{font-size:14.5px;line-height:1.45}
+@media (min-width:1240px){.strip.six{margin-left:-56px;margin-right:-56px}}
+@media (max-width:1040px) and (min-width:821px){
+  .strip.six{grid-template-columns:repeat(3,minmax(0,1fr));gap:36px clamp(20px,4vw,48px);max-width:820px}
+  .strip.six .phone{border-radius:34px;border-width:5px}
+}
+@media (max-width:820px){
+  .strip.six{grid-template-columns:none;gap:clamp(14px,2.6vw,34px)}
+  .strip.six .phone{border-radius:34px;border-width:5px}
+  .strip.six h3{font-size:20px}
+}
+.fine + .fine{margin-top:8px}
+
+/* the reels card: Android's floating card over a made-up short-video app playing stock clips */
+.reels-split{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);grid-template-areas:"art head" "art facts";column-gap:clamp(32px,7vw,100px);align-items:center}
+.reels-head{grid-area:head;align-self:end}
+.reels-split .facts{grid-area:facts;align-self:start}
+.reels-art{grid-area:art;width:min(100%,280px);margin:0 auto}
+.reels-art .plat{font-size:14.5px;line-height:1.45;color:var(--text-2);text-align:center;margin-top:18px}
+.reels-art .plat b{color:var(--text);font-weight:600}
+.reels-art .eg{font-size:13px;color:var(--text-3);text-align:center;margin-top:8px}
+.phone.droid{border-radius:36px;border-width:6px}
+.reel-screen{position:relative;aspect-ratio:9/19;overflow:hidden;background:#000;font-family:var(--sans);color:#fff}
+.reel-screen::before{content:"";position:absolute;top:11px;left:50%;width:11px;height:11px;margin-left:-5.5px;border-radius:50%;background:#000;box-shadow:0 0 0 1.5px rgba(255,255,255,.1);z-index:3}
+.rview{position:absolute;left:0;right:0;top:0;bottom:46px;overflow:hidden}
+.rf{position:absolute;left:0;top:0;width:100%;display:flex;flex-direction:column;transition:transform .36s cubic-bezier(.2,.85,.3,1)}
+.rv{position:relative;flex:1 1 0;min-height:0;overflow:hidden;background:#0b0f12}
+.phone .rv video{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;object-fit:cover;background:#0b0f12}
+.rv::before{content:"";position:absolute;left:0;right:0;bottom:0;height:46%;background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.62));z-index:1;pointer-events:none}
+.rv svg{display:block;fill:#fff}
+.rv .rail{position:absolute;right:7px;bottom:16px;z-index:2;display:grid;gap:13px;justify-items:center;text-align:center}
+.rv .rail span{display:grid;gap:3px;justify-items:center}
+.rv .rail svg{width:23px;height:23px;filter:drop-shadow(0 1px 2px rgba(0,0,0,.5))}
+.rv .rail b{font:600 9px/1 var(--sans);text-shadow:0 1px 2px rgba(0,0,0,.6)}
+.rv .cap{position:absolute;left:11px;right:52px;bottom:14px;z-index:2;display:grid;gap:6px;text-shadow:0 1px 2px rgba(0,0,0,.6)}
+.rv .who{display:flex;align-items:center;gap:6px;min-width:0}
+.rv .who i{flex:none;width:22px;height:22px;border-radius:50%;background:#5b6f78;font:700 10px/22px var(--sans);text-align:center;text-shadow:none}
+.rv1 .who i{background:#b0683a}.rv2 .who i{background:#4d7f5a}.rv3 .who i{background:#4a6f9c}.rv4 .who i{background:#8a5a8f}
+.rv .who b{font:600 10.5px/1.2 var(--sans);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rv .who em{flex:none;font:600 9px/1 var(--sans);font-style:normal;color:#0f0f0f;background:#fff;border-radius:20px;padding:5px 8px;text-shadow:none}
+.rv .line{font:400 10.5px/1.3 var(--sans);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rv .snd{font:400 9.5px/1.2 var(--sans);color:rgba(255,255,255,.85)}
+.rv .prog{position:absolute;left:0;bottom:0;z-index:2;width:0;height:2px;background:#e8e8e8}
+.rv.on .prog{animation:rprog 3s linear both}
+@keyframes rprog{to{width:100%}}
+.rnav{position:absolute;left:0;right:0;bottom:0;height:46px;display:grid;grid-template-columns:repeat(5,1fr);align-items:center;justify-items:center;background:#0f0f0f;padding-bottom:5px}
+.rnav span{display:grid;gap:3px;justify-items:center;opacity:.72}
+.rnav span.on,.rnav span.add{opacity:1}
+.rnav svg{display:block;width:17px;height:17px;fill:#fff}
+.rnav .add svg{width:27px;height:27px}
+.rnav b{font:500 7.5px/1 var(--sans)}
+.rbadge{position:absolute;top:36px;right:10px;z-index:2;display:flex;align-items:center;background:#18252C;color:#fff;border-radius:23px;padding-left:13px;font-family:var(--sans);box-shadow:0 10px 26px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.1)}
+.rbadge b{display:block;font:700 13.5px/1.2 var(--sans);font-variant-numeric:tabular-nums;white-space:nowrap}
+.rbadge small{display:block;font-size:10.5px;line-height:1.2;color:rgba(255,255,255,.68);margin-top:3px;white-space:nowrap}
+.rbadge .x{position:relative;flex:none;width:40px;height:46px}
+.rbadge .x::before,.rbadge .x::after{content:"";position:absolute;left:13px;top:22px;width:14px;height:2px;border-radius:1px;background:var(--teal)}
+.rbadge .x::before{transform:rotate(45deg)}
+.rbadge .x::after{transform:rotate(-45deg)}
+.rbadge.bump{animation:rbump .5s ease-out}
+@keyframes rbump{35%{transform:scale(1.07)}}
+@media (max-width:820px){.reels-split{grid-template-columns:1fr;grid-template-areas:"head" "art" "facts"}.reels-art{width:min(82%,250px);margin-top:30px}}
+@media (prefers-reduced-motion:reduce){.rf{transition:none}.rbadge.bump{animation:none}.rv.on .prog{animation:none}}
+
 .proof{width:min(100%,290px);margin:0 auto}
 .proof .eg{font-size:13px;color:var(--text-3);text-align:center;margin-top:14px}
 .steps .pic.shot{aspect-ratio:auto;padding:0;max-width:250px;display:block}
