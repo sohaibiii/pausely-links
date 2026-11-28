@@ -12,6 +12,9 @@ Rules these pages keep, same as the app (CLAUDE.md in the app repo):
     app sends nothing anywhere (the Privacy Policy says exactly what leaves);
   * the short video figure is an estimate and always says "about";
   * drawings of the app are drawings, and example numbers say they are examples;
+  * the app is on iPhone, iPad and Android, and the three are not the same: anything
+    only one of them does says which (the floating reels card is Android's, the
+    Dynamic Island is the iPhone's), and nothing is promised for a Mac;
   * no long dashes in copy.
 """
 import hashlib
@@ -19,6 +22,7 @@ import json
 import os
 import re
 import shutil
+import urllib.parse
 
 import analytics
 import gen
@@ -60,15 +64,42 @@ APPLE = ('<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path 
          '6.13c.61-.74 1.02-1.76.91-2.78-.88.04-1.94.59-2.57 1.32-.56.65-1.06 1.7-.93 2.7.98.08 1.98-.5 2.59-1.24z"/></svg>')
 
 
+# The Android app (Google Play, live since November 2026).
+PLAY_ID = "com.social.pausely"
+PLAY_URL = "https://play.google.com/store/apps/details?id=" + PLAY_ID
+
+PLAY = ('<svg viewBox="0 0 24 24" aria-hidden="true">'
+        '<path fill="#00D7FE" d="M3.5 1.9c-.3.3-.4.8-.4 1.3v17.6c0 .5.1 1 .4 1.3L13.4 12z"/>'
+        '<path fill="#00F076" d="M16.7 8.6 5.2 2c-.7-.4-1.3-.4-1.7-.1L13.4 12z"/>'
+        '<path fill="#FF3A44" d="M16.7 15.4 13.4 12l-9.9 10.1c.4.3 1 .3 1.7-.1z"/>'
+        '<path fill="#FFCE00" d="m16.7 15.4 4-2.3c1.1-.6 1.1-1.6 0-2.2l-4-2.3-3.3 3.4z"/></svg>')
+
+
 def store_url(ct):
     if PROVIDER_TOKEN:
         return f"{APP_STORE_URL}?pt={PROVIDER_TOKEN}&ct={ct}&mt=8"
     return APP_STORE_URL
 
 
+def play_url(ct):
+    """Google Play, with the page that sent the visitor in the install referrer."""
+    ref = urllib.parse.quote(f"utm_source={gen.DOMAIN or 'website'}&utm_medium=website&utm_campaign={ct}", safe="")
+    return f"{PLAY_URL}&referrer={ref}"
+
+
 def store(ct):
-    return (f'<a class="store" href="{E(store_url(ct))}">{APPLE}'
-            f'<span><small>Download on the</small><b>App Store</b></span></a>')
+    """Both shops, side by side. On an Android phone the page puts Google Play first."""
+    return (f'<span class="stores"><a class="store" href="{E(store_url(ct))}">{APPLE}'
+            f'<span><small>Download on the</small><b>App Store</b></span></a>'
+            f'<a class="store play" href="{E(play_url(ct))}">{PLAY}'
+            f'<span><small>Get it on</small><b>Google Play</b></span></a></span>')
+
+
+# On an Android phone, "Get the app" goes to Google Play and its button comes first.
+ANDROID_JS = ('<script>(function(){if(!/Android/i.test(navigator.userAgent))return;'
+              'document.documentElement.className+=" android";'
+              'var a=document.querySelectorAll("a[data-play]");'
+              'for(var i=0;i<a.length;i++)a[i].href=a[i].getAttribute("data-play")})();</script>')
 
 
 # Drawings of the app's screens, in the app's own words.
@@ -83,6 +114,34 @@ A_SHIELD = "A drawing of the block screen: the number 12, Opens today. Buttons: 
 A_BREATH = "A drawing of the breathing pause: a soft circle and the words Breathe in."
 A_CHOICE = ("A drawing of the choice screen: You paused. Buttons: I changed my mind, Or walk for 10 minutes, "
             "Continue for 5 minutes.")
+
+# The Android app's floating card ("Reels & time"), in its own words and in the
+# corner it starts in. The feed behind it is a drawing of no app in particular.
+def _reel(n):
+    return (f'<div class="rv rv{n}"><i class="blob"></i><span class="rail"><i></i><i></i><i></i></span>'
+            f'<span class="cap"><i></i><i></i><i></i></span></div>')
+
+
+REELS = f"""<div class="phone droid" id="reels" role="img" aria-label="A drawing of an Android phone showing a feed of short videos. In the top right corner Pausely's floating card reads 00:42, 12 reels, this visit, estimated. Example numbers.">
+  <div class="reel-screen">
+    <div class="rf">{"".join(_reel(n) for n in (1, 2, 3, 4, 1))}</div>
+    <div class="rbadge"><span><b><span class="rb-time">00:42</span> · <span class="rb-count">12</span> reels</b><small>This visit · estimated</small></span><i class="x"></i></div>
+  </div>
+</div>"""
+REELS_JS = ('<script>(function(){var r=document.getElementById("reels");'
+            'if(!r||!window.IntersectionObserver||(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches))return;'
+            'var t=r.querySelector(".rb-time"),c=r.querySelector(".rb-count"),f=r.querySelector(".rf"),b=r.querySelector(".rbadge"),'
+            's=42,n=12,i=0,on=false;'
+            'function two(v){return(v<10?"0":"")+v}'
+            'function tick(){if(!on)return;s++;'
+            'if(s>=150){s=42;n=12}'
+            't.textContent=two(Math.floor(s/60))+":"+two(s%60);'
+            'if(s%3===0){i++;n++;c.textContent=n;f.style.transition="";f.style.transform="translateY(-"+i*20+"%)";'
+            'b.classList.remove("bump");void b.offsetWidth;b.classList.add("bump");'
+            'if(i===4)setTimeout(function(){f.style.transition="none";f.style.transform="translateY(0)";i=0},600)}}'
+            'new IntersectionObserver(function(e){on=e[0].isIntersecting},{threshold:.3}).observe(r);'
+            'setInterval(tick,1000)})();</script>')
+
 
 def shot(img, alt, lazy=True):
     load = ' loading="lazy" decoding="async"' if lazy else ""
@@ -136,12 +195,13 @@ def layout(key, path, title, description, body, *, ct, dark=False, jsonld=(), og
     nav = "".join(
         f'<a href="{BASE}{p}"{current if k == key else ""}>{label}</a>' for k, label, p in NAV
     )
-    get = f'<a class="get" href="{E(store_url(ct + "-nav"))}">Get the app</a>'
+    play = E(play_url(ct + "-nav"))
+    get = f'<a class="get" href="{E(store_url(ct + "-nav"))}" data-play="{play}">Get the app</a>'
     ld = "".join(f'<script type="application/ld+json">{json.dumps(d, ensure_ascii=False)}</script>' for d in jsonld)
     brand = f'<a class="brand" href="{BASE}/"><img src="{BASE}/icon.png" alt="" width="32" height="32">{APP}</a>'
     top = f"""<header class="top"><div class="wrap">
   {brand}
-  <a class="get get-m" href="{E(store_url(ct + "-nav"))}">Get the app</a>
+  <a class="get get-m" href="{E(store_url(ct + "-nav"))}" data-play="{play}">Get the app</a>
   <nav aria-label="Pages">{nav}{get}</nav>
 </div></header>"""
     languages = " · ".join(
@@ -189,6 +249,7 @@ def layout(key, path, title, description, body, *, ct, dark=False, jsonld=(), og
     <li><a href="{BASE}/how-it-works/">How it works</a></li>
     <li><a href="{BASE}/pricing/">Pricing</a></li>
     <li><a href="{E(store_url(ct + "-footer"))}">Download on the App Store</a></li>
+    <li><a href="{E(play_url(ct + "-footer"))}">Get it on Google Play</a></li>
   </ul></div>
   <div><h4>Read</h4><ul>
     <li><a href="{BASE}/guides/">All guides</a></li>
@@ -201,9 +262,9 @@ def layout(key, path, title, description, body, *, ct, dark=False, jsonld=(), og
     <li><a href="{BASE}/terms/">Terms of Use</a></li>
     <li><a href="{BASE}/delete-data/">Your data</a></li>{analytics.footer_link(BASE)}
   </ul></div>
-  <p class="legal">© {YEAR} {APP} · {COMPANY}. Screens of the app show its demo data, and the simpler pictures are drawings. Apple, iPhone, iPad, Safari, Screen Time and App Store are trademarks of Apple Inc. TikTok and Instagram are trademarks of their owners. Pausely is not affiliated with, sponsored by or endorsed by them or by any other app named or shown here. Support in other languages: {languages}</p>
+  <p class="legal">© {YEAR} {APP} · {COMPANY}. Screens of the app show its demo data, and the simpler pictures are drawings. Apple, iPhone, iPad, Safari, Screen Time and App Store are trademarks of Apple Inc. Android and Google Play are trademarks of Google LLC. TikTok and Instagram are trademarks of their owners. Pausely is not affiliated with, sponsored by or endorsed by them or by any other app named or shown here. Support in other languages: {languages}</p>
 </div></footer>
-{analytics.banner(BASE)}</body>
+{analytics.banner(BASE)}{ANDROID_JS}</body>
 </html>
 """
     return html
@@ -224,24 +285,30 @@ FAQ = [
      "in every time you open the app, before the scrolling starts, and asks for a breath first. "
      f'<a href="{BASE}/guides/why-screen-time-limits-dont-work/">The longer comparison.</a>'),
     ("Which apps does it work with?",
-     "Any app on your iPhone or iPad. You pick them in Apple's own Screen Time picker, so it works with whichever "
-     "ones take your time. Pausely never learns their names. Apple hands it private codes instead."),
+     "Any app on your phone, so it works with whichever ones take your time. On iPhone and iPad you pick them in "
+     "Apple's own Screen Time picker, and Pausely never learns their names: Apple hands it private codes instead. "
+     "On Android you pick them from the list of apps on your phone."),
     ("Does Pausely see what I do in other apps?",
-     "No. It never sees your browsing, your messages or anything inside another app. iOS tells it how long the apps "
-     "you chose have been open, and Pausely keeps those minutes on your device."),
+     "On iPhone and iPad, no. It never sees your browsing, your messages or anything inside another app. iOS tells "
+     "it how long the apps you chose have been open, and Pausely keeps those minutes on your device. On Android, "
+     "Pausely uses the Accessibility service to see which app is in front. It never reads your messages or what "
+     "you type, and never taps or types for you. In Chrome and a few other browsers it also sees the address of "
+     "the site you open, so it can pause the sites you chose. It asks first, and explains all of this before you "
+     "say yes."),
     ("Is Pausely free?",
-     "Yes, and free is a working product, not a demo: two apps protected, one rule, the breathing pause, your whole "
-     "progress screen, today's time in each app you chose, and the countdown on the Lock Screen and in the Dynamic "
-     "Island."),
+     "Yes, and free is a working product, not a demo: two apps protected, one rule, the breathing pause and your "
+     "whole progress screen. On iPhone and iPad it also covers today's time in each app you chose, and the "
+     "countdown on the Lock Screen and in the Dynamic Island."),
     ("What does Premium add?",
      "Every app, website and category you choose, unlimited rules and daily limits, every kind of pause, Block "
-     "everything, strict mode and Lock Pausely, time banners, your patterns, widgets, and the optional AI pauses. "
+     "everything, strict mode and Lock Pausely, time banners on iPhone, the floating reels card on Android, your "
+     "patterns, widgets, and the optional AI pauses. "
      f'<a href="{BASE}/pricing/">See the plans.</a>'),
     ("Do I need an account?",
      "No. There is no sign up, no email field and no password anywhere in the app."),
     ("Which devices does it need?",
-     "An iPhone or iPad running iOS 17 or iPadOS 17, or newer. There is no Mac version, because the Screen Time "
-     "frameworks Pausely is built on are not available there."),
+     "An iPhone or iPad running iOS 17 or iPadOS 17 or newer, or an Android phone running Android 8 or newer. "
+     "There is no Mac version."),
 ]
 
 
@@ -262,7 +329,7 @@ def home():
 <main id="content">
 <div class="wrap hero-grid">
   <div class="hero-copy">
-    <p class="kicker">For iPhone and iPad</p>
+    <p class="kicker">For iPhone, iPad and Android</p>
     <h1>Stop scrolling <em>on autopilot.</em></h1>
     <p class="lede">Pausely puts a short pause in front of TikTok, Instagram or any app you open without thinking. Breathe first. Then decide if you still want to go in.</p>
     <div class="cta-row">
@@ -311,18 +378,36 @@ def home():
   </div>
 </div></section>
 
-<section class="sec"><div class="wrap">
-  <h2>The real app, <em>on your iPhone.</em></h2>
-  <p class="intro">A breath is the pause everybody starts with. With Premium you can pick another, or let Pausely choose a different one each time.</p>
-  <ol class="strip">
-    <li>{shot("breathing", "The breathing pause in Pausely: a soft circle inside a ring, with the word Hold and a countdown.")}<h3>Breathe</h3><p>Ten seconds, with a circle to follow.</p></li>
-    <li>{shot("typing", "The typing pause: Type this to continue, with twenty characters to type and a field that says Type here.")}<h3>Or type</h3><p>Twenty characters. Hard to do on autopilot.</p></li>
-    <li>{shot("intention", "The intention pause: Why are you opening this app? Twelve tiles such as Reply to someone, Just checking, Bored and Out of habit.")}<h3>Or say why</h3><p>One tap on the reason that fits.</p></li>
-    <li>{shot("choice", "The choice screen: You paused. Buttons: I changed my mind, Or walk for 10 minutes, Or read for 10 minutes, and Continue for 1 or 5 minutes.")}<h3>Then choose</h3><p>Stop here, do something else, or go in for a minute.</p></li>
+<section class="sec" id="pauses"><div class="wrap">
+  <h2>Six kinds of pause. <em>Pick yours.</em></h2>
+  <p class="intro">A breath is the pause everybody starts with, and it is free. With Premium you can pick another, or let Pausely choose a different one each time.</p>
+  <ol class="strip six">
+    <li>{shot("breathing", "The breathing pause in Pausely: a soft circle inside a ring, with the word Hold and a countdown.")}<h3>Breathe <i class="tag free">Free</i></h3><p>Ten seconds, with a circle to follow.</p></li>
+    <li>{shot("typing", "The typing pause: Type this to continue, with twenty characters to type and a field that says Type here.")}<h3>Type <i class="tag">Premium</i></h3><p>Twenty characters. Hard to do on autopilot.</p></li>
+    <li>{shot("intention", "The intention pause: Why are you opening this app? Twelve tiles such as Reply to someone, Just checking, Bored and Out of habit.")}<h3>Say why <i class="tag">Premium</i></h3><p>One tap on the reason that fits.</p></li>
+    <li>{shot("reminder", "The reminder pause: a short line to read under the label On being here, with a bar that fills while you read, and Show me another.")}<h3>Read a line <i class="tag">Premium</i></h3><p>A reminder from Pausely, or one you wrote yourself.</p></li>
+    <li>{shot("question", "The question pause: One question. One try. Which of these rivers runs through the middle of the capital city? Four answers and an Answer button.")}<h3>Answer a question <i class="tag">Premium</i></h3><p>One question about where you live. One try.</p></li>
+    <li>{shot("reflect", "The reflection pause: you said Just checking, and Pausely asks What would make the next hour feel like it went well?")}<h3>Reflect <i class="tag">Premium</i></h3><p>Say why you are here. Get one gentle question back.</p></li>
   </ol>
-  <p class="strip-hint">Swipe to see all four.</p>
-  <p class="fine">Want it firmer? Rules, daily limits, Block everything and strict mode are there when you ask. <a href="{BASE}/how-it-works/">Everything Pausely does</a></p>
+  <p class="strip-hint">Swipe to see all six.</p>
+  <p class="fine">Screens from the iPhone app, showing its demo data. The Android app has the same pauses, though a new one can reach it a little later. The last two are written by AI and stay off until you turn AI pauses on. <a href="{BASE}/privacy/#ai">What they send</a></p>
+  <p class="fine">After any pause you choose: stop there, do something else, or go in for a few minutes. Want it firmer? Rules, daily limits, Block everything and strict mode are there when you ask. <a href="{BASE}/how-it-works/">Everything Pausely does</a></p>
 </div></section>
+
+<section class="sec" id="reels-count"><div class="wrap reels-split">
+  <div class="reels-head">
+    <h2>How many reels <em>was that?</em></h2>
+    <p class="intro">It is easy to lose count of short videos. Pausely keeps a rough count for you, and shows it while you are still scrolling.</p>
+  </div>
+  <div class="reels-art">{REELS}<p class="eg">A drawing, with example numbers.</p></div>
+  <ul class="facts">
+    <li><b>On Android</b><span>A small card floats over the apps you pick. It shows how long this visit has lasted and about how many videos went by. One tap hides it.</span></li>
+    <li><b>On iPhone</b><span>iOS doesn't let one app draw over another, so Pausely sends a banner every few minutes: your time in the app today, and about how many short videos that comes to.</span></li>
+    <li><b>An estimate</b><span>Some videos can be missed, and not every feed can be counted. The timer keeps going either way.</span></li>
+    <li><b>Yours to turn on</b><span>Part of Premium, and off until you switch it on. The totals stay on your phone.</span></li>
+  </ul>
+</div></section>
+{REELS_JS}
 
 <section class="sec"><div class="wrap split">
   <div>
@@ -330,7 +415,7 @@ def home():
     <p class="intro">Every time you walk away, Pausely counts it. The progress screen is free, and your numbers stay on your phone.</p>
     <ul class="facts">
       <li><b>No account</b><span>Nothing to sign up for.</span></li>
-      <li><b>Your apps stay private</b><span>Pausely can't read which apps you picked. Apple keeps that.</span></li>
+      <li><b>Your apps stay private</b><span>On iPhone, Pausely can't even read which apps you picked. Apple keeps that.</span></li>
       <li><b>On your device</b><span>Your time, your pauses and your journal stay on your phone.</span></li>
     </ul>
     <p class="fine"><a href="{BASE}/privacy/">What leaves the phone, exactly</a></p>
@@ -374,7 +459,7 @@ def home():
   <h2>Take a breath <em>before the scroll.</em></h2>
   <div class="cta-row">
     {store("home-closing")}
-    <p class="cta-note">iPhone and iPad, iOS 17 or newer.<br>English and seven other languages.</p>
+    <p class="cta-note">iPhone, iPad and Android.<br>English and seven other languages.</p>
   </div>
 </div></section>"""
     ld = [
@@ -382,11 +467,11 @@ def home():
          "url": SITE + "/"},
         ORG,
         {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Pausely",
-         "operatingSystem": "iOS", "applicationCategory": "LifestyleApplication",
+         "operatingSystem": "iOS, Android", "applicationCategory": "LifestyleApplication",
          "image": SITE + "/apple-touch-icon.png",
-         "description": "An app for iPhone and iPad that puts a short pause in front of the apps you choose, "
-                        "so opening them becomes a decision.",
-         "url": SITE + "/", "downloadUrl": APP_STORE_URL,
+         "description": "An app for iPhone, iPad and Android that puts a short pause in front of the apps you "
+                        "choose, so opening them becomes a decision.",
+         "url": SITE + "/", "downloadUrl": [APP_STORE_URL, PLAY_URL],
          "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
          "publisher": ORG},
         {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
@@ -394,8 +479,8 @@ def home():
             for q, a in faq]},
     ]
     return layout("home", "/", "Pausely: Stop Scrolling on Autopilot, Pause Before You Open",
-                  "Pausely puts a ten second pause in front of the apps you open without thinking, on iPhone and "
-                  "iPad. Breathe first, then decide. Free to start, no account.",
+                  "Pausely puts a ten second pause in front of the apps you open without thinking, on iPhone, iPad "
+                  "and Android. Breathe first, then decide. Free to start.",
                   body, ct="home", dark=True, jsonld=ld)
 
 
@@ -417,7 +502,8 @@ def how_it_works():
     steps = "".join([
         step("Setup, once", "Choose the apps that take your time",
              ["Pick them in Apple's own picker. Two are free, and Premium covers every app, website and whole category you choose.",
-              "Pausely uses Apple's Screen Time, the same system behind iOS's built in app limits. It asks for that permission once, and you can take it back in Settings at any time."],
+              "On iPhone and iPad, Pausely uses Apple's Screen Time, the same system behind iOS's built in app limits. It asks for that permission once, and you can take it back in Settings at any time.",
+              "On Android it uses the Accessibility service to notice when one of your apps comes to the front. It explains what that lets it see before you say yes."],
              "shot", "", shot("home-apps", "Pausely's Home: Protection is on, today's pauses, and a row of your apps, each with its own switch.")),
         step("When you tap one", "The block screen comes first",
              ["Instead of the app, you see a number: how many times you have opened it today. No comment, no lecture. Only the number.",
@@ -432,7 +518,7 @@ def how_it_works():
               "Under <kbd>Continue for</kbd>, tap <kbd>1m</kbd> or <kbd>5m</kbd> and the app opens for that long. Or take the third way out: one of the things you said you would rather do, such as a walk, a book or a glass of water, with a timer when you start it."],
              "shot", "", shot("choice", "The choice screen: You paused. I changed my mind, Or walk for 10 minutes, Or read for 10 minutes, Continue for 1 or 5 minutes.")),
         step("If you go in", "The time is yours, and it ends",
-             ["A countdown runs on the Lock Screen and in the Dynamic Island while the app is open.",
+             ["A countdown runs while the app is open: on the Lock Screen and in the Dynamic Island on iPhone, in a quiet notification on Android.",
               "When the time is up, the pause is back in front of the app. Nothing is taken from you. You are asked again."],
              "p6", "A drawing of a countdown: 4 minutes 32 seconds left, then the pause comes back.", window_pic),
         step("Over time", "Watch it add up",
@@ -463,22 +549,23 @@ def how_it_works():
   {rows([
       ("Things to do instead", "free", "Pick up to three things you would rather do. They sit on the choice screen as a third way out. Premium has room for six."),
       ("A journal", "free", "For the times you would rather write than scroll. It stays on your device."),
-      ("Time banners", "premium", "Every few minutes in an app you picked, a banner says how long you have spent in it today."),
+      ("Time banners", "premium", "On iPhone and iPad. Every few minutes in an app you picked, a banner says how long you have spent in it today."),
       ("Short videos", "premium", "About how many short videos your time came to. An estimate, never a count."),
-      ("Widgets and Siri", "premium", "Home Screen and Lock Screen widgets, Control Center buttons, Siri and Shortcuts."),
+      ("Reels and time", "premium", "On Android. A small card floats over the apps you pick, with a timer for this visit and about how many reels went by. Some videos can be missed."),
+      ("Widgets", "premium", "Home Screen widgets on both. On iPhone also the Lock Screen, Control Center buttons, Siri and Shortcuts."),
   ])}
 </div></section>
 
 <section class="sec"><div class="wrap">
   <h2>Setting it up takes <em>a few minutes.</em></h2>
   <ol class="setup">
-    <li><span><b>Choose your apps.</b> Apple asks for Screen Time access on the same screen. Pausely can't work without it.</span></li>
+    <li><span><b>Choose your apps.</b> On iPhone, Apple asks for Screen Time access on the same screen. On Android, Pausely asks for Accessibility access. It can't work without it.</span></li>
     <li><span><b>Try your pause once,</b> so you know what is coming.</span></li>
     <li><span><b>Add things you would rather do.</b> A walk, a book, a glass of water, or something of your own.</span></li>
     <li><span><b>Allow notifications if you want them.</b> Pausely says why it uses them first.</span></li>
     <li><span><b>Done.</b> Open one of your apps and meet the pause.</span></li>
   </ol>
-  <div class="cta-row" style="margin-top:34px">{store("how-it-works")}<p class="cta-note">Free to start.<br>iPhone and iPad, iOS 17 or newer.</p></div>
+  <div class="cta-row" style="margin-top:34px">{store("how-it-works")}<p class="cta-note">Free to start.<br>iPhone, iPad and Android.</p></div>
 </div></section>
 </main>"""
     return layout("how-it-works", "/how-it-works/", "How Pausely Works: A Pause Before the Apps You Overuse",
@@ -505,18 +592,18 @@ def pricing():
       <li>One rule</li>
       <li>The breathing pause</li>
       <li>The whole progress screen: pauses, wins, time saved, streak and chart</li>
-      <li>Time per app</li>
-      <li>The countdown on the Lock Screen and in the Dynamic Island</li>
+      <li>The countdown while an app is open</li>
+      <li>On iPhone and iPad: Time per app</li>
     </ul></div>
     <div><h3>Premium</h3><p class="price">Everything in Free, plus</p><ul>
       <li>Every app, website and category you choose</li>
       <li>As many rules as you like, and daily limits</li>
       <li>Every kind of pause, and a pause that asks a little more when you keep reaching for the same app</li>
       <li>Block everything, strict mode and Lock Pausely</li>
-      <li>Time banners and the short video estimate</li>
+      <li>Time banners on iPhone, the floating reels card on Android, and the short video estimate</li>
       <li>Your patterns, the mood insight and your week in words</li>
       <li>Room for six things to do instead</li>
-      <li>Widgets, Control Center, Siri and Shortcuts</li>
+      <li>Widgets, and on iPhone Control Center, Siri and Shortcuts</li>
       <li>The optional AI pauses, off until you turn them on</li>
     </ul></div>
   </div>
@@ -524,30 +611,31 @@ def pricing():
   <div class="table-scroll"><table class="price-table">
     <thead><tr><th>Premium plan</th><th>How it is billed</th><th>Good to know</th></tr></thead>
     <tbody>
-      <tr><td>Monthly</td><td class="num">Every month</td><td>Cancel any time in your App Store settings.</td></tr>
+      <tr><td>Monthly</td><td class="num">Every month</td><td>Cancel any time in your App Store or Google Play settings.</td></tr>
       <tr><td>Yearly</td><td class="num">Every year</td><td>Starts with a free trial where one is offered.</td></tr>
       <tr><td>Lifetime</td><td class="num">One payment</td><td>No renewal.</td></tr>
-      <tr><td>Family Yearly</td><td class="num">Every year</td><td>Shared through Apple's Family Sharing. Starts with a free trial where one is offered.</td></tr>
-      <tr><td>Family Lifetime</td><td class="num">One payment</td><td>One payment for the whole family group.</td></tr>
+      <tr><td>Family Yearly</td><td class="num">Every year</td><td>On iPhone and iPad, shared through Apple's Family Sharing. Starts with a free trial where one is offered.</td></tr>
+      <tr><td>Family Lifetime</td><td class="num">One payment</td><td>On iPhone and iPad. One payment for the whole family group.</td></tr>
     </tbody>
   </table></div>
-  <p class="fine">The price for your country is shown in the app and on the App Store before you pay, in your own currency. Billing, refunds and cancellations are handled by Apple. <a href="{BASE}/terms/#subscriptions">Subscription terms</a></p>
+  <p class="fine">The price for your country is shown in the app and in its store before you pay, in your own currency. Billing, refunds and cancellations are handled by Apple on iPhone and iPad, and by Google Play on Android. <a href="{BASE}/terms/#subscriptions">Subscription terms</a></p>
 </div>
 
 <section class="sec" style="margin-top:clamp(48px,7vw,90px);border-top:1px solid var(--line-d)"><div class="wrap">
   <h2>The small print, <em>in plain words.</em></h2>
   <div class="faq">
     <details open><summary>What happens if my subscription ends?</summary><div><p>What protects you keeps protecting you. Every app you chose and every rule keeps running and stays editable, and the pause you chose keeps standing in front of your apps. Adding more closes, and so do the extras that show you things, such as widgets and time banners.</p></div></details>
-    <details><summary>How do the family plans work?</summary><div><p>Family Yearly and Family Lifetime are shared through Apple's Family Sharing. Each person gets Premium in their own copy of Pausely, on their own device. Nobody sees anyone else's apps, numbers or journal.</p></div></details>
-    <details><summary>Can I restore Premium on a new phone?</summary><div><p>Yes. Open the Premium screen in Pausely and tap <kbd>Restore purchases</kbd>. Premium belongs to your Apple Account, not to the device.</p></div></details>
+    <details><summary>How do the family plans work?</summary><div><p>On iPhone and iPad, Family Yearly and Family Lifetime are shared through Apple's Family Sharing. Each person gets Premium in their own copy of Pausely, on their own device. Nobody sees anyone else's apps, numbers or journal.</p></div></details>
+    <details><summary>Can I restore Premium on a new phone?</summary><div><p>Yes. Open the Premium screen in Pausely and tap <kbd>Restore purchases</kbd>. Premium belongs to your Apple Account, or on Android to your Google account, not to the device.</p></div></details>
+    <details><summary>Does Premium move between iPhone and Android?</summary><div><p>No. Pausely has no accounts of its own, so Premium stays with the store you bought it in: the App Store or Google Play.</p></div></details>
     <details><summary>Are there ads in Pausely?</summary><div><p>No. Pausely shows no ads, and Premium is the only thing it sells.</p></div></details>
   </div>
   <div class="cta-row" style="margin-top:34px">{store("pricing")}<p class="cta-note">Start free.<br>Upgrade inside the app if you want to.</p></div>
 </div></section>
 </main>"""
     return layout("pricing", "/pricing/", "Pausely Pricing: Free Plan and Premium",
-                  "Pausely is free for two apps, with the breathing pause and your progress screen. Premium adds "
-                  "every app and website, every pause, daily limits and strict mode.", body, ct="pricing",
+                  "Pausely is free for two apps on iPhone, iPad and Android, with the breathing pause. Premium adds "
+                  "every app, every pause, daily limits and strict mode.", body, ct="pricing",
                   jsonld=[crumbs(("Pricing", "/pricing/"))])
 
 
