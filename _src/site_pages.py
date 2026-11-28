@@ -185,17 +185,17 @@ def layout(key, path, title, description, body, *, ct, dark=False, jsonld=(), og
     {brand}
     <p>A breath before the scroll. Made by {COMPANY}. Write to <a href="mailto:{EMAIL}">{EMAIL}</a> and a person will reply.</p>
   </div>
-  <div><h4>The app</h4><ul>
+  <div><p class="fh">The app</p><ul>
     <li><a href="{BASE}/how-it-works/">How it works</a></li>
     <li><a href="{BASE}/pricing/">Pricing</a></li>
     <li><a href="{E(store_url(ct + "-footer"))}">Download on the App Store</a></li>
   </ul></div>
-  <div><h4>Read</h4><ul>
+  <div><p class="fh">Read</p><ul>
     <li><a href="{BASE}/guides/">All guides</a></li>
     <li><a href="{BASE}/guides/how-to-stop-doomscrolling/">Stop doomscrolling</a></li>
     <li><a href="{BASE}/guides/how-to-block-tiktok-on-iphone/">Block TikTok on iPhone</a></li>
   </ul></div>
-  <div><h4>Help and legal</h4><ul>
+  <div><p class="fh">Help and legal</p><ul>
     <li><a href="{BASE}/support/">Support</a></li>
     <li><a href="{BASE}/privacy/">Privacy Policy</a></li>
     <li><a href="{BASE}/terms/">Terms of Use</a></li>

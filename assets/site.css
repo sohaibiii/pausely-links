@@ -237,7 +237,7 @@ kbd{font:inherit;font-weight:600;background:rgba(238,244,243,.1);border-radius:6
 /* footer */
 footer{background:var(--bg);color:var(--text-2);border-top:1px solid var(--line);font-size:15px;padding:36px 0 44px}
 footer .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) repeat(3,minmax(0,1fr));gap:28px}
-footer h4{font:600 12px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--text);margin:0 0 12px;opacity:.7}
+footer .fh{font:600 12px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--text);margin:0 0 12px;opacity:.7}
 footer ul{list-style:none;margin:0;padding:0}
 footer li{margin:7px 0}
 footer a{color:var(--text-2);text-decoration:none}
