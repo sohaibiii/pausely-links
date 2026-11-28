@@ -20,8 +20,7 @@ GUIDES = [
         "minutes": 7,
         "title": "How to stop doomscrolling on iPhone: 7 things that work",
         "seo_title": "How to Stop Doomscrolling on iPhone: 7 Things That Work",
-        "description": "Seven practical ways to stop doomscrolling on an iPhone, from moving one icon to setting "
-                       "limits that hold, with exact steps and an honest note on what each one can't do.",
+        "description": "Seven practical ways to stop doomscrolling on an iPhone, from moving one icon to setting limits that hold, with exact steps and what each one can't do.",
         "blurb": "Seven changes, lightest first. Most take under a minute and none of them need willpower at midnight.",
         "standfirst": "Doomscrolling is rarely a decision. Your thumb opens the app before you have noticed, and "
                       "twenty minutes go by. So the fixes that work are the ones that interrupt the opening, not "
@@ -91,8 +90,7 @@ GUIDES = [
         "minutes": 6,
         "title": "How to block TikTok on iPhone (4 ways, lightest to firmest)",
         "seo_title": "How to Block TikTok on iPhone: 4 Ways That Work",
-        "description": "Four ways to block TikTok on an iPhone: TikTok's own limit, a Screen Time limit, a full "
-                       "block of the app and tiktok.com, and a pause before it opens. Exact steps for each.",
+        "description": "Four ways to block TikTok on an iPhone: TikTok's own limit, a Screen Time limit, a full block of the app and tiktok.com, and a pause before it opens.",
         "blurb": "From TikTok's own timer to a full block of the app and the website, and where each one gives way.",
         "standfirst": "TikTok lives in two places on your phone: the app, and tiktok.com in Safari. Here are four "
                       "ways to block it, from a soft reminder to a block with no way round, with the steps for "
@@ -150,9 +148,8 @@ GUIDES = [
         "topic": "Blocking apps",
         "minutes": 6,
         "title": "How to block Instagram on iPhone without deleting your account",
-        "seo_title": "How to Block Instagram on iPhone (Without Deleting Your Account)",
-        "description": "How to block or limit Instagram on an iPhone: its own daily limit, a Screen Time limit, "
-                       "blocking instagram.com in Safari, and a pause before it opens. No account deletion needed.",
+        "seo_title": "How to Block Instagram on iPhone (No Account Deletion)",
+        "description": "How to block or limit Instagram on an iPhone: its own daily limit, a Screen Time limit, blocking instagram.com in Safari, and a pause before it opens.",
         "blurb": "Keep the account and the messages. Lose the forty automatic opens a day.",
         "standfirst": "Most people don't want to leave Instagram. They want their messages and their friends' "
                       "photos, without the hour of Reels that comes attached. Here is how to block or limit it "
@@ -205,9 +202,8 @@ GUIDES = [
         "topic": "Screen Time",
         "minutes": 5,
         "title": "Why you keep tapping Ignore Limit, and how to make a Screen Time limit hold",
-        "seo_title": "Screen Time Limits Not Working? How to Stop Tapping Ignore Limit",
-        "description": "Why Screen Time app limits are so easy to ignore on iPhone, how to remove the Ignore Limit "
-                       "button with a passcode, and what to do when a limit is the wrong tool.",
+        "seo_title": "Screen Time Limits Not Working? Stop Tapping Ignore Limit",
+        "description": "Why Screen Time limits are so easy to ignore on iPhone, how to remove the Ignore Limit button with a passcode, and what to use when a limit is the wrong tool.",
         "blurb": "The Ignore Limit button is one tap. Here is how to remove it, and why a limit may be the wrong tool anyway.",
         "standfirst": "You set a one hour limit. The hour ends, a grey screen appears, and your thumb has tapped "
                       "Ignore Limit For Today before you have read it. You are not unusually weak. The limit was "
@@ -260,9 +256,8 @@ GUIDES = [
         "topic": "Screen Time",
         "minutes": 5,
         "title": "How to block apps at night on iPhone",
-        "seo_title": "How to Block Apps at Night on iPhone (Downtime, Step by Step)",
-        "description": "How to block apps at night on an iPhone with Downtime, how to keep your alarm and calls "
-                       "working, why Sleep Focus alone doesn't block apps, and how to make the block hold.",
+        "seo_title": "How to Block Apps at Night on iPhone: Downtime Step by Step",
+        "description": "How to block apps at night on an iPhone with Downtime, keep your alarm and calls working, and make the block hold. Why Sleep Focus alone doesn't block apps.",
         "blurb": "Downtime, step by step, with your alarm and calls still working, and how to stop yourself overriding it.",
         "standfirst": "The last scroll of the day is the longest one, because nothing is waiting to interrupt it. "
                       "Your iPhone can close chosen apps at a set time every night. Here is how to set it up so "
