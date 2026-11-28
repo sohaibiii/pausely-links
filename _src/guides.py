@@ -284,6 +284,7 @@ GUIDES = [
   <li>Under <kbd>Contacts</kbd> on the same screen, choose who can reach you during Downtime.</li>
 </ol>
 <p>Be honest with this list. If you allow the browser, the feeds are all still there on the web.</p>
+<p>Shopping apps belong off the list too if late night orders are the problem rather than the feeds. We also make On Ice, a shopping blocker, and wrote a guide on <a href="https://getonice.com/guides/how-to-stop-late-night-online-shopping/">how to stop late night online shopping</a>.</p>
 
 <h2>Make it hold</h2>
 <p>Out of the box, a covered app has an <kbd>Ignore Limit</kbd> button under it, with <kbd>Ignore Limit For Today</kbd> one tap further in. To remove it:</p>
