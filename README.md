@@ -31,6 +31,8 @@ Rules these pages keep, and `site_pages.check` fails the build on the ones a mac
 - Screens of the app are real screenshots (`assets/img/`, the app's demo data); the simpler pictures are drawings in the app's own words.
 - The demo in the hero (`assets/video/demo.mp4`) is cut from the App Store preview, with two scenes added: tapping TikTok on the Home Screen, and the typing pause. TikTok is named and shown as the app being paused, and the footer says Pausely is not affiliated with it.
 - No borrowed statistics, studies, press or reviews.
+- The app is on iPhone, iPad and Android (Google Play, `com.social.pausely`), and they are not the same app. Anything only one of them does says which: the floating reels card is Android's, the Dynamic Island and Screen Time are the iPhone's. Nothing is promised for a Mac.
+- The reels card on the home page is a drawing of Android's "Reels & time" badge, in its words and in the corner it starts in, over a feed that is no app in particular. Its count is an estimate and the page says so.
 - No claim that the app sends nothing anywhere. The Privacy Policy says exactly what leaves.
 - No prices. Yearly changes on 1 December 2026, and the App Store shows the real one.
 - No long dashes in copy.
