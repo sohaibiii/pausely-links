@@ -312,6 +312,10 @@ def layout(key, path, title, description, body, *, ct, dark=False, jsonld=(), og
     <li><a href="{BASE}/guides/how-to-stop-doomscrolling/">Stop doomscrolling</a></li>
     <li><a href="{BASE}/guides/how-to-block-tiktok-on-iphone/">Block TikTok on iPhone</a></li>
   </ul></div>
+  <div><p class="fh">Our other apps</p><ul>
+    <li><a href="https://getonice.com/">On Ice</a>: stop impulse buying</li>
+    <li><a href="https://www.joinclary.com/">Clary</a>: period and pregnancy tracker</li>
+  </ul></div>
   <div><p class="fh">Help and legal</p><ul>
     <li><a href="{BASE}/support/">Support</a></li>
     <li><a href="{BASE}/privacy/">Privacy Policy</a></li>
@@ -329,6 +333,10 @@ def layout(key, path, title, description, body, *, ct, dark=False, jsonld=(), og
   <div><p class="fh">{t("The app")}</p><ul>
     <li><a href="{E(store_url(ct + "-footer"))}">{t("Download on the App Store")}</a></li>
     <li><a href="{E(play_url(ct + "-footer"))}">{t("Get it on Google Play")}</a></li>
+  </ul></div>
+  <div><p class="fh">{t("Our other apps")}</p><ul>
+    <li><a href="https://getonice.com/">On Ice</a>: {t("stop impulse buying")}</li>
+    <li><a href="https://www.joinclary.com/">Clary</a>: {t("period and pregnancy tracker")}</li>
   </ul></div>
   <div><p class="fh">{t("Help and legal")}</p><ul>
     <li><a href="{BASE}{prefix}/">{W["nav.support"]}</a></li>

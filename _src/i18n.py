@@ -770,3 +770,20 @@ _replace("ja", "Pauselyは無料ですか？",
          "カウントダウンも使えます。")
 _replace("ja", "どのデバイスで使えますか？",
          "iOS 17またはiPadOS 17以降のiPhoneかiPad、またはAndroid 8以降のAndroidスマートフォンです。Mac版はありません。")
+
+# Footer: links to the company's other apps (28 Nov 2026).
+T["de"].update({
+    "Our other apps": "Unsere anderen Apps",
+    "stop impulse buying": "weniger Impulskäufe",
+    "period and pregnancy tracker": "Zyklus und Schwangerschaft im Blick",
+})
+T["es"].update({
+    "Our other apps": "Nuestras otras apps",
+    "stop impulse buying": "frena las compras por impulso",
+    "period and pregnancy tracker": "seguimiento de periodo y embarazo",
+})
+T["ja"].update({
+    "Our other apps": "ほかのアプリ",
+    "stop impulse buying": "衝動買いを減らす",
+    "period and pregnancy tracker": "生理と妊娠の記録",
+})
