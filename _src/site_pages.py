@@ -116,30 +116,77 @@ A_CHOICE = ("A drawing of the choice screen: You paused. Buttons: I changed my m
             "Continue for 5 minutes.")
 
 # The Android app's floating card ("Reels & time"), in its own words and in the
-# corner it starts in. The feed behind it is a drawing of no app in particular.
-def _reel(n):
-    return (f'<div class="rv rv{n}"><i class="blob"></i><span class="rail"><i></i><i></i><i></i></span>'
-            f'<span class="cap"><i></i><i></i><i></i></span></div>')
+# corner it starts in. The player behind it is a made-up app (called Clips, the
+# name the app's own examples use): its layout is the one every short-video app
+# shares, with no real app's name or logo. The clips are stock footage whose
+# licence allows this use (assets/video/reels/SOURCES.md), never somebody's
+# real post, and the names and numbers on them are invented.
+_ICON = {
+    "up": '<path d="M2 10h4v11H2zM8 21h9.3a2 2 0 0 0 1.9-1.4l2.6-7.8A2 2 0 0 0 19.9 9H14l.8-4.2a1.9 1.9 0 0 0-3.4-1.4L8 9.5z"/>',
+    "down": '<path transform="rotate(180 12 12)" d="M2 10h4v11H2zM8 21h9.3a2 2 0 0 0 1.9-1.4l2.6-7.8A2 2 0 0 0 19.9 9H14l.8-4.2a1.9 1.9 0 0 0-3.4-1.4L8 9.5z"/>',
+    "say": '<path d="M4 3h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H9l-5 4v-4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/>',
+    "send": '<path d="M14 4l8 7.5-8 7.5v-4.6C8.5 14.4 4.9 16 2 20c.8-6 4.3-10.6 12-11.5z"/>',
+    "home": '<path d="M12 3l9 8h-2.5v9h-5v-6h-3v6h-5v-9H3z"/>',
+    "clips": '<path d="M7 2h10a3 3 0 0 1 3 3v14a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3zm3 6.5v7l6-3.5z"/>',
+    "plus": '<path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1 5h2v4h4v2h-4v4h-2v-4H7v-2h4z"/>',
+    "subs": '<path d="M6 3h12v2H6zM4 7h16v2H4zm-1 4h18a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1zm7 2.5v5l4.5-2.5z"/>',
+    "you": '<path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 4a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7zm0 14a8 8 0 0 1-6-2.7c1.2-2 3.4-3.3 6-3.3s4.8 1.3 6 3.3A8 8 0 0 1 12 20z"/>',
+}
 
 
-REELS = f"""<div class="phone droid" id="reels" role="img" aria-label="A drawing of an Android phone showing a feed of short videos. In the top right corner Pausely's floating card reads 00:42, 12 reels, this visit, estimated. Example numbers.">
+def _ic(name):
+    return f'<svg viewBox="0 0 24 24" aria-hidden="true">{_ICON[name]}</svg>'
+
+
+# file, who posted it, the line under the name, likes, comments. All invented.
+REEL_CLIPS = [
+    ("1", "Kitchen diaries", "The easiest weeknight dinner", "24K", "312"),
+    ("2", "Dog days", "He heard the word walk", "108K", "1.2K"),
+    ("3", "Somewhere south", "Found this beach by accident", "9.4K", "87"),
+    ("4", "Sweet shift", "Sprinkles, in slow motion", "61K", "540"),
+    ("5", "Studio hours", "Day 12 of painting every day", "15K", "203"),
+]
+
+
+def _reel(clip, n):
+    f, who, line, likes, says = clip
+    return (f'<div class="rv rv{n}">'
+            f'<video muted loop playsinline preload="none" poster="{ASSETS}/video/reels/{f}.jpg" src="{ASSETS}/video/reels/{f}.mp4"></video>'
+            f'<span class="rail"><span>{_ic("up")}<b>{likes}</b></span><span>{_ic("down")}<b>Dislike</b></span>'
+            f'<span>{_ic("say")}<b>{says}</b></span><span>{_ic("send")}<b>Share</b></span></span>'
+            f'<span class="cap"><span class="who"><i>{E(who[0])}</i><b>{E(who)}</b><em>Follow</em></span>'
+            f'<span class="line">{E(line)}</span><span class="snd">♪ Original sound</span></span>'
+            f'<i class="prog"></i></div>')
+
+
+_REEL_TRACK = REEL_CLIPS + REEL_CLIPS[:1]   # the first again, so the feed can loop
+REELS = f"""<div class="phone droid" id="reels" role="img" data-nosnippet aria-label="An Android phone playing short videos in a made-up app. In the top right corner Pausely's floating card reads 00:42, 12 reels, this visit, estimated. Example numbers.">
   <div class="reel-screen">
-    <div class="rf">{"".join(_reel(n) for n in (1, 2, 3, 4, 1))}</div>
+    <div class="rview"><div class="rf" style="height:{len(_REEL_TRACK) * 100}%">{"".join(_reel(c, n) for n, c in enumerate(_REEL_TRACK))}</div></div>
+    <div class="rnav"><span>{_ic("home")}<b>Home</b></span><span class="on">{_ic("clips")}<b>Clips</b></span><span class="add">{_ic("plus")}</span><span>{_ic("subs")}<b>Following</b></span><span>{_ic("you")}<b>You</b></span></div>
     <div class="rbadge"><span><b><span class="rb-time">00:42</span> · <span class="rb-count">12</span> reels</b><small>This visit · estimated</small></span><i class="x"></i></div>
   </div>
 </div>"""
 REELS_JS = ('<script>(function(){var r=document.getElementById("reels");'
             'if(!r||!window.IntersectionObserver||(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches))return;'
             'var t=r.querySelector(".rb-time"),c=r.querySelector(".rb-count"),f=r.querySelector(".rf"),b=r.querySelector(".rbadge"),'
-            's=42,n=12,i=0,on=false;'
-            'function two(v){return(v<10?"0":"")+v}'
+            'v=r.querySelectorAll(".rv"),N=v.length,s=42,n=12,i=0,on=false;'
+            'function vid(k){return v[k].querySelector("video")}'
+            'function two(x){return(x<10?"0":"")+x}'
+            # play the clip in view from its start, stop the rest, and fetch the next one early
+            'function show(k,keep){for(var j=0;j<N;j++){var m=vid(j);if(j===k){v[j].classList.add("on");'
+            'if(!keep){try{m.currentTime=0}catch(e){}}var p=m.play();if(p&&p.catch)p.catch(function(){})}'
+            'else{v[j].classList.remove("on");m.pause()}}'
+            'if(k>=0&&k<N-1)vid(k+1).preload="auto"}'
+            'function go(k,jump){f.style.transition=jump?"none":"";f.style.transform="translateY(-"+k*100/N+"%)"}'
             'function tick(){if(!on)return;s++;'
             'if(s>=150){s=42;n=12}'
             't.textContent=two(Math.floor(s/60))+":"+two(s%60);'
-            'if(s%3===0){i++;n++;c.textContent=n;f.style.transition="";f.style.transform="translateY(-"+i*20+"%)";'
+            'if(s%3===0){i++;n++;c.textContent=n;go(i);show(i);'
             'b.classList.remove("bump");void b.offsetWidth;b.classList.add("bump");'
-            'if(i===4)setTimeout(function(){f.style.transition="none";f.style.transform="translateY(0)";i=0},600)}}'
-            'new IntersectionObserver(function(e){on=e[0].isIntersecting},{threshold:.3}).observe(r);'
+            # the last clip is the first again: once it has slid in, swap to the real first
+            'if(i===N-1)setTimeout(function(){try{vid(0).currentTime=vid(N-1).currentTime}catch(e){}i=0;go(0,true);show(0,true)},600)}}'
+            'new IntersectionObserver(function(e){on=e[0].isIntersecting;show(on?i:-1,true)},{threshold:.3}).observe(r);'
             'setInterval(tick,1000)})();</script>')
 
 
@@ -399,7 +446,7 @@ def home():
     <h2>How many reels <em>was that?</em></h2>
     <p class="intro">It is easy to lose count of short videos. Pausely keeps a rough count for you, and shows it while you are still scrolling.</p>
   </div>
-  <div class="reels-art">{REELS}<p class="eg">A drawing, with example numbers.</p></div>
+  <div class="reels-art">{REELS}<p class="eg">A made-up app playing stock clips. Example numbers.</p></div>
   <ul class="facts">
     <li><b>On Android</b><span>A small card floats over the apps you pick. It shows how long this visit has lasted and about how many videos went by. One tap hides it.</span></li>
     <li><b>On iPhone</b><span>iOS doesn't let one app draw over another, so Pausely sends a banner every few minutes: your time in the app today, and about how many short videos that comes to.</span></li>
