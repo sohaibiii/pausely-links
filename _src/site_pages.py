@@ -8,8 +8,11 @@ live in this file and in `guides.py`, their styles in `assets/site.css`.
 Rules these pages keep, same as the app (CLAUDE.md in the app repo):
   * only features the app has, named the way its screens name them;
   * nothing scolds anyone for the time they spend on their phone;
-  * no borrowed statistics, studies, press or reviews, and no claim that the
-    app sends nothing anywhere (the Privacy Policy says exactly what leaves);
+  * no borrowed press or reviews, and no claim that the app sends nothing
+    anywhere (the Privacy Policy says exactly what leaves);
+  * one study is cited, on the home page, and only this way: its own figures,
+    its source, that it tested another app and not Pausely, and that one of
+    its authors makes that app. Nothing here is called proven;
   * the short video figure is an estimate and always says "about";
   * drawings of the app are drawings, and example numbers say they are examples;
   * the app is on iPhone, iPad and Android, and the three are not the same: anything
@@ -116,30 +119,84 @@ A_CHOICE = ("A drawing of the choice screen: You paused. Buttons: I changed my m
             "Continue for 5 minutes.")
 
 # The Android app's floating card ("Reels & time"), in its own words and in the
-# corner it starts in. The feed behind it is a drawing of no app in particular.
-def _reel(n):
-    return (f'<div class="rv rv{n}"><i class="blob"></i><span class="rail"><i></i><i></i><i></i></span>'
-            f'<span class="cap"><i></i><i></i><i></i></span></div>')
+# corner it starts in. The player behind it is a made-up app (called Clips, the
+# name the app's own examples use): its layout is the one every short-video app
+# shares, with no real app's name or logo. The clips are stock footage whose
+# licence allows this use (see REEL_CLIPS), never somebody's
+# real post, and the names and numbers on them are invented.
+_ICON = {
+    "up": '<path d="M2 10h4v11H2zM8 21h9.3a2 2 0 0 0 1.9-1.4l2.6-7.8A2 2 0 0 0 19.9 9H14l.8-4.2a1.9 1.9 0 0 0-3.4-1.4L8 9.5z"/>',
+    "down": '<path transform="rotate(180 12 12)" d="M2 10h4v11H2zM8 21h9.3a2 2 0 0 0 1.9-1.4l2.6-7.8A2 2 0 0 0 19.9 9H14l.8-4.2a1.9 1.9 0 0 0-3.4-1.4L8 9.5z"/>',
+    "say": '<path d="M4 3h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H9l-5 4v-4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/>',
+    "send": '<path d="M14 4l8 7.5-8 7.5v-4.6C8.5 14.4 4.9 16 2 20c.8-6 4.3-10.6 12-11.5z"/>',
+    "home": '<path d="M12 3l9 8h-2.5v9h-5v-6h-3v6h-5v-9H3z"/>',
+    "clips": '<path d="M7 2h10a3 3 0 0 1 3 3v14a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3zm3 6.5v7l6-3.5z"/>',
+    "plus": '<path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1 5h2v4h4v2h-4v4h-2v-4H7v-2h4z"/>',
+    "subs": '<path d="M6 3h12v2H6zM4 7h16v2H4zm-1 4h18a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1zm7 2.5v5l4.5-2.5z"/>',
+    "you": '<path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 4a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7zm0 14a8 8 0 0 1-6-2.7c1.2-2 3.4-3.3 6-3.3s4.8 1.3 6 3.3A8 8 0 0 1 12 20z"/>',
+}
 
 
-REELS = f"""<div class="phone droid" id="reels" role="img" aria-label="A drawing of an Android phone showing a feed of short videos. In the top right corner Pausely's floating card reads 00:42, 12 reels, this visit, estimated. Example numbers.">
+def _ic(name):
+    return f'<svg viewBox="0 0 24 24" aria-hidden="true">{_ICON[name]}</svg>'
+
+
+# Where the clip plays from, who posted it, the line under the name, likes,
+# comments. The clips are Mixkit's (Stock Video Free License: commercial use,
+# no credit needed) and play straight from Mixkit's own address. The names,
+# lines and numbers are invented.
+_MIXKIT = "https://assets.mixkit.co"
+REEL_CLIPS = [
+    (_MIXKIT + "/videos/12171/12171-720.mp4", "Kitchen diaries", "The easiest weeknight dinner", "24K", "312"),
+    (_MIXKIT + "/videos/1548/1548-720.mp4", "Dog days", "He heard the word walk", "108K", "1.2K"),
+    (_MIXKIT + "/videos/51500/51500-720.mp4", "Somewhere south", "Found this beach by accident", "9.4K", "87"),
+    (_MIXKIT + "/active_storage/video_items/100357/1723573133/100357-video-720.mp4", "Sweet shift", "Sprinkles, in slow motion", "61K", "540"),
+    (_MIXKIT + "/active_storage/video_items/100490/1724285970/100490-video-720.mp4", "Studio hours", "Day 12 of painting every day", "15K", "203"),
+]
+
+
+def _reel(clip, n):
+    f, who, line, likes, says = clip
+    return (f'<div class="rv rv{n}">'
+            f'<video muted loop playsinline preload="none" src="{E(f)}"></video>'
+            f'<span class="rail"><span>{_ic("up")}<b>{likes}</b></span><span>{_ic("down")}<b>Dislike</b></span>'
+            f'<span>{_ic("say")}<b>{says}</b></span><span>{_ic("send")}<b>Share</b></span></span>'
+            f'<span class="cap"><span class="who"><i>{E(who[0])}</i><b>{E(who)}</b><em>Follow</em></span>'
+            f'<span class="line">{E(line)}</span><span class="snd">♪ Original sound</span></span>'
+            f'<i class="prog"></i></div>')
+
+
+_REEL_TRACK = REEL_CLIPS + REEL_CLIPS[:1]   # the first again, so the feed can loop
+REELS = f"""<div class="phone droid" id="reels" role="img" data-nosnippet aria-label="An Android phone playing short videos in a made-up app. In the top right corner Pausely's floating card reads 00:42, 12 reels, this visit, estimated. Example numbers.">
   <div class="reel-screen">
-    <div class="rf">{"".join(_reel(n) for n in (1, 2, 3, 4, 1))}</div>
+    <div class="rview"><div class="rf" style="height:{len(_REEL_TRACK) * 100}%">{"".join(_reel(c, n) for n, c in enumerate(_REEL_TRACK))}</div></div>
+    <div class="rnav"><span>{_ic("home")}<b>Home</b></span><span class="on">{_ic("clips")}<b>Clips</b></span><span class="add">{_ic("plus")}</span><span>{_ic("subs")}<b>Following</b></span><span>{_ic("you")}<b>You</b></span></div>
     <div class="rbadge"><span><b><span class="rb-time">00:42</span> · <span class="rb-count">12</span> reels</b><small>This visit · estimated</small></span><i class="x"></i></div>
   </div>
 </div>"""
 REELS_JS = ('<script>(function(){var r=document.getElementById("reels");'
-            'if(!r||!window.IntersectionObserver||(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches))return;'
+            'if(!r||!window.IntersectionObserver)return;'
             'var t=r.querySelector(".rb-time"),c=r.querySelector(".rb-count"),f=r.querySelector(".rf"),b=r.querySelector(".rbadge"),'
-            's=42,n=12,i=0,on=false;'
-            'function two(v){return(v<10?"0":"")+v}'
+            'v=r.querySelectorAll(".rv"),N=v.length,s=42,n=12,i=0,on=false;'
+            'function vid(k){return v[k].querySelector("video")}'
+            # nothing is fetched until the phone is nearly in view; then the first picture
+            'new IntersectionObserver(function(e,o){if(e[0].isIntersecting){o.disconnect();var m=vid(0);m.preload="metadata";m.load()}},{rootMargin:"500px"}).observe(r);'
+            'if(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches)return;'
+            'function two(x){return(x<10?"0":"")+x}'
+            # play the clip in view from its start, stop the rest, and fetch the next one early
+            'function show(k,keep){for(var j=0;j<N;j++){var m=vid(j);if(j===k){v[j].classList.add("on");'
+            'if(!keep){try{m.currentTime=0}catch(e){}}var p=m.play();if(p&&p.catch)p.catch(function(){})}'
+            'else{v[j].classList.remove("on");m.pause()}}'
+            'if(k>=0&&k<N-1){var x=vid(k+1);if(x.preload!=="auto"){x.preload="auto";if(!x.readyState)x.load()}}}'
+            'function go(k,jump){f.style.transition=jump?"none":"";f.style.transform="translateY(-"+k*100/N+"%)"}'
             'function tick(){if(!on)return;s++;'
             'if(s>=150){s=42;n=12}'
             't.textContent=two(Math.floor(s/60))+":"+two(s%60);'
-            'if(s%3===0){i++;n++;c.textContent=n;f.style.transition="";f.style.transform="translateY(-"+i*20+"%)";'
+            'if(s%3===0){i++;n++;c.textContent=n;go(i);show(i);'
             'b.classList.remove("bump");void b.offsetWidth;b.classList.add("bump");'
-            'if(i===4)setTimeout(function(){f.style.transition="none";f.style.transform="translateY(0)";i=0},600)}}'
-            'new IntersectionObserver(function(e){on=e[0].isIntersecting},{threshold:.3}).observe(r);'
+            # the last clip is the first again: once it has slid in, swap to the real first
+            'if(i===N-1)setTimeout(function(){try{vid(0).currentTime=vid(N-1).currentTime}catch(e){}i=0;go(0,true);show(0,true)},600)}}'
+            'new IntersectionObserver(function(e){on=e[0].isIntersecting;show(on?i:-1,true)},{threshold:.3}).observe(r);'
             'setInterval(tick,1000)})();</script>')
 
 
@@ -378,6 +435,18 @@ def home():
   </div>
 </div></section>
 
+<section class="sec" id="research"><div class="wrap">
+  <h2>Does a pause work? <em>It has been tested.</em></h2>
+  <p class="intro">In 2023, researchers published a six week study of 280 people using an app that works this way: a short wait before the app opens, then a way to change your mind.</p>
+  <div class="trio">
+    <div><b>36%</b><span>of the time, people closed the app again after the pause.</span></div>
+    <div><b>37%</b><span>fewer attempts to open those apps by week six than in week one.</span></div>
+    <div><b>57%</b><span>fewer times those apps were actually opened after six weeks.</span></div>
+  </div>
+  <p class="fine">A second experiment with 500 people looked at which part did the work. The way to back out helped most, and the wait helped too. Pausely gives you both: the pause, then "I changed my mind".</p>
+  <p class="fine">The study tested another app that pauses you the same way, not Pausely, and one of its three authors makes that app. Pausely has not been in a study of its own, so read these as what the method did there, not as a promise. Source: Grüning, Riedel and Lorenz-Spreen, <a href="https://doi.org/10.1073/pnas.2213114120" rel="noopener">Directing smartphone use through the self-nudge app one sec</a>, PNAS, 2023.</p>
+</div></section>
+
 <section class="sec" id="pauses"><div class="wrap">
   <h2>Six kinds of pause. <em>Pick yours.</em></h2>
   <p class="intro">A breath is the pause everybody starts with, and it is free. With Premium you can pick another, or let Pausely choose a different one each time.</p>
@@ -399,7 +468,7 @@ def home():
     <h2>How many reels <em>was that?</em></h2>
     <p class="intro">It is easy to lose count of short videos. Pausely keeps a rough count for you, and shows it while you are still scrolling.</p>
   </div>
-  <div class="reels-art">{REELS}<p class="eg">A drawing, with example numbers.</p></div>
+  <div class="reels-art">{REELS}<p class="plat"><b>This is Android.</b> On iPhone you get a banner every few minutes instead, with about how many short videos you watched.</p><p class="eg">A made-up app playing stock clips from Mixkit. Example numbers.</p></div>
   <ul class="facts">
     <li><b>On Android</b><span>A small card floats over the apps you pick. It shows how long this visit has lasted and about how many videos went by. One tap hides it.</span></li>
     <li><b>On iPhone</b><span>iOS doesn't let one app draw over another, so Pausely sends a banner every few minutes: your time in the app today, and about how many short videos that comes to.</span></li>
