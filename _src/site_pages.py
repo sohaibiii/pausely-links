@@ -8,8 +8,11 @@ live in this file and in `guides.py`, their styles in `assets/site.css`.
 Rules these pages keep, same as the app (CLAUDE.md in the app repo):
   * only features the app has, named the way its screens name them;
   * nothing scolds anyone for the time they spend on their phone;
-  * no borrowed statistics, studies, press or reviews, and no claim that the
-    app sends nothing anywhere (the Privacy Policy says exactly what leaves);
+  * no borrowed press or reviews, and no claim that the app sends nothing
+    anywhere (the Privacy Policy says exactly what leaves);
+  * one study is cited, on the home page, and only this way: its own figures,
+    its source, that it tested another app and not Pausely, and that one of
+    its authors makes that app. Nothing here is called proven;
   * the short video figure is an estimate and always says "about";
   * drawings of the app are drawings, and example numbers say they are examples;
   * the app is on iPhone, iPad and Android, and the three are not the same: anything
@@ -430,6 +433,18 @@ def home():
     <div><b>6</b><span>kinds of pause, from a breath to a question to answer.</span></div>
     <div><b>0</b><span>accounts. No sign up, no email, no password.</span></div>
   </div>
+</div></section>
+
+<section class="sec" id="research"><div class="wrap">
+  <h2>Does a pause work? <em>It has been tested.</em></h2>
+  <p class="intro">In 2023, researchers published a six week study of 280 people using an app that works this way: a short wait before the app opens, then a way to change your mind.</p>
+  <div class="trio">
+    <div><b>36%</b><span>of the time, people closed the app again after the pause.</span></div>
+    <div><b>37%</b><span>fewer attempts to open those apps by week six than in week one.</span></div>
+    <div><b>57%</b><span>fewer times those apps were actually opened after six weeks.</span></div>
+  </div>
+  <p class="fine">A second experiment with 500 people looked at which part did the work. The way to back out helped most, and the wait helped too. Pausely gives you both: the pause, then "I changed my mind".</p>
+  <p class="fine">The study tested another app that pauses you the same way, not Pausely, and one of its three authors makes that app. Pausely has not been in a study of its own, so read these as what the method did there, not as a promise. Source: Grüning, Riedel and Lorenz-Spreen, <a href="https://doi.org/10.1073/pnas.2213114120" rel="noopener">Directing smartphone use through the self-nudge app one sec</a>, PNAS, 2023.</p>
 </div></section>
 
 <section class="sec" id="pauses"><div class="wrap">
